@@ -31,10 +31,10 @@ export default class Adminhomeheader extends Component {
           <a className="nav-link active" aria-current="page" href="/" style={{fontSize:'25px'}}>Subjects</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/" style={{fontSize:'25px'}}>Time Tables</a>
+          <a className="nav-link active" aria-current="page" href="/Admintimetable" style={{fontSize:'25px'}}>Time Tables</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/" style={{fontSize:'25px'}}>Special Events</a>
+          <a className="nav-link active" aria-current="page" href="/adminspecialevent" style={{fontSize:'25px'}}>Special Events</a>
         </li>
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="/staffhome" style={{fontSize:'25px'}}>Staff </a>

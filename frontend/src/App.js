@@ -9,6 +9,19 @@ import adminViewApplication from './components/adminViewApplication'
 import updateAdmin from './components/updateAdmin'
 import Apply from './components/Apply'
 
+import Specialevents from './components/Specialevents';
+import Loginpage from './components/Loginpage';
+import middle from './components/Middle';
+import Aboutus from './components/Aboutus';
+import Adminspecialevent from './components/Adminspecialevent';
+import Createspecialevent from './components/Createspecialevent';
+import Editspecialevent from './components/Editspecialevent';
+import Adminttrequest from './components/Adminttrequest';
+import Adminalltimetables from './components/Adminalltimetables';
+import Adminaddttable from './components/Adminaddttable';
+import Admineditttables from './components/Admineditttables';
+import Displaytimetables from './components/Displaytimetables';
+
 
 export default class App extends Component {
   render() {
@@ -17,12 +30,28 @@ export default class App extends Component {
       <div>
 
         <Route path=""  component={Adminhomeheader}></Route>
+      
         <Route path="/staffhome"  component={MainHome}></Route>
         <Route path="/applications"  component={AppliedAll}></Route>
         <Route path="/update/:id"  component={updateAdmin}></Route>
         <Route path="/adminprofile/:id"  component={adminViewProfile}></Route>
         <Route path="/viewapplication/:id"  component={adminViewApplication}></Route> 
         <Route path="/apply"  component={Apply}></Route>   
+
+        <Route path="/middle" exact component={middle}></Route>
+        <Route path="/special" component={Specialevents}></Route>
+        <Route path="/adminspecialevent" component={Adminspecialevent}></Route>
+        <Route path="/about" component={Aboutus}></Route>
+        <Route path="/admin"  component={Loginpage}></Route>
+        <Route path= "/addnewspecialevent" component={Createspecialevent}></Route>
+        <Route path="/editspecialevent/:id" component={Editspecialevent}></Route> 
+        <Route path="/Admintimetable" component={Adminttrequest}></Route>
+        <Route path="/Admintimetable" component={Adminalltimetables}></Route>
+        <Route path="/addnewtimetable" component={Adminaddttable}></Route>
+        <Route path="/admineditttables/:id" component={Adminttrequest}></Route>
+        <Route path="/admineditttables/:id" component={Admineditttables}></Route>
+        <Route path="/displaytimetables" component={Displaytimetables}></Route>
+
         <Route path="" component={Adminhomefooter}></Route>
 
       </div>
