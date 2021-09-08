@@ -1,7 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component,useState,useEffect } from 'react'
 import {BrowserRouter, Route} from 'react-router-dom';
+import axios from 'axios';
 import Adminhomeheader from './components/Adminhomeheader';
 import Adminhomefooter from './components/Adminhomefooter';
+
 import AppliedAll from './components/AppliedAll'
 import MainHome from './components/MainHome'
 import adminViewProfile from './components/adminViewProfile'
@@ -22,6 +24,7 @@ import Adminaddttable from './components/Adminaddttable';
 import Admineditttables from './components/Admineditttables';
 import Displaytimetables from './components/Displaytimetables';
 
+import AdminHome from './components/AdminHome';
 import CreateSub from './components/CreateSub';
 import SubHome from './components/SubHome';
 import EditSub from './components/EditSub';
@@ -30,23 +33,63 @@ import SubPdf from './components/SubPdf';
 import EnrollmentHome from './components/EnrollmentHome';
 import AddEnrollment from './components/AddEnrollment';
 
+import addLecturer from './components/addLecturer';
+import EditLecturer from './components/EditLecturer';
+import lecturerHome from './components/lecturerHome';
+import PostLecturer from './components/PostLecturer';
+import timetableUpdate from './components/timetableUpdate';
+import leaveReq from './components/leaveReq';
+import DownloadPdf from './components/DownloadPdf'
 
-export default class App extends Component {
-  render() {
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import './App.css';
+import Courses from './components/Courses';
+import AddCourse from './components/AddCourse';
+import Course from './components/Course';
+import EditCourse from './components/EditCourse';
+import DisplayAll from './components/DisplayAll';
+import Login from './components/Login';
+import courseInside from './components/courseInside';
+import adminCourseDisplay from './components/adminCourseDisplay';
+import buyCourse from './components/buyCourse';
+
+
+
+
+  
+  function App() {
+
+     
+
+      const[posts , setPosts] = useState([])
+    
+      useEffect(() => {
+    
+        axios.get('http://localhost:8000/courses')
+        .then(res => setPosts(res.data) )
+        .catch(error => console.log(error));
+    
+    
+      })
+
+
+
     return (
     <BrowserRouter>
       <div>
 
         <Route path=""  component={Adminhomeheader}></Route>
       
-        <Route path="/staffhome"  component={MainHome}></Route>
+        <Route path="/staffhome" component={MainHome}></Route>
         <Route path="/applications"  component={AppliedAll}></Route>
         <Route path="/update/:id"  component={updateAdmin}></Route>
         <Route path="/adminprofile/:id"  component={adminViewProfile}></Route>
         <Route path="/viewapplication/:id"  component={adminViewApplication}></Route> 
         <Route path="/apply"  component={Apply}></Route>   
 
-        <Route path="/middle" exact component={middle}></Route>
+        <Route path="/middle" component={middle}></Route>
         <Route path="/special" component={Specialevents}></Route>
         <Route path="/adminspecialevent" component={Adminspecialevent}></Route>
         <Route path="/about" component={Aboutus}></Route>
@@ -60,18 +103,40 @@ export default class App extends Component {
         <Route path="/admineditttables/:id" component={Admineditttables}></Route>
         <Route path="/displaytimetables" component={Displaytimetables}></Route>
 
-        <Route path="/Adminsubhome" exact component={SubHome}></Route>
+        <Route path="/" exact component={AdminHome}></Route>
+        <Route path="/Adminsubhome" component={SubHome}></Route>
         <Route path="/add" component={CreateSub}></Route>
         <Route path="/edit/:id" component={EditSub}></Route>
         <Route path="/subject/:id" component={SubDetails}></Route>
-        <Route path="/download/:id" component={SubPdf}></Route>
+        <Route path="/downloadsub/:id" component={SubPdf}></Route>
         <Route path="/enrollhome" component={EnrollmentHome}></Route>
         <Route path="/addEnrollment" component={AddEnrollment}></Route>
-        
+
+        <Route path ="/lechome" component ={lecturerHome}></Route>
+        <Route path= "/addLec" component={addLecturer}></Route>
+        <Route path ="/editLec/:id" component={EditLecturer}></Route>
+        <Route path ="/postLec/:id" component={PostLecturer}></Route>
+        <Route path ="/timetableReq" component={timetableUpdate}></Route> 
+        <Route path ="/leaveReq" component={leaveReq}></Route> 
+        <Route path ="/download/:id" component={DownloadPdf}></Route>
+
+       
+       
+        <Route   exact path="/view"  render={()=> <Courses posts={posts} />} />
+        <Route path="/course/:id"    render={(props)=>  <Course {...props} posts={posts} />} />
+        <Route path="/Cupdate/:id"    render={(props)=>  <EditCourse {...props} posts={posts} />} />
+        <Route  path="/add-course"  component={AddCourse} />
+        <Route  path="/allCourse"  component={Login} />
+        <Route  path="/Admincoursepage"  render={()=> <DisplayAll posts={posts} />} />
+        <Route  path="/inside"  component={buyCourse} />
+        <Route path="/course/:id"    render={(props)=>  <adminCourseDisplay {...props} posts={posts} />} />
+
+
         <Route path="" component={Adminhomefooter}></Route>
 
       </div>
     </BrowserRouter>
     )
   }
-}
+
+  export default App;

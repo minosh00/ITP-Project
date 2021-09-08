@@ -81,7 +81,7 @@ export default class CreateSub extends Component {
 
                   <div className="col-md-4">
                     <label for="validationCustom01" className="form-label">Subject ID</label>
-                    <input type="text" className="form-control" name="subjectId"  value={this.state.subjectId} onChange={this.handleChange} required/>
+                    <input className="form-control" name="subjectId"  value={this.state.subjectId} onChange={this.handleChange} required/>
                     <div className="invalid-feedback">
                       Insert Subject ID!
                     </div>
@@ -89,7 +89,7 @@ export default class CreateSub extends Component {
 
                   <div className="col-md-4">
                     <label for="validationCustom02" className="form-label">Subject Name</label>
-                    <input type="text" className="form-control" name="subjectName" value={this.state.subjectName} onChange={this.handleChange} required/>
+                    <input className="form-control" name="subjectName" value={this.state.subjectName} onChange={this.handleChange} required/>
                     <div className="invalid-feedback">
                     Insert Subject Name!
                     </div>
@@ -99,7 +99,7 @@ export default class CreateSub extends Component {
                     <label for="validationCustomUsername" className="form-label">Subject Fee</label>
                     <div className="input-group has-validation">
                       <span className="input-group-text" id="inputGroupPrepend">@</span>
-                      <input type="text" className="form-control" name="subjectFee" value={this.state.subjectFee} onChange={this.handleChange} required/>
+                      <input className="form-control" name="subjectFee" value={this.state.subjectFee} onChange={this.handleChange} required/>
                       <div className="invalid-feedback">
                       Insert Subject Fee!
                       </div>
@@ -108,7 +108,7 @@ export default class CreateSub extends Component {
 
                   <div className="col-md-3">
                     <label for="validationCustom04" className="form-label">Subject Type</label>
-                    <select type="text" className="form-select" name="subjectType" value={this.state.subjectType} onChange={this.handleInputChange} required>
+                    <select className="form-select" name="subjectType" value={this.state.subjectType} onChange={this.handleInputChange} required>
                       <option selected disabled value="">Choose...</option>
                       <option>Group Class</option>
                       <option>Mass Class</option>
@@ -121,7 +121,7 @@ export default class CreateSub extends Component {
 
                   <div className="col-md-3">
                     <label for="validationCustom04" className="form-label">Subject Category</label>
-                    <select type="text" className="form-select" name="subjectCategory" value={this.state.subjectCategory} onChange={this.handleInputChange} required>
+                    <select className="form-select" name="subjectCategory" value={this.state.subjectCategory} onChange={this.handleInputChange} required>
                       <option selected disabled value="">Choose...</option>
                       <option>Ordinary Level</option>
                       <option>Advanced Level</option>
