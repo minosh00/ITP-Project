@@ -6,9 +6,18 @@ const cors = require('cors');
 const app = express();
 
 //import routes here
+
+//hivindu
 const applicationRoutes = require('./routes/applications')
 const registeredRoutes = require('./routes/registered')
 
+//dima
+const eventRoutes = require('./routes/specialevents');
+const timetableRoutes = require('./routes/timetables');
+const attendanceRoutes = require('./routes/attendances');
+const studentattendancesRoute = require('./routes/studentattendances');
+const leaverequests = require('./routes/leaverequest');
+const ttrequest = require('./routes/timetablerequest');
 
 
 
@@ -20,9 +29,18 @@ app.use(cors());
 
 
 //route middleware
+
+//hivindu
 app.use(applicationRoutes);
 app.use(registeredRoutes);
 
+//dima
+app.use(eventRoutes);
+app.use(timetableRoutes);
+app.use(attendanceRoutes);
+app.use(studentattendancesRoute);
+app.use(leaverequests);
+app.use(ttrequest);
 
 
 
