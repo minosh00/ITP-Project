@@ -147,7 +147,7 @@ componentDidMount(){
   
                 <td>
   
-                    <a className="btn btn-secondary" href= {`/edit/${posts._id}`}>
+                    <a className="btn btn-secondary" href= {`/stdedit/${posts._id}`}>
                     <i className="fas fa-edit" ></i>&nbsp;EDIT
                     </a>
                     
