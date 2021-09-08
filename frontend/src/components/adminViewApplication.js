@@ -112,7 +112,7 @@ componentDidMount(){
 <a className="btn btn-success" href="/staffhome" style={{textDecoration:'none', color:'white'}}>
                  <i className="fas fa-home"></i>&nbsp;Home
                 </a>
-        &nbsp;
+              &nbsp;
                &nbsp;
                &nbsp;
                &nbsp;
