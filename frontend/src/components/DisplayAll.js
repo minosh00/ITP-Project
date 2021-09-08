@@ -92,7 +92,7 @@ const DisplayAll = ({posts}) => {
         <td>
    
 
-<Link to={`/update/${course._id}`} 
+<Link to={`/Cupdate/${course._id}`} 
 
 className="btn btn-warning" style={{marginTop:'13px'}}>
 
