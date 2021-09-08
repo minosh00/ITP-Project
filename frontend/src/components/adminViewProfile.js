@@ -31,8 +31,8 @@ export default class adminViewProfile extends Component {
                 Address, BasicSalary} = this.state.profile;
             return (
                 
-                <div style={{marginTop:'20px'}}>
-                 <a className="btn btn-success" href="/" style={{textDecoration:'none', color:'white'}}>
+                <div style={{marginTop:'20px'}}  className="container">
+                 <a className="btn btn-success" href="/staffhome" style={{textDecoration:'none', color:'white'}}>
                  <i className="fas fa-home"></i>&nbsp;Home
                 </a>
                      <h1 className="h1">Profile</h1>

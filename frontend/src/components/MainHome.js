@@ -67,7 +67,7 @@ handleSearchArea =(e)=>{
                <h1 className="h1">Staff Details</h1>
                <p class="lead"> Contains All Registered Non-Academic Staff Details</p>
 <hr/>
-                 <a className="btn btn-success" href="/" style={{textDecoration:'none', color:'white'}}>
+                 <a className="btn btn-success" href="/staffhome" style={{textDecoration:'none', color:'white'}}>
                  <i className="fas fa-home"></i>&nbsp;&nbsp;&nbsp;Home
                 </a>
 
