@@ -70,7 +70,7 @@ export default class CreateSub extends Component {
 
             <div className='container'>
                 <div>
-                    <h2>Add New Subject</h2>
+                    <h1>Add New Subject</h1>
                     <h5>Create a New Subject and Add to the System</h5>
                     <hr/>
                 </div>
