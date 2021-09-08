@@ -19,13 +19,13 @@ export default class Adminhomeheader extends Component {
           <a className="nav-link active" aria-current="page" href="/" style={{fontSize:'25px'}}>Home</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/" style={{fontSize:'25px'}}>Student</a>
+          <a className="nav-link active" aria-current="page" href="/AdminStudnethome" style={{fontSize:'25px'}}>Student</a>
         </li>
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="/lechome" style={{fontSize:'25px'}}>Lecturer</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/" style={{fontSize:'25px'}}>Courses</a>
+          <a className="nav-link active" aria-current="page" href="/Admincoursepage" style={{fontSize:'25px'}}>Courses</a>
         </li>
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="/Adminsubhome" style={{fontSize:'25px'}}>Subjects</a>

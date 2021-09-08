@@ -1,33 +1,29 @@
 const express = require('express');
-const { findByIdAndUpdate } = require('../models/lecturers');
-const Lecturers = require('../models/lecturers');
+const acceptedStd = require('../models/approvedStudents');
 const pdf = require('html-pdf');
 const pdfTemplate = require('../documents');
 
 const router = express.Router();
 
 //save posts
-
-router.post('/lecturer/save', (req, res)=>{
-
-    let newLecturer = new Lecturers(req. body);
-
-    newLecturer.save((err)=>{
+router.post('/approved/save',(req,res)=>{
+    let newStd = new acceptedStd(req.body);
+    newStd.save((err)=>{
         if(err){
             return res.status(400).json({
                 error:err
             });
         }
         return res.status(200).json({
-            success:"Posts saved successfully"
+            success:"Student Added successfully"
         });
     });
 });
 
-//get posts
+//read registered students
 
-router.get('/lecturers', (req, res) => {
-    Lecturers.find().exec((err, lecturers)=>{
+router.get('/approved',(req,res)=>{
+    acceptedStd.find().exec((err,posts) =>{
         if(err){
             return res.status(400).json({
                 error:err
@@ -35,40 +31,39 @@ router.get('/lecturers', (req, res) => {
         }
         return res.status(200).json({
             success:true,
-            existingLecturers:lecturers
-        });
+            existingPosts:posts
+
+       });
     });
 });
 
-//get specific post
 
-router.get("/lecturer/:id", (req, res)=>{
-    let lecturerId = req.params.id;
+// get specific post
 
-    Lecturers.findById(lecturerId, (err, lecturer)=>{
+router.get('/Approved/:id',(req,res)=>{
+    let postId =req.params.id;
+
+    acceptedStd.findById(postId,(err,post)=>{
         if(err){
-            return res.status(400).json({
-                success:false, err
-            });
+            return res.status(400).json({success:false,err});
         }
-
         return res.status(200).json({
-            success:true,lecturer
+            success:true,
+            post
         });
     });
 });
 
 
+//update registered students
 
-//updating posts
-
-router.put('/lecturer/update/:id', (req, res)=>{
-    Lecturers.findByIdAndUpdate(
+router.put('/Approved/update/:id', (req, res)=>{
+    acceptedStd.findByIdAndUpdate(
         req.params.id,
         {
             $set:req.body
         },
-        (err, lecturer)=>{
+        (err, post)=>{
             if(err){
                 return res.status(400).json({
                     error:err
@@ -82,10 +77,10 @@ router.put('/lecturer/update/:id', (req, res)=>{
     );
 });
 
-//delete posts
+//remove for registered students list
 
-router.delete('/lecturer/delete/:id', (req, res)=>{
-    Lecturers.findByIdAndRemove(req.params.id).exec((err, deletedPost) =>{
+router.delete('/approved/delete/:id', (req, res)=>{
+    acceptedStd.findByIdAndRemove(req.params.id).exec((err, deletedPost) =>{
         if(err){
             return res.status(400).json({
                 message:"Delete error", err
@@ -99,8 +94,9 @@ router.delete('/lecturer/delete/:id', (req, res)=>{
 });
 
 //create PDF
+
 router.post('/create-pdf', (req, res) => {
-    pdf.create(pdfTemplate(req.body), {}).toFile('lecturer.pdf', (err) => {
+    pdf.create(pdfTemplate(req.body), {}).toFile('result.pdf', (err) => {
         if(err) {
             res.send(Promise.reject());
         }
@@ -110,10 +106,9 @@ router.post('/create-pdf', (req, res) => {
 });
 
 //get PDF
+
 router.get('/fetch-pdf', (req, res) => {
-    res.sendFile('lecturer.pdf', { root: 'C:/Users/dinir/Desktop/Projects/ITP Project/ITP Project' })
+    res.sendFile('result.pdf', { root: 'C:/Users/malshika/Desktop/studentMain' })
 })
-
-
 
 module.exports = router;

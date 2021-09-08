@@ -125,7 +125,7 @@ onDelete=(id)=>{
                     </a>
                     &nbsp;&nbsp;
                     <a className="btn btn-outline-danger" href={`/downloadsub/${subjects._id}`}>
-                    <i className="fas fa-file"></i>&nbsp;Download PDF
+                    <i className="fa fa-file-pdf-o"></i>&nbsp;Download PDF
                     </a>
                   </td>
                 </tr>
