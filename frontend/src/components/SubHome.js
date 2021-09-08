@@ -62,7 +62,7 @@ onDelete=(id)=>{
     return (
       <div>
         <div style={{marginBottom: '45px', marginLeft:'50px'}}>
-            <h2>Subject Management</h2>
+            <h1>Subject Management</h1>
             <h5>Currently Available Subjects</h5>
             
         </div >
@@ -98,7 +98,7 @@ onDelete=(id)=>{
                 <th scope="col">subject Category</th>
                 <th scope="col">subject Fee</th>
                 <th scope="col">subject Description</th>
-                <th style={{width:'350px'}} scope="col">Actions</th>
+                <th style={{width:'380px'}} scope="col">Actions</th>
               </tr>
             </thead>
             <tbody>

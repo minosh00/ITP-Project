@@ -82,7 +82,7 @@ export default class EditSub extends Component {
         return (
             <div className="container">
                 <div>
-                    <h2>Edit Subject Details</h2>
+                    <h1>Edit Subject Details</h1>
                     <h5>Edit Subject Details Here</h5>
                     <hr/>
                 </div>

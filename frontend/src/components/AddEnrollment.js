@@ -55,7 +55,7 @@ export default class AddEnrollment extends Component {
         return (
             <div className='container'>
                 <div>
-                    <h2>Add New Enrollment</h2>
+                    <h1>Add New Enrollment</h1>
                     <h5>Create a New Enrollment and Add to the System</h5>
                     <hr/>
                 </div>

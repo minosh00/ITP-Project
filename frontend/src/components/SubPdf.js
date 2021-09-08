@@ -93,7 +93,7 @@ export default class EditSub extends Component {
         return (
             <div className="container">
                 <div>
-                    <h2>Download the PDF File</h2>
+                    <h1>Download the PDF File</h1>
                     <h5>Click Download to Continue</h5>
                     <hr/>
                 </div>

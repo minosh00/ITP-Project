@@ -61,7 +61,7 @@ export default class EnrollmentHome extends Component {
         return (
             <div>
                 <div style={{marginBottom: '45px'}}>
-                    <h2>Enrollment List</h2>
+                    <h1>Enrollment List</h1>
                     <h5></h5>
                 </div >
 

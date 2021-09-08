@@ -43,7 +43,7 @@ export default class SubDetails extends Component {
 
         return (
             <div style={{marginTop:'20px'}} >
-                <h2>Subject Details</h2>
+                <h1>Subject Details</h1>
                 <h4 style={{marginTop:'20px'}}>:{subjectName}</h4>
                 <hr/>
 
