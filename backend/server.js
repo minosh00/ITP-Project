@@ -78,7 +78,7 @@ app.use(buyCourse);
 app.use(postRoutes);
 app.use(approvedStudents);
 
-const PORT = 8000;
+const PORT = 8030;
 const DB_URL = 'mongodb+srv://admin:admin@institutedb.nhxwx.mongodb.net/instituteDB?retryWrites=true&w=majority';
 
 mongoose.connect(DB_URL, {
