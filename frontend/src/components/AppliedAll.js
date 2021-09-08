@@ -36,11 +36,11 @@ onDelete=(id)=>{
 
     render() {
         return (
-            <div>
+            <div className="container">
                <h1 className="h1">Applications For Recruitments</h1>
                <p class="lead"> Contains All Applications for Staff</p>
                <hr/>
-               <a className="btn btn-success" href="/" style={{textDecoration:'none', color:'white'}}>
+               <a className="btn btn-success" href="/staffhome" style={{textDecoration:'none', color:'white'}}>
                  <i className="fas fa-home"></i>&nbsp;Home
                 </a>
                 &nbsp;
