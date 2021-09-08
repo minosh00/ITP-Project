@@ -1,4 +1,4 @@
-module.exports = ({ subjectId,subjectName,subjectType,subjectCategory,subjectFee,subjectDes }) => {
+module.exports = ({lecId,lecFname,lecLname,nic,dob,email,cNumber,address,username,password,summary,aQualification,Rmembership,Rdate }) => {
     const today = new Date();
 return `
     <!doctype html>
@@ -11,11 +11,11 @@ return `
              max-width: 800px;
              margin: auto;
              padding: 30px;
-             border: 2px solid #eee;
+             border: 2px solid black;
              box-shadow: 0 0 10px rgba(0, 0, 0, .15);
              font-size: 16px;
              line-height: 24px;
-             font-family: 'Tahoma', 'Verdana', 'sans-serif',
+             font-family: 'Helvetica Neue', 'Helvetica',
              color: #555;
              }
              .margin-top {
@@ -57,7 +57,6 @@ return `
              }
              .invoice-box table tr.item td {
              border-bottom: 1px solid #eee;
-             margin-bottom: 5px ;
              }
              .invoice-box table tr.item.last td {
              border-bottom: none;
@@ -82,14 +81,14 @@ return `
        </head>
        <body>
           <div class="invoice-box">
-             <table cellpadding="0" cellspacing="0"  style="font-family:verdana; font-size:12px">
+             <table cellpadding="0" cellspacing="0" style="font-family:verdana">
                 <tr class="top">
                    <td colspan="2">
                       <table style="font-family:verdana">
                          <tr>
-                            <td class="title"><img  src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fst4.depositphotos.com%2F34458648%2F38830%2Fv%2F450%2Fdepositphotos_388305964-stock-illustration-pen-book-education-abstract-logo.jpg&imgrefurl=https%3A%2F%2Fwww.everypixel.com%2Fq%2Flogo-education&tbnid=2D9qrDssvcw1cM&vet=10CEEQMyh_ahcKEwjwtrWPoOjyAhUAAAAAHQAAAAAQAg..i&docid=WLC-bze3zVwdNM&w=508&h=600&q=education%20logos&ved=0CEEQMyh_ahcKEwjwtrWPoOjyAhUAAAAAHQAAAAAQAg"
+                            <td class="title"><img  src="../images/longpic.png"
                                style="width:100%; max-width:156px;"></td>
-                            <td style="text-align:right">
+                            <td  style="text-align:right">
                                Date: ${`${today.getDate()}. ${today.getMonth() + 1}. ${today.getFullYear()}.`}
                             </td>
                          </tr>
@@ -100,32 +99,67 @@ return `
                    <td colspan="2">
                       <table style="font-family:verdana">
                          <tr>
-                            <td style="font-size:18px">
-                               Subject ID: ${subjectId}
+                            <td>
+                              Lecturer ID: ${lecId}
                             </td>
                          </tr>
                       </table>
                    </td>
                 </tr>
-                <tr class="item">
-                   <td width="30%">Subject Name:</td>
-                   <td>${subjectName}</td>
+                <tr class="heading">
+
                 </tr>
                 <tr class="item">
-                   <td>Subject Category :</td>
-                   <td>${subjectCategory}</td>
+                   <td width="30%">Lecturer First Name:</td>
+                   <td>${lecFname}</td>
                 </tr>
                 <tr class="item">
-                   <td>Subject Type     :</td>
-                   <td>${subjectType}</td>
+                   <td>Lecturer Last Name:</td>
+                   <td>${lecLname}</td>
                 </tr>
                 <tr class="item">
-                   <td>Subject Fee      :</td>
-                   <td>${subjectFee}</td>
+                   <td>Nic Number:</td>
+                   <td>${nic}</td>
                 </tr>
                 <tr class="item">
-                   <td>Brief Description:</td>
-                   <td>${subjectDes}</td>
+                   <td>Date Of Birth:</td>
+                   <td>${dob}</td>
+                </tr>
+                <tr class="item">
+                   <td>E-mail:</td>
+                   <td>${email}</td>
+                </tr>
+                <tr class="item">
+                   <td>Contact Number:</td>
+                   <td>${cNumber}</td>
+                </tr>
+                <tr class="item">
+                   <td>Address:</td>
+                   <td>${address}</td>
+                </tr>
+                <tr class="item">
+                   <td>User Name:</td>
+                   <td>${username}</td>
+                </tr>
+                <tr class="item">
+                   <td>Password:</td>
+                   <td>${password}</td>
+                </tr>
+                <tr class="item">
+                   <td>Career Summary:</td>
+                   <td>${summary}</td>
+                </tr>
+                <tr class="item">
+                   <td>Acedemic Qualifications:</td>
+                   <td>${aQualification}</td>
+                </tr>
+                <tr class="item">
+                   <td>Research interests and memberships:</td>
+                   <td>${Rmembership}</td>
+                </tr>
+                <tr class="item">
+                   <td>Registration Date:</td>
+                   <td>${Rdate}</td>
                 </tr>
              </table>
              <br />

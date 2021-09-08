@@ -2,7 +2,7 @@ const express = require('express');
 const { findByIdAndUpdate } = require('../models/subjects');
 const Subjects = require('../models/subjects');
 const pdf = require('html-pdf');
-const pdfTemplate = require('../documents');
+const pdfTemplate = require('../subDocuments');
 
 const router = express.Router();
 
@@ -112,7 +112,7 @@ router.post('/create-pdf', (req, res) => {
 //get the PDF
 
 router.get('/fetch-pdf', (req, res) => {
-    res.sendFile('subject.pdf', { root: 'C:/Users/dinir/Desktop/Projects/RoyalEdu-subject-withimages' });
+    res.sendFile('subject.pdf', { root: 'C:/Users/dinir/Desktop/Projects/ITP Project/ITP Project' });
 })
 
 
