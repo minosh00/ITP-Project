@@ -20,10 +20,12 @@ export default class AdminHome extends Component {
                                 <a href=''><img src={student} style={{width:200 , marginTop:'40px', marginLeft:'40px', marginRight:'40px'}}></img></a><br/>
                                 <center><a className="btn btn-outline-success" style={{marginTop:'20px'}} href=''>&nbsp;Student Management&nbsp;</a></center>
                             </td>
+
                             <td>
-                                <a href=''><img src={subject} style={{width:200 , marginTop:'40px', marginLeft:'40px', marginRight:'40px'}}></img></a><br/>
-                                <center><a className="btn btn-outline-success" style={{marginTop:'20px'}} href=''>&nbsp;Student Management&nbsp;</a></center>
+                                <a href='/Adminsubhome'><img src={subject} style={{width:200 , marginTop:'40px', marginLeft:'40px', marginRight:'40px'}}></img></a><br/>
+                                <center><a className="btn btn-outline-success" style={{marginTop:'20px'}} href='/Adminsubhome'>&nbsp;Student Management&nbsp;</a></center>
                             </td>
+
                             <td>
                                 <a href=''><img src={lecturer} style={{width:200 , marginTop:'40px', marginLeft:'40px', marginRight:'40px'}}></img></a><br/>
                                 <center><a className="btn btn-outline-success" style={{marginTop:'20px'}} href=''>&nbsp;lecturer Management&nbsp;</a></center>
@@ -35,10 +37,12 @@ export default class AdminHome extends Component {
                                 <a href=''><img src={course} style={{width:200 , marginTop:'40px', marginLeft:'40px', marginRight:'40px'}}></img></a><br/>
                                 <center><a className="btn btn-outline-success" style={{marginTop:'20px'}} href=''>&nbsp;Course Management&nbsp;</a></center>
                             </td>
+
                             <td>
                                 <a href=''><img src={timetable} style={{width:200 , marginTop:'40px', marginLeft:'40px', marginRight:'40px'}}></img></a><br/>
                                 <center><a className="btn btn-outline-success" style={{marginTop:'20px'}} href=''>&nbsp;TimeTable Management&nbsp;</a></center>
                             </td>
+
                             <td>
                                 <a href=''><img src={attendence} style={{width:200 , marginTop:'40px', marginLeft:'40px', marginRight:'40px'}}></img></a><br/>
                                 <center><a className="btn btn-outline-success" style={{marginTop:'20px'}} href=''>&nbsp;Attendence Management&nbsp;</a></center>
@@ -47,16 +51,18 @@ export default class AdminHome extends Component {
 
                         <tr>
                             <td>
-                                <a href=''><img src={staff} style={{width:200 , marginTop:'40px', marginLeft:'40px', marginRight:'40px'}}></img></a><br/>
-                                <center><a className="btn btn-outline-success" style={{marginTop:'20px'}} href=''>&nbsp;Staff Management&nbsp;</a></center>
+                                <a href='/staffhome'><img src={staff} style={{width:200 , marginTop:'40px', marginLeft:'40px', marginRight:'40px'}}></img></a><br/>
+                                <center><a className="btn btn-outline-success" style={{marginTop:'20px'}} href='/staffhome'>&nbsp;Staff Management&nbsp;</a></center>
                             </td>
+
                             <td>
                                 <a href=''><img src={library} style={{width:200 , marginTop:'40px', marginLeft:'40px', marginRight:'40px'}}></img></a><br/>
                                 <center><a className="btn btn-outline-success" style={{marginTop:'20px'}} href=''>&nbsp;Library Management&nbsp;</a></center>
                             </td>
+                            
                             <td>
                                 <a href=''><img src={payment} style={{width:200 , marginTop:'40px', marginLeft:'40px', marginRight:'40px'}}></img></a><br/>
-                                <center><a className="btn btn-outline-success" href=''>&nbsp;payment Management&nbsp;</a></center>
+                                <center><a className="btn btn-outline-success" style={{marginTop:'20px'}} href=''>&nbsp;payment Management&nbsp;</a></center>
                             </td>
                         </tr>
                     </table></center>
