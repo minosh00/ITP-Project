@@ -111,7 +111,7 @@ router.post('/create-pdf', (req, res) => {
 
 //get PDF
 router.get('/fetch-pdf', (req, res) => {
-    res.sendFile('lecturer.pdf', { root: 'C:/Users/ADMIN/OneDrive/Desktop/Project/lecturer' })
+    res.sendFile('lecturer.pdf', { root: 'C:/Users/dinir/Desktop/Projects/ITP Project/ITP Project' })
 })
 
 
