@@ -22,6 +22,14 @@ import Adminaddttable from './components/Adminaddttable';
 import Admineditttables from './components/Admineditttables';
 import Displaytimetables from './components/Displaytimetables';
 
+import CreateSub from './components/CreateSub';
+import SubHome from './components/SubHome';
+import EditSub from './components/EditSub';
+import SubDetails from './components/SubDetails';
+import SubPdf from './components/SubPdf';
+import EnrollmentHome from './components/EnrollmentHome';
+import AddEnrollment from './components/AddEnrollment';
+
 
 export default class App extends Component {
   render() {
@@ -52,6 +60,14 @@ export default class App extends Component {
         <Route path="/admineditttables/:id" component={Admineditttables}></Route>
         <Route path="/displaytimetables" component={Displaytimetables}></Route>
 
+        <Route path="/Adminsubhome" exact component={SubHome}></Route>
+        <Route path="/add" component={CreateSub}></Route>
+        <Route path="/edit/:id" component={EditSub}></Route>
+        <Route path="/subject/:id" component={SubDetails}></Route>
+        <Route path="/download/:id" component={SubPdf}></Route>
+        <Route path="/enrollhome" component={EnrollmentHome}></Route>
+        <Route path="/addEnrollment" component={AddEnrollment}></Route>
+        
         <Route path="" component={Adminhomefooter}></Route>
 
       </div>

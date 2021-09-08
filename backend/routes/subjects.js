@@ -1,7 +1,5 @@
 const express = require('express');
 const { findByIdAndUpdate } = require('../models/subjects');
-const cloudinary = require('../utils/cloudinary');
-const upload = require('../utils/multer');
 const Subjects = require('../models/subjects');
 const pdf = require('html-pdf');
 const pdfTemplate = require('../documents');
@@ -10,33 +8,7 @@ const router = express.Router();
 
 
 
-//add a new subject to the system
-
-/*router.post('/subject/save', upload.single("image"), async(req, res)=>{
-    try{
-        const result = await cloudinary.uploader.upload(req.file.path)
-
-    // Create new user
-    let subject = new Subjects({
-
-        subjectId: req.body.subjectId,
-        subjectName: req.body.subjectName,
-        subjectType: req.body.subjectType,
-        subjectCategory: req.body.subjectCategory,
-        subjectFee: req.body.subjectFee,
-        subjectDes: req.body.subjectDes,
-        avatar: result.secure_url,
-        cloudinaryId: result.public_id,
-      });
-
-      // Save user
-      await subject.save();
-        res.json(result);
-
-    } catch(err){
-        console.log(err);
-    }
-});*/
+//save
 
 router.post('/subject/save', (req, res)=>{
 

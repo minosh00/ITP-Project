@@ -28,7 +28,7 @@ export default class Adminhomeheader extends Component {
           <a className="nav-link active" aria-current="page" href="/" style={{fontSize:'25px'}}>Courses</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/" style={{fontSize:'25px'}}>Subjects</a>
+          <a className="nav-link active" aria-current="page" href="/Adminsubhome" style={{fontSize:'25px'}}>Subjects</a>
         </li>
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="/Admintimetable" style={{fontSize:'25px'}}>Time Tables</a>
