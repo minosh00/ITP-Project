@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component,useState,useEffect } from 'react'
 import {BrowserRouter, Route} from 'react-router-dom';
-
+import axios from 'axios';
 import Adminhomeheader from './components/Adminhomeheader';
 import Adminhomefooter from './components/Adminhomefooter';
 
@@ -41,11 +41,40 @@ import timetableUpdate from './components/timetableUpdate';
 import leaveReq from './components/leaveReq';
 import DownloadPdf from './components/DownloadPdf'
 
-export default class App extends Component {
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import './App.css';
+import Courses from './components/Courses';
+import AddCourse from './components/AddCourse';
+import Course from './components/Course';
+import EditCourse from './components/EditCourse';
+import DisplayAll from './components/DisplayAll';
+import Login from './components/Login';
+import courseInside from './components/courseInside';
+import adminCourseDisplay from './components/adminCourseDisplay';
+import buyCourse from './components/buyCourse';
+
+
 
 
   
-  render() {
+  function App() {
+
+     
+
+      const[posts , setPosts] = useState([])
+    
+      useEffect(() => {
+    
+        axios.get('http://localhost:8000/courses')
+        .then(res => setPosts(res.data) )
+        .catch(error => console.log(error));
+    
+    
+      })
+
+
 
     return (
     <BrowserRouter>
@@ -91,10 +120,23 @@ export default class App extends Component {
         <Route path ="/leaveReq" component={leaveReq}></Route> 
         <Route path ="/download/:id" component={DownloadPdf}></Route>
 
+       
+       
+        <Route   exact path="/view"  render={()=> <Courses posts={posts} />} />
+        <Route path="/course/:id"    render={(props)=>  <Course {...props} posts={posts} />} />
+        <Route path="/Cupdate/:id"    render={(props)=>  <EditCourse {...props} posts={posts} />} />
+        <Route  path="/add-course"  component={AddCourse} />
+        <Route  path="/allCourse"  component={Login} />
+        <Route  path="/Admincoursepage"  render={()=> <DisplayAll posts={posts} />} />
+        <Route  path="/inside"  component={buyCourse} />
+        <Route path="/course/:id"    render={(props)=>  <adminCourseDisplay {...props} posts={posts} />} />
+
+
         <Route path="" component={Adminhomefooter}></Route>
 
       </div>
     </BrowserRouter>
     )
   }
-}
+
+  export default App;
