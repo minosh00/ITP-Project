@@ -29,7 +29,7 @@ export default class SubDetails extends Component {
 
     createAndDownloadPdf = () => {
         axios.post('/create-pdf', this.state)
-          .then(() => axios.get('fetch-pdf', { responseType: 'blob' }))
+          .then(() => axios.get('/fetch-pdf', { responseType: 'blob' }))
           .then((res) => {
             const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
     
@@ -43,11 +43,11 @@ export default class SubDetails extends Component {
 
         return (
             <div style={{marginTop:'20px'}} >
-                <h1>Subject Details</h1>
-                <h4 style={{marginTop:'20px'}}>:{subjectName}</h4>
+                <h1 style={{marginLeft:'20px'}}>Subject Details</h1>
+                <h4 style={{marginTop:'20px', marginLeft:'20px'}}>:{subjectName}</h4>
                 <hr/>
 
-                <dl className="row">
+                <dl className="row" style={{marginLeft:'20px'}}>
                     <dt className="col-sm-3" style={{marginTop:'20px'}}>subjectId</dt>
                     <dd className="col-sm-9" style={{marginTop:'20px'}}>{subjectId}</dd>
 
@@ -68,7 +68,7 @@ export default class SubDetails extends Component {
                 </dl>
 
                 <div>                
-                    <button className="btn btn-primary" onClick={this.createAndDownloadPdf}>Download PDF</button>
+                <button style={{marginLeft:'20px'}} className="btn btn-danger" onClick={this.createAndDownloadPdf}><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download PDF</button>
                 </div>
             </div>
         )

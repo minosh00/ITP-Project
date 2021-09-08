@@ -34,6 +34,10 @@ const detailRoutes = require('./routes/updateDetails');
 const buyCourse = require("./routes/buyCourse");
 const  courseRouter =require('./routes/courses');
 
+//malshika
+const postRoutes = require('./routes/posts')
+const approvedStudents = require('./routes/approvedstudents')
+
 //app middleware
 app.use(bodyParser.json());
 app.use(cors());
@@ -69,6 +73,10 @@ app.use(detailRoutes);
 //minosh
 app.use('/courses', courseRouter );
 app.use(buyCourse);
+
+//malshika
+app.use(postRoutes);
+app.use(approvedStudents);
 
 const PORT = 8000;
 const DB_URL = 'mongodb+srv://admin:admin@institutedb.nhxwx.mongodb.net/instituteDB?retryWrites=true&w=majority';
