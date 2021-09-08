@@ -23,13 +23,19 @@ const ttrequest = require('./routes/timetablerequest');
 const subjectRoutes = require('./routes/subjects');
 const enrollmentRoutes = require('./routes/enrollments');
 
+//nethmi
+const lecturerRoutes = require('./routes/lecturers');
+const regRoutes = require('./routes/registration');
+const reqRoutes = require('./routes/request');
+const timetableRoutes = require('./routes/updateTimet');
+const detailRoutes = require('./routes/updateDetails');
 
 
 //app middleware
 app.use(bodyParser.json());
 app.use(cors());
-
-
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 
 //route middleware
@@ -49,6 +55,13 @@ app.use(ttrequest);
 //diniru
 app.use(subjectRoutes);
 app.use(enrollmentRoutes);
+
+//nethmi
+app.use(lecturerRoutes);
+app.use(regRoutes);
+app.use(reqRoutes);
+app.use(timetableRoutes);
+app.use(detailRoutes);
 
 
 const PORT = 8070;
