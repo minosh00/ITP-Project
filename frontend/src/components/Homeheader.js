@@ -7,7 +7,7 @@ export default class Homeheader extends Component {
   
     render() {
         return (
-      <div >
+      <div style={{marginBottom:'20px'}}>
         <nav className="navbar navbar-light bg-light ">
           <div   >
              <img src={logo} alt="logo" style={{width:600 , marginTop:'20px', marginLeft:'20px'}} />

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import {BrowserRouter, Route} from 'react-router-dom';
 
-import Homeheader from './components/Homeheader';
-import Homefooter from './components/Homefooter';
+import Homeheader from './components/Adminhomeheader';
+import Homefooter from './components/Adminhomefooter';
 
 
 export default class App extends Component {
