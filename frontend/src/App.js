@@ -84,8 +84,8 @@ export default class App extends Component {
         <Route path= "/addLec" component={addLecturer}></Route>
         <Route path ="/editLec/:id" component={EditLecturer}></Route>
         <Route path ="/postLec/:id" component={PostLecturer}></Route>
-        <Route path ="/timetableReq" exact component={timetableUpdate}></Route> 
-        <Route path ="/leaveReq" exact component={leaveReq}></Route> 
+        <Route path ="/timetableReq" component={timetableUpdate}></Route> 
+        <Route path ="/leaveReq" component={leaveReq}></Route> 
         <Route path ="/download/:id" component={DownloadPdf}></Route>
 
         <Route path="" component={Adminhomefooter}></Route>
