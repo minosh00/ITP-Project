@@ -74,7 +74,7 @@ axios.get("/lecturers").then(res =>{
   render() {
     return(
       
-      <div className="homebackground" >
+      <div>
         <div className="row">
           <div className="col-lg-12 mt-3 mb-3">
            
