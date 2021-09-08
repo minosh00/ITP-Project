@@ -42,8 +42,38 @@ import leaveReq from './components/leaveReq';
 import DownloadPdf from './components/DownloadPdf'
 
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import React ,{useState,useEffect}from 'react';
+import './App.css';
+import Courses from './components/Courses';
+import AddCourse from './components/AddCourse';
+import Course from './components/Course';
+import EditCourse from './components/EditCourse';
+import DisplayAll from './components/DisplayAll';
+import Login from './components/Login';
+import courseInside from './components/courseInside';
+import adminCourseDisplay from './components/adminCourseDisplay';
+import buyCourse from './components/buyCourse';
+
 export default class App extends Component {
+
+
+  
   render() {
+
+    const[posts , setPosts] = useState([])
+
+  useEffect(() => {
+
+    axios.get('http://localhost:8000/courses')
+    .then(res => setPosts(res.data) )
+    .catch(error => console.log(error));
+
+
+  })
+
+
+
     return (
     <BrowserRouter>
       <div>
@@ -87,6 +117,19 @@ export default class App extends Component {
         <Route path ="/timetableReq" component={timetableUpdate}></Route> 
         <Route path ="/leaveReq" component={leaveReq}></Route> 
         <Route path ="/download/:id" component={DownloadPdf}></Route>
+
+                
+        <Route   exact path="/view"  render={()=> <Courses posts={posts} />} />
+        <Route path="/course/:id"    render={(props)=>  <Course {...props} posts={posts} />} />
+        <Route path="/update/:id"    render={(props)=>  <EditCourse {...props} posts={posts} />} />
+        <Route  path="/add-course"  component={AddCourse} />
+        <Route  path="/allCourse"  component={Login} />
+
+        <Route  path="/Admincoursepage"  render={()=> <DisplayAll posts={posts} />} />
+        <Route  path="/inside"  component={buyCourse} />
+
+        <Route path="/course/:id"    render={(props)=>  <adminCourseDisplay {...props} posts={posts} />} />
+
 
         <Route path="" component={Adminhomefooter}></Route>
 
