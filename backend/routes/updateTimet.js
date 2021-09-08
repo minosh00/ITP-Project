@@ -1,5 +1,5 @@
 const express = require('express');
-const timetableRequests = require('../models/updateTimet');
+const timetableRequests = require('../models/updateTT');
 
 const router = express.Router();
 

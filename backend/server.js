@@ -27,7 +27,7 @@ const enrollmentRoutes = require('./routes/enrollments');
 const lecturerRoutes = require('./routes/lecturers');
 const regRoutes = require('./routes/registration');
 const reqRoutes = require('./routes/request');
-const timetableRoutes = require('./routes/updateTimet');
+const timetableUpdate = require('./routes/updateTimet');
 const detailRoutes = require('./routes/updateDetails');
 
 
@@ -60,11 +60,11 @@ app.use(enrollmentRoutes);
 app.use(lecturerRoutes);
 app.use(regRoutes);
 app.use(reqRoutes);
-app.use(timetableRoutes);
+app.use(timetableUpdate);
 app.use(detailRoutes);
 
 
-const PORT = 8000;
+const PORT = 8080;
 const DB_URL = 'mongodb+srv://admin:admin@institutedb.nhxwx.mongodb.net/instituteDB?retryWrites=true&w=majority';
 
 mongoose.connect(DB_URL, {

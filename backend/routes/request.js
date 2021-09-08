@@ -1,5 +1,5 @@
 const express = require('express');
-const requests = require('../models/request');
+const requests = require('../models/ttrequest');
 
 const router = express.Router();
 

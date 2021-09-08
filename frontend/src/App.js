@@ -37,7 +37,6 @@ import addLecturer from './components/addLecturer';
 import EditLecturer from './components/EditLecturer';
 import lecturerHome from './components/lecturerHome';
 import PostLecturer from './components/PostLecturer';
-import lecturerHome from './components/AdminHome';
 import timetableUpdate from './components/timetableUpdate';
 import leaveReq from './components/leaveReq';
 import DownloadPdf from './components/DownloadPdf'
@@ -81,7 +80,7 @@ export default class App extends Component {
         <Route path="/enrollhome" component={EnrollmentHome}></Route>
         <Route path="/addEnrollment" component={AddEnrollment}></Route>
 
-        <Route path ="/" exact component ={lecturerHome}></Route>
+        <Route path ="/lechome" exact component ={lecturerHome}></Route>
         <Route path= "/addLec" component={addLecturer}></Route>
         <Route path ="/editLec/:id" component={EditLecturer}></Route>
         <Route path ="/postLec/:id" component={PostLecturer}></Route>
