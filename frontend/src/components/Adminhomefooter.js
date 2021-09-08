@@ -13,8 +13,8 @@ export default class Adminhomefooter extends Component {
         <div className="row">
 
           <div className="col-xs-9 col-md-3">
-            <h6 style={{color:'black', marginLeft:'300px'}}>Categories</h6>
-            <ul className="footer-links"  style={{marginLeft:'300px'}}>
+            <h6 style={{color:'black', marginLeft:'200px'}}>Categories</h6>
+            <ul className="footer-links"  style={{marginLeft:'200px'}}>
               <li><a href="/"  style={{textDecoration:'none'}}>A/L subjects</a></li>
               <li><a href="/"  style={{textDecoration:'none'}}>O/L subjects</a></li>
               <li><a href="/"  style={{textDecoration:'none'}}>After A/L subjects</a></li>
