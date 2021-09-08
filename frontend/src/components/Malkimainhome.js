@@ -71,7 +71,7 @@ componentDidMount(){
               </td>
               
               <td>
-                <button className="btn btn-secondary" style={{marginLeft:'33px'}}><a href="/applications" style={{textDecoration:'none',color:'white'}}> STUDENT APPLICATIONS </a></button>
+                <button className="btn btn-secondary" style={{marginLeft:'33px'}}><a href="/studentapplications" style={{textDecoration:'none',color:'white'}}> STUDENT APPLICATIONS </a></button>
               </td>
               <td>
                 <button className="btn btn-secondary" style={{marginLeft:'33px'}}><a href="/registration" style={{textDecoration:'none',color:'white'}}> New Student Registration Form</a></button>

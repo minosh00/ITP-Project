@@ -148,7 +148,7 @@ import StdPdf from './components/StdPdf';
         <Route path="/add" component={CreatePost}></Route>
         <Route path="/edit/:id" component={EditPost}></Route>
         <Route path="/post/:id" component={PostDetails}></Route>
-        <Route path="/applications" component={Home}></Route>
+        <Route path="/studentapplications" component={Home}></Route>
         <Route path="/addstudent/:id" component={addstudent}></Route>
         <Route path="/view/:id" component={ViewStdDetails}></Route>
         <Route path="/registration" component={Registration}></Route>
