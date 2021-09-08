@@ -33,6 +33,15 @@ import SubPdf from './components/SubPdf';
 import EnrollmentHome from './components/EnrollmentHome';
 import AddEnrollment from './components/AddEnrollment';
 
+import addLecturer from './components/addLecturer';
+import EditLecturer from './components/EditLecturer';
+import lecturerHome from './components/lecturerHome';
+import PostLecturer from './components/PostLecturer';
+import lecturerHome from './components/AdminHome';
+import timetableUpdate from './components/timetableUpdate';
+import leaveReq from './components/leaveReq';
+import DownloadPdf from './components/DownloadPdf'
+
 
 export default class App extends Component {
   render() {
@@ -64,14 +73,22 @@ export default class App extends Component {
         <Route path="/displaytimetables" component={Displaytimetables}></Route>
 
         <Route path="/" exact component={AdminHome}></Route>
-        <Route path="/Adminsubhome" component={SubHome}></Route>
+        <Route path="/Adminsubhome" exact component={SubHome}></Route>
         <Route path="/add" component={CreateSub}></Route>
         <Route path="/edit/:id" component={EditSub}></Route>
         <Route path="/subject/:id" component={SubDetails}></Route>
         <Route path="/download/:id" component={SubPdf}></Route>
         <Route path="/enrollhome" component={EnrollmentHome}></Route>
         <Route path="/addEnrollment" component={AddEnrollment}></Route>
-        
+
+        <Route path ="/" exact component ={lecturerHome}></Route>
+        <Route path= "/addLec" component={addLecturer}></Route>
+        <Route path ="/editLec/:id" component={EditLecturer}></Route>
+        <Route path ="/postLec/:id" component={PostLecturer}></Route>
+        <Route path ="/timetableReq" exact component={timetableUpdate}></Route> 
+        <Route path ="/leaveReq" exact component={leaveReq}></Route> 
+        <Route path ="/download/:id" component={DownloadPdf}></Route>
+
         <Route path="" component={Adminhomefooter}></Route>
 
       </div>
