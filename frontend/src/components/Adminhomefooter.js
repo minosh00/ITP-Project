@@ -12,15 +12,15 @@ export default class Adminhomefooter extends Component {
       <div >
         <div className="row">
 
-          <div className="col-xs-9 col-md-3" style={{marginLeft:'20px'}}>
-            <h6 style={{color:'black'}}>Categories</h6>
-            <ul className="footer-links">
-              <li><a href="/">A/L subjects</a></li>
-              <li><a href="/">O/L subjects</a></li>
-              <li><a href="/">After A/L subjects</a></li>
-              <li><a href="/">After O/L subjects</a></li>
-              <li><a href="/">About us</a></li>
-              <li><a href="/">Payment</a></li>
+          <div className="col-xs-9 col-md-3">
+            <h6 style={{color:'black', marginLeft:'300px'}}>Categories</h6>
+            <ul className="footer-links"  style={{marginLeft:'300px'}}>
+              <li><a href="/"  style={{textDecoration:'none'}}>A/L subjects</a></li>
+              <li><a href="/"  style={{textDecoration:'none'}}>O/L subjects</a></li>
+              <li><a href="/"  style={{textDecoration:'none'}}>After A/L subjects</a></li>
+              <li><a href="/"  style={{textDecoration:'none'}}>After O/L subjects</a></li>
+              <li><a href="/"  style={{textDecoration:'none'}}>About us</a></li>
+              <li><a href="/"  style={{textDecoration:'none'}}>Payment</a></li>
             </ul>
           </div>
 
@@ -31,11 +31,11 @@ export default class Adminhomefooter extends Component {
           <div className="col-xs-6 col-md-2">
             <h6 style={{color:'black'}}>Payments</h6>
             <ul className="footer-links">
-              <li><a href="/">About Us</a></li>
-              <li><a href="/">Contact Us</a></li>
-              <li><a href="/">Contribute</a></li>
-              <li><a href="/">Privacy Policy</a></li>
-              <li><a href="/">Sitemap</a></li>
+              <li><a href="/"  style={{textDecoration:'none'}}>About Us</a></li>
+              <li><a href="/"  style={{textDecoration:'none'}}>Contact Us</a></li>
+              <li><a href="/"  style={{textDecoration:'none'}}>Contribute</a></li>
+              <li><a href="/"  style={{textDecoration:'none'}}>Privacy Policy</a></li>
+              <li><a href="/"  style={{textDecoration:'none'}}>Sitemap</a></li>
             </ul>
           </div>
         </div>
@@ -45,7 +45,7 @@ export default class Adminhomefooter extends Component {
 <div className="bg-light">
         <div className="row">
           <div className="col-md-6 col-sm-6 col-xs-12" style={{marginLeft:'20px'}}>
-            <p className="copyright-text" >Copyright &copy; 2021 All Rights Reserved by<br/><a href="/">Royal-Edu Institute </a>.
+            <p className="copyright-text" >Copyright &copy; 2021 All Rights Reserved by<br/><a href="/"  style={{textDecoration:'none'}}>Royal-Edu Institute </a>.
             </p>
           </div>
           <center><div className="col-md-5 col-sm-6 col-xs-12">
