@@ -64,7 +64,7 @@ app.use(timetableRoutes);
 app.use(detailRoutes);
 
 
-const PORT = 8070;
+const PORT = 8000;
 const DB_URL = 'mongodb+srv://admin:admin@institutedb.nhxwx.mongodb.net/instituteDB?retryWrites=true&w=majority';
 
 mongoose.connect(DB_URL, {

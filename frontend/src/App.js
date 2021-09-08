@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import {BrowserRouter, Route} from 'react-router-dom';
+
 import Adminhomeheader from './components/Adminhomeheader';
 import Adminhomefooter from './components/Adminhomefooter';
+
 import AppliedAll from './components/AppliedAll'
 import MainHome from './components/MainHome'
 import adminViewProfile from './components/adminViewProfile'
@@ -22,6 +24,7 @@ import Adminaddttable from './components/Adminaddttable';
 import Admineditttables from './components/Admineditttables';
 import Displaytimetables from './components/Displaytimetables';
 
+import AdminHome from './components/AdminHome';
 import CreateSub from './components/CreateSub';
 import SubHome from './components/SubHome';
 import EditSub from './components/EditSub';
@@ -60,7 +63,8 @@ export default class App extends Component {
         <Route path="/admineditttables/:id" component={Admineditttables}></Route>
         <Route path="/displaytimetables" component={Displaytimetables}></Route>
 
-        <Route path="/Adminsubhome" exact component={SubHome}></Route>
+        <Route path="/" exact component={AdminHome}></Route>
+        <Route path="/Adminsubhome" component={SubHome}></Route>
         <Route path="/add" component={CreateSub}></Route>
         <Route path="/edit/:id" component={EditSub}></Route>
         <Route path="/subject/:id" component={SubDetails}></Route>

@@ -8,7 +8,7 @@ export default class Adminhomefooter extends Component {
     render() {
         return (
             <div >
-     <footer className="site-footer bg-dark text-dark" style={{fontSize:'20px'}}>
+     <footer className="site-footer bg-dark text-dark" style={{fontSize:'20px', marginTop:'60px'}}>
       <div >
         <div className="row">
 

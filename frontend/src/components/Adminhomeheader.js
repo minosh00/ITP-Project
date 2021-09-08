@@ -16,7 +16,7 @@ export default class Adminhomeheader extends Component {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 text-dark"> 
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/" style={{fontSize:'25px'}}>Home</a>
+          <a className="nav-link active" aria-current="page" href="/adminMainHome" style={{fontSize:'25px'}}>Home</a>
         </li>
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="/" style={{fontSize:'25px'}}>Student</a>
