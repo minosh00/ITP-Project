@@ -50,14 +50,14 @@ export default class App extends Component {
 
         <Route path=""  component={Adminhomeheader}></Route>
       
-        <Route path="/staffhome"  component={MainHome}></Route>
+        <Route path="/staffhome" component={MainHome}></Route>
         <Route path="/applications"  component={AppliedAll}></Route>
         <Route path="/update/:id"  component={updateAdmin}></Route>
         <Route path="/adminprofile/:id"  component={adminViewProfile}></Route>
         <Route path="/viewapplication/:id"  component={adminViewApplication}></Route> 
         <Route path="/apply"  component={Apply}></Route>   
 
-        <Route path="/middle" exact component={middle}></Route>
+        <Route path="/middle" component={middle}></Route>
         <Route path="/special" component={Specialevents}></Route>
         <Route path="/adminspecialevent" component={Adminspecialevent}></Route>
         <Route path="/about" component={Aboutus}></Route>
@@ -72,7 +72,7 @@ export default class App extends Component {
         <Route path="/displaytimetables" component={Displaytimetables}></Route>
 
         <Route path="/" exact component={AdminHome}></Route>
-        <Route path="/Adminsubhome" exact component={SubHome}></Route>
+        <Route path="/Adminsubhome" component={SubHome}></Route>
         <Route path="/add" component={CreateSub}></Route>
         <Route path="/edit/:id" component={EditSub}></Route>
         <Route path="/subject/:id" component={SubDetails}></Route>
@@ -80,7 +80,7 @@ export default class App extends Component {
         <Route path="/enrollhome" component={EnrollmentHome}></Route>
         <Route path="/addEnrollment" component={AddEnrollment}></Route>
 
-        <Route path ="/lechome" exact component ={lecturerHome}></Route>
+        <Route path ="/lechome" component ={lecturerHome}></Route>
         <Route path= "/addLec" component={addLecturer}></Route>
         <Route path ="/editLec/:id" component={EditLecturer}></Route>
         <Route path ="/postLec/:id" component={PostLecturer}></Route>
