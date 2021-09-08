@@ -25,7 +25,7 @@ export default class Adminhomefooter extends Component {
           </div>
 
           <div className="col-xs-9 col-md-6">
-            
+           <center><img src={logo} alt="logo"style={{width:200 , marginTop:'20px'}}/></center>
           </div>
 
           <div className="col-xs-6 col-md-2">
