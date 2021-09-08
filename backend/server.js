@@ -19,6 +19,10 @@ const studentattendancesRoute = require('./routes/studentattendances');
 const leaverequests = require('./routes/leaverequest');
 const ttrequest = require('./routes/timetablerequest');
 
+//diniru
+const subjectRoutes = require('./routes/subjects');
+const enrollmentRoutes = require('./routes/enrollments');
+
 
 
 //app middleware
@@ -42,6 +46,9 @@ app.use(studentattendancesRoute);
 app.use(leaverequests);
 app.use(ttrequest);
 
+//diniru
+app.use(subjectRoutes);
+app.use(enrollmentRoutes);
 
 
 const PORT = 8070;
