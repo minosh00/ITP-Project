@@ -90,23 +90,23 @@ export default class EditSub extends Component {
                 <form className="row g-3">
   <div className="col-md-6">
     <label for="inputEmail4" className="form-label">Subject ID</label>
-    <input type="text" className="form-control" name="subjectId"  value={this.state.subjectId} onChange={this.handleInputChange}/>
+    <input className="form-control" name="subjectId"  value={this.state.subjectId} onChange={this.handleInputChange}/>
   </div>
   <div className="col-md-6">
     <label for="inputPassword4" className="form-label">Subject Name</label>
-    <input type="text" className="form-control" name="subjectName" value={this.state.subjectName} onChange={this.handleInputChange}/>
+    <input className="form-control" name="subjectName" value={this.state.subjectName} onChange={this.handleInputChange}/>
   </div>
   <div className="col-md-4">
     <label for="inputAddress2" className="form-label">Subject Fee</label>
-    <input type="text" className="form-control" name="subjectFee" value={this.state.subjectFee} onChange={this.handleInputChange}/>
+    <input className="form-control" name="subjectFee" value={this.state.subjectFee} onChange={this.handleInputChange}/>
   </div>
    <div className="col-md-8">
     <label for="inputCity" className="form-label">Description</label>
-    <input type="text" className="form-control" style={{width:'600px'}} name="subjectDes" value={this.state.subjectDes} onChange={this.handleInputChange}/>
+    <input className="form-control" style={{width:'600px'}} name="subjectDes" value={this.state.subjectDes} onChange={this.handleInputChange}/>
   </div>
   <div className="col-md-4">
     <label for="inputAddress" className="form-label">Subject Type</label>
-    <select type="text" className="form-control" name="subjectType" value={this.state.subjectType} onChange={this.handleInputChange} >
+    <select className="form-control" name="subjectType" value={this.state.subjectType} onChange={this.handleInputChange} >
     <option>Choose</option>
     <option>Group Class</option>
     <option>Mass Class</option>

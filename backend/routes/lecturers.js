@@ -100,7 +100,7 @@ router.delete('/lecturer/delete/:id', (req, res)=>{
 
 //create PDF
 router.post('/create-pdf', (req, res) => {
-    pdf.create(pdfTemplate(req.body), {}).toFile('result.pdf', (err) => {
+    pdf.create(pdfTemplate(req.body), {}).toFile('lecturer.pdf', (err) => {
         if(err) {
             res.send(Promise.reject());
         }
@@ -111,7 +111,7 @@ router.post('/create-pdf', (req, res) => {
 
 //get PDF
 router.get('/fetch-pdf', (req, res) => {
-    res.sendFile('result.pdf', { root: 'C:/Users/ADMIN/OneDrive/Desktop/Project/lecturer' })
+    res.sendFile('lecturer.pdf', { root: 'C:/Users/ADMIN/OneDrive/Desktop/Project/lecturer' })
 })
 
 

@@ -85,7 +85,7 @@ export default class EditSub extends Component {
           .then((res) => {
             const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
     
-            saveAs(pdfBlob, 'newPdf.pdf');
+            saveAs(pdfBlob, 'Subject.pdf');
           })
       }
 
@@ -101,32 +101,32 @@ export default class EditSub extends Component {
                 
   <div className="col-md-8" style={{marginTop: '20px'}}>
     <label for="inputEmail4" className="form-label">Subject ID</label>
-    <input type="text" className="form-control" name="subjectId"  value={this.state.subjectId} onChange={this.handleInputChange} readOnly/>
+    <input className="form-control" name="subjectId"  value={this.state.subjectId} onChange={this.handleInputChange} readOnly/>
   </div>
 
   <div className="col-md-8" style={{marginTop: '20px'}}>
     <label for="inputPassword4" className="form-label">Subject Name</label>
-    <input type="text" className="form-control" name="subjectName" value={this.state.subjectName} onChange={this.handleInputChange} readOnly/>
+    <input className="form-control" name="subjectName" value={this.state.subjectName} onChange={this.handleInputChange} readOnly/>
   </div>
 
   <div className="col-md-8" style={{marginTop: '20px'}}>
     <label for="inputAddress2" className="form-label">Subject Fee</label>
-    <input type="text" className="form-control" name="subjectFee" value={this.state.subjectFee} onChange={this.handleInputChange} readOnly/>
+    <input className="form-control" name="subjectFee" value={this.state.subjectFee} onChange={this.handleInputChange} readOnly/>
   </div>
 
    <div className="col-md-8" style={{marginTop: '20px'}}>
     <label for="inputCity" className="form-label">Description</label>
-    <textarea rows="7" type="text" className="form-control" style={{width:'600px'}} name="subjectDes" value={this.state.subjectDes} onChange={this.handleInputChange} readOnly/>
+    <textarea rows="7" className="form-control" style={{width:'600px'}} name="subjectDes" value={this.state.subjectDes} onChange={this.handleInputChange} readOnly/>
   </div>
 
   <div className="col-md-8" style={{marginTop: '20px'}}>
     <label for="inputCity" className="form-label">Subject Type</label>
-    <input type="text" className="form-control" style={{width:'600px'}} name="subjectType" value={this.state.subjectType} onChange={this.handleInputChange} readOnly/>
+    <input className="form-control" style={{width:'600px'}} name="subjectType" value={this.state.subjectType} onChange={this.handleInputChange} readOnly/>
   </div>
 
   <div className="col-md-8" style={{marginTop: '20px'}}>
     <label for="inputCity" className="form-label">Subject Category</label>
-    <input type="text" className="form-control" style={{width:'600px'}} name="subjectCategory" value={this.state.subjectCategory} onChange={this.handleInputChange} readOnly/>
+    <input className="form-control" style={{width:'600px'}} name="subjectCategory" value={this.state.subjectCategory} onChange={this.handleInputChange} readOnly/>
   </div>
 
   <hr/>

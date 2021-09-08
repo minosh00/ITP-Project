@@ -71,4 +71,4 @@ const lecturerSchema = new mongoose.Schema({
 
 });
 
-module.exports = mongoose.model('LecturerDetails',lecturerSchema);
+module.exports = mongoose.model('lecturerdetails',lecturerSchema);

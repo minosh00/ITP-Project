@@ -76,7 +76,7 @@ export default class App extends Component {
         <Route path="/add" component={CreateSub}></Route>
         <Route path="/edit/:id" component={EditSub}></Route>
         <Route path="/subject/:id" component={SubDetails}></Route>
-        <Route path="/download/:id" component={SubPdf}></Route>
+        <Route path="/downloadsub/:id" component={SubPdf}></Route>
         <Route path="/enrollhome" component={EnrollmentHome}></Route>
         <Route path="/addEnrollment" component={AddEnrollment}></Route>
 

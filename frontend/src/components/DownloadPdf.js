@@ -120,7 +120,7 @@ export default class DownloadPdf extends Component {
           .then((res) => {
             const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
     
-            saveAs(pdfBlob, 'newPdf.pdf');
+            saveAs(pdfBlob, 'Lecturer.pdf');
           })
       }
     

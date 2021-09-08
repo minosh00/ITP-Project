@@ -100,7 +100,7 @@ router.get("/subject/:id", (req, res)=>{
 //create the PDF
 
 router.post('/create-pdf', (req, res) => {
-    pdf.create(pdfTemplate(req.body), {}).toFile('result.pdf', (err) => {
+    pdf.create(pdfTemplate(req.body), {}).toFile('subject.pdf', (err) => {
         if(err) {
             res.send(Promise.reject());
         }
@@ -112,7 +112,7 @@ router.post('/create-pdf', (req, res) => {
 //get the PDF
 
 router.get('/fetch-pdf', (req, res) => {
-    res.sendFile('result.pdf', { root: 'C:/Users/dinir/Desktop/Projects/RoyalEdu-subject-withimages' });
+    res.sendFile('subject.pdf', { root: 'C:/Users/dinir/Desktop/Projects/RoyalEdu-subject-withimages' });
 })
 
 

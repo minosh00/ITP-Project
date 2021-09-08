@@ -66,27 +66,27 @@ export default class AddEnrollment extends Component {
 
                     <div className="col-md-6">
                         <label for="inputEmail4" className="form-label">Enrollment Code</label>
-                        <input type="text" className="form-control" name="enrollmentCode"  value={this.state.enrollmentCode} onChange={this.handleChange} required></input>
+                        <input className="form-control" name="enrollmentCode"  value={this.state.enrollmentCode} onChange={this.handleChange} required></input>
                     </div>
 
                     <div className="col-md-6">
                         <label for="inputPassword4" className="form-label">Student ID</label>
-                        <input type="text" className="form-control" name="studentId" value={this.state.studentId} onChange={this.handleChange} required/>
+                        <input className="form-control" name="studentId" value={this.state.studentId} onChange={this.handleChange} required/>
                     </div>
 
                     <div className="col-md-4">
                         <label for="inputAddress2" className="form-label">Subject ID</label>
-                        <input type="text" className="form-control" name="SubjectId" value={this.state.SubjectId} onChange={this.handleChange} required/>
+                        <input className="form-control" name="SubjectId" value={this.state.SubjectId} onChange={this.handleChange} required/>
                     </div>
 
                     <div className="col-md-4">
                         <label for="inputAddress2" className="form-label">Student Name</label>
-                        <input type="text" className="form-control" name="StudentName" value={this.state.StudentName} onChange={this.handleChange} required/>
+                        <input className="form-control" name="StudentName" value={this.state.StudentName} onChange={this.handleChange} required/>
                     </div>
 
                     <div className="col-md-4">
                         <label for="inputAddress2" className="form-label">Student Address</label>
-                        <input type="text" className="form-control" name="StudentAddress" value={this.state.StudentAddress} onChange={this.handleChange} required/>
+                        <input className="form-control" name="StudentAddress" value={this.state.StudentAddress} onChange={this.handleChange} required/>
                     </div>
 
                     <div className="col-md-3">

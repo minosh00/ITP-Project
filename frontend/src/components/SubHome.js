@@ -124,7 +124,7 @@ onDelete=(id)=>{
                       <i className="far fa-trash-alt"></i>&nbsp;Delete
                     </a>
                     &nbsp;&nbsp;
-                    <a className="btn btn-outline-danger" href={`/download/${subjects._id}`}>
+                    <a className="btn btn-outline-danger" href={`/downloadsub/${subjects._id}`}>
                     <i className="fas fa-file"></i>&nbsp;Download PDF
                     </a>
                   </td>
