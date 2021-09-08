@@ -30,6 +30,9 @@ const reqRoutes = require('./routes/request');
 const timetableUpdate = require('./routes/updateTimet');
 const detailRoutes = require('./routes/updateDetails');
 
+//minosh
+const buyCourse = require("./routes/buyCourse");
+const  courseRouter =require('./routes/courses');
 
 //app middleware
 app.use(bodyParser.json());
@@ -63,6 +66,9 @@ app.use(reqRoutes);
 app.use(timetableUpdate);
 app.use(detailRoutes);
 
+//minosh
+app.use('/courses', courseRouter );
+app.use(buyCourse);
 
 const PORT = 8000;
 const DB_URL = 'mongodb+srv://admin:admin@institutedb.nhxwx.mongodb.net/instituteDB?retryWrites=true&w=majority';
