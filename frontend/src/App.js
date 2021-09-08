@@ -56,6 +56,18 @@ import adminCourseDisplay from './components/adminCourseDisplay';
 import buyCourse from './components/buyCourse';
 
 
+import CreatePost from './components/CreatePost';
+import EditPost from './components/EditPost';
+import Malkimainhome from './components/Malkimainhome';
+import PostDetails from './components/PostDetails';
+import Home from './components/Home';
+import addstudent from './components/addstudent';
+import ViewStdDetails from './components/ViewStdDetails';
+import Registration from './components/Registration';
+import profile from './components/profile';
+import StdEdit from './components/StdEdit';
+import StdPdf from './components/StdPdf';
+
 
 
   
@@ -131,6 +143,18 @@ import buyCourse from './components/buyCourse';
         <Route  path="/inside"  component={buyCourse} />
         <Route path="/course/:id"    render={(props)=>  <adminCourseDisplay {...props} posts={posts} />} />
 
+
+        <Route path="/AdminStudnethome"  component={Malkimainhome}></Route>
+        <Route path="/add" component={CreatePost}></Route>
+        <Route path="/edit/:id" component={EditPost}></Route>
+        <Route path="/post/:id" component={PostDetails}></Route>
+        <Route path="/applications" component={Home}></Route>
+        <Route path="/addstudent/:id" component={addstudent}></Route>
+        <Route path="/view/:id" component={ViewStdDetails}></Route>
+        <Route path="/registration" component={Registration}></Route>
+        <Route path="/profile/:id" component={profile}></Route>
+        <Route path="/stdEdit/:id" component={StdEdit}></Route>
+        <Route path="/stdPdf/:id" component={StdPdf}></Route>
 
         <Route path="" component={Adminhomefooter}></Route>
 
