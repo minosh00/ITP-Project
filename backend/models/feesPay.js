@@ -1,16 +1,15 @@
-
 const mongoose  = require('mongoose');
-const buyCourseSchema = new mongoose.Schema({
+const feesPaySchema = new mongoose.Schema({
     
     fullName:{
         type:String,
         required:true
     },
-    address:{
+    studentID:{
         type:String,
         required:true
     },
-    email:{
+    date:{
         type:String,
         required:true
     },
@@ -18,11 +17,15 @@ const buyCourseSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    nic:{
+    email:{
         type:String,
         required:true
     },
-    courseName:{
+    lecturerName:{
+        type:String,
+        required:true
+    },
+    courseID:{
         type:String,
         required:true
     },
@@ -38,10 +41,6 @@ const buyCourseSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    date:{
-        type:String,
-        required:true
-    },
-
+    
 });
-module.exports = mongoose.model('Buy Online Course',buyCourseSchema);
+module.exports = mongoose.model('Pay Fees Online Course',feesPaySchema);

@@ -61,8 +61,8 @@ export default class AdminHome extends Component {
                             </td>
                             
                             <td>
-                                <a href=''><img src={payment} style={{width:200 , marginTop:'40px', marginLeft:'40px', marginRight:'40px'}}></img></a><br/>
-                                <center><a className="btn btn-outline-success" style={{marginTop:'20px'}} href=''>&nbsp;payment Management&nbsp;</a></center>
+                                <a href='/paymenthome'><img src={payment} style={{width:200 , marginTop:'40px', marginLeft:'40px', marginRight:'40px'}}></img></a><br/>
+                                <center><a className="btn btn-outline-success" style={{marginTop:'20px'}} href='/paymenthome'>&nbsp;payment Management&nbsp;</a></center>
                             </td>
                         </tr>
                     </table></center>
