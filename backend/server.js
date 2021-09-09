@@ -34,6 +34,10 @@ const detailRoutes = require('./routes/updateDetails');
 const buyCourse = require("./routes/buyCourse");
 const  courseRouter =require('./routes/courses');
 
+//malshika
+const postRoutes = require('./routes/posts')
+const approvedStudents = require('./routes/approvedstudents')
+
 //app middleware
 app.use(bodyParser.json());
 app.use(cors());
@@ -71,8 +75,8 @@ app.use('/courses', courseRouter );
 app.use(buyCourse);
 
 //malshika
-const postRoutes = require('./routes/posts')
-const approvedStudents = require('./routes/approvedstudents')
+app.use(postRoutes);
+app.use(approvedStudents);
 
 
 const PORT = 8000;
