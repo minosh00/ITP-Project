@@ -95,95 +95,97 @@ export default class StdPdf extends Component {
             <p className="fs-4">Student Management System</p>
        <div className="container">
        <form className="needs-validation" noValidate>
-       <h2><p className="fs-1">Display Student Details </p></h2>
-       &nbsp;&nbsp;  
-       <div className="mb-3">
+       <h1><p className="fs-1">Display Student Details </p></h1>
+       &nbsp;&nbsp; 
+
+<div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Registration Number </p></label>
-<input type="text" className="form-control" name="registrationNo" aria-describedby="emailHelp" value={this.state.registrationNo} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="registrationNo" aria-describedby="emailHelp" value={this.state.registrationNo} onChange={this.handleInputChange} readOnly/>
 </div>
-       <div className="mb-3">
-       <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Student full Name </p></label>
-<input type="text" className="form-control" name="student_full_name" value={this.state.student_full_name} onChange={this.handleInputChange} readOnly />
+
+<div className="mb-3">
+<label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Student full Name </p></label>
+<input className="form-control" name="student_full_name" value={this.state.student_full_name} onChange={this.handleInputChange} readOnly />
 </div>
 <div className="mb-3">
 <label for="exampleInputPassword1" className="form-label"><p class="fw-bold">Name with Initials </p></label>
-<input type="text" className="form-control" name="Name_with_initials" value={this.state.Name_with_initials} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="Name_with_initials" value={this.state.Name_with_initials} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputPassword1" className="form-label"> <p class="fw-bold">Date of Addmission </p></label>
-<input type="text" className="form-control" name="date_of_addmission" value={this.state.date_of_addmission} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="date_of_addmission" value={this.state.date_of_addmission} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"><p class="fw-bold">Class Name </p></label>
-<input type="text" className="form-control" name="class_name" aria-describedby="emailHelp" value={this.state.class_name} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="class_name" aria-describedby="emailHelp" value={this.state.class_name} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"><p class="fw-bold">Course Name </p></label>
-<input type="text" className="form-control" name="course_name" aria-describedby="emailHelp" value={this.state.course_name} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="course_name" aria-describedby="emailHelp" value={this.state.course_name} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Date of Birth</p></label>
-<input type="text" className="form-control" name="date_of_birth" aria-describedby="emailHelp" value={this.state.date_of_birth} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="date_of_birth" aria-describedby="emailHelp" value={this.state.date_of_birth} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">NIC</p></label>
-<input type="text" className="form-control" name="nic" aria-describedby="emailHelp" value={this.state.nic} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="nic" aria-describedby="emailHelp" value={this.state.nic} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Email</p></label>
-<input type="text" className="form-control" name="email" aria-describedby="emailHelp" value={this.state.email} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="email" aria-describedby="emailHelp" value={this.state.email} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Address</p></label>
-<input type="text" className="form-control" name="address" aria-describedby="emailHelp" value={this.state.address} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="address" aria-describedby="emailHelp" value={this.state.address} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Contact Number</p></label>
-<input type="text" className="form-control" name="telephone" aria-describedby="emailHelp" value={this.state.telephone} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="telephone" aria-describedby="emailHelp" value={this.state.telephone} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Gender</p></label>
-<input type="text" className="form-control" name="gender" aria-describedby="emailHelp" value={this.state.gender} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="gender" aria-describedby="emailHelp" value={this.state.gender} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Religion</p></label>
-<input type="text" className="form-control" name="religion" aria-describedby="emailHelp" value={this.state.religion} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="religion" aria-describedby="emailHelp" value={this.state.religion} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Nationality</p></label>
-<input type="text" className="form-control" name="nationality" aria-describedby="emailHelp" value={this.state.nationality} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="nationality" aria-describedby="emailHelp" value={this.state.nationality} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Gurdian Name</p></label>
-<input type="text" className="form-control" name="gurdian_name" aria-describedby="emailHelp" value={this.state.gurdian_name} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="gurdian_name" aria-describedby="emailHelp" value={this.state.gurdian_name} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Gurdian Contact Number</p></label>
-<input type="text" className="form-control" name="gurdian_contact_number" aria-describedby="emailHelp" value={this.state.gurdian_contact_number} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="gurdian_contact_number" aria-describedby="emailHelp" value={this.state.gurdian_contact_number} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Gurdian Email</p></label>
-<input type="text" className="form-control" name="gurdian_email" aria-describedby="emailHelp" value={this.state.gurdian_email} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="gurdian_email" aria-describedby="emailHelp" value={this.state.gurdian_email} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Gurdian Occupation</p></label>
-<input type="text" className="form-control" name="gurdian_occupation" aria-describedby="emailHelp" value={this.state.gurdian_occupation} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="gurdian_occupation" aria-describedby="emailHelp" value={this.state.gurdian_occupation} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Date </p></label>
-<input type="text" className="form-control" name="date" aria-describedby="emailHelp" value={this.state.date} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="date" aria-describedby="emailHelp" value={this.state.date} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Bank Name</p></label>
-<input type="text" className="form-control" name="bank_name" aria-describedby="emailHelp" value={this.state.bank_name} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="bank_name" aria-describedby="emailHelp" value={this.state.bank_name} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Branch</p></label>
-<input type="text" className="form-control" name="branch" aria-describedby="emailHelp" value={this.state.branch} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="branch" aria-describedby="emailHelp" value={this.state.branch} onChange={this.handleInputChange} readOnly/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Payment Date</p></label>
-<input type="text" className="form-control" name="payment_date" aria-describedby="emailHelp" value={this.state.payment_date} onChange={this.handleInputChange} readOnly/>
+<input className="form-control" name="payment_date" aria-describedby="emailHelp" value={this.state.payment_date} onChange={this.handleInputChange} readOnly/>
 </div>
 </form>
 <h1><p class="fs-5">Press this button to download your PDF of your All Details.</p></h1>

@@ -74,7 +74,7 @@ onDelete=(id)=>{
               </td>
               <td>
                 
-                <a className="btn btn-success" style={{marginLeft:'1065px'}} href='/add'>
+                <a className="btn btn-success" style={{marginLeft:'1065px'}} href='/addsub'>
                 <i className="fas fa-plus-circle"></i>&nbsp;Add New Subject
                 </a>
                 &nbsp;

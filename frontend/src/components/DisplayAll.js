@@ -40,6 +40,16 @@ const DisplayAll = ({posts}) => {
        <button type="button" className="btn btn-info "  > <i class="fas fa-plus-circle"></i>&nbsp;Add New Course </button>
     </Link>
 </div >
+<div align="right">
+  <br></br>
+    <p>The Course Follow student In The Institue</p>
+  <Link to ={{
+        pathname:`/followed`
+      }}>
+        
+       <button type="button"class="btn btn-dark" > <i class="fas fa-sign-out-alt"></i>&nbsp;Enroll Student List </button>
+    </Link>
+</div >
  
     <br></br>
     <br></br>
