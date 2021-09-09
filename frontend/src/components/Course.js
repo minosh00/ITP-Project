@@ -41,32 +41,37 @@ const Course =  (props) => {
 
 
         <MainContainer  >
-   <table id="table-to-xls"  >
+   <table id="table-to-xls">
        <h2>Course Information&nbsp;&nbsp;<i class="far fa-bookmark"></i></h2>
 
       
        <br></br>
        <br></br>
 
-      <h4><i class="fas fa-portrait"></i> &nbsp;Course ID : {courseID}</h4>
-      <br></br>
-       <h4><i class="fas fa-book-open"></i>&nbsp;Course  Name : {courseName}</h4>
-       <br></br>
-     
-     
-       <h4><i class="fas fa-comment-medical"></i> &nbsp;Description :&nbsp;&nbsp;<br/><br/>{description}</h4>
-       <br></br>
-       <h4><i class="fas fa-key"></i>&nbsp;Requirement :&nbsp;{requirement}</h4>
-       <br></br>
-       <h4><i class="fas fa-users"></i>&nbsp;Category :&nbsp;{price}</h4>
-       <br></br>
-       <h4><i class="far fa-calendar-times"></i>&nbsp;Duration :&nbsp;{duration}</h4>
-       <br></br>
-       <h4><i class="far fa-credit-card"></i>&nbsp;Price :&nbsp;{price}</h4>
-     </table>
-     
-      <div>
-        <br></br>
+       <dl className="row" >
+<dt className="col-sm-3"><i class="fas fa-portrait"></i>&nbsp; Course ID</dt>
+<dd className="col-sm-9">{courseID}</dd>
+
+<dt className="col-sm-3"><i class="fas fa-book-open"></i>&nbsp;Course  Name</dt>
+<dd className="col-sm-9"> {courseName}</dd>
+
+<dt className="col-sm-3"><i class="fas fa-comment-medical"></i> &nbsp; Description</dt>
+<dd className="col-sm-9">{description}</dd>
+
+<dt className="col-sm-3"><i class="fas fa-key"></i>&nbsp; Requirement</dt>
+<dd className="col-sm-9">{requirement}</dd>
+
+
+
+
+<dt className="col-sm-3"><i class="far fa-credit-card"></i>&nbsp; Price </dt>
+<dd className="col-sm-9">{price}</dd>
+
+
+<dt className="col-sm-3"><i class="far fa-calendar-times"></i>&nbsp; Duration</dt>
+<dd className="col-sm-9">{duration}</dd>
+</dl>
+</table>
       <div />
    
   
@@ -74,21 +79,16 @@ const Course =  (props) => {
                     className="btn btn-warning"
                    
                     table="table-to-xls"
-                    filename="CourseInformstion"
+                    filename={courseID}
                     sheet="tablexls"
                     
                     buttonText="Download as XLSheet"/></button>
-                    
-    </div> 
+             <br></br>
+   
     <br></br>
       <Link  to="/" type="button" class="btn btn-success"><i class="fas fa-arrow-circle-left"></i>&nbsp;Back</Link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <Link to ={{
-        pathname:`/allCourse`
-      }}>
-    <button type="button" class="btn btn-primary">&nbsp;🔑Enroll</button>
-    </Link>
-    
+     
 
 
 
