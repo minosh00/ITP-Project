@@ -17,7 +17,7 @@ export default class buyCourse extends Component {
      }
   
     retrivebuyCourse(){
-      axios.get("http://localhost:8000/retrive")
+      axios.get("http://localhost:8000/retrivecourse")
           .then(response => this.setState({ buyCourse:response.data.existingCourseReceipt }))
           .catch(error => {
               this.setState({ errorMessage: error.message });
