@@ -140,7 +140,7 @@ import StdPdf from './components/StdPdf';
         <Route  path="/add-course"  component={AddCourse} />
         <Route  path="/allCourse"  component={Login} />
         <Route  path="/Admincoursepage"  render={()=> <DisplayAll posts={posts} />} />
-        <Route  path="/inside"  component={buyCourse} />
+        <Route  path="/followed"  component={buyCourse} />
         <Route path="/course/:id"    render={(props)=>  <adminCourseDisplay {...props} posts={posts} />} />
 
 

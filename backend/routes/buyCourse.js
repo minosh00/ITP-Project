@@ -4,7 +4,7 @@ const buyCourseRoutes = require('../models/buyCourse');
 const router = express.Router();
 
 
-router.get('/retrive', (req,res) => {
+router.get('/retrivecourse', (req,res) => {
     buyCourseRoutes.find().exec((err,CourseRoutes) => {
         if (err) {
             return res.status(400).json ({
