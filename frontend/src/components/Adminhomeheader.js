@@ -40,6 +40,9 @@ export default class Adminhomeheader extends Component {
           <a className="nav-link active" aria-current="page" href="/staffhome" style={{fontSize:'25px'}}>Staff </a>
         </li>
         <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="/paymenthome" style={{fontSize:'25px'}}>Payment </a>
+        </li>
+        <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="/" style={{fontSize:'25px'}}>Attendence </a>
         </li>
       </ul>

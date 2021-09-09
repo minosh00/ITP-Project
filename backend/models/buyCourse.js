@@ -26,6 +26,18 @@ const buyCourseSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    cardNo:{
+        type:String,
+        required:true
+    },
+    cvc:{
+        type:String,
+        required:true
+    },
+    cardHoldersName:{
+        type:String,
+        required:true
+    },
     date:{
         type:String,
         required:true
