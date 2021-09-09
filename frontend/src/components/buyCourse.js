@@ -1,7 +1,8 @@
 import React, { Component ,useState } from 'react'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 export default class buyCourse extends Component {
-     
+  
     constructor(props){
         super(props);
         
@@ -17,7 +18,7 @@ export default class buyCourse extends Component {
      }
   
     retrivebuyCourse(){
-      axios.get("http://localhost:8000/retrive")
+      axios.get("http://localhost:8000/retrivecourse")
           .then(response => this.setState({ buyCourse:response.data.existingCourseReceipt }))
           .catch(error => {
               this.setState({ errorMessage: error.message });
@@ -88,6 +89,9 @@ export default class buyCourse extends Component {
                   ))}
                   </tbody>
                   </table>
+                  <Link  to="/Admincoursepage" type="button" class="btn btn-success"><i class="fas fa-arrow-circle-left"></i>&nbsp;Back</Link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
                   </div>
                   </div>
         )
