@@ -117,7 +117,7 @@ import StdPdf from './components/StdPdf';
 
         <Route path="/" exact component={AdminHome}></Route>
         <Route path="/Adminsubhome" component={SubHome}></Route>
-        <Route path="/add" component={CreateSub}></Route>
+        <Route path="/addsub" component={CreateSub}></Route>
         <Route path="/edit/:id" component={EditSub}></Route>
         <Route path="/subject/:id" component={SubDetails}></Route>
         <Route path="/downloadsub/:id" component={SubPdf}></Route>
