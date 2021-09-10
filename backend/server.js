@@ -18,6 +18,8 @@ const attendanceRoutes = require('./routes/attendances');
 const studentattendancesRoute = require('./routes/studentattendances');
 const leaverequests = require('./routes/leaverequest');
 const ttrequest = require('./routes/timetablerequest');
+const approvedleaves = require('./routes/ApprovedLeavesR');
+ 
 
 //diniru
 const subjectRoutes = require('./routes/subjects');
@@ -63,6 +65,7 @@ app.use(attendanceRoutes);
 app.use(studentattendancesRoute);
 app.use(leaverequests);
 app.use(ttrequest);
+app.use(approvedleaves);
 
 //diniru
 app.use(subjectRoutes);

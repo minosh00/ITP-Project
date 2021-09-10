@@ -29,6 +29,7 @@ import AdminStaffLecAttendance from './components/AdminStaffLecAttendance';
 import DimaNavbarAttend from './components/DImaNavBarAttend';
 import AdminSTDattendance from './components/AdminSTDattendance';
 import AdminApproveLrequests from './components/AdminApproveLrequests';
+import AdminApproveLR from './components/AdminApproveLR';
 
 import AdminHome from './components/AdminHome';
 import CreateSub from './components/CreateSub';
@@ -139,7 +140,8 @@ import feesPayList from './components/feesPayList';
         <Route path="/AdminSTDattendance" component={AdminSTDattendance}></Route>
         <Route path="/AdminApproveLrequests" component={DimaNavbarAttend}></Route>
         <Route path="/AdminApproveLrequests" component={AdminApproveLrequests}></Route>
-        
+        <Route path="/AdminApproveLR/:id" component={AdminApproveLR}></Route>
+
         <Route path="/" exact component={AdminHome}></Route>
         <Route path="/Adminsubhome" component={SubHome}></Route>
         <Route path="/addsub" component={CreateSub}></Route>
