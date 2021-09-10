@@ -60,18 +60,18 @@ export default class EnrollmentHome extends Component {
     render() {
         return (
             <div>
-                <div style={{marginBottom: '45px'}}>
+                <div style={{marginBottom: '45px', marginLeft:'50px'}}>
                     <h1>Enrollment List</h1>
-                    <h5></h5>
+                    <h5>All the Enrollments Will be Displayed Here</h5>
                 </div >
 
                 <table>
                     <tr>
                     <td>
-                        <input className="form-control" style={{width:'400px'}} type="search" placeholder="Search for Enrollments" name="searchQuery" onChange={this.handleSearchArea}></input>
+                        <input className="form-control" style={{width:'400px', marginLeft:'50px'}} type="search" placeholder="Search for Enrollments" name="searchQuery" onChange={this.handleSearchArea}></input>
                     </td>
                     <td>
-                        <button className="btn btn-primary" style={{marginLeft:'1015px'}}><a href="/addEnrollment" style={{textDecoration:'none', color:'white'}}>Add New Enrollment</a></button>
+                        <button className="btn btn-primary" style={{marginLeft:'1100px'}}><a href="/addEnrollment" style={{textDecoration:'none', color:'white'}}>Add New Enrollment</a></button>
                         &nbsp;
                         <ReactHTMLTableToExcel
                             className = 'btn btn-outline-success'
@@ -84,7 +84,7 @@ export default class EnrollmentHome extends Component {
                     </tr>
                 </table>
 
-                <table id="enrollment-table" className="table" style={{marginTop: '45px', width:'95%'}}>
+                <table id="enrollment-table" className="table table-striped" style={{marginTop: '45px'}}>
                 <thead>
                 <tr>
                     
