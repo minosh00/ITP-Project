@@ -29,6 +29,7 @@ import AdminStaffLecAttendance from './components/AdminStaffLecAttendance';
 import DimaNavbarAttend from './components/DImaNavBarAttend';
 import AdminSTDattendance from './components/AdminSTDattendance';
 import AdminApproveLrequests from './components/AdminApproveLrequests';
+import AdminApproveLR from './components/AdminApproveLR';
 
 import AdminHome from './components/AdminHome';
 import CreateSub from './components/CreateSub';
@@ -50,6 +51,7 @@ import DownloadPdf from './components/DownloadPdf'
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import './App.css';
+import EditCourseFollowpdf from './components/EditCourseFollowpdf';
 import Courses from './components/Courses';
 import AddCourse from './components/AddCourse';
 import Course from './components/Course';
@@ -139,7 +141,8 @@ import feesPayList from './components/feesPayList';
         <Route path="/AdminSTDattendance" component={AdminSTDattendance}></Route>
         <Route path="/AdminApproveLrequests" component={DimaNavbarAttend}></Route>
         <Route path="/AdminApproveLrequests" component={AdminApproveLrequests}></Route>
-        
+        <Route path="/AdminApproveLR/:id" component={AdminApproveLR}></Route>
+
         <Route path="/" exact component={AdminHome}></Route>
         <Route path="/Adminsubhome" component={SubHome}></Route>
         <Route path="/addsub" component={CreateSub}></Route>
@@ -169,6 +172,7 @@ import feesPayList from './components/feesPayList';
         <Route  path="/Admincoursepage"  render={()=> <DisplayAll posts={posts} />} />
         <Route  path="/followed"  component={buyCourse} />
         <Route path="/course/:id"    render={(props)=>  <adminCourseDisplay {...props} posts={posts} />} />
+        <Route  path="/buyCoursepdf/:id"  component={EditCourseFollowpdf} />
 
 
         <Route path="/AdminStudnethome"  component={Malkimainhome}></Route>
