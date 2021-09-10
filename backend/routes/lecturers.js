@@ -2,7 +2,7 @@ const express = require('express');
 const { findByIdAndUpdate } = require('../models/lecturers');
 const Lecturers = require('../models/lecturers');
 const pdf = require('html-pdf');
-const pdfTemplate = require('../documents');
+const pdfTemplate2 = require('../documents/lecDocuments');
 
 const router = express.Router();
 
@@ -99,8 +99,8 @@ router.delete('/lecturer/delete/:id', (req, res)=>{
 });
 
 //create PDF
-router.post('/create-pdf', (req, res) => {
-    pdf.create(pdfTemplate(req.body), {}).toFile('lecturer.pdf', (err) => {
+router.post('/createpdflec', (req, res) => {
+    pdf.create(pdfTemplate2(req.body), {}).toFile('pdflec.pdf', (err) => {
         if(err) {
             res.send(Promise.reject());
         }
@@ -110,8 +110,8 @@ router.post('/create-pdf', (req, res) => {
 });
 
 //get PDF
-router.get('/fetch-pdf', (req, res) => {
-    res.sendFile('lecturer.pdf', { root: 'C:/Users/dinir/Desktop/Projects/ITP Project/ITP Project' })
+router.get('/fetchpdflec', (req, res) => {
+    res.sendFile('pdflec.pdf', { root: 'C:/Users/dinir/Desktop/Projects/ITP Project/ITP Project' })
 })
 
 

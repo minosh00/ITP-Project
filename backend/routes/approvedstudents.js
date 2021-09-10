@@ -1,7 +1,7 @@
 const express = require('express');
 const acceptedStd = require('../models/approvedStudents');
 const pdf = require('html-pdf');
-const pdfTemplate = require('../documents');
+const pdfTemplate = require('../documents/lecDocuments');
 
 const router = express.Router();
 
