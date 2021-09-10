@@ -1,7 +1,7 @@
 const express = require('express');
 const acceptedStd = require('../models/approvedStudents');
 const pdf = require('html-pdf');
-const pdfTemplate = require('../documents/lecDocuments');
+const pdfTemplate3 = require('../documents/stdDocuments');
 
 const router = express.Router();
 
@@ -95,8 +95,8 @@ router.delete('/approved/delete/:id', (req, res)=>{
 
 //create PDF
 
-router.post('/create-pdf', (req, res) => {
-    pdf.create(pdfTemplate(req.body), {}).toFile('result.pdf', (err) => {
+router.post('/createpdfstd', (req, res) => {
+    pdf.create(pdfTemplate3(req.body), {}).toFile('pdfstd.pdf', (err) => {
         if(err) {
             res.send(Promise.reject());
         }
@@ -107,8 +107,8 @@ router.post('/create-pdf', (req, res) => {
 
 //get PDF
 
-router.get('/fetch-pdf', (req, res) => {
-    res.sendFile('result.pdf', { root: 'C:/Users/malshika/Desktop/studentMain' })
+router.get('/fetchpdfstd', (req, res) => {
+    res.sendFile('pdfstd.pdf', { root: `${__dirname}/../..` })
 })
 
 module.exports = router;
