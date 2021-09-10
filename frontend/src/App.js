@@ -50,6 +50,7 @@ import DownloadPdf from './components/DownloadPdf'
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import './App.css';
+import EditCourseFollowpdf from './components/EditCourseFollowpdf';
 import Courses from './components/Courses';
 import AddCourse from './components/AddCourse';
 import Course from './components/Course';
@@ -169,6 +170,7 @@ import feesPayList from './components/feesPayList';
         <Route  path="/Admincoursepage"  render={()=> <DisplayAll posts={posts} />} />
         <Route  path="/followed"  component={buyCourse} />
         <Route path="/course/:id"    render={(props)=>  <adminCourseDisplay {...props} posts={posts} />} />
+        <Route  path="/buyCoursepdf/:id"  component={EditCourseFollowpdf} />
 
 
         <Route path="/AdminStudnethome"  component={Malkimainhome}></Route>
