@@ -18,4 +18,21 @@ router.post('/approveleaves/save',(req,res)=>{
     });
 });
 
+//Approved leave requets
+
+router.get('/approvedleaverequests', (req, res) => {
+    approvedleaves.find().exec((err, approvedrequest)=>{
+        if(err){
+            return res.status(400).json({
+                error:err
+            });
+        }
+        return res.status(200).json({
+            success:true,
+            existingapprovedleaves:approvedrequest
+        });
+    });
+});
+
+
 module.exports = router;
