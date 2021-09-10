@@ -23,6 +23,12 @@ import Adminalltimetables from './components/Adminalltimetables';
 import Adminaddttable from './components/Adminaddttable';
 import Admineditttables from './components/Admineditttables';
 import Displaytimetables from './components/Displaytimetables';
+import DimaNavbarTT from './components/DimaNavbarTT';
+import DimaNavbarSE from './components/DimaNavBarSE';
+import AdminStaffLecAttendance from './components/AdminStaffLecAttendance';
+import DimaNavbarAttend from './components/DImaNavBarAttend';
+import AdminSTDattendance from './components/AdminSTDattendance';
+import AdminApproveLrequests from './components/AdminApproveLrequests';
 
 import AdminHome from './components/AdminHome';
 import CreateSub from './components/CreateSub';
@@ -110,8 +116,10 @@ import feesPayList from './components/feesPayList';
         <Route path="/viewapplication/:id"  component={adminViewApplication}></Route> 
         <Route path="/apply"  component={Apply}></Route>   
 
+        <Route path="/Admintimetable" component={DimaNavbarTT}></Route>
         <Route path="/middle" component={middle}></Route>
         <Route path="/special" component={Specialevents}></Route>
+        <Route path="/adminspecialevent" component={DimaNavbarSE}></Route>
         <Route path="/adminspecialevent" component={Adminspecialevent}></Route>
         <Route path="/about" component={Aboutus}></Route>
         <Route path="/admin"  component={Loginpage}></Route>
@@ -123,7 +131,15 @@ import feesPayList from './components/feesPayList';
         <Route path="/admineditttables/:id" component={Adminttrequest}></Route>
         <Route path="/admineditttables/:id" component={Admineditttables}></Route>
         <Route path="/displaytimetables" component={Displaytimetables}></Route>
-
+        <Route path="/AdminAttendance" component={DimaNavbarAttend}></Route>
+        <Route path="/AdminAttendance" component={AdminStaffLecAttendance}></Route>
+        <Route path="/AdminStaffLecAttendance" component={DimaNavbarAttend}></Route>
+        <Route path="/AdminStaffLecAttendance" component={AdminStaffLecAttendance}></Route>
+        <Route path="/AdminSTDattendance" component={DimaNavbarAttend}></Route>
+        <Route path="/AdminSTDattendance" component={AdminSTDattendance}></Route>
+        <Route path="/AdminApproveLrequests" component={DimaNavbarAttend}></Route>
+        <Route path="/AdminApproveLrequests" component={AdminApproveLrequests}></Route>
+        
         <Route path="/" exact component={AdminHome}></Route>
         <Route path="/Adminsubhome" component={SubHome}></Route>
         <Route path="/addsub" component={CreateSub}></Route>

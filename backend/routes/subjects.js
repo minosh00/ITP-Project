@@ -2,7 +2,7 @@ const express = require('express');
 const { findByIdAndUpdate } = require('../models/subjects');
 const Subjects = require('../models/subjects');
 const pdf = require('html-pdf');
-const pdfTemplate = require('../subDocuments');
+const pdfTemplate1 = require('../documents/subDocuments');
 
 const router = express.Router();
 
@@ -100,7 +100,7 @@ router.get("/subject/:id", (req, res)=>{
 //create the PDF
 
 router.post('/create-pdf', (req, res) => {
-    pdf.create(pdfTemplate(req.body), {}).toFile('subject.pdf', (err) => {
+    pdf.create(pdfTemplate1(req.body), {}).toFile('pdfsub.pdf', (err) => {
         if(err) {
             res.send(Promise.reject());
         }
@@ -112,7 +112,7 @@ router.post('/create-pdf', (req, res) => {
 //get the PDF
 
 router.get('/fetch-pdf', (req, res) => {
-    res.sendFile('subject.pdf', { root: 'C:/Users/dinir/Desktop/Projects/ITP Project/ITP Project' });
+    res.sendFile('pdfsub.pdf', { root:  `${__dirname}/../..` });
 })
 
 

@@ -39,12 +39,12 @@ export default class StdPdf extends Component {
     handleChange = ({ target: { value, name }}) => this.setState({ [name]: value })
 
     createAndDownloadPdf = () => {
-      axios.post('/create-pdf', this.state)
-        .then(() => axios.get('/fetch-pdf', { responseType: 'blob' }))
+      axios.post('/createpdfstd', this.state)
+        .then(() => axios.get('/fetchpdfstd', { responseType: 'blob' }))
         .then((res) => {
           const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
   
-          saveAs(pdfBlob, 'newPdf.pdf');
+          saveAs(pdfBlob, 'student.pdf');
         })
     }
 

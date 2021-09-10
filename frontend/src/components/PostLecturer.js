@@ -42,8 +42,8 @@ export default class PostLecturer extends Component {
         });
     }
     createAndDownloadPdf = () => {
-        axios.post('/create-pdf', this.state)
-          .then(() => axios.get('/fetch-pdf', { responseType: 'blob' }))
+        axios.post('/createpdflec', this.state)
+          .then(() => axios.get('/fetchpdflec', { responseType: 'blob' }))
           .then((res) => {
             const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
     
