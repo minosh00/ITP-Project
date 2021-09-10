@@ -41,7 +41,6 @@ import timetableUpdate from './components/timetableUpdate';
 import leaveReq from './components/leaveReq';
 import DownloadPdf from './components/DownloadPdf'
 
-
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import './App.css';
@@ -67,6 +66,16 @@ import Registration from './components/Registration';
 import profile from './components/profile';
 import StdEdit from './components/StdEdit';
 import StdPdf from './components/StdPdf';
+
+import NavBar from './components/NavBar';
+import CreateItem from './components/CreateItem';
+import EditItem from './components/EditItem';
+import HomePayment from './components/HomePayment';
+import BuyCourseDula from './components/BuyCourseDula';
+import CourseReceipt from './components/CourseReceipt';
+import GetCourseReceipt from './components/GetCourseReceipt';
+import FeesPay from './components/FeesPay';
+import feesPayList from './components/feesPayList';
 
 
 
@@ -118,7 +127,9 @@ import StdPdf from './components/StdPdf';
         <Route path="/" exact component={AdminHome}></Route>
         <Route path="/Adminsubhome" component={SubHome}></Route>
         <Route path="/addsub" component={CreateSub}></Route>
-        <Route path="/edit/:id" component={EditSub}></Route>
+
+        <Route path="/editsub/:id" component={EditSub}></Route>
+
         <Route path="/subject/:id" component={SubDetails}></Route>
         <Route path="/downloadsub/:id" component={SubPdf}></Route>
         <Route path="/enrollhome" component={EnrollmentHome}></Route>
@@ -155,6 +166,16 @@ import StdPdf from './components/StdPdf';
         <Route path="/profile/:id" component={profile}></Route>
         <Route path="/stdEdit/:id" component={StdEdit}></Route>
         <Route path="/stdPdf/:id" component={StdPdf}></Route>
+
+        <Route path ="/paymenthome" component = {NavBar}></Route>
+        <Route path ="/paymenthome" component = {HomePayment}></Route>
+        <Route path = "/additem" component ={CreateItem}></Route> 
+        <Route path = "/edititem/:id" component ={EditItem}></Route> 
+        <Route path = "/buycourse" component = {BuyCourseDula}></Route>
+        <Route path = "/cReceipt" component = {CourseReceipt}></Route>
+        <Route path = "/getCourseR/:id" component = {GetCourseReceipt}></Route>
+        <Route path = "/feespay" component = {FeesPay}></Route>
+        <Route path = "/paidlist" component = {feesPayList}></Route>
 
         <Route path="" component={Adminhomefooter}></Route>
 

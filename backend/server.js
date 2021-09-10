@@ -38,6 +38,11 @@ const  courseRouter =require('./routes/courses');
 const postRoutes = require('./routes/posts')
 const approvedStudents = require('./routes/approvedstudents')
 
+//madhu
+const additional_payRoutes = require('./routes/additional_pay');
+const buyCourseDula = require('./routes/buyCourseDula');
+const feesPay = require('./routes/feesPay');
+
 //app middleware
 app.use(bodyParser.json());
 app.use(cors());
@@ -77,6 +82,11 @@ app.use(buyCourse);
 //malshika
 app.use(postRoutes);
 app.use(approvedStudents);
+
+//madhu
+app.use(additional_payRoutes);
+app.use (buyCourseDula);
+app.use (feesPay);
 
 
 const PORT = 8030;

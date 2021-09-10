@@ -116,7 +116,7 @@ onDelete=(id)=>{
                   <td>{subjects.subjectFee}</td>
                   <td>{subjects.subjectDes}</td>
                   <td>
-                    <a className="btn btn-warning" href={`/edit/${subjects._id}`}>
+                    <a className="btn btn-warning" href={`/editsub/${subjects._id}`}>
                       <i className="fas fa-edit"></i>&nbsp;Edit
                     </a>
                     &nbsp;&nbsp;
