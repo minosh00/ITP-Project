@@ -166,12 +166,11 @@ export default class AdminApproveLR extends Component {
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>Pay or No Pay</label>
-                    <input type="text"
-                    className="form-control"
-                    name="PayORnoPay"
-                    placeholder="enter PayORnoPay"
-                    value={this.state.PayORnoPay}
-                    onChange={this.handleInputChange}/>
+                    <select className="form-select" name="PayORnoPay" value={this.state.PayORnoPay} onChange={this.handleInputChange} >
+                      <option selected disabled value="">Choose...</option>
+                      <option>No Pay</option>
+                      <option>Pay</option>
+                    </select>
                 </div>
 
                 <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} onClick={this.onSubmit}>
