@@ -47,7 +47,7 @@ export default class PostLecturer extends Component {
           .then((res) => {
             const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
     
-            saveAs(pdfBlob, 'newPdf.pdf');
+            saveAs(pdfBlob, 'lecturer.pdf');
           })
       }
     
