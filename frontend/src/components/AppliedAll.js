@@ -36,7 +36,7 @@ onDelete=(id)=>{
 
     render() {
         return (
-            <div className="container">
+            <div>
                <h1 className="h1">Applications For Recruitments</h1>
                <p class="lead"> Contains All Applications for Staff</p>
                <hr/>
@@ -60,6 +60,8 @@ onDelete=(id)=>{
               <th scope="col">National ID number</th>
               <th scope="col">Gender</th>
               <th scope="col">Expected Salary</th>
+              <th scope="col">Date Of Birth</th>
+              <th scope="col">Address</th>
               <th scope="col"> </th>
             </tr>
           </thead>
@@ -74,7 +76,8 @@ onDelete=(id)=>{
               <td>{applications.NationalIDNumber}</td>
               <td>{applications.Gender}</td>
               <td>{applications.ExpectedSalary}</td>
-
+              <td>{applications.DateOfBirth}</td>
+              <td>{applications.Address}</td>
 
 
 
