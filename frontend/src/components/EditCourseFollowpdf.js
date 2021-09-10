@@ -44,8 +44,8 @@ export default class EditCourseFollowpdf extends Component {
     }
 
     createAndDownloadPdf = () => {
-      axios.post('/createpdfcourse', this.state)
-        .then(() => axios.get('/fetchpdfcourse', { responseType: 'blob' }))
+      axios.post('/create-pdfcourse', this.state)
+        .then(() => axios.get('/fetch-pdfcourse', { responseType: 'blob' }))
         .then((res) => {
           const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
   

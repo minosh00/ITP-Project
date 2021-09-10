@@ -61,7 +61,7 @@ router.delete('/buycourse/delete/:id' , (req, res )=>{
 
 //create PDF
 
-router.post('/createpdfcourse', (req, res) => {
+router.post('/create-pdfcourse', (req, res) => {
     pdf.create(pdfTemplate4(req.body), {}).toFile('pdfcourse.pdf', (err) => {
         if(err) {
             res.send(Promise.reject());
@@ -73,7 +73,7 @@ router.post('/createpdfcourse', (req, res) => {
 
 //get PDF
 
-router.get('/fetchpdfcourse', (req, res) => {
+router.get('/fetch-pdfcourse', (req, res) => {
     res.sendFile('pdfcourse.pdf', { root:  `${__dirname}/../..` });
 })
 
