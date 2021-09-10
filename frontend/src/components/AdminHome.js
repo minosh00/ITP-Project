@@ -40,7 +40,7 @@ export default class AdminHome extends Component {
 
                             <td>
                                 <a href=''><img src={timetable} style={{width:200 , marginTop:'40px', marginLeft:'40px', marginRight:'40px'}}></img></a><br/>
-                                <center><a className="btn btn-outline-success" style={{marginTop:'20px'}} href=''>&nbsp;TimeTable Management&nbsp;</a></center>
+                                <center><a className="btn btn-outline-success" style={{marginTop:'20px'}} href='/Admintimetable'>&nbsp;TimeTable Management&nbsp;</a></center>
                             </td>
 
                             <td>
