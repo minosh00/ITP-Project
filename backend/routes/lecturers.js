@@ -111,7 +111,7 @@ router.post('/createpdflec', (req, res) => {
 
 //get PDF
 router.get('/fetchpdflec', (req, res) => {
-    res.sendFile('pdflec.pdf', { root: 'C:/Users/dinir/Desktop/Projects/ITP Project/ITP Project' })
+    res.sendFile('pdflec.pdf', { root: `${__dirname}/../..` })
 })
 
 
