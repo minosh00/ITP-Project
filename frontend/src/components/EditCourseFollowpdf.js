@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import { saveAs } from 'file-saver';
 
 export default class EditCourseFollowpdf extends Component {
 
@@ -10,8 +11,7 @@ export default class EditCourseFollowpdf extends Component {
             fullName:"",
             email:"",
             courseName:"",
-            nic:"",
-         
+            nic:""
         }
     }
     
@@ -24,43 +24,33 @@ export default class EditCourseFollowpdf extends Component {
         })
     }
 
-    onSubmit=(e)=>{
-        e.preventDefault();
-
-        const id = this.props.match.params.id;
-        const {fullName,email,courseName,nic} = this.state;
-
-        const data={
-            fullName:fullName,
-            email:email,
-            courseName:courseName,
-            nic:nic
-       
-        }
-
-        console.log(data)
-
-     
-      
-    }
-
     componentDidMount(){
 
         const id = this.props.match.params.id;
 
-        axios.get(`http://localhost:8000/retrivecourse/${id}`).then((res)=>{
+        axios.get(`/buycourse/${id}`).then((res)=>{
             if(res.data.success){
                 this.setState({
-                    fullName:res.data.buyCourse.fullName,
-                    email:res.data.buyCourse.email,
-                    courseName:res.data.buyCourse.courseName,
-                    nic:res.data.buyCourse.nic,
+                    fullName:res.data.buycourse.fullName,
+                    email:res.data.buycourse.email,
+                    courseName:res.data.buycourse.courseName,
+                    nic:res.data.buycourse.nic,
                    
                 });
 
-                console.log(this.state.buyCourse);
+                console.log(this.state.buycourse);
             }
         });
+    }
+
+    createAndDownloadPdf = () => {
+      axios.post('/createpdfcourse', this.state)
+        .then(() => axios.get('/fetchpdfcourse', { responseType: 'blob' }))
+        .then((res) => {
+          const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
+  
+          saveAs(pdfBlob, 'course.pdf');
+        })
     }
 
     render() {
@@ -77,36 +67,27 @@ export default class EditCourseFollowpdf extends Component {
                 <form className="row g-3">
   <div className="col-md-6">
     <label for="inputEmail4" className="form-label">Subject ID</label>
-    <input className="form-control" name="fullName"  value={this.state.fullName} onChange={this.handleInputChange}/>
+    <input className="form-control" name="fullName"  value={this.state.fullName} onChange={this.handleInputChange} readOnly/>
   </div>
   <div className="col-md-6">
     <label for="inputPassword4" className="form-label">Subject Name</label>
-    <input className="form-control" name="email" value={this.state.email} onChange={this.handleInputChange}/>
+    <input className="form-control" name="email" value={this.state.email} onChange={this.handleInputChange} readOnly/>
   </div>
   <div className="col-md-4">
     <label for="inputAddress2" className="form-label">Subject Fee</label>
-    <input className="form-control" name="courseName" value={this.state.courseName} onChange={this.handleInputChange}/>
+    <input className="form-control" name="courseName" value={this.state.courseName} onChange={this.handleInputChange} readOnly/>
   </div>
    <div className="col-md-8">
     <label for="inputCity" className="form-label">Description</label>
-    <input className="form-control" style={{width:'600px'}} name="nic" value={this.state.nic} onChange={this.handleInputChange}/>
+    <input className="form-control" style={{width:'600px'}} name="nic" value={this.state.nic} onChange={this.handleInputChange} readOnly/>
   </div>
  
- 
-
-  <div className="col-12">
-    <div className="form-check">
-      <input className="form-check-input" type="checkbox" id="gridCheck"/>
-      <label className="form-check-label" for="gridCheck">
-        Confirm Details
-      </label> 
-    </div>
-  </div>
   <div>
-    <hr/>
-    <button type="submit" className="btn btn-success" onClick={this.onSubmit}>Confirm Edits</button>
   </div>
 </form>
+<hr/>
+    <button className="btn btn-success" onClick={this.createAndDownloadPdf}>Download</button>
+
 </div>
 </div>
         )
