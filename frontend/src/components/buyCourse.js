@@ -80,9 +80,15 @@ export default class buyCourse extends Component {
                              <td>{buyCourse.courseName}</td>
                              <td>{buyCourse.nic}</td>
                              
-                             <td> <a className="btn btn-danger" href="#" onClick={() => this.onDelete(buyCourse._id)}>
-                          <i className="far fa-trash-alt"></i>&nbsp;Remove 
-                        </a></td>
+                             <td>
+                               <a className="btn btn-danger" href="#" onClick={() => this.onDelete(buyCourse._id)}>
+                                  <i className="far fa-trash-alt"></i>&nbsp;Remove 
+                                </a>
+
+                                <a className="btn btn-danger" href={`/buyCoursepdf/${buyCourse._id}`}>
+                                  <i className="far fa-file-pdf"></i>&nbsp;Download PDF
+                                </a>
+                              </td>
                       
                         
                      </tr>  

@@ -1,5 +1,7 @@
 const express = require('express');
 const buyCourseRoutes = require('../models/buyCourse');
+const pdf = require('html-pdf');
+const pdfTemplate4 = require('../documents/courseDocs');
 
 const router = express.Router();
 
@@ -55,17 +57,25 @@ router.delete('/buycourse/delete/:id' , (req, res )=>{
     });
 
 });
-
-
-
-
 });
 
+//create PDF
 
+router.post('/create-pdfcourse', (req, res) => {
+    pdf.create(pdfTemplate4(req.body), {}).toFile('pdfcourse.pdf', (err) => {
+        if(err) {
+            res.send(Promise.reject());
+        }
 
+        res.send(Promise.resolve());
+    });
+});
 
+//get PDF
 
-
+router.get('/fetch-pdfcourse', (req, res) => {
+    res.sendFile('pdfcourse.pdf', { root:  `${__dirname}/../..` });
+})
 
 
 

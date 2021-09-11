@@ -20,7 +20,7 @@ router.post('/req/save',(req,res)=>{
 
 //read leave request details
 
-router.get('/req', (req, res) => {
+router.get('/leaverequests', (req, res) => {
     requests.find().exec((err, request)=>{
         if(err){
             return res.status(400).json({
@@ -29,8 +29,47 @@ router.get('/req', (req, res) => {
         }
         return res.status(200).json({
             success:true,
-            existingRequests:request
+            existingleaveRequests:request
         });
     });
 });
+
+//delete leave requests
+
+router.delete('/leaverequests/delete/:id',(req,res)=>{
+
+    requests.findByIdAndDelete(req.params.id).exec((err,deletedrequests)=>{
+          
+        if(err) return res.status(400).json({
+            message:"Delete Unsuccessfull",err
+        });
+
+        return res.json({
+            message:" Deleted Successfull!",deletedrequests
+        });
+    });
+
+});
+
+//search by id
+
+router.get('/leaverequests/search/:id',(req,res) =>{
+
+    let requestsID = req.params.id;
+ 
+    requests.findById(requestsID,(err,lrequets)=>{
+        if(err){
+            return res.status(400).json({
+                success:false,err
+            });
+        }
+        return res.status(200).json({
+            success:true,
+            lrequets
+        });
+    });
+ 
+ });
+
+
 module.exports = router;

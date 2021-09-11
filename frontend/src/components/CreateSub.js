@@ -68,14 +68,15 @@ export default class CreateSub extends Component {
 
         return (
 
-            <div className='container'>
-                <div>
+            <div>
+                <div style={{marginBottom: '45px', marginLeft:'50px'}}>
                     <h1>Add New Subject</h1>
                     <h5>Create a New Subject and Add to the System</h5>
-                    <hr/>
                 </div>
 
-                <div style={{marginTop: '45px'}}>
+                <hr/>
+
+                <div className='container' style={{marginTop: '45px'}}>
 
                 <form className="row g-3 needs-validation" novalidate>
 

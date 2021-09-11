@@ -80,13 +80,15 @@ export default class EditSub extends Component {
 
     render() {
         return (
-            <div className="container">
-                <div>
+            <div>
+                <div style={{marginBottom: '45px', marginLeft:'50px'}}>
                     <h1>Edit Subject Details</h1>
                     <h5>Edit Subject Details Here</h5>
-                    <hr/>
                 </div>
-                <div style={{marginTop: '45px'}}>
+
+                <hr/>
+
+                <div className='container' style={{marginTop: '45px'}}>
                 <form className="row g-3">
   <div className="col-md-6">
     <label for="inputEmail4" className="form-label">Subject ID</label>

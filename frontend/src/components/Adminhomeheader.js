@@ -7,7 +7,7 @@ export default class Adminhomeheader extends Component {
   
     render() {
         return (
-      <div style={{marginBottom:'20px'}} >
+      <div style={{marginBottom:'45px'}} >
         <nav className="navbar navbar-light bg-light">
           <div>
              <img src={logo} alt="logo"style={{width:600 , marginTop:'20px', marginLeft:'20px'}}/>
@@ -43,7 +43,7 @@ export default class Adminhomeheader extends Component {
           <a className="nav-link active" aria-current="page" href="/paymenthome" style={{fontSize:'25px'}}>Payment </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/" style={{fontSize:'25px'}}>Attendence </a>
+          <a className="nav-link active" aria-current="page" href="/AdminAttendance" style={{fontSize:'25px'}}>Attendence </a>
         </li>
       </ul>
       <form className="d-flex">
