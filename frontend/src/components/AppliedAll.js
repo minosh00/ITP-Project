@@ -36,7 +36,7 @@ onDelete=(id)=>{
 
     render() {
         return (
-            <div>
+            <div style={{marginLeft:100}}>
                <h1 className="h1">Applications For Recruitments</h1>
                <p class="lead"> Contains All Applications for Staff</p>
                <hr/>

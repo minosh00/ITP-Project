@@ -109,7 +109,7 @@ export default class updateAdmin extends Component {
     render() {
         return (
 
-             <div className="col-md-8 mt-4 mx-auto">
+             <div style={{marginLeft:100}}>
 
 <a className="btn btn-success" href="/staffhome" style={{textDecoration:'none', color:'white'}}>
                  <i className="fas fa-home"></i>&nbsp;Home
