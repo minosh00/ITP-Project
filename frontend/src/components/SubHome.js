@@ -17,6 +17,7 @@ componentDidMount(){
   this.retrieveSubjects();
 }
 
+
 retrieveSubjects(){
   axios.get("/subject").then(res=>{
     if(res.data.success){
@@ -64,9 +65,10 @@ onDelete=(id)=>{
         <div style={{marginBottom: '45px', marginLeft:'50px'}}>
             <h1>Subject Management</h1>
             <h5>Currently Available Subjects</h5>
-            
         </div >
+
       <hr/>
+      
         <table>
             <tr>
               <td>
@@ -74,7 +76,7 @@ onDelete=(id)=>{
               </td>
               <td>
                 
-                <a className="btn btn-success" style={{marginLeft:'1065px'}} href='/addsub'>
+                <a className="btn btn-success" style={{marginLeft:'1100px'}} href='/addsub'>
                 <i className="fas fa-plus-circle"></i>&nbsp;Add New Subject
                 </a>
                 &nbsp;
@@ -87,7 +89,7 @@ onDelete=(id)=>{
             </tr>
           </table>
         
-          <table className="table table-striped" style={{marginTop: '45px', marginLeft:'25px'}}>
+          <table className="table table-striped" style={{marginTop: '45px'}}>
             <thead>
               <tr>
                 
@@ -98,7 +100,7 @@ onDelete=(id)=>{
                 <th scope="col">subject Category</th>
                 <th scope="col">subject Fee</th>
                 <th scope="col">subject Description</th>
-                <th style={{width:'380px'}} scope="col">Actions</th>
+                <th style={{width:'360px'}} scope="col">Actions</th>
               </tr>
             </thead>
             <tbody>

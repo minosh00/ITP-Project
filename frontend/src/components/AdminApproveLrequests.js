@@ -68,7 +68,7 @@ export default class AdminApproveLrequests extends Component {
                            <td>{leaverequests.email}</td>
                            <td>{leaverequests.Cnumber}</td>
                            <td>
-                                       <a  className="btn btn-warning" href={`//${leaverequests._id}`} style={{textDecoration:'none', color:'white'}}>
+                                       <a  className="btn btn-warning" href={`/AdminApproveLR/${leaverequests._id}`} style={{textDecoration:'none', color:'white'}}>
                                         <i>Approve</i>
                                        </a>
                                        &nbsp;

@@ -27,16 +27,6 @@ export default class SubDetails extends Component {
         });
     }
 
-    createAndDownloadPdf = () => {
-        axios.post('/create-pdf', this.state)
-          .then(() => axios.get('/fetch-pdf', { responseType: 'blob' }))
-          .then((res) => {
-            const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
-    
-            saveAs(pdfBlob, 'newPdf.pdf');
-          })
-      }
-
     render() {
 
         const {subjectId, subjectName, subjectType, subjectCategory, subjectFee, subjectDes} = this.state.subject;
@@ -66,10 +56,6 @@ export default class SubDetails extends Component {
                     <dt className="col-sm-3" style={{marginTop:'20px'}}>subjectDes</dt>
                     <dd className="col-sm-9" style={{marginTop:'20px'}}>{subjectDes}</dd>
                 </dl>
-
-                <div>                
-                <button style={{marginLeft:'20px'}} className="btn btn-danger" onClick={this.createAndDownloadPdf}><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download PDF</button>
-                </div>
             </div>
         )
     }

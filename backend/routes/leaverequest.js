@@ -51,4 +51,25 @@ router.delete('/leaverequests/delete/:id',(req,res)=>{
 
 });
 
+//search by id
+
+router.get('/leaverequests/search/:id',(req,res) =>{
+
+    let requestsID = req.params.id;
+ 
+    requests.findById(requestsID,(err,lrequets)=>{
+        if(err){
+            return res.status(400).json({
+                success:false,err
+            });
+        }
+        return res.status(200).json({
+            success:true,
+            lrequets
+        });
+    });
+ 
+ });
+
+
 module.exports = router;

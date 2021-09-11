@@ -18,6 +18,8 @@ const attendanceRoutes = require('./routes/attendances');
 const studentattendancesRoute = require('./routes/studentattendances');
 const leaverequests = require('./routes/leaverequest');
 const ttrequest = require('./routes/timetablerequest');
+const approvedleaves = require('./routes/ApprovedLeavesR');
+ 
 
 //diniru
 const subjectRoutes = require('./routes/subjects');
@@ -63,6 +65,7 @@ app.use(attendanceRoutes);
 app.use(studentattendancesRoute);
 app.use(leaverequests);
 app.use(ttrequest);
+app.use(approvedleaves);
 
 //diniru
 app.use(subjectRoutes);
@@ -89,7 +92,7 @@ app.use (buyCourseDula);
 app.use (feesPay);
 
 
-const PORT = 8080;
+const PORT = 8070;
 const DB_URL = 'mongodb+srv://admin:admin@institutedb.nhxwx.mongodb.net/instituteDB?retryWrites=true&w=majority';
 
 mongoose.connect(DB_URL, {
