@@ -22,4 +22,42 @@ router.post('/studentattend/insert',(req,res)=>{
 }); 
 
 
+
+//retrive stdattendance
+
+router.get('/retriveSTDattendance',(req,res)=>{
+    
+    studentattendances.find().exec((err,STDattendance)=>{
+        if(err){
+            return res.status(400).json({
+                    error:err
+            });
+        }
+        return res.status(200).json({
+            success:true,
+            existingstdattendance:STDattendance
+        });
+    });
+
+});
+
+
+//delete stdattendance
+
+router.delete('/stdattendance/delete/:id',(req,res)=>{
+
+    studentattendances.findByIdAndDelete(req.params.id).exec((err,deletedSTDattendance)=>{
+          
+        if(err) return res.status(400).json({
+            message:"Delete Unsuccessfull",err
+        });
+
+        return res.json({
+            message:" Deleted Successfull!",deletedSTDattendance
+        });
+    });
+
+});
+
+
 module.exports = router;
