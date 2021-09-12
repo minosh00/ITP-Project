@@ -88,6 +88,13 @@ export default class adminViewProfile extends Component {
 
                     
                     </table>
+                    &nbsp;
+
+                <a className="btn btn-success" href={`/update/${this.props.match.params.id}`}>
+                    <i className="fas fa-edit" ></i>&nbsp;Edit Details
+                </a>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                     <ReactHTMLTableToExcel
                     className="btn btn-success"
