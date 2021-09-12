@@ -5,6 +5,11 @@ export default class Createspecialevent extends Component {
 
     constructor(props){
         super(props);
+
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+
+
         this.state={
             eventID:"",
             eventname:"",
