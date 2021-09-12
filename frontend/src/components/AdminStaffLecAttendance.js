@@ -43,9 +43,9 @@ export default class AdminStaffLecAttendance extends Component {
                 </div>
                 <br/><br/>
                 <div className="container-xxl">   
-                <button className="btn btn-primary"><a href="" style={{textDecoration:'none', color:'white'}}>Download All details</a></button>
+                <button className="btn btn-primary"><a href="" style={{textDecoration:'none', color:'white'}}>Download All Attendance details</a></button>
                 <br/><br/>
-                <button className="btn btn-success"><a href="/addnewattendance" style={{textDecoration:'none', color:'white'}}>Add new time table</a></button>
+                <button className="btn btn-success"><a href="/addnewattendance" style={{textDecoration:'none', color:'white'}}>Mark New attendance</a></button>
                 <br/><br/>
                 <table className="table table-success table-striped table-bordered">
                 <thead>
