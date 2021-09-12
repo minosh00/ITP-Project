@@ -62,7 +62,7 @@ handleSearchArea =(e)=>{
 
     render() {
         return (
-            <div>
+            <div style={{marginLeft:100}} >
 
                <h1 className="h1">Staff Details</h1>
                <p class="lead"> Contains All Registered Non-Academic Staff Details</p>
