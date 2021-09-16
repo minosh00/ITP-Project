@@ -10,6 +10,7 @@ import adminViewProfile from './components/adminViewProfile'
 import adminViewApplication from './components/adminViewApplication'
 import updateAdmin from './components/updateAdmin'
 import Apply from './components/Apply'
+import staffpdf from './components/staffpdf'
 
 import Specialevents from './components/Specialevents';
 import Loginpage from './components/Loginpage';
@@ -119,6 +120,7 @@ import feesPayList from './components/feesPayList';
         <Route path="/adminprofile/:id"  component={adminViewProfile}></Route>
         <Route path="/viewapplication/:id"  component={adminViewApplication}></Route> 
         <Route path="/apply"  component={Apply}></Route>   
+        <Route path="/pdf/:id" component={staffpdf}></Route>
 
         <Route path="/Admintimetable" component={DimaNavbarTT}></Route>
         <Route path="/middle" component={middle}></Route>

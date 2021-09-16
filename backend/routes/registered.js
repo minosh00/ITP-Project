@@ -1,6 +1,8 @@
 const express = require('express');
 const { findByIdAndUpdate } = require('../models/registered');
 const registered = require('../models/registered');
+const pdf = require('html-pdf');
+const pdfTemplate1 = require('../documents/stfDocuments');
 
 const router = express.Router();
 
@@ -93,5 +95,23 @@ router.delete('/register/delete/:id', (req, res)=>{
         });
     });
 });
+
+//create the PDF
+
+router.post('/createstfpdf', (req, res) => {
+    pdf.create(pdfTemplate1(req.body), {}).toFile('pdfstaff.pdf', (err) => {
+        if(err) {
+            res.send(Promise.reject());
+        }
+
+        res.send(Promise.resolve());
+    });
+});
+
+//get the PDF
+
+router.get('/fetchstfpdf', (req, res) => {
+    res.sendFile('pdfstaff.pdf', { root:  `${__dirname}/../..` });
+})
 
 module.exports = router;
