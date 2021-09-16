@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 
 export default class adminViewProfile extends Component {
 
@@ -39,7 +38,7 @@ export default class adminViewProfile extends Component {
     
                     <hr/>
     
-                    <table className="table" id="table-to-xls">
+                    <table className="table">
         
                         <tr>
                             <th scope="col">Registation Number</th>
@@ -96,13 +95,9 @@ export default class adminViewProfile extends Component {
 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                    <ReactHTMLTableToExcel
-                    className="btn btn-success"
-                    style={{textDecoration:'none', color:'white'}}
-                    table="table-to-xls"
-                    filename={RegistationNumber}
-                    sheet="tablexls"
-                    buttonText="Download Details"/>
+                <a className="btn btn-success" href={`/pdf/${this.props.match.params.id}`}>
+                    <i className="fas fa-file" ></i>&nbsp;Generate PDF
+                </a>
 
 
                 </div>
