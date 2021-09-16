@@ -108,7 +108,7 @@ export default class updateAdmin extends Component {
           .then((res) => {
             const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
     
-            saveAs(pdfBlob, 'staff.pdf');
+            saveAs(pdfBlob, 'Staff.pdf');
           })
       }
 
@@ -122,10 +122,7 @@ export default class updateAdmin extends Component {
 
 <a className="btn btn-success" href="/staffhome" style={{textDecoration:'none', color:'white'}}>
                  <i className="fas fa-home"></i>&nbsp;Home
-                </a>
-                <br/>
-                <br/>
-                <br/>
+                </a>-
             <h1 className="h1">Download PDF</h1>
 
            <hr/>
@@ -137,7 +134,7 @@ export default class updateAdmin extends Component {
           className="form-control" 
           name="RegistationNumber"
           value={this.state.RegistationNumber}
-          onChange= {this.handleInputChange}/>
+          onChange= {this.handleInputChange} readOnly/>
         </div>
 
         <div className="mb-3">
@@ -146,7 +143,7 @@ export default class updateAdmin extends Component {
           className="form-control" 
           name="AppointedDate"
           value={this.state.AppointedDate}
-          onChange= {this.handleInputChange}/>
+          onChange= {this.handleInputChange}readOnly/>
         </div>
 
         <div className="mb-3">
@@ -155,7 +152,7 @@ export default class updateAdmin extends Component {
           className="form-control" 
           name="FirstName"
           value={this.state.FirstName}
-          onChange={this.handleInputChange}/>
+          onChange={this.handleInputChange}readOnly/>
         </div>
 
         <div className="mb-3">
@@ -164,7 +161,7 @@ export default class updateAdmin extends Component {
           className="form-control" 
           name="LastName"
           value={this.state.LastName}
-          onChange={this.handleInputChange}/>
+          onChange={this.handleInputChange}readOnly/>
         </div>
 
         <div className="mb-3">
@@ -173,7 +170,7 @@ export default class updateAdmin extends Component {
           className="form-control" 
           name="DateOfBirth"
           value={this.state.DateOfBirth}
-          onChange={this.handleInputChange}/>
+          onChange={this.handleInputChange}readOnly/>
         </div>
 
         <div className="mb-3">
@@ -182,7 +179,7 @@ export default class updateAdmin extends Component {
           className="form-control" 
           name="position"
           value={this.state.position}
-          onChange={this.handleInputChange}/>
+          onChange={this.handleInputChange}readOnly/>
         </div>
 
         <div className="mb-3">
@@ -191,7 +188,7 @@ export default class updateAdmin extends Component {
           className="form-control" 
           name="ContactNumber"
           value={this.state.ContactNumber}
-          onChange={this.handleInputChange}/>
+          onChange={this.handleInputChange}readOnly/>
         </div>
 
         <div className="mb-3">
@@ -200,7 +197,7 @@ export default class updateAdmin extends Component {
           className="form-control" 
           name="NationalIDNumber"
           value={this.state.NationalIDNumber}
-          onChange={this.handleInputChange}/>
+          onChange={this.handleInputChange}readOnly/>
         </div>
 
         
@@ -210,7 +207,7 @@ export default class updateAdmin extends Component {
           className="form-control" 
           name="Gender"
           value={this.state.Gender}
-          onChange={this.handleInputChange}/>
+          onChange={this.handleInputChange}readOnly/>
         </div>
 
         
@@ -220,7 +217,7 @@ export default class updateAdmin extends Component {
           className="form-control" 
           name="Address"
           value={this.state.Address}
-          onChange={this.handleInputChange}/>
+          onChange={this.handleInputChange}readOnly/>
         </div>
 
         
@@ -230,7 +227,7 @@ export default class updateAdmin extends Component {
           className="form-control" 
           name="BasicSalary"
           value={this.state.BasicSalary}
-          onChange={this.handleInputChange}/>
+          onChange={this.handleInputChange}readOnly/>
         </div>
         </form>
         <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} onClick={this.createAndDownloadPdf}> 
