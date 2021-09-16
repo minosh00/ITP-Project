@@ -31,7 +31,7 @@ export default class adminViewProfile extends Component {
                 Address, BasicSalary} = this.state.profile;
             return (
                 
-                <div style={{marginTop:'20px'}}  className="container">
+                <div style={{marginLeft:100}}>
                  <a className="btn btn-success" href="/staffhome" style={{textDecoration:'none', color:'white'}}>
                  <i className="fas fa-home"></i>&nbsp;Home
                 </a>
@@ -88,6 +88,13 @@ export default class adminViewProfile extends Component {
 
                     
                     </table>
+                    &nbsp;
+
+                <a className="btn btn-success" href={`/update/${this.props.match.params.id}`}>
+                    <i className="fas fa-edit" ></i>&nbsp;Edit Details
+                </a>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                     <ReactHTMLTableToExcel
                     className="btn btn-success"

@@ -30,6 +30,8 @@ import DimaNavbarAttend from './components/DImaNavBarAttend';
 import AdminSTDattendance from './components/AdminSTDattendance';
 import AdminApproveLrequests from './components/AdminApproveLrequests';
 import AdminApproveLR from './components/AdminApproveLR';
+import Adminaddnewattendance from './components/Adminaddnewattendance';
+import MarkStudentattendance from './components/MarkStudentattendance';
 
 import AdminHome from './components/AdminHome';
 import CreateSub from './components/CreateSub';
@@ -142,13 +144,13 @@ import feesPayList from './components/feesPayList';
         <Route path="/AdminApproveLrequests" component={DimaNavbarAttend}></Route>
         <Route path="/AdminApproveLrequests" component={AdminApproveLrequests}></Route>
         <Route path="/AdminApproveLR/:id" component={AdminApproveLR}></Route>
+        <Route path="/addnewattendance" component={Adminaddnewattendance}></Route>
+        <Route path="/addnewstdattendance" component={MarkStudentattendance}></Route>
 
         <Route path="/" exact component={AdminHome}></Route>
         <Route path="/Adminsubhome" component={SubHome}></Route>
         <Route path="/addsub" component={CreateSub}></Route>
-
         <Route path="/editsub/:id" component={EditSub}></Route>
-
         <Route path="/subject/:id" component={SubDetails}></Route>
         <Route path="/downloadsub/:id" component={SubPdf}></Route>
         <Route path="/enrollhome" component={EnrollmentHome}></Route>

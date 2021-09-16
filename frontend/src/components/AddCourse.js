@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const AddCourse = () => {
 
-
+ 
     const[courseID , setCourseID] = useState("");
     const[courseName , setCourseName] = useState("");
     const[courseType , setcourseType] = useState("");

@@ -2,61 +2,73 @@ import React, { Component } from 'react'
 import axios from 'axios';
 export default class Createspecialevent extends Component {
 
-
     constructor(props){
         super(props);
+
+        this.onChangeeventID = this.onChangeeventID.bind(this);
+        this.onChangeeventname = this.onChangeeventname.bind(this);
+        this.onChangevenue = this.onChangevenue.bind(this);
+        this.onChangedate = this.onChangedate.bind(this);
+        this.onChangetime = this.onChangetime.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+        
         this.state={
-            eventID:"",
-            eventname:"",
-            venue:"",
-            date:"",
-            time:""
+            eventID:'',
+            eventname:'',
+            venue:'',
+            date:'',
+            time:''
+        
         }
     }
 
 
-    handleInputChange = (e) =>{
-        const {name,value} = e.target;
-        this.setState({
-            ...this.state,
-            [name]:value
-        })
+
+    onChangeeventID(e) {
+        this.setState({ eventID: e.target.value })
     }
 
-    onSubmit = (e) =>{
-        e.preventDefault();
-
-        const {eventID,eventname,venue,date,time} = this.state;
-
-        const data ={
-            eventID:eventID,
-            eventname:eventname,
-            venue:venue,
-            date:date,
-            time:time
-        }
-          console.log(data)
-
-          axios.post(`/events/insert`,data).then((res)=>{
-            if(res.data.success){
-                alert("New special event added succssfully!")
-                this.setState(
-                    {
-                        eventID:"",
-                        eventname:"",
-                        venue:"",
-                        date:"",
-                        time:"" 
-                    }
-                )
-            }
-        })
-
-
-
+    onChangeeventname(e) {
+        this.setState({ eventname: e.target.value })
     }
 
+    onChangevenue(e) {
+        this.setState({ venue: e.target.value })
+    }
 
+    onChangedate(e) {
+        this.setState({ date: e.target.value })
+    }
+
+    onChangetime(e) {
+        this.setState({ time: e.target.value })
+    }
+
+    onSubmit(e) {
+        e.preventDefault()
+        
+        const userObject = {
+            eventID: this.state.eventID,
+            eventname: this.state.eventname,
+            venue: this.state.venue,
+            date: this.state.date,
+            time: this.state.time
+        };
+
+        axios.post('/events/insert', userObject)
+            .then((res) => {
+                console.log(res.data)
+            }).catch((error) => {
+                console.log(error)
+            });
+        
+        alert("New special event added succssfully!")
+        this.setState({ eventID:'',
+        eventname:'',
+        venue:'',
+        date:'',
+        time:''})
+    }
 
 
 
@@ -72,7 +84,7 @@ export default class Createspecialevent extends Component {
                     name="eventID"
                     placeholder="enter Event Id"
                     value={this.state.eventID}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.onChangeeventID}/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -82,7 +94,7 @@ export default class Createspecialevent extends Component {
                     name="eventname"
                     placeholder="enter Event Name"
                     value={this.state.eventname}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.onChangeeventname}/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -92,7 +104,7 @@ export default class Createspecialevent extends Component {
                     name="venue"
                     placeholder="enter Venue"
                     value={this.state.venue}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.onChangevenue}/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -102,7 +114,7 @@ export default class Createspecialevent extends Component {
                     name="date"
                     placeholder="enter Date"
                     value={this.state.date}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.onChangedate}/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -112,7 +124,7 @@ export default class Createspecialevent extends Component {
                     name="time"
                     placeholder="enter Time"
                     value={this.state.time}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.onChangetime}/>
                 </div>
 
                 <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} onClick={this.onSubmit}>
