@@ -1,4 +1,4 @@
-module.exports = ({lecId,lecFname,lecLname,nic,dob,email,cNumber,address,username,password,summary,aQualification,Rmembership,Rdate }) => {
+module.exports = ({lecId,lecFname,lecLname,nic,dob,email,cNumber,address,summary,aQualification,Rmembership,Rdate }) => {
     const today = new Date();
 return `
     <!doctype html>
@@ -110,11 +110,11 @@ return `
 
                 </tr>
                 <tr class="item">
-                   <td width="30%">Lecturer First Name:</td>
+                   <td width="30%">First Name:</td>
                    <td>${lecFname}</td>
                 </tr>
                 <tr class="item">
-                   <td>Lecturer Last Name:</td>
+                   <td>Last Name:</td>
                    <td>${lecLname}</td>
                 </tr>
                 <tr class="item">
@@ -137,14 +137,7 @@ return `
                    <td>Address:</td>
                    <td>${address}</td>
                 </tr>
-                <tr class="item">
-                   <td>User Name:</td>
-                   <td>${username}</td>
-                </tr>
-                <tr class="item">
-                   <td>Password:</td>
-                   <td>${password}</td>
-                </tr>
+             
                 <tr class="item">
                    <td>Career Summary:</td>
                    <td>${summary}</td>

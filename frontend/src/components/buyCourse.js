@@ -36,7 +36,28 @@ export default class buyCourse extends Component {
     })
   }
   
+  filterData(buyCourse, Searchkey){
+    const result = buyCourse.filter((cus)=>
+    cus.fullName.toLowerCase().includes(Searchkey) || 
+    cus.email.toLowerCase().includes(Searchkey) ||
+    cus.courseName.toLowerCase().includes(Searchkey) ||
+    cus.nic.toLowerCase().includes(Searchkey) 
+    
   
+    )
+
+    this.setState({buyCourse:result})
+  }
+  
+  handleSearchArea = (e)=>{
+    const Searchkey = e.currentTarget.value;
+    axios.get("http://localhost:8000/retrivecourse").then(res=>{
+      if(res.data.success){
+        this.filterData(res.data.existingCourseReceipt, Searchkey)
+      }
+    })
+  }
+
 
   
   
@@ -44,12 +65,15 @@ export default class buyCourse extends Component {
       render() {
           return (
               <div>
-                 <div className="container">
+                 <div >
                  <br></br>
   <h1>Courses Follow Student List</h1>
   <div align="left">
     <p>The Course Follow student In The Institue</p>
     </div>
+    <td>
+                <input className="form-control" style={{width:'400px', marginLeft:'50px'}} type="search" placeholder="Search for student" name="searchQuery" onChange={this.handleSearchArea}></input>
+              </td>
   <div align="right">
     <p></p>
  
@@ -60,6 +84,7 @@ export default class buyCourse extends Component {
                 
               
 <table class="table">
+
                   <thead>
                   <tr class="text-info bg-dark">
                               <th scope="col">No</th>
@@ -76,6 +101,7 @@ export default class buyCourse extends Component {
                   {this.state.buyCourse.map((buyCourse,index)=>(
                          <tr>
                          <th scope="row">{index+1}</th>
+              
                              <td>{buyCourse.fullName}</td>
                              <td>{buyCourse.email}</td>
                              <td>{buyCourse.courseName}</td>
@@ -86,9 +112,11 @@ export default class buyCourse extends Component {
                                   <i className="far fa-trash-alt"></i>&nbsp;Remove 
                                 </a>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a className="btn btn-danger" href={`/buyCoursepdf/${buyCourse._id}`}>
+                                <a className="btn btn-success" href={`/buyCoursepdf/${buyCourse._id}`}>
                                   <i className="far fa-file-pdf"></i>&nbsp;Download PDF
-                                </a>
+                                </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <Link  to="/EnrollKeySend" type="button"  class="btn btn-primary"><i class="far fa-envelope"></i>&nbsp;Send Enroll Key Via Email</Link>
+     
                               </td>
                       
                         
