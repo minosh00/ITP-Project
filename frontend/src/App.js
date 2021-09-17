@@ -42,6 +42,8 @@ import SubDetails from './components/SubDetails';
 import SubPdf from './components/SubPdf';
 import EnrollmentHome from './components/EnrollmentHome';
 import AddEnrollment from './components/AddEnrollment';
+import SubStdPreview from './components/SubStdPreview';
+import SubAddClient from './components/SubAddClient';
 
 import addLecturer from './components/addLecturer';
 import EditLecturer from './components/EditLecturer';
@@ -157,6 +159,8 @@ import feesPayList from './components/feesPayList';
         <Route path="/downloadsub/:id" component={SubPdf}></Route>
         <Route path="/enrollhome" component={EnrollmentHome}></Route>
         <Route path="/addEnrollment" component={AddEnrollment}></Route>
+        <Route path="/stdview" component={SubStdPreview}></Route>
+        <Route path="/subjectclientadd/:id" component={SubAddClient}></Route>
 
         <Route path ="/lechome" component ={lecturerHome}></Route>
         <Route path= "/addLec" component={addLecturer}></Route>
