@@ -18,8 +18,8 @@ export default class LecSalary extends Component {
      }
   
     retrivedulaleaverequests(){
-      axios.get('/dulaleaverequests')
-          .then(response => this.setState({ dulaleaverequests:response.data.existingleaveDUlaRequests }))
+      axios.get('/approvedleaverequests')
+          .then(response => this.setState({ dulaleaverequests:response.data.existingapprovedleaves }))
           .catch(error => {
               this.setState({ errorMessage: error.message });
               console.error('There was an error!', error);
@@ -40,7 +40,7 @@ export default class LecSalary extends Component {
    handleSearchArea = (e) =>{
     const searchKey = e.currentTarget.value;
        
-    axios.get("/dulaleaverequests").then(res=>{
+    axios.get("/approvedleaverequests").then(res=>{
         if(res.data.success){
             this.filterData(res.data.existingleaveDUlaRequests,searchKey)
         }

@@ -45,10 +45,9 @@ const approvedStudents = require('./routes/approvedstudents')
 const additional_payRoutes = require('./routes/additional_pay');
 const buyCourseDula = require('./routes/buyCourseDula');
 const feesPay = require('./routes/feesPay');
-const dulaleaverequests = require('./routes/DulaleaveRequests');
 const CalculatedSalarys = require('./routes/CalculatedSalarys');
 const nonAcStaffSalary = require('./routes/nonAcStaffSalary');
-const Staffdetails = require('./routes/StaffdetailsR');
+
 
 //app middleware
 app.use(bodyParser.json());
@@ -96,10 +95,9 @@ app.use(approvedStudents);
 app.use(additional_payRoutes);
 app.use (buyCourseDula);
 app.use (feesPay);
-app.use(dulaleaverequests);
 app.use(CalculatedSalarys);
 app.use(nonAcStaffSalary);
-app.use(Staffdetails);
+
 
 const PORT = 8000;
 const DB_URL = 'mongodb+srv://admin:admin@institutedb.nhxwx.mongodb.net/instituteDB?retryWrites=true&w=majority';
