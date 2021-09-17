@@ -8,6 +8,7 @@ export default class CalcStaffSalary extends Component {
 
         var data1 = parseInt(document.getElementById("BasicSal").value);     
         var data3 = parseInt(document.getElementById("Bonus").value);
+        var data2 = 0;
         var total = data1 + data3;
 
         if (isNaN(total)){
