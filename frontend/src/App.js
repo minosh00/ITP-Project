@@ -88,7 +88,12 @@ import CourseReceipt from './components/CourseReceipt';
 import GetCourseReceipt from './components/GetCourseReceipt';
 import FeesPay from './components/FeesPay';
 import feesPayList from './components/feesPayList';
-
+import LecSalary from './components/LecSalary';
+import CalculateLecSalary from './components/CalculateLecSalary';
+import CalcNetSalry from './components/CalcNetSalry';
+import StaffSalary from './components/StaffSalary';
+import calculateStaffSalary from './components/calculateStaffSalary';
+import CalcStaffSalary from './components/CalcStaffSalary';
 
 
   
@@ -203,6 +208,15 @@ import feesPayList from './components/feesPayList';
         <Route path = "/getCourseR/:id" component = {GetCourseReceipt}></Route>
         <Route path = "/feespay" component = {FeesPay}></Route>
         <Route path = "/paidlist" component = {feesPayList}></Route>
+        <Route path = "/calculatesalary" component = {LecSalary}></Route>
+        <Route path="/calculatesalry/:id" component={LecSalary}></Route>
+        <Route path="/calculatesalry/:id" component={CalcNetSalry}></Route>
+        <Route path="/calculatesalry/:id" component={CalculateLecSalary}></Route>
+        <Route path="/calculateStaffsalary" component={StaffSalary}></Route>
+        <Route path="/calculatestaffsalry/:id" component={StaffSalary}></Route>
+        <Route path="/calculatestaffsalry/:id" component={CalcStaffSalary}></Route>
+        <Route path="/calculatestaffsalry/:id" component={calculateStaffSalary}></Route>
+      
 
         <Route path="" component={Adminhomefooter}></Route>
 
