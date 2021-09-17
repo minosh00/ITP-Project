@@ -19,8 +19,8 @@ export default class StaffSalary extends Component {
      }
   
     retriveStaffDetails(){
-      axios.get('/reg')
-          .then(response => this.setState({ StaffDetails:response.data.existingRegistrations }))
+      axios.get('/register/posts')
+          .then(response => this.setState({ StaffDetails:response.data.existingPosts }))
           .catch(error => {
               this.setState({ errorMessage: error.message });
               console.error('There was an error!', error);
@@ -43,7 +43,7 @@ export default class StaffSalary extends Component {
    handleSearchArea = (e) =>{
     const searchKey = e.currentTarget.value;
        
-    axios.get("/reg").then(res=>{
+    axios.get("/register/posts").then(res=>{
         if(res.data.success){
             this.filterData(res.data.existingRegistrations,searchKey)
         }
