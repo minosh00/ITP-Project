@@ -64,6 +64,7 @@ import Login from './components/Login';
 import courseInside from './components/courseInside';
 import adminCourseDisplay from './components/adminCourseDisplay';
 import buyCourse from './components/buyCourse';
+import CourseEnrollKeySendEmail from './components/CourseEnrollKeySendEmail';
 
 
 import CreatePost from './components/CreatePost';
@@ -177,6 +178,8 @@ import feesPayList from './components/feesPayList';
         <Route  path="/followed"  component={buyCourse} />
         <Route path="/course/:id"    render={(props)=>  <adminCourseDisplay {...props} posts={posts} />} />
         <Route  path="/buyCoursepdf/:id"  component={EditCourseFollowpdf} />
+        <Route  path="/EnrollKeySend"  component={CourseEnrollKeySendEmail} />
+
 
 
         <Route path="/AdminStudnethome"  component={Malkimainhome}></Route>

@@ -114,7 +114,9 @@ export default class buyCourse extends Component {
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <a className="btn btn-success" href={`/buyCoursepdf/${buyCourse._id}`}>
                                   <i className="far fa-file-pdf"></i>&nbsp;Download PDF
-                                </a>
+                                </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <Link  to="/EnrollKeySend" type="button"  class="btn btn-primary"><i class="far fa-envelope"></i>&nbsp;Send Enroll Key Via Email</Link>
+     
                               </td>
                       
                         
