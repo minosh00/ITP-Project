@@ -67,7 +67,7 @@ const AddCourse = () => {
 
   <div class="mb-3">
     <label htmlFor="courseID" class="form-label">Course ID</label>
-    <input type="text" class="form-control" placeholder="Enter Course ID"
+    <input type="" class="form-control" placeholder="Enter Course ID"
       onChange={(e )=> setCourseID(e.target.value)}
        value={courseID}
     />
@@ -76,7 +76,7 @@ const AddCourse = () => {
 
   <div class="mb-3">
     <label htmlFor="courseName" class="form-label">Course Name</label>
-    <input type="text" class="form-control" placeholder="Enter Course Name" 
+    <input type="" class="form-control" placeholder="Enter Course Name" 
         onChange={e => setCourseName(e.target.value)}
         value={courseName}/>
   </div>
@@ -84,7 +84,7 @@ const AddCourse = () => {
   <div class="form-outline">
           
           <label htmlFor="courseType" class="form-label">Course Type</label>
-              <input type="text"  class="form-control" placeholder="Course Type.." 
+              <input type=""  class="form-control" placeholder="Course Type.." 
                 onChange={e => setcourseType(e.target.value)}
                 value={courseType}
           
@@ -105,7 +105,7 @@ const AddCourse = () => {
       <div class="form-outline">
           
     <label htmlFor="requirement" class="form-label">Requirement</label>
-        <input type="text"  class="form-control" placeholder="complete or need After A/L or After O/L..." 
+        <input type=""  class="form-control" placeholder="complete or need After A/L or After O/L..." 
             onChange={e => setRequirement(e.target.value)}
             value={requirement}
             />
@@ -114,7 +114,7 @@ const AddCourse = () => {
     <div class="col">
       <div class="form-outline">
       <label htmlFor="category" class="form-label">Price</label>
-        <input type="text" class="form-control"  placeholder="price"
+        <input type="" class="form-control"  placeholder="price"
         
         onChange={e => setprice(e.target.value)}
         value={price}
@@ -133,7 +133,7 @@ const AddCourse = () => {
   <div class="form-outline">
           <br></br>
           <label htmlFor="duration" class="form-label">Course Dueration</label>
-              <input type="text"  class="form-control" placeholder="Course Dueration.." 
+              <input type=""  class="form-control" placeholder="Course Dueration.." 
                  onChange={e => setDuration(e.target.value)}
                  value={duration}
           
