@@ -63,7 +63,7 @@ export default class calculateStaffSalary extends Component {
         componentDidMount(){
             const id = this.props.match.params.id;
     
-            axios.get(`/reg/${id}`).then((res)=>{
+            axios.get(`/register/${id}`).then((res)=>{
                 if(res.data.success){
                     this.setState({
                     RegistationNumber:res.data.post.RegistationNumber,
