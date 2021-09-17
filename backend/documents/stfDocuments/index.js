@@ -1,4 +1,6 @@
-module.exports = ({fullName, email, nic, courseName }) => {
+module.exports = ({RegistationNumber,AppointedDate, FirstName, LastName,
+    DateOfBirth, position, ContactNumber, NationalIDNumber, Gender, 
+    Address, BasicSalary}) => {
     const today = new Date();
 return `
     <!doctype html>
@@ -11,11 +13,11 @@ return `
              max-width: 800px;
              margin: auto;
              padding: 30px;
-             border: 2px solid black;
+             border: 2px solid #eee;
              box-shadow: 0 0 10px rgba(0, 0, 0, .15);
              font-size: 16px;
              line-height: 24px;
-             font-family: 'Helvetica Neue', 'Helvetica',
+             font-family: 'Tahoma', 'Verdana', 'sans-serif',
              color: #555;
              }
              .margin-top {
@@ -57,6 +59,7 @@ return `
              }
              .invoice-box table tr.item td {
              border-bottom: 1px solid #eee;
+             margin-bottom: 5px ;
              }
              .invoice-box table tr.item.last td {
              border-bottom: none;
@@ -81,14 +84,14 @@ return `
        </head>
        <body>
           <div class="invoice-box">
-             <table cellpadding="0" cellspacing="0" style="font-family:verdana">
+             <table cellpadding="0" cellspacing="0"  style="font-family:verdana; font-size:12px">
                 <tr class="top">
                    <td colspan="2">
                       <table style="font-family:verdana">
                          <tr>
-                            <td class="title"><img  src="../images/longpic.png"
+                            <td class="title"><img  src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fst4.depositphotos.com%2F34458648%2F38830%2Fv%2F450%2Fdepositphotos_388305964-stock-illustration-pen-book-education-abstract-logo.jpg&imgrefurl=https%3A%2F%2Fwww.everypixel.com%2Fq%2Flogo-education&tbnid=2D9qrDssvcw1cM&vet=10CEEQMyh_ahcKEwjwtrWPoOjyAhUAAAAAHQAAAAAQAg..i&docid=WLC-bze3zVwdNM&w=508&h=600&q=education%20logos&ved=0CEEQMyh_ahcKEwjwtrWPoOjyAhUAAAAAHQAAAAAQAg"
                                style="width:100%; max-width:156px;"></td>
-                            <td  style="text-align:right">
+                            <td style="text-align:right">
                                Date: ${`${today.getDate()}. ${today.getMonth() + 1}. ${today.getFullYear()}.`}
                             </td>
                          </tr>
@@ -99,28 +102,53 @@ return `
                    <td colspan="2">
                       <table style="font-family:verdana">
                          <tr>
-                            <td>
-                              name: ${fullName}
+                            <td style="font-size:18px">
+                            Registation Number: ${RegistationNumber}
                             </td>
                          </tr>
                       </table>
                    </td>
                 </tr>
-                <tr class="heading">
-
+                <tr class="item">
+                   <td width="30%">Appointed Date:</td>
+                   <td>${AppointedDate}</td>
                 </tr>
                 <tr class="item">
-                   <td>email:</td>
-                   <td>${email}</td>
+                   <td>First Name :</td>
+                   <td>${FirstName}</td>
                 </tr>
                 <tr class="item">
-                   <td>course name:</td>
-                   <td>${courseName}</td>
+                   <td>Last Name :</td>
+                   <td>${LastName}</td>
                 </tr>
                 <tr class="item">
-                   <td>nic:</td>
-                   <td>${nic}</td>
+                   <td>Date Of Birth  :</td>
+                   <td>${DateOfBirth}</td>
                 </tr>
+                <tr class="item">
+                   <td>Position  :</td>
+                   <td>${position}</td>
+                </tr>
+                <tr class="item">
+                   <td>ContactNumber :</td>
+                   <td>${ContactNumber}</td>
+                </tr>
+                <tr class="item">
+                <td>National ID Number :</td>
+                <td>${NationalIDNumber}</td>
+                </tr>
+                <tr class="item">
+                <td>Gender :</td>
+                <td>${Gender}</td>
+                </tr>
+                <tr class="item">
+                <td>Address :</td>
+                <td>${Address}</td>
+                </tr>
+                </tr>
+                <tr class="item">
+                <td>Basic Salary :</td>
+                <td>${BasicSalary}</td>
                 </tr>
              </table>
              <br />

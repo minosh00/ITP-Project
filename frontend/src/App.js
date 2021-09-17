@@ -10,6 +10,7 @@ import adminViewProfile from './components/adminViewProfile'
 import adminViewApplication from './components/adminViewApplication'
 import updateAdmin from './components/updateAdmin'
 import Apply from './components/Apply'
+import staffpdf from './components/staffpdf'
 
 import Specialevents from './components/Specialevents';
 import Loginpage from './components/Loginpage';
@@ -63,6 +64,7 @@ import Login from './components/Login';
 import courseInside from './components/courseInside';
 import adminCourseDisplay from './components/adminCourseDisplay';
 import buyCourse from './components/buyCourse';
+import CourseEnrollKeySendEmail from './components/CourseEnrollKeySendEmail';
 
 
 import CreatePost from './components/CreatePost';
@@ -119,6 +121,7 @@ import feesPayList from './components/feesPayList';
         <Route path="/adminprofile/:id"  component={adminViewProfile}></Route>
         <Route path="/viewapplication/:id"  component={adminViewApplication}></Route> 
         <Route path="/apply"  component={Apply}></Route>   
+        <Route path="/pdf/:id" component={staffpdf}></Route>
 
         <Route path="/Admintimetable" component={DimaNavbarTT}></Route>
         <Route path="/middle" component={middle}></Route>
@@ -175,6 +178,8 @@ import feesPayList from './components/feesPayList';
         <Route  path="/followed"  component={buyCourse} />
         <Route path="/course/:id"    render={(props)=>  <adminCourseDisplay {...props} posts={posts} />} />
         <Route  path="/buyCoursepdf/:id"  component={EditCourseFollowpdf} />
+        <Route  path="/EnrollKeySend"  component={CourseEnrollKeySendEmail} />
+
 
 
         <Route path="/AdminStudnethome"  component={Malkimainhome}></Route>
