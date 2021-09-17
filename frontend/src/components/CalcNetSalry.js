@@ -30,7 +30,7 @@ export default class CalcNetSalry extends Component {
    
     render() {
         return (
-            <div>
+            <div className="container-xxl">
                  <div>
                 <br/><br/>
                 <div className="container-xxl">
