@@ -66,7 +66,7 @@ componentDidMount(){
           <table>
             <tr>
               <td>        
-                <input style={{width:'400px'}} className="form-control" type="search" placeholder="Search" name="searchQuery" onChange={this.handleSearchArea}></input>
+                <input style={{width:'700px'}} className="form-control" type="search" placeholder="Search" name="searchQuery" onChange={this.handleSearchArea}></input>
               </td>
               <td>
               </td>

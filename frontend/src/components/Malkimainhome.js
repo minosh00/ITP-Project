@@ -67,7 +67,7 @@ componentDidMount(){
           <table>
             <tr>
               <td>
-                <input className="form-control" style={{width:'400px'}} type="search" placeholder="Search" name="searchQuery" onChange={this.handleSearchArea}></input>
+                <input className="form-control" style={{width:'700px'}} type="search" placeholder="Search" name="searchQuery" onChange={this.handleSearchArea}></input>
               </td>
               
               <td>
@@ -83,7 +83,7 @@ componentDidMount(){
           
           
 
-        <table className="table table-success table-striped table-bordered">
+        <table className="table table-success table-striped table-bordered" style={{marginTop:'45px'}}>
      
 
           <thead>
