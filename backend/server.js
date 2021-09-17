@@ -24,6 +24,7 @@ const approvedleaves = require('./routes/ApprovedLeavesR');
 //diniru
 const subjectRoutes = require('./routes/subjects');
 const enrollmentRoutes = require('./routes/enrollments');
+const subjectClient = require('./routes/subjectClient')
 
 //nethmi
 const lecturerRoutes = require('./routes/lecturers');
@@ -73,6 +74,7 @@ app.use(approvedleaves);
 //diniru
 app.use(subjectRoutes);
 app.use(enrollmentRoutes);
+app.use(subjectClient)
 
 //nethmi
 app.use(lecturerRoutes);
