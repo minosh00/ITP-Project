@@ -96,7 +96,7 @@ import CalcNetSalry from './components/CalcNetSalry';
 import StaffSalary from './components/StaffSalary';
 import calculateStaffSalary from './components/calculateStaffSalary';
 import CalcStaffSalary from './components/CalcStaffSalary';
-
+import Adminlogin from './components/Adminlogin';
 
   function App() {
 
@@ -156,7 +156,7 @@ import CalcStaffSalary from './components/CalcStaffSalary';
         <Route path="/addnewattendance" component={Adminaddnewattendance}></Route>
         <Route path="/addnewstdattendance" component={MarkStudentattendance}></Route>
 
-        <Route path="/" exact component={AdminHome}></Route>
+        <Route path="/adminhome"  component={AdminHome}></Route>
         <Route path="/Adminsubhome" component={SubHome}></Route>
         <Route path="/addsub" component={CreateSub}></Route>
         <Route path="/editsub/:id" component={EditSub}></Route>
@@ -202,6 +202,8 @@ import CalcStaffSalary from './components/CalcStaffSalary';
         <Route path="/stdEdit/:id" component={StdEdit}></Route>
         <Route path="/stdPdf/:id" component={StdPdf}></Route>
 
+        <Route path="/" exact component={Adminlogin}></Route>
+        <Route path="/adminlogin" component={Adminlogin}></Route>
         <Route path ="/paymenthome" component = {NavBar}></Route>
         <Route path ="/paymenthome" component = {HomePayment}></Route>
         <Route path = "/additem" component ={CreateItem}></Route> 
