@@ -39,7 +39,7 @@ export default class Displaytimetables extends Component {
                             <th scope="col">Subject or Course</th>
                             <th scope="col">Month and Date</th>
                             <th scope="col">Time</th>
-                            <th scope="col">Edit or Delete</th>
+                            <th scope="col">Download</th>
                           </tr>
                     </thead>
                <tbody>
