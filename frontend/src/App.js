@@ -221,7 +221,7 @@ import CalcStaffSalary from './components/CalcStaffSalary';
         <Route path="/calculatestaffsalry/:id" component={calculateStaffSalary}></Route>
       
 
-      <Route path="/AddApplicant" component={AddApllicant}/>
+    
 
         <Route path="" component={Adminhomefooter}></Route>
 
