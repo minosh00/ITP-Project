@@ -11,7 +11,7 @@ const AddBooks = ({books}) => {
   const [book, setBook ]=useState([])
 
    const deteleBook = id =>{
-     axios.delete(`http://localhost:5000/addBook/${id}`)
+     axios.delete(`http://localhost:8000/addBook/${id}`)
      .then(res => alert(res.data))
      setBook(book.filter(elem => elem._id !== id))
    }

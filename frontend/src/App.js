@@ -97,6 +97,7 @@ import StaffSalary from './components/StaffSalary';
 import calculateStaffSalary from './components/calculateStaffSalary';
 import CalcStaffSalary from './components/CalcStaffSalary';
 
+import "bootstrap/dist/css/bootstrap.min.css";
 import AddBooks from './components/AddBooks';
 import Header from "./components/Header";
 import Navbar from './components/DisaNavbar';
@@ -128,7 +129,7 @@ import Applicant from './components/Applicant';
 
       useEffect(()=>{
     
-        axios.get('http://localhost:5000/addBook') 
+        axios.get('http://localhost:8000/addBook') 
         .then(res=>setBooks(res.data))
         .catch(error => console.log(error));
       })
@@ -137,7 +138,7 @@ import Applicant from './components/Applicant';
     
       useEffect(()=>{
     
-        axios.get('http://localhost:5000/fines') 
+        axios.get('http://localhost:8000/fines') 
         .then(res =>setPayFines(res.data))
         .catch(error => console.log(error));
       })
@@ -146,7 +147,7 @@ import Applicant from './components/Applicant';
     
       useEffect(()=>{
     
-        axios.get('http://localhost:5000/applicants') 
+        axios.get('http://localhost:8000/applicants') 
         .then(res =>setApplicant(res.data))
         .catch(error => console.log(error));
       })
