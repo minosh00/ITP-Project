@@ -78,26 +78,26 @@ axios.get("/lecturers").then(res =>{
         <div className="row">
           <div className="col-lg-12 mt-3 mb-3">
            
-            <br></br>
-            <br></br>
-            <div  className ="alllecturerheader">
-            <h2><center><b>All Lecturers' Details</b></center></h2>
-            </div>
+          
+            <div style={{marginBottom: '10px', marginLeft:'5px'}}>
+            <h1><b>Lecturer Management</b></h1>
+            <h5>Details of the lecturers in the Royal-Edu institute</h5>
+        </div >
             </div>
             <div className="col-lg-3 mt-2 mb-2">
-         
+            <div style={{marginLeft:'12px'}}>
               <input
               className="form-control"
               type="search"
               placeholder="Serach"
               name="searchQuery"
               onChange={this.handleSearchArea}>
-              </input>
+              </input></div>
               </div>
               </div>
 
-              <div className ="addbtn">
-              <button className="btn btn-success"><a href = "/addLec" style ={{textDecoration:'none',color:'white'}}><i class="fa fa-plus-square" aria-hidden="true"></i>   Add New Lecturer Details</a></button>
+              <div className ="addbtn" >
+              <button className="btn btn-success"><a href = "/addLec" style ={{textDecoration:'none',color:'white',marginLeft:'12px'}}><i class="fa fa-plus-square" aria-hidden="true"></i>   Add New Lecturer Details</a></button>
               </div>
 
               <ReactHTMLTableToExcel
