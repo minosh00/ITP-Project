@@ -25,7 +25,7 @@ const DisplayAll = ({posts}) => {
      
 
 
-<div className="container">
+<div className="">
   <br></br>
   <h1>Manage All Course</h1>
   <div align="left">

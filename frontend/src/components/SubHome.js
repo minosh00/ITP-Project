@@ -95,11 +95,11 @@ onDelete=(id)=>{
                 
                 <th style={{background: 'var(--bs-red)'}} scope="col">#</th>
                 <th scope="col">subject ID</th>
-                <th style={{width:'120px'}} scope="col">subject Name</th>
+                <th scope="col">subject Name</th>
                 <th scope="col">subject Type</th>
                 <th scope="col">subject Category</th>
                 <th scope="col">subject Fee</th>
-                <th scope="col">subject Description</th>
+                <th  style={{width:'800px'}} scope="col">subject Description</th>
                 <th style={{width:'360px'}} scope="col">Actions</th>
               </tr>
             </thead>
@@ -111,6 +111,10 @@ onDelete=(id)=>{
                       <a href={`/subject/${subjects._id}`} style={{textDecoration:'none'}}>
                       {subjects.subjectId}
                       </a>
+                      &nbsp;&nbsp;
+                      <a className="btn btn-success" href={`/subjectclientadd/${subjects._id}`}>
+                    <i className="fas fa-upload"></i>
+                    </a>
                     </td>
                   <td>{subjects.subjectName}</td>
                   <td>{subjects.subjectType}</td>
@@ -129,11 +133,13 @@ onDelete=(id)=>{
                     <a className="btn btn-outline-danger" href={`/downloadsub/${subjects._id}`}>
                     <i className="fa fa-file-pdf-o"></i>&nbsp;Download PDF
                     </a>
-                  </td>
+                    </td>
                 </tr>
               ))}
             </tbody>
           </table>
+        
+          <a className="btn btn-outline-primary" href={`/stdview`}>client side</a>
 
       </div>
     )
