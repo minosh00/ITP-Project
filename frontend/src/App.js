@@ -97,19 +97,7 @@ import StaffSalary from './components/StaffSalary';
 import calculateStaffSalary from './components/calculateStaffSalary';
 import CalcStaffSalary from './components/CalcStaffSalary';
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import AddBooks from './components/AddBooks';
-import Header from "./components/Header";
-import Navbar from './components/DisaNavbar';
-import AddNewBooks from './components/AddNewBooks';
-import SearchBooks from './components/SearchBooks';
-import Editbooks from './components/EditBooks';
-import Fine from './components/Fine';
-import AddFine from './components/AddFine';
-import SearchFine from './components/SearchFine';
-import AddApllicant from './components/AddApplicant';
-import Applicant from './components/Applicant';
-  
+
   function App() {
 
      
@@ -125,33 +113,7 @@ import Applicant from './components/Applicant';
     
       })
 
-      const [books, setBooks] = useState([])
-
-      useEffect(()=>{
-    
-        axios.get('http://localhost:8000/addBook') 
-        .then(res=>setBooks(res.data))
-        .catch(error => console.log(error));
-      })
-    
-      const [PayFines, setPayFines] = useState([])
-    
-      useEffect(()=>{
-    
-        axios.get('http://localhost:8000/fines') 
-        .then(res =>setPayFines(res.data))
-        .catch(error => console.log(error));
-      })
-    
-      const [Applicants, setApplicant] = useState([])
-    
-      useEffect(()=>{
-    
-        axios.get('http://localhost:8000/applicants') 
-        .then(res =>setApplicant(res.data))
-        .catch(error => console.log(error));
-      })
-    
+     
 
     return (
     <BrowserRouter>
@@ -258,15 +220,7 @@ import Applicant from './components/Applicant';
         <Route path="/calculatestaffsalry/:id" component={CalcStaffSalary}></Route>
         <Route path="/calculatestaffsalry/:id" component={calculateStaffSalary}></Route>
       
-      <Route path="/libraryhome" component={Navbar}></Route>
-      <Route  path="/libraryhome" render={() => <AddBooks books={books}/>} />
-      <Route path="/addBook/:id" render={props => <SearchBooks{...props} books={books}/>} />
-      <Route path="/update/:id" render={props => <Editbooks{...props} books={books}/>} />
-      <Route path="/add-books" component={AddNewBooks} />
-      <Route path="/Fines" render={() => <Fine PayFines={PayFines}/>}/>
-      <Route path="/add-fine" component={AddFine} />
-      <Route path="/disafines/:id" render={props => <SearchFine{...props} PayFines={PayFines}/>} />
-      <Route path="/ApplicantHome" render={() => <Applicant Applicants={Applicants}/>}/>
+
       <Route path="/AddApplicant" component={AddApllicant}/>
 
         <Route path="" component={Adminhomefooter}></Route>
