@@ -5,6 +5,8 @@ import axios from 'axios';
 import Homeheader from './components/Homeheader';
 import Homefooter from './components/Homefooter';
 
+
+
 import Apply from './components/Apply'
 
 import Specialevents from './components/Specialevents';
@@ -16,6 +18,7 @@ import Displaytimetables from './components/Displaytimetables';
 import Courses from './components/Courses';
 import Login from './components/Login';
 import Course from './components/Course';
+
 
 
   function App() {
