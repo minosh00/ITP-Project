@@ -78,6 +78,7 @@ import Registration from './components/Registration';
 import profile from './components/profile';
 import StdEdit from './components/StdEdit';
 import StdPdf from './components/StdPdf';
+import StudentEmail from './components/StudentEmail';
 
 import NavBar from './components/NavBar';
 import CreateItem from './components/CreateItem';
@@ -193,6 +194,7 @@ import feesPayList from './components/feesPayList';
         <Route path="/profile/:id" component={profile}></Route>
         <Route path="/stdEdit/:id" component={StdEdit}></Route>
         <Route path="/stdPdf/:id" component={StdPdf}></Route>
+        <Route path="/getmail" component={StudentEmail}></Route>
 
         <Route path ="/paymenthome" component = {NavBar}></Route>
         <Route path ="/paymenthome" component = {HomePayment}></Route>

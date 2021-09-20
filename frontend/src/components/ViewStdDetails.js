@@ -139,6 +139,9 @@ export default class ViewStdDetails extends Component {
                     filename="Students Report"
                     sheet="tablexls"
                     buttonText=" Download Excel Report"/>
+
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/getmail"><button class="btn btn-danger" ><i class="far fa-envelope"></i>&nbsp;Send Email</button></a>
+
                 </div>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <div className="container">   
