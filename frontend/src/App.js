@@ -42,6 +42,8 @@ import SubDetails from './components/SubDetails';
 import SubPdf from './components/SubPdf';
 import EnrollmentHome from './components/EnrollmentHome';
 import AddEnrollment from './components/AddEnrollment';
+import SubStdPreview from './components/SubStdPreview';
+import SubAddClient from './components/SubAddClient';
 
 import addLecturer from './components/addLecturer';
 import EditLecturer from './components/EditLecturer';
@@ -89,10 +91,14 @@ import CourseReceipt from './components/CourseReceipt';
 import GetCourseReceipt from './components/GetCourseReceipt';
 import FeesPay from './components/FeesPay';
 import feesPayList from './components/feesPayList';
+import LecSalary from './components/LecSalary';
+import CalculateLecSalary from './components/CalculateLecSalary';
+import CalcNetSalry from './components/CalcNetSalry';
+import StaffSalary from './components/StaffSalary';
+import calculateStaffSalary from './components/calculateStaffSalary';
+import CalcStaffSalary from './components/CalcStaffSalary';
+import Adminlogin from './components/Adminlogin';
 
-
-
-  
   function App() {
 
      
@@ -108,7 +114,7 @@ import feesPayList from './components/feesPayList';
     
       })
 
-
+     
 
     return (
     <BrowserRouter>
@@ -151,7 +157,7 @@ import feesPayList from './components/feesPayList';
         <Route path="/addnewattendance" component={Adminaddnewattendance}></Route>
         <Route path="/addnewstdattendance" component={MarkStudentattendance}></Route>
 
-        <Route path="/" exact component={AdminHome}></Route>
+        <Route path="/adminhome"  component={AdminHome}></Route>
         <Route path="/Adminsubhome" component={SubHome}></Route>
         <Route path="/addsub" component={CreateSub}></Route>
         <Route path="/editsub/:id" component={EditSub}></Route>
@@ -159,6 +165,8 @@ import feesPayList from './components/feesPayList';
         <Route path="/downloadsub/:id" component={SubPdf}></Route>
         <Route path="/enrollhome" component={EnrollmentHome}></Route>
         <Route path="/addEnrollment" component={AddEnrollment}></Route>
+        <Route path="/stdview" component={SubStdPreview}></Route>
+        <Route path="/subjectclientadd/:id" component={SubAddClient}></Route>
 
         <Route path ="/lechome" component ={lecturerHome}></Route>
         <Route path= "/addLec" component={addLecturer}></Route>
@@ -196,6 +204,8 @@ import feesPayList from './components/feesPayList';
         <Route path="/stdPdf/:id" component={StdPdf}></Route>
         <Route path="/getmail" component={StudentEmail}></Route>
 
+        <Route path="/" exact component={Adminlogin}></Route>
+        <Route path="/adminlogin" component={Adminlogin}></Route>
         <Route path ="/paymenthome" component = {NavBar}></Route>
         <Route path ="/paymenthome" component = {HomePayment}></Route>
         <Route path = "/additem" component ={CreateItem}></Route> 
@@ -205,6 +215,17 @@ import feesPayList from './components/feesPayList';
         <Route path = "/getCourseR/:id" component = {GetCourseReceipt}></Route>
         <Route path = "/feespay" component = {FeesPay}></Route>
         <Route path = "/paidlist" component = {feesPayList}></Route>
+        <Route path = "/calculatesalary" component = {LecSalary}></Route>
+        <Route path="/calculatesalry/:id" component={LecSalary}></Route>
+        <Route path="/calculatesalry/:id" component={CalcNetSalry}></Route>
+        <Route path="/calculatesalry/:id" component={CalculateLecSalary}></Route>
+        <Route path="/calculateStaffsalary" component={StaffSalary}></Route>
+        <Route path="/calculatestaffsalry/:id" component={StaffSalary}></Route>
+        <Route path="/calculatestaffsalry/:id" component={CalcStaffSalary}></Route>
+        <Route path="/calculatestaffsalry/:id" component={calculateStaffSalary}></Route>
+      
+
+    
 
         <Route path="" component={Adminhomefooter}></Route>
 

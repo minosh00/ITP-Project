@@ -35,4 +35,20 @@ router.get('/approvedleaverequests', (req, res) => {
 });
 
 
+// get specific lec id
+
+router.get('/paymentdetails/:id',(req,res)=>{
+    let lecId =req.params.id;
+
+    approvedleaves.findById(lecId,(err,lArequest)=>{
+        if(err){
+            return res.status(400).json({success:false,err});
+        }
+        return res.status(200).json({
+            success:true,
+            lArequest
+        });
+    });
+});
+
 module.exports = router;

@@ -99,7 +99,7 @@ export default class CreateSub extends Component {
                   <div className="col-md-4">
                     <label for="validationCustomUsername" className="form-label">Subject Fee</label>
                     <div className="input-group has-validation">
-                      <span className="input-group-text" id="inputGroupPrepend">@</span>
+                      <span className="input-group-text" id="inputGroupPrepend">Rs:</span>
                       <input className="form-control" name="subjectFee" value={this.state.subjectFee} onChange={this.handleChange} required/>
                       <div className="invalid-feedback">
                       Insert Subject Fee!
