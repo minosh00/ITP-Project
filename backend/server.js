@@ -24,6 +24,7 @@ const approvedleaves = require('./routes/ApprovedLeavesR');
 //diniru
 const subjectRoutes = require('./routes/subjects');
 const enrollmentRoutes = require('./routes/enrollments');
+const subjectClient = require('./routes/subjectClient')
 
 //nethmi
 const lecturerRoutes = require('./routes/lecturers');
@@ -44,6 +45,11 @@ const approvedStudents = require('./routes/approvedstudents')
 const additional_payRoutes = require('./routes/additional_pay');
 const buyCourseDula = require('./routes/buyCourseDula');
 const feesPay = require('./routes/feesPay');
+const CalculatedSalarys = require('./routes/CalculatedSalarys');
+const nonAcStaffSalary = require('./routes/nonAcStaffSalary');
+
+//disa
+
 
 //app middleware
 app.use(bodyParser.json());
@@ -70,6 +76,7 @@ app.use(approvedleaves);
 //diniru
 app.use(subjectRoutes);
 app.use(enrollmentRoutes);
+app.use(subjectClient)
 
 //nethmi
 app.use(lecturerRoutes);
@@ -90,6 +97,10 @@ app.use(approvedStudents);
 app.use(additional_payRoutes);
 app.use (buyCourseDula);
 app.use (feesPay);
+app.use(CalculatedSalarys);
+app.use(nonAcStaffSalary);
+
+//disa
 
 
 const PORT = 8000;
