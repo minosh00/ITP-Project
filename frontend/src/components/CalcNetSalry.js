@@ -26,7 +26,7 @@ export default class CalcNetSalry extends Component {
 
     
 //rendering part
-
+//form
    
     render() {
         return (
