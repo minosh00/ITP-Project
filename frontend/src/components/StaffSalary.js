@@ -33,7 +33,7 @@ export default class StaffSalary extends Component {
     StaffDetails.FirstName.toLowerCase().includes(searchKey)||
     StaffDetails.LastName.toLowerCase().includes(searchKey)
 
-   
+      
     )
     this.setState({StaffDetails:result})
   }
