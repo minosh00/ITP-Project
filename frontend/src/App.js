@@ -173,7 +173,7 @@ useEffect(()=>{
       <div>
 
         <Route path=""  component={Adminhomeheader}></Route>
-      
+
         <Route path="/staffhome" component={MainHome}></Route>
         <Route path="/applications"  component={AppliedAll}></Route>
         <Route path="/update/:id"  component={updateAdmin}></Route>
@@ -209,7 +209,8 @@ useEffect(()=>{
         <Route path="/addnewattendance" component={Adminaddnewattendance}></Route>
         <Route path="/addnewstdattendance" component={MarkStudentattendance}></Route>
 
-        <Route path="/adminhome"  component={AdminHome}></Route>
+       
+        <Route path="/adminhome" exact component={AdminHome}></Route>
         <Route path="/Adminsubhome" component={SubHome}></Route>
         <Route path="/addsub" component={CreateSub}></Route>
         <Route path="/editsub/:id" component={EditSub}></Route>
@@ -256,7 +257,7 @@ useEffect(()=>{
         <Route path="/stdPdf/:id" component={StdPdf}></Route>
 
         <Route path="/" exact component={Adminlogin}></Route>
-        <Route path="/adminlogin" component={Adminlogin}></Route>
+        <Route path="/adminmainhomelogin" component={Adminlogin}></Route>
         <Route path ="/paymenthome" component = {NavBar}></Route>
         <Route path ="/paymenthome" component = {HomePayment}></Route>
         <Route path = "/additem" component ={CreateItem}></Route> 
