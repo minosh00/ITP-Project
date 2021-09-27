@@ -8,7 +8,7 @@ export default class CalcNetSalry extends Component {
      CalcNetSalry(){
 
      
-
+     
         var data1 = parseInt(document.getElementById("BasicSal").value);
         var data2 = parseInt(document.getElementById("LeaveswithPay").value);
         var data3 = parseInt(document.getElementById("PayperDay").value);
@@ -25,8 +25,8 @@ export default class CalcNetSalry extends Component {
     }
 
     
-
-
+//rendering part
+//form
    
     render() {
         return (
