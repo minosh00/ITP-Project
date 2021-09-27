@@ -32,7 +32,7 @@ const Courses = ({posts}) => {
   <p className="card-text">&nbsp;🔶 Course Duration: {course.duration}</p>
   <p className="card-text">&nbsp;💯 Certificate of completion </p>
   <Link to ={{
-        pathname:`/course/${course._id}`
+        pathname:`/allCourse`
       }}>
     <button type="button" class="btn btn-primary"><i class="fas fa-search"></i>&nbsp;More</button>
     </Link>
