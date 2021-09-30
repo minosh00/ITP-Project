@@ -17,7 +17,7 @@ const CourseEnrollKeySendEmail = () => {
         alert("email send succes");
     }).catch(err=> console.log(err));
   }
-
+  
   return (
     <div>
      <form className="row" onSubmit={sendEmail} >

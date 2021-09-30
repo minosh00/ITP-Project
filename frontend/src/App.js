@@ -52,6 +52,8 @@ import PostLecturer from './components/PostLecturer';
 import timetableUpdate from './components/timetableUpdate';
 import leaveReq from './components/leaveReq';
 import DownloadPdf from './components/DownloadPdf'
+import LecturerEmail from './components/LecturerEmail';
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -228,6 +230,7 @@ useEffect(()=>{
         <Route path ="/timetableReq" component={timetableUpdate}></Route> 
         <Route path ="/leaveReq" component={leaveReq}></Route> 
         <Route path ="/download/:id" component={DownloadPdf}></Route>
+        <Route path ="/lecConfirmationSend" component={LecturerEmail}></Route>
 
        
        
