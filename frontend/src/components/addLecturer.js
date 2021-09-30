@@ -8,7 +8,7 @@ export default class addLecturer extends Component {
     constructor(props){
         super(props);
         this.state={
-            lecId:"",
+            lecId:"LEC"+this.rand(9999, 99999),
             lecFname:"",
             lecLname:"",
             nic:"",
@@ -16,8 +16,8 @@ export default class addLecturer extends Component {
             email:"",
             cNumber:"",
             address:"",
-            username:"",
-            password:"",
+            username:"L"+this.rand(99999, 999999),
+            password:this.rand(9999999,99999999),
             summary:"",
             aQualification:"",
             Rmembership:"",
@@ -79,7 +79,9 @@ onsubmit = (e) =>{
         }
     })
 }
-
+rand=(min, max)=>{
+    return Math.floor(Math.random()*max-min+1)+min;
+  }
 
 
 render(){
@@ -89,81 +91,81 @@ render(){
        <center><h1><b><u>Add New Lecturer</u></b></h1></center>
           
        <form className="needs-validation" noValidate>
-       
-<div className="mb-3">
+
+<div className="col-md-12">
 <label className="form-label"><b>Lecturer ID</b></label>
-<textarea class="textField" name="lecId" cols="25" rows="2" value={this.state.lecId} onChange={this.handleInputChange}></textarea>
-</div>
+<input className="form-control" name="lecId" value={this.state.lecId} onChange={this.handleInputChange}></input>
+</div><br/>
 
-<div className="mb-3">
+<div className="col-md-12">
 <label className="form-label"><b>First Name</b></label>
-<textarea class="textField" name="lecFname" cols="25" rows="2" value={this.state.lecFname} onChange={this.handleInputChange}></textarea>
-</div>
+<input className="form-control" name="lecFname" value={this.state.lecFname} onChange={this.handleInputChange}></input>
+</div><br/>
 
 
-<div className="mb-3">
+<div className="col-md-12">
 <label  className="form-label"><b>Last Name</b></label>
-<textarea class="textField" name="lecLname" cols="25" rows="2" value={this.state.lecLname} onChange={this.handleInputChange}></textarea>
-</div>
+<input className="form-control" name="lecLname" value={this.state.lecLname} onChange={this.handleInputChange}></input>
+</div><br/>
 
-<div className="mb-3">
+<div className="col-md-12">
 <label  className="form-label"><b>NIC number</b></label>
-<textarea class="textField" name="nic" cols="25" rows="2" value={this.state.nic} onChange={this.handleInputChange}></textarea>
-</div>
+<input className="form-control" name="nic" value={this.state.nic} onChange={this.handleInputChange}></input>
+</div><br/>
 
-<div className="mb-3">
+<div className="col-md-12">
 <label  className="form-label"><b>Date of birth</b></label>
 <input type="date" className="form-control" placeholder ="D/M/Y"name="dob" value={this.state.dob} onChange={this.handleInputChange}/>
-</div>
+</div><br/>
 
-<div className="mb-3">
+<div className="col-md-12">
 <label  className="form-label"><b>E-mail</b></label>
-<textarea class="textField" name="email" cols="25" rows="2" value={this.state.email} onChange={this.handleInputChange}></textarea>
-</div>
+<input className="form-control" name="email" value={this.state.email} onChange={this.handleInputChange}></input>
+</div><br/>
 
-<div className="mb-3">
+<div className="col-md-12">
 <label  className="form-label"><b>Contact number</b></label>
-<textarea class="textField" name="cNumber" cols="25" rows="2" value={this.state.cNumber} onChange={this.handleInputChange}></textarea>
-</div>
+<input className="form-control" name="cNumber" value={this.state.cNumber} onChange={this.handleInputChange}></input>
+</div><br/>
 
-<div className="mb-3">
+<div className="col-md-12">
 <label  className="form-label"><b>Address</b></label>
-<textarea class="textField" name="address" cols="25" rows="2" value={this.state.address} onChange={this.handleInputChange}></textarea>
-</div>
+<input className="form-control" name="address" value={this.state.address} onChange={this.handleInputChange}></input>
+</div><br/>
 
-<div className="mb-3">
+<div className="col-md-12">
 <label className="form-label"><b>Username</b></label>
-<textarea class="textField" name="username" cols="25" rows="2" value={this.state.username} onChange={this.handleInputChange}></textarea>
-</div>
+<input className="form-control" name="username" value={this.state.username} onChange={this.handleInputChange}></input>
+</div><br/>
 
-<div className="mb-3">
+<div className="col-md-12">
 <label className="form-label"><b>Password</b></label>
-<textarea class="textField" name="password" cols="25" rows="2" value={this.state.password} onChange={this.handleInputChange}></textarea>
-</div>
+<input className="form-control" name="password" value={this.state.password} onChange={this.handleInputChange}></input>
+</div><br/>
 
 
-<div className="mb-3">
+<div className="col-md-12">
 <label  className="form-label"><b>Career Summary</b></label>
-<textarea class="textField" name="summary" cols="25" rows="5" value={this.state.summary} onChange={this.handleInputChange}></textarea>
-</div>
+<input className="form-control" name="summary" cols="25" rows="5" value={this.state.summary} onChange={this.handleInputChange}></input>
+</div><br/>
 
 
-<div className="mb-3">
+<div className="col-md-12">
 <label  className="form-label"><b>Acedemic qualifications</b></label>
-<textarea class="textField" name="aQualification" cols="25" rows="5" value={this.state.aQualification} onChange={this.handleInputChange}></textarea>
-</div>
+<input className="form-control" name="aQualification" cols="25" rows="5" value={this.state.aQualification} onChange={this.handleInputChange}></input>
+</div><br/>
 
 
 <div className ="alpex-003"></div>
-<div className="mb-3">
+<div className="col-md-12">
 <label className="form-label"><b>Research interests and memberships</b></label>
-<textarea class="textField" name="Rmembership" cols="25" rows="5" value={this.state.Rmembership} onChange={this.handleInputChange}></textarea>
-</div>
+<input className="form-control" name="Rmembership" cols="25" rows="5" value={this.state.Rmembership} onChange={this.handleInputChange}></input>
+</div><br/>
 
-<div className="mb-3">
+<div className="col-md-12">
 <label  className="form-label"><b>Registration Date</b></label>
 <input type="date" className="form-control" name="Rdate" value={this.state.Rdate} onChange={this.handleInputChange}/>
-</div>
+</div><br/>
 
 
 <center>
