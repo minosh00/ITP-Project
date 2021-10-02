@@ -46,7 +46,7 @@ export default class Adminhomeheader extends Component {
           <a className="nav-link active" aria-current="page" href="/paymenthome" style={{fontSize:'25px'}}>Payment </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/AdminAttendance" style={{fontSize:'25px'}}>Attendence </a>
+          <a className="nav-link active" aria-current="page" href="/AdminAttendance" style={{fontSize:'25px'}}>Attendance </a>
         </li>
       </ul>
       <form className="d-flex">

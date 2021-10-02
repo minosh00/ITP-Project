@@ -14,7 +14,6 @@ export default class Homeheader extends Component {
                        
          </div>
         </nav>
-        <br/>
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
       <ul className="navbar-nav me-auto mb-3 mb-lg-0 text-dark"> 
         <li className="nav-item">
@@ -24,7 +23,7 @@ export default class Homeheader extends Component {
           <a className="nav-link active " aria-current="page" href="/course" style={{fontSize:'25px'}}>Courses</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link active " aria-current="page" href="/" style={{fontSize:'25px'}}>Subjects</a>
+          <a className="nav-link active " aria-current="page" href="/allsubjects" style={{fontSize:'25px'}}>Subjects</a>
         </li>
         <li className="nav-item">
           <a className="nav-link active " aria-current="page" href="/" style={{fontSize:'25px'}}>Library</a>
@@ -44,7 +43,7 @@ export default class Homeheader extends Component {
       </ul>
       <form className="d-flex">
       <a className="navbar-brand " href="/apply"><b> Register Now! </b></a>
-      <a className="navbar-brand " href="/admin"><b> Login </b></a>
+      <a className="navbar-brand " href="/login"><b> Login </b></a>
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
         <button className="btn btn-success" type="submit" style={{ marginRight:'20px'}}>Search</button>
       </form>

@@ -10,7 +10,7 @@ export default class Homeheader extends Component {
      <footer className="site-footer bg-dark text-dark" style={{fontSize:'20px'}}>
       <div >
         <div className="row">
-          <div className="col-sm-12 col-md-2" style={{marginLeft:'20px'}}>
+          <div className="col-sm-12 col-md-2" style={{marginLeft:'100px'}}>
           <h6 >Categories</h6>
             <ul className="footer-links">
               <li><a href="/" style={{textDecoration:'none'}}>A/L subjects</a></li>
@@ -28,7 +28,7 @@ export default class Homeheader extends Component {
             <p className="text-justify" style={{color:'white'}}>Royal-EDU higher education institute <i> Join with us to make your life success </i> We have  courses for after o/l and after a/l students. There are all subjects for O/L and A/L students. . </p>
           </div>
 
-          <div className="col-xs-6 col-md-2">
+          <div className="col-xs-6 col-md-2" style={{marginLeft:'70px'}}>
             <h6>Payments</h6>
             <ul className="footer-links">
               <li><a href="/"  style={{textDecoration:'none'}}>About Us</a></li>
@@ -54,7 +54,7 @@ export default class Homeheader extends Component {
               <li><a className="facebook" href="www.facebook.com"><i className="fa fa-facebook"></i></a></li>
               <li><a className="twitter" href="www.twitter.com"><i className="fa fa-twitter"></i></a></li>
               <li><a className="dribbble" href="www.dribbble.com"><i className="fa fa-dribbble"></i></a></li>
-              <li><a className="linkedin" href="www.linkedin.com"><i className="fa fa-linkedin"></i></a></li>   
+              <li><a className="linkedin" href="www.linkedin.com"><i className="fa fa-linkedin"></i></a></li>
               </ul>
             </div></center>
           

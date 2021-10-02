@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 
-export default class SubStdView extends Component {
+export default class AllSubjectsView extends Component {
 
     constructor(props){
         super(props);
