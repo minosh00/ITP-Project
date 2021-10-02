@@ -107,7 +107,7 @@ componentDidMount(){
 
       return (
 
-        <div className="col-md-8 mt-4 mx-auto">
+        <div style={{marginLeft:100}}>
 
 <a className="btn btn-success" href="/staffhome" style={{textDecoration:'none', color:'white'}}>
                  <i className="fas fa-home"></i>&nbsp;Home
@@ -120,7 +120,7 @@ componentDidMount(){
               
                <a className="btn btn-success" href="/applications" style={{textDecoration:'none', color:'white'}}>
                  <i className="fas fa-file"></i>&nbsp;Applications
-                </a>
+                </a> 
        <center><h1 className="h1">ADD TO STAFF</h1></center> 
 
       <hr/>
