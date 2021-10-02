@@ -42,6 +42,8 @@ import SubDetails from './components/SubDetails';
 import SubPdf from './components/SubPdf';
 import EnrollmentHome from './components/EnrollmentHome';
 import AddEnrollment from './components/AddEnrollment';
+import SubStdPreview from './components/SubStdPreview';
+import SubAddClient from './components/SubAddClient';
 
 import addLecturer from './components/addLecturer';
 import EditLecturer from './components/EditLecturer';
@@ -50,6 +52,13 @@ import PostLecturer from './components/PostLecturer';
 import timetableUpdate from './components/timetableUpdate';
 import leaveReq from './components/leaveReq';
 import DownloadPdf from './components/DownloadPdf'
+import LecturerEmail from './components/LecturerEmail';
+import viewRegistrations from './components/viewRegistrations'
+import CreateRegistration from './components/CreateRegistration';
+import detailRequest from './components/detailRequest';
+import detailsHome from './components/detailsHome';
+
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -88,10 +97,32 @@ import CourseReceipt from './components/CourseReceipt';
 import GetCourseReceipt from './components/GetCourseReceipt';
 import FeesPay from './components/FeesPay';
 import feesPayList from './components/feesPayList';
+import LecSalary from './components/LecSalary';
+import CalculateLecSalary from './components/CalculateLecSalary';
+import CalcNetSalry from './components/CalcNetSalry';
+import StaffSalary from './components/StaffSalary';
+import calculateStaffSalary from './components/calculateStaffSalary';
+import CalcStaffSalary from './components/CalcStaffSalary';
+import Adminlogin from './components/Adminlogin';
 
 
+import AddBooks from './components/AddBooks';
+import Header from "./components/Header";
+import Navbar from './components/DisaNavbar';
+import AddNewBooks from './components/AddNewBooks';
+import SearchBooks from './components/SearchBooks';
+import Editbooks from './components/EditBooks';
+import Fine from './components/Fine';
+import AddFine from './components/AddFine';
+import SearchFine from './components/SearchFine';
+import AddApllicant from './components/AddApplicant';
+import Applicant from './components/Applicant';
+import AddLibraryMember from './components/AddLibraryMember';
+import LibraryAdmin from './components/LibraryAdmin';
+import Members from './components/Members';
+import EditMembers from './components/EditMembers';
 
-  
+
   function App() {
 
      
@@ -107,6 +138,41 @@ import feesPayList from './components/feesPayList';
     
       })
 
+       
+      const [books, setBooks] = useState([])
+
+  useEffect(()=>{
+
+    axios.get('http://localhost:8000/addBook') 
+    .then(res=>setBooks(res.data))
+    .catch(error => console.log(error));
+  },[])
+
+  const [PayFines, setPayFines] = useState([])
+
+  useEffect(()=>{
+
+    axios.get('http://localhost:8000/fines') 
+    .then(res =>setPayFines(res.data))
+    .catch(error => console.log(error));
+  },[])
+
+  const [Applicants, setApplicant] = useState([])
+
+  useEffect(()=>{
+
+    axios.get('http://localhost:8000/applicants') 
+    .then(res =>setApplicant(res.data))
+    .catch(error => console.log(error));
+  },[])
+
+const[Member,setMember] = useState([])
+useEffect(()=>{
+
+  axios.get('http://localhost:8000/member')
+  .then(res=>setMember(res.data))
+  .catch(error=>console.log(error));
+},[])
 
 
     return (
@@ -114,7 +180,7 @@ import feesPayList from './components/feesPayList';
       <div>
 
         <Route path=""  component={Adminhomeheader}></Route>
-      
+
         <Route path="/staffhome" component={MainHome}></Route>
         <Route path="/applications"  component={AppliedAll}></Route>
         <Route path="/update/:id"  component={updateAdmin}></Route>
@@ -150,7 +216,8 @@ import feesPayList from './components/feesPayList';
         <Route path="/addnewattendance" component={Adminaddnewattendance}></Route>
         <Route path="/addnewstdattendance" component={MarkStudentattendance}></Route>
 
-        <Route path="/" exact component={AdminHome}></Route>
+       
+        <Route path="/adminhome" exact component={AdminHome}></Route>
         <Route path="/Adminsubhome" component={SubHome}></Route>
         <Route path="/addsub" component={CreateSub}></Route>
         <Route path="/editsub/:id" component={EditSub}></Route>
@@ -158,6 +225,8 @@ import feesPayList from './components/feesPayList';
         <Route path="/downloadsub/:id" component={SubPdf}></Route>
         <Route path="/enrollhome" component={EnrollmentHome}></Route>
         <Route path="/addEnrollment" component={AddEnrollment}></Route>
+        <Route path="/stdview" component={SubStdPreview}></Route>
+        <Route path="/subjectclientadd/:id" component={SubAddClient}></Route>
 
         <Route path ="/lechome" component ={lecturerHome}></Route>
         <Route path= "/addLec" component={addLecturer}></Route>
@@ -166,9 +235,14 @@ import feesPayList from './components/feesPayList';
         <Route path ="/timetableReq" component={timetableUpdate}></Route> 
         <Route path ="/leaveReq" component={leaveReq}></Route> 
         <Route path ="/download/:id" component={DownloadPdf}></Route>
+        <Route path ="/lecConfirmationSend" component={LecturerEmail}></Route>
+        <Route path ="/viewRegistrations" component={viewRegistrations}></Route>
+        <Route path ="/lecturerRegistration" component={CreateRegistration}></Route>
+        <Route path ="/publishNotice" component={detailRequest}></Route>
+        <Route path ="/viewNotice" component={detailsHome}></Route>
+        
+        
 
-       
-       
         <Route   exact path="/view"  render={()=> <Courses posts={posts} />} />
         <Route path="/course/:id"    render={(props)=>  <Course {...props} posts={posts} />} />
         <Route path="/Cupdate/:id"    render={(props)=>  <EditCourse {...props} posts={posts} />} />
@@ -194,6 +268,8 @@ import feesPayList from './components/feesPayList';
         <Route path="/stdEdit/:id" component={StdEdit}></Route>
         <Route path="/stdPdf/:id" component={StdPdf}></Route>
 
+        <Route path="/" exact component={Adminlogin}></Route>
+        <Route path="/adminmainhomelogin" component={Adminlogin}></Route>
         <Route path ="/paymenthome" component = {NavBar}></Route>
         <Route path ="/paymenthome" component = {HomePayment}></Route>
         <Route path = "/additem" component ={CreateItem}></Route> 
@@ -203,6 +279,32 @@ import feesPayList from './components/feesPayList';
         <Route path = "/getCourseR/:id" component = {GetCourseReceipt}></Route>
         <Route path = "/feespay" component = {FeesPay}></Route>
         <Route path = "/paidlist" component = {feesPayList}></Route>
+        <Route path = "/calculatesalary" component = {LecSalary}></Route>
+        <Route path="/calculatesalry/:id" component={LecSalary}></Route>
+        <Route path="/calculatesalry/:id" component={CalcNetSalry}></Route>
+        <Route path="/calculatesalry/:id" component={CalculateLecSalary}></Route>
+        <Route path="/calculateStaffsalary" component={StaffSalary}></Route>
+        <Route path="/calculatestaffsalry/:id" component={StaffSalary}></Route>
+        <Route path="/calculatestaffsalry/:id" component={CalcStaffSalary}></Route>
+        <Route path="/calculatestaffsalry/:id" component={calculateStaffSalary}></Route>
+      
+
+        <Route exact path ="/libraryhome" component={LibraryAdmin}/>
+      <Route path="/books" render={() => <AddBooks books={books}/>} />
+      <Route path="/addBook/:id" render={props => <SearchBooks{...props} books={books}/>} />
+      <Route path="/update/:id" render={props => <Editbooks{...props} books={books}/>} />
+      <Route path="/add-books" component={AddNewBooks} />
+      <Route path="/Fines" render={() => <Fine PayFines={PayFines}/>}/>
+      <Route path="/add-fine" component={AddFine} />
+      <Route path="/disafines/:id" render={props => <SearchFine{...props} PayFines={PayFines}/>} />
+      <Route path="/ApplicantHome" render={() => <Applicant Applicants={Applicants}/>}/>
+      <Route path="/AddApplicant" component={AddApllicant}/>
+      <Route path="/addtolibray/:id" render={props => <AddLibraryMember{...props}  Applicants={Applicants}/>} />
+      <Route path="/allMembers" render={() => <Members   Member={Member}/>}/>
+      <Route path="/updateMember/:id" render={props => <EditMembers{...props} Member={Member}/>} />
+      
+
+    
 
         <Route path="" component={Adminhomefooter}></Route>
 

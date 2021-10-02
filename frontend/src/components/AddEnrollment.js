@@ -7,7 +7,7 @@ export default class AddEnrollment extends Component {
         super(props);
 
         this.state={
-            enrollmentCode:"",
+            enrollmentCode:"EN"+this.rand(999, 99999),
             studentId:"",
             SubjectId:"",
             StudentName:"",
@@ -50,6 +50,10 @@ export default class AddEnrollment extends Component {
             }
         })
     }
+
+    rand=(min, max)=>{
+        return Math.floor(Math.random()*max-min+1)+min;
+      }
 
     render() {
         return (

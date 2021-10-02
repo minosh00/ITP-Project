@@ -32,6 +32,13 @@ export default class NavBar extends Component {
            &nbsp;
            &nbsp;
            <button className = "btn btn-info"> <a href = "/paidlist" style = {{textDecoration: 'none' , color : 'black'}}><b>Paid List</b></a></button>
+           <br/><br/>
+           <button className = "btn btn-secondary"> <i class="fa fa-list" aria-hidden="true"></i>  <a href = "/calculatesalary" style = {{textDecoration: 'none' , color : 'black'}}><b>Calculte Lecturer Salary</b></a></button>
+           &nbsp;
+           &nbsp;
+           &nbsp;
+
+           <button className = "btn btn-secondary"> <i class="fa fa-list" aria-hidden="true"></i>  <a href = "/calculateStaffsalary" style = {{textDecoration: 'none' , color : 'black'}}><b>Calculte Staff Salary</b></a></button>
            &nbsp;
            &nbsp;
            &nbsp;
