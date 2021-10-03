@@ -68,7 +68,7 @@ export default class Adminaddnewattendance extends Component {
         return (           
             <div className="col-md-8 mt-4 mx-auto">
             <h1 className="h3 mb-3 font-weight-normal">Mark  Attendaces</h1>
-            <form className="needs-validation" noValidate>
+            <form className="needs-validation" onSubmit={this.onSubmit}>
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>attendance ID</label>
                     <input type="text"
@@ -76,7 +76,7 @@ export default class Adminaddnewattendance extends Component {
                     name="attendanceID"
                     placeholder="enter attendance Id"
                     value={this.state.attendanceID}
-                    onChange={this.onChangeattendanceID}/>
+                    onChange={this.onChangeattendanceID} required/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -86,7 +86,7 @@ export default class Adminaddnewattendance extends Component {
                     name="name"
                     placeholder="enter Full Name"
                     value={this.state.name}
-                    onChange={this.onChangename}/>
+                    onChange={this.onChangename} required/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -96,7 +96,7 @@ export default class Adminaddnewattendance extends Component {
                     name="month"
                     placeholder="enter month"
                     value={this.state.month}
-                    onChange={this.onChangemonth}/>
+                    onChange={this.onChangemonth} required/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -106,11 +106,11 @@ export default class Adminaddnewattendance extends Component {
                     name="category"
                     placeholder="enter category"
                     value={this.state.category}
-                    onChange={this.onChangecategory}/>
+                    onChange={this.onChangecategory} required/>
                 </div>
 
 
-                <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} onClick={this.onSubmit}>
+                <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} >
                     <i className="far fa-check-square"></i>
                     &nbsp;Mark attendance
                 </button>

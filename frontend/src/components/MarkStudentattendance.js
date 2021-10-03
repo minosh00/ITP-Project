@@ -42,7 +42,14 @@ export default class MarkStudentattendance extends Component {
     }
 
     onChangecount(e) {
-        this.setState({ count: e.target.value })
+
+        const { name, value } = e.target;
+         let val = e.target.value;
+
+        if(val>0)
+         {this.setState({ count: e.target.value })}
+         else{  
+             alert('The count should be grater than 0!.')}
     }
 
     onSubmit(e) {
@@ -76,7 +83,7 @@ export default class MarkStudentattendance extends Component {
         return (           
             <div className="col-md-8 mt-4 mx-auto">
             <h1 className="h3 mb-3 font-weight-normal">Mark Student Attendaces</h1>
-            <form className="needs-validation" noValidate>
+            <form className="needs-validation" onSubmit={this.onSubmit}>
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>lecturer ID</label>
                     <input type="text"
@@ -84,7 +91,7 @@ export default class MarkStudentattendance extends Component {
                     name="lecturerid"
                     placeholder="enter lecturer Id"
                     value={this.state.lecturerid}
-                    onChange={this.onChangelecturerid}/>
+                    onChange={this.onChangelecturerid} required/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -94,7 +101,7 @@ export default class MarkStudentattendance extends Component {
                     name="lecname"
                     placeholder="enter Full lecname"
                     value={this.state.lecname}
-                    onChange={this.onChangelecname}/>
+                    onChange={this.onChangelecname} required/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -104,7 +111,7 @@ export default class MarkStudentattendance extends Component {
                     name="subjectorcourse"
                     placeholder="enter subject or course"
                     value={this.state.subjectorcourse}
-                    onChange={this.onChangesubjectorcourse}/>
+                    onChange={this.onChangesubjectorcourse} required/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -114,7 +121,7 @@ export default class MarkStudentattendance extends Component {
                     name="date"
                     placeholder="enter date"
                     value={this.state.date}
-                    onChange={this.onChangedate}/>
+                    onChange={this.onChangedate} required/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -124,11 +131,11 @@ export default class MarkStudentattendance extends Component {
                     name="count"
                     placeholder="enter count"
                     value={this.state.count}
-                    onChange={this.onChangecount}/>
+                    onChange={this.onChangecount} required/>
                 </div>
 
 
-                <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} onClick={this.onSubmit}>
+                <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} >
                     <i className="far fa-check-square"></i>
                     &nbsp;Mark Student attendance
                 </button>
