@@ -13,7 +13,7 @@ export default class Adminaddnewattendance extends Component {
         this.onSubmit = this.onSubmit.bind(this);
         
         this.state={
-            attendanceID:'',
+            attendanceID:"ATT" + this.randomid(999, 99999),
             name:'',
             month:'',
             category:''
@@ -63,6 +63,10 @@ export default class Adminaddnewattendance extends Component {
         category:''})
     }
 
+    
+    randomid = (min, max) => {
+        return Math.floor(Math.random() * max - min + 1) + min;
+    }
    
     render() {
         return (           
@@ -76,7 +80,7 @@ export default class Adminaddnewattendance extends Component {
                     name="attendanceID"
                     placeholder="enter attendance Id"
                     value={this.state.attendanceID}
-                    onChange={this.onChangeattendanceID} required/>
+                    onChange={this.onChangeattendanceID} readOnly/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
