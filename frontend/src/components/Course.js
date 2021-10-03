@@ -2,9 +2,15 @@ import React ,{useState,useEffect,useRef  }from 'react'
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import autoTable from 'jspdf-autotable'
+import { jsPDF } from "jspdf";
 import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 const Course =  (props) => {
-   
+
+
+    
+  
+        
     const[courseID , setCourseID] = useState("");
     const[courseName , setCourseName] = useState("");
     const[courseType , setcourseType] = useState("");
@@ -13,6 +19,25 @@ const Course =  (props) => {
     const[price , setprice] = useState("");
     const[duration , setDuration] = useState("");
     const[message, setMessage] =useState('');
+
+
+    function  pdfGenerat (){
+        var doc = new jsPDF('landscape', 'px', 'a4', 'false');
+        
+        doc.autoTable({
+            styles: { fillColor: [255, 0, 0] },
+            columnStyles: { 0: { halign: 'center', fillColor: [0, 255, 0] } }, 
+            margin: { top: 10 },
+                body: [
+                    [{ content: ' Course Details  ', colSpan: 2, rowSpan: 2, styles: { halign: 'center' } }],
+                  ],
+                })
+            autoTable(doc, { html: '#tt' })
+           doc.save('CourseINFO.pdf')
+            }
+
+    
+            
 
    useEffect(() => {
         axios.get(`http://localhost:8000/courses/${props.match.params.id}`)
@@ -34,21 +59,22 @@ const Course =  (props) => {
           
          },[props]);
 
-
-
+        
+            
     return (
 
 
 
+
         <MainContainer  >
-   <table id="table-to-xls">
+   <table id="tt">
        <h2>Course Information&nbsp;&nbsp;<i class="far fa-bookmark"></i></h2>
 
       
        <br></br>
        <br></br>
 
-       <dl className="row" >
+       <dl className="row"  >
 <dt className="col-sm-3"><i class="fas fa-portrait"></i>&nbsp; Course ID</dt>
 <dd className="col-sm-9">{courseID}</dd>
 
@@ -75,14 +101,18 @@ const Course =  (props) => {
       <div />
    
   
-     <button> <ReactHTMLTableToExcel id="test-table-xls-button"
-                    className="btn btn-warning"
-                   
-                    table="table-to-xls"
-                    filename={courseID}
-                    sheet="tablexls"
-                    
-                    buttonText="Download as XLSheet"/></button>
+      <button className="btn btn-danger btn-sm"  onClick={pdfGenerat}>Generate  PDF</button>
+      <br></br><br></br>
+      <ReactHTMLTableToExcel 
+                 className="btn btn-info"
+                 table="tt"
+                 filename="Course Details "
+                 sheet="sheet"
+                 buttonText="Download XLsheet"
+
+                 
+                 / >
+
              <br></br>
    
     <br></br>
