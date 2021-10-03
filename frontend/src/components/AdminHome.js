@@ -18,7 +18,7 @@ export default class AdminHome extends Component {
                         <tr>
                             <td>
                                 <a href=''><img src={student} style={{width:200 , marginTop:'40px', marginLeft:'40px', marginRight:'40px'}}></img></a><br/>
-                                <center><a className="btn btn-outline-success" style={{marginTop:'20px'}} href=''>&nbsp;Student Management&nbsp;</a></center>
+                                <center><a className="btn btn-outline-success" style={{marginTop:'20px'}} href='/AdminStudnethome'>&nbsp;Student Management&nbsp;</a></center>
                             </td>
 
                             <td>

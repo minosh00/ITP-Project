@@ -87,6 +87,7 @@ import Registration from './components/Registration';
 import profile from './components/profile';
 import StdEdit from './components/StdEdit';
 import StdPdf from './components/StdPdf';
+import StudentEmail from './components/StudentEmail';
 
 import NavBar from './components/NavBar';
 import CreateItem from './components/CreateItem';
@@ -267,6 +268,7 @@ useEffect(()=>{
         <Route path="/profile/:id" component={profile}></Route>
         <Route path="/stdEdit/:id" component={StdEdit}></Route>
         <Route path="/stdPdf/:id" component={StdPdf}></Route>
+        <Route path="/getmail" component={StudentEmail}></Route>
 
         <Route path="/" exact component={Adminlogin}></Route>
         <Route path="/adminmainhomelogin" component={Adminlogin}></Route>

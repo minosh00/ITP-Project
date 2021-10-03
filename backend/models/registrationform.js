@@ -94,7 +94,14 @@ const postSchema = new mongoose.Schema({
     payment_date:{
         type:String,
         //required:true
+    },
 
+    avatar:{
+        type:String
+    },
+
+    cloudinary_id:{
+        type:String
     }
 });
 module.exports = mongoose.model('unRegistedStds',postSchema);

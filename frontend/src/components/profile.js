@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import background from '../images/pic33.jpg';
+import pic2 from '../images/std3.jpg';
 
 export default class profile extends Component {
 
@@ -33,12 +33,19 @@ export default class profile extends Component {
             const{registrationNo,student_full_name,Name_with_initials,date_of_addmission,class_name,course_name,date_of_birth,nic,email,address,telephone,gender,religion,nationality,gurdian_name,gurdian_contact_number,gurdian_email,gurdian_occupation,date,bank_name,branch,payment_date} = this.state.posts;
             return (
                 
-                <div style={{marginTop:'20px',backgroundImage: `url(${background})`,backgroundPosition: 'center',backgroundSize: 'cover',backgroundRepeat: 'no-repeat',}}>
+                <div>
                 <p class="fs-4">Student Management System</p>
                 <div className="container">
-                 <h1><p class="fs-1">  Student Profile </p></h1>
-                &nbsp;&nbsp;            
-
+                <h1><p class="fs-1">  Welcome to the Student Profile </p></h1>
+                    &nbsp;&nbsp;
+                    <table>
+                        <tr>
+                            <td>
+                                <a href=''><img src={pic2} style={{ height: '250px', marginTop: '40px', marginLeft: '300px' }}></img></a><br />
+                                <br></br>
+                            </td>
+                        </tr>
+                    </table>
                 
                 <table className="table" id="table-to-xls">
                    
@@ -140,7 +147,7 @@ export default class profile extends Component {
                 <p class="fs-5">If you need  Edit some details which were included in your Student Registration form?And You can click this button as well.
                 </p>
                 </div>
-                    <a className="btn btn-secondary" href={`/stdEdit/${this.props.match.params.id}`}><i className="fas fa-edit" ></i>&nbsp;Update Details</a>
+                    <a className="btn btn-dark" href={`/stdEdit/${this.props.match.params.id}`}><i className="fas fa-edit" ></i>&nbsp;Update Details</a>
                     
                 <div className="container">   
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

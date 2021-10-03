@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import adminpic2 from '../images/stdAdminPic.png';
+import search from '../images/searchStd.jpg';
 export default class Home extends Component {
   constructor(props){
     super(props);
@@ -60,13 +61,18 @@ componentDidMount(){
       return (
         <div>
           <p class="fs-4">Student Management System</p>
+          <div className="container">
+                <h1><p class="fs-1"> Welcome to Student <img src={adminpic2} style={{width:'600px' , height:'100%'}}></img> </p></h1>
+          </div> 
           <h1> <p class="fs-2"> Display Student Details</p></h1>
            
-          
+          <div>
+                <h1><p class="fs-3"> You can search.. <img src={search} style={{width:'80px' , height:'100%'}}></img> </p></h1>
+          </div>
           <table>
             <tr>
               <td>        
-                <input style={{width:'400px'}} className="form-control" type="search" placeholder="Search" name="searchQuery" onChange={this.handleSearchArea}></input>
+                <input style={{width:'700px'}} className="form-control" type="search" placeholder="Search" name="searchQuery" onChange={this.handleSearchArea}></input>
               </td>
               <td>
               </td>
@@ -117,13 +123,13 @@ componentDidMount(){
   
                 <td>
   
-                    <a className="btn btn-secondary" href= {`/addstudent/${posts._id}`}>
+                    <a className="btn btn-dark" href= {`/addstudent/${posts._id}`}>
                     <i className="fas fa-edit" ></i>&nbsp;Approved
                     </a>&nbsp;&nbsp;&nbsp;&nbsp;
                     
   
                 
-                <a className="btn btn-danger"  href="#" onClick={() =>this.onDelete(posts._id)}>
+                <a className="btn btn-warning"  href="#" onClick={() =>this.onDelete(posts._id)}>
                     <i className="fas fa-trash-alt"></i>&nbsp;Delete
                     </a>
                 </td>
