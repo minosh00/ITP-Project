@@ -51,7 +51,11 @@ const CalculatedSalarys = require('./routes/CalculatedSalarys');
 const nonAcStaffSalary = require('./routes/nonAcStaffSalary');
 
 //disa
-
+const fineRoutes = require('./routes/fine');
+const borrowRoutes = require('./routes/borrow');
+const applicantsRoutes = require('./routes/applicants');
+const membersRoutes = require('./routes/members');
+const addBookRoutes = require('./routes/addBook');
 
 //app middleware
 app.use(bodyParser.json());
@@ -103,7 +107,11 @@ app.use(CalculatedSalarys);
 app.use(nonAcStaffSalary);
 
 //disa
-
+app.use("/fines",fineRoutes);
+app.use("/borrow",borrowRoutes);
+app.use("/applicants",applicantsRoutes);
+app.use("/member",membersRoutes);
+app.use("/addBook",addBookRoutes);
 
 const PORT = 8000;
 const DB_URL = 'mongodb+srv://admin:admin@institutedb.nhxwx.mongodb.net/instituteDB?retryWrites=true&w=majority';
