@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import background from '../images/pic33.jpg';
+import pic3 from '../images/std33.jpg';
 import ReactHTMLTableToExcel from 'react-html-table-to-excel';
  
 export default class ViewStdDetails extends Component {
@@ -30,12 +30,19 @@ export default class ViewStdDetails extends Component {
             const{registrationNo,student_full_name,Name_with_initials,date_of_addmission,class_name,course_name,date_of_birth,nic,email,address,telephone,gender,religion,nationality,gurdian_name,gurdian_contact_number,gurdian_email,gurdian_occupation,date,bank_name,branch,payment_date} = this.state.posts;
             return (
                 
-                <div style={{marginTop:'20px',backgroundImage: `url(${background})`,backgroundPosition: 'center',backgroundSize: 'cover',backgroundRepeat: 'no-repeat',}}>
+                <div>
                 <p class="fs-4">Student Management System</p>
                 <div className="container">
                 <h1><p class="fs-1">View Student Details</p></h1>
                 &nbsp;&nbsp;            
-
+                <table>
+                        <tr>
+                            <td>
+                                <a href=''><img src={pic3} style={{ height: '250px', marginTop: '40px', marginLeft: '300px' }}></img></a><br />
+                                <br></br>
+                            </td>
+                        </tr>
+                    </table> 
     
                 <table className="table" id="table-to-xls">
                 <tr>
@@ -133,12 +140,15 @@ export default class ViewStdDetails extends Component {
                         &nbsp;&nbsp;
                     </table>
                     <ReactHTMLTableToExcel
-                    className="btn btn-secondary fas fa-file"
+                    className="btn btn-dark fas fa-file"
                     style={{textDecoration:'none', color:'white'}}
                     table="table-to-xls"
                     filename="Students Report"
                     sheet="tablexls"
                     buttonText=" Download Excel Report"/>
+
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/getmail"><button class="btn btn-danger" ><i class="far fa-envelope"></i>&nbsp;Send Email</button></a>
+
                 </div>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <div className="container">   

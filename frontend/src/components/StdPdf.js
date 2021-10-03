@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { saveAs } from 'file-saver';
-import background from '../images/pic33.jpg';
+import pic4 from '../images/pdf.jpg';
 
 
 export default class StdPdf extends Component {
@@ -91,12 +91,12 @@ export default class StdPdf extends Component {
     render(){
         
         return (
-            <div style={{marginTop:'20px',backgroundImage: `url(${background})`,backgroundPosition: 'center',backgroundSize: 'cover',backgroundRepeat: 'no-repeat',}}>
+            <div>
             <p className="fs-4">Student Management System</p>
        <div className="container">
        <form className="needs-validation" noValidate>
-       <h1><p className="fs-1">Display Student Details </p></h1>
-       &nbsp;&nbsp; 
+       <h2 style={{color:'black'}}><p className="fs-1">Display Student Details <img src={pic4} style={{width:'100px' , height:'100%'}}></img></p></h2>
+       &nbsp;&nbsp;
 
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Registration Number </p></label>
@@ -190,7 +190,7 @@ export default class StdPdf extends Component {
 </form>
 <h1><p class="fs-5">Press this button to download your PDF of your All Details.</p></h1>
 &nbsp;&nbsp;&nbsp;
-<center><button className="btn btn-secondary" onClick={this.createAndDownloadPdf}>&nbsp; Download PDF&nbsp; </button></center>
+<center><button className="btn btn-dark" onClick={this.createAndDownloadPdf}>&nbsp; Download PDF&nbsp; </button></center>
    </div>&nbsp;&nbsp;&nbsp;
    <p class="fs-5">The Royal Edu Institue was established in 1978 by a group of senior government officials, business executives, and academics. Led by The Honorable Bill Seidman, 
    former Chairman of the Federal Deposit Insurance Corporation and the Resolution Trust Corporation, this distinguished group founded the Royal Edu Institue because they saw the need for current and future business executives to have a much better understanding of the dynamics of government and public policy, especially the impact on their businesses, industries, and on the economy overall. This mission is even more critical today.

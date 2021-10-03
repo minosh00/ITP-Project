@@ -53,6 +53,11 @@ import timetableUpdate from './components/timetableUpdate';
 import leaveReq from './components/leaveReq';
 import DownloadPdf from './components/DownloadPdf'
 import LecturerEmail from './components/LecturerEmail';
+import viewRegistrations from './components/viewRegistrations'
+import CreateRegistration from './components/CreateRegistration';
+import detailRequest from './components/detailRequest';
+import detailsHome from './components/detailsHome';
+
 
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -82,6 +87,7 @@ import Registration from './components/Registration';
 import profile from './components/profile';
 import StdEdit from './components/StdEdit';
 import StdPdf from './components/StdPdf';
+import StudentEmail from './components/StudentEmail';
 
 import NavBar from './components/NavBar';
 import CreateItem from './components/CreateItem';
@@ -231,9 +237,13 @@ useEffect(()=>{
         <Route path ="/leaveReq" component={leaveReq}></Route> 
         <Route path ="/download/:id" component={DownloadPdf}></Route>
         <Route path ="/lecConfirmationSend" component={LecturerEmail}></Route>
+        <Route path ="/viewRegistrations" component={viewRegistrations}></Route>
+        <Route path ="/lecturerRegistration" component={CreateRegistration}></Route>
+        <Route path ="/publishNotice" component={detailRequest}></Route>
+        <Route path ="/viewNotice" component={detailsHome}></Route>
+        
+        
 
-       
-       
         <Route   exact path="/view"  render={()=> <Courses posts={posts} />} />
         <Route path="/course/:id"    render={(props)=>  <Course {...props} posts={posts} />} />
         <Route path="/Cupdate/:id"    render={(props)=>  <EditCourse {...props} posts={posts} />} />
@@ -258,6 +268,7 @@ useEffect(()=>{
         <Route path="/profile/:id" component={profile}></Route>
         <Route path="/stdEdit/:id" component={StdEdit}></Route>
         <Route path="/stdPdf/:id" component={StdPdf}></Route>
+        <Route path="/getmail" component={StudentEmail}></Route>
 
         <Route path="/" exact component={Adminlogin}></Route>
         <Route path="/adminmainhomelogin" component={Adminlogin}></Route>

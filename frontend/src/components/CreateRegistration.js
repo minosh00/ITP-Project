@@ -75,10 +75,15 @@ const CreateRegistration = (props) => {
   return (
     <div className="container">
       <br />
-      <div className="card" style={{ width: "100%" , color:"black"}}>
-        <div className="alllecturerheader">
+      <div className="card" style={{
+         width: '1500px',
+         border: '1px solid black',
+         marginRight:'10px',
+         marginLeft:'-90px'}}>
+        <div className="">
+          <br></br>
           <center>
-          <h2>Lecturer Registration</h2>
+          <h3><b>Lecturer Registration</b></h3>
           </center>
         </div>
 

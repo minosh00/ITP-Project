@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const app = express();
 
@@ -32,6 +34,8 @@ const regRoutes = require('./routes/registration');
 const reqRoutes = require('./routes/request');
 const timetableUpdate = require('./routes/updateTimet');
 const detailRoutes = require('./routes/updateDetails');
+const registrationL = require('./routes/registrationL');
+const regeviewer = require('./routes/regeviewer');
 
 //minosh
 const buyCourse = require("./routes/buyCourse");
@@ -88,6 +92,8 @@ app.use(regRoutes);
 app.use(reqRoutes);
 app.use(timetableUpdate);
 app.use(detailRoutes);
+app.use(registrationL);
+app.use(regeviewer);
 
 //minosh
 app.use('/courses', courseRouter );
@@ -111,7 +117,7 @@ app.use("/applicants",applicantsRoutes);
 app.use("/member",membersRoutes);
 app.use("/addBook",addBookRoutes);
 
-const PORT = 8080;
+const PORT = 8000;
 const DB_URL = 'mongodb+srv://admin:admin@institutedb.nhxwx.mongodb.net/instituteDB?retryWrites=true&w=majority';
 
 mongoose.connect(DB_URL, {

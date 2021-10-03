@@ -47,9 +47,9 @@ onDelete=(id)=>{
               &nbsp;
               &nbsp;
               &nbsp;
-                <a className="btn btn-success" href="/apply" style={{textDecoration:'none', color:'white'}}>
+                 <a className="btn btn-success" href="/apply" style={{textDecoration:'none', color:'white'}}>
                  <i className="fas fa-file"></i>&nbsp;Add Application
-                </a>
+                </a> 
     <table className="table table-striped">
           <thead>
             <tr>

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from'axios';
 import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 import './style.css'
+import background from '../images/home34.png';
 
 
 export default class lecturerHome extends Component {
@@ -74,18 +75,18 @@ axios.get("/lecturers").then(res =>{
   render() {
     return(
       
-      <div>
+      <div style={{marginTop:'-45px',backgroundImage: `url(${background})`,backgroundPosition: 'center',backgroundSize: 'cover',backgroundRepeat: 'no-repeat',}}>
         <div className="row">
           <div className="col-lg-12 mt-3 mb-3">
            
           
-            <div style={{marginBottom: '10px', marginLeft:'5px'}}>
-            <h1><b>Lecturer Management</b></h1>
-            <h5>Details of the lecturers in the Royal-Edu institute</h5>
+            <div style={{marginTop: '19px', marginLeft:'5px'}}>
+            <center><h3><b>Lecturer Management</b></h3></center>
+            <center><h5><b>Details of the lecturers in the Royal-Edu institute</b></h5></center>
         </div >
             </div>
             <div className="col-lg-3 mt-2 mb-2">
-            <div style={{marginLeft:'12px'}}>
+            <div style={{marginLeft:'1px'}}>
               <input
               className="form-control"
               type="search"
@@ -111,13 +112,13 @@ axios.get("/lecturers").then(res =>{
                
                   
 
-        <table className =" table table-bordered" >
+        <table className =" table table-success table-striped table-bordered" >
         <thead className ="table-dark">
 
         <br></br>
         
           <tr>
-             <th scope="col" >#</th>
+             <th scope="col" ></th>
              <th scope="col">Lecturer ID</th>
              <th scope="col">First Name </th>
              <th scope="col">Last Name</th>
