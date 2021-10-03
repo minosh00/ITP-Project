@@ -93,7 +93,7 @@ export default class AdminApproveLR extends Component {
             <div>
                  <div className="col-md-8 mt-4 mx-auto">
             <h1 className="h3 mb-3 font-weight-normal">Approved Leave requests</h1>
-            <form className="needs-validation" noValidate>
+            <form className="needs-validation" onSubmit={this.onSubmit}>
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>Lecturer ID</label>
                     <input type="text"
@@ -101,7 +101,7 @@ export default class AdminApproveLR extends Component {
                     name="lecId"
                     placeholder="enter Lecturer Id"
                     value={this.state.lecId}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.handleInputChange} readOnly/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -111,7 +111,7 @@ export default class AdminApproveLR extends Component {
                     name="name"
                     placeholder="enter Event Name"
                     value={this.state.name}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.handleInputChange} readOnly/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -121,7 +121,7 @@ export default class AdminApproveLR extends Component {
                     name="beginDate"
                     placeholder="enter begin Date"
                     value={this.state.beginDate}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.handleInputChange} readOnly/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -131,7 +131,7 @@ export default class AdminApproveLR extends Component {
                     name="returnDate"
                     placeholder="enter return Date"
                     value={this.state.returnDate}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.handleInputChange} readOnly/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -141,7 +141,7 @@ export default class AdminApproveLR extends Component {
                     name="reason"
                     placeholder="enter reason"
                     value={this.state.reason}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.handleInputChange} readOnly/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -151,7 +151,7 @@ export default class AdminApproveLR extends Component {
                     name="email"
                     placeholder="enter email"
                     value={this.state.email}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.handleInputChange} readOnly/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -161,19 +161,19 @@ export default class AdminApproveLR extends Component {
                     name="Cnumber"
                     placeholder="enter Cnumber"
                     value={this.state.Cnumber}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.handleInputChange} readOnly/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>Pay or No Pay</label>
-                    <select className="form-select" name="PayORnoPay" value={this.state.PayORnoPay} onChange={this.handleInputChange} >
+                    <select className="form-select" name="PayORnoPay" value={this.state.PayORnoPay} onChange={this.handleInputChange} required >
                       <option selected disabled value="">Choose...</option>
                       <option>No Pay</option>
                       <option>Pay</option>
                     </select>
                 </div>
 
-                <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} onClick={this.onSubmit}>
+                <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} >
                     <i className="far fa-check-square"></i>
                     &nbsp;Approved Leave
                 </button>

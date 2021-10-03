@@ -77,7 +77,7 @@ export default class Admineditttables extends Component {
             <div>
                 <div className="col-md-8 mt-4 mx-auto">
             <h1 className="h3 mb-3 font-weight-normal">Update Time table</h1>
-            <form className="needs-validation" noValidate>
+            <form className="needs-validation"  onSubmit={this.onSubmit}>
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>Time Table ID</label>
                     <input type="text"
@@ -85,7 +85,7 @@ export default class Admineditttables extends Component {
                     name="timetableID"
                     placeholder="enter Event Id"
                     value={this.state.timetableID}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.handleInputChange} required/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -95,7 +95,7 @@ export default class Admineditttables extends Component {
                     name="subjectORcourse"
                     placeholder="enter Subject or Course"
                     value={this.state.subjectORcourse}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.handleInputChange} required/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -105,7 +105,7 @@ export default class Admineditttables extends Component {
                     name="monthANDdate"
                     placeholder="enter Month and Date"
                     value={this.state.monthANDdate}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.handleInputChange} required/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -115,10 +115,10 @@ export default class Admineditttables extends Component {
                     name="time"
                     placeholder="enter Time"
                     value={this.state.time}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.handleInputChange} required/>
                 </div>
 
-                <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} onClick={this.onSubmit}>
+                <button className="btn btn-success" type="submit"  style={{marginTop:'15px'}}>
                     <i className="far fa-check-square"></i>
                     &nbsp;Update Time table
                 </button>
