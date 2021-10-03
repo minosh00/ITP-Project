@@ -71,7 +71,7 @@ export default class EnrollmentHome extends Component {
                         <input className="form-control" style={{width:'400px', marginLeft:'50px'}} type="search" placeholder="Search for Enrollments" name="searchQuery" onChange={this.handleSearchArea}></input>
                     </td>
                     <td>
-                        <button className="btn btn-primary" style={{marginLeft:'1100px'}}><a href="/addEnrollment" style={{textDecoration:'none', color:'white'}}>Add New Enrollment</a></button>
+                        <button className="btn btn-primary" style={{marginLeft:'1320px'}}><a href="/addEnrollment" style={{textDecoration:'none', color:'white'}}><i className="fas fa-plus-circle"></i>&nbsp;Add New Enrollment</a></button>
                         &nbsp;
                         <ReactHTMLTableToExcel
                             className = 'btn btn-outline-success'

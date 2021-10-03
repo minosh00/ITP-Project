@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-
+import main from './SubjectImages/subjectmain.jpg'
 
 export default class SubHome extends Component {
 constructor(props){
@@ -66,8 +66,10 @@ onDelete=(id)=>{
             <h1>Subject Management</h1>
             <h5>Currently Available Subjects</h5>
         </div >
-
-      <hr/>
+        
+        <div style={{marginBottom:'45px'}}>
+          <img src={main} style={{width:'100%', height:'50%'}}/>
+        </div>
       
         <table>
             <tr>
@@ -76,7 +78,7 @@ onDelete=(id)=>{
               </td>
               <td>
                 
-                <a className="btn btn-success" style={{marginLeft:'1100px'}} href='/addsub'>
+                <a className="btn btn-success" style={{marginLeft:'1320px'}} href='/addsub'>
                 <i className="fas fa-plus-circle"></i>&nbsp;Add New Subject
                 </a>
                 &nbsp;
