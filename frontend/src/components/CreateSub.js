@@ -46,7 +46,7 @@ export default class CreateSub extends Component {
       [name]: value
     })
   }
-  
+
   onSubmit = (e) => {
     e.preventDefault();
 
@@ -87,6 +87,8 @@ export default class CreateSub extends Component {
   render() {
 
     return (
+
+      
 
       <div>
         <div style={{ marginBottom: '45px', marginLeft: '50px' }}>
@@ -171,19 +173,20 @@ export default class CreateSub extends Component {
 
             <div class="col-12">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required/>
-                <label class ="form-check-label" for="invalidCheck">
-                Agree to terms and conditions
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+                <label class="form-check-label" for="invalidCheck">
+                  Agree to terms and conditions
                 </label>
-                <div class ="invalid-feedback">
-                You must agree before submitting.
+                <div class="invalid-feedback">
+                  You must agree before submitting.
                 </div>
               </div>
             </div>
 
             <div>
               <hr />
-              <button type="submit" className="btn btn-success">Add New</button>
+              <button type="submit" className="btn btn-success" data-toggle="modal">Add New</button>
+              
             </div>
 
           </form>

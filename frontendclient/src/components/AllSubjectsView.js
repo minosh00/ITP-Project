@@ -55,7 +55,7 @@ export default class AllSubjectsView extends Component {
                             <td style={{width:'150px',}}>{subjects.subjectName}<br/><b style={{fontSize:'24px'}}>Rs: {subjects.subjectFee}</b></td>
                             <td style={{width:'500px', fontSize:'17px', color:'#8c8c8c'}}>{subjects.subjectDes}</td>
                             <td style={{width:'150px', marginLeft:'50px'}}>
-                              <a className="btn btn-success" onClick={()=>this.onDelete(subjects._id)}>
+                              <a className="btn btn-success" href='/addenrollsub'>
                               &nbsp;<b>Enroll</b>&nbsp;<i className="fas fa-arrow-circle-right"></i>
                               </a>
                             </td>

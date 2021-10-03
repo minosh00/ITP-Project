@@ -66,10 +66,6 @@ onDelete=(id)=>{
             <h1>Subject Management</h1>
             <h5>Currently Available Subjects</h5>
         </div >
-        
-        <div style={{marginBottom:'45px'}}>
-          <img src={main} style={{width:'100%', height:'50%'}}/>
-        </div>
       
         <table>
             <tr>
