@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import background from '../images/pic33.jpg';
+import pics from '../images/EditNew.jpg';
+import ch1 from '../images/child.jpg';
 export default class StdEdit extends Component {
    
 
@@ -143,12 +144,15 @@ onsubmit = (e) =>{
     render(){
         
         return (
-            <div style={{marginTop:'20px',backgroundImage: `url(${background})`,backgroundPosition: 'center',backgroundSize: 'cover',backgroundRepeat: 'no-repeat',}}>
+            <div>
             <p class="fs-4">Student Management System</p>
+            <div className="container">
+        <img src={ch1} style={{width:'250px' , height:'100%'}}></img> 
+</div>
        <div className="container">
        <form className="needs-validation" noValidate>
-       <h1><p class="fs-1">Edit Student Details </p></h1>
-       &nbsp;&nbsp;  
+       <h1><p class="fs-1"> STUDENT DETAILS <img src={pics} style={{width:'400px' , height:'100%'}}></img> </p></h1>
+         
        <div className="mb-3">
 <label for="exampleInputPassword1" className="form-label"><p class="fw-bold">Student Full Name </p></label>
 <input className="form-control" name="student_full_name" value={this.state.student_full_name} onChange={this.handleInputChange}/>
@@ -237,23 +241,13 @@ onsubmit = (e) =>{
 <h3><p class="fs-4">Are You Sure To Save All Above Details In This Page and You Can Press Submit Button
 </p></h3>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-<center><button type="submit" className="btn btn-secondary btn-lg" onClick={this.onsubmit}>&nbsp;SUBMIT &nbsp;</button></center>
+<button type="button" style={{width:'100%'}} className="btn btn-dark btn-lg btn-block" onClick={this.onSubmit}>SAVE ALL DETAILS</button>
 </form>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
    </div>
-   <p class="fs-5">Giving Compass is a one-stop shop to help individual donors learn about issues.
-                 get involved, and give to community-led change.
-                 In the US, 80% of giving to nonprofits comes from individuals (Giving USA)
-                 While the amount we give is important, how we give also matters.
-                 We guide donors toward practices that advance equity and address the root causes of society's issues.
-                We embrace fresh ideas, forward thinking, and fast improvements.
-                We are accountable to our mission and to delivering a public benefit.
-                We are driven by the desire to do the right thing.We believe in the power of elevating diverse voices and representing the breadth and depth of work in our sector.
-                We’re motivated by the joy of giving and spreading it.
-                </p>
+   
    </div>
    )
    }

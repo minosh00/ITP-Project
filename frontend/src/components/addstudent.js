@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import background from '../images/pic33.jpg';
+import pic7 from '../images/addNew.png';
 export default class addstudent extends Component {
    
 
@@ -142,10 +142,10 @@ onsubmit = (e) =>{
    
     render(){
         return (
-            <div style={{marginTop:'20px',backgroundImage: `url(${background})`,backgroundPosition: 'center',backgroundSize: 'cover',backgroundRepeat: 'no-repeat',}}>
+            <div>
                 <p class="fs-4">Student Management System</p> 
        <div className="container">
-       <h1><p class="fs-1"> Admin Approves Student </p></h1>
+       <h2><p class="fs-1"> Admin Approves Student <img src={pic7} style={{width:'200px' , height:'100%'}}></img></p></h2>
         &nbsp;&nbsp; 
        <form className="needs-validation" noValidate>
        <div className="mb-3">
@@ -236,7 +236,7 @@ onsubmit = (e) =>{
 <label for="exampleInputEmail1" className="form-label"><p class="fw-bold">Payment Date </p></label>
 <input className="form-control" name="payment_date" aria-describedby="emailHelp" value={this.state.payment_date} onChange={this.handleInputChange}/>
 </div>
-<center><button type="submit" className="btn btn-secondary" onClick={this.onsubmit}> &nbsp; SUBMIT &nbsp;</button></center>
+<center><button type="submit" className="btn btn-dark" onClick={this.onsubmit}> &nbsp; SUBMIT &nbsp;</button></center>
 </form>
    </div>
    </div>

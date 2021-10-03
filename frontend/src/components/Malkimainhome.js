@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import adminpic from '../images/stdAdminPic.png';
+import search from '../images/searchStd.jpg';
 
 export default class mainhome extends Component {
   constructor(props){
@@ -62,8 +64,13 @@ componentDidMount(){
       return (
         <div>
          <p class="fs-4">Student Management System</p>
+         <div className="container">
+                <h1><p class="fs-1"> Welcome to Student <img src={adminpic} style={{width:'600px' , height:'100%'}}></img> </p></h1>
+          </div> 
         <h1> <p class="fs-2"> Display Student Details</p></h1>
-          
+        <div>
+                <h1><p class="fs-3"> You can search.. <img src={search} style={{width:'80px' , height:'100%'}}></img> </p></h1>
+          </div>
           <table>
             <tr>
               <td>
@@ -71,10 +78,10 @@ componentDidMount(){
               </td>
               
               <td>
-                <button className="btn btn-secondary" style={{marginLeft:'33px'}}><a href="/studentapplications" style={{textDecoration:'none',color:'white'}}> STUDENT APPLICATIONS </a></button>
+                <button className="btn btn-dark" style={{marginLeft:'33px'}}><a href="/studentapplications" style={{textDecoration:'none',color:'white'}}> STUDENT APPLICATIONS </a></button>
               </td>
               <td>
-                <button className="btn btn-secondary" style={{marginLeft:'33px'}}><a href="/registration" style={{textDecoration:'none',color:'white'}}> New Student Registration Form</a></button>
+                <button className="btn btn-dark" style={{marginLeft:'33px'}}><a href="/registration" style={{textDecoration:'none',color:'white'}}> Registration Form</a></button>
               </td>
               
             </tr>
@@ -134,19 +141,19 @@ componentDidMount(){
   
                 <td>
   
-                    <a className="btn btn-secondary" href= {`/stdupdateedit/${posts._id}`}>
+                    <a className="btn btn-dark" href= {`/stdupdateedit/${posts._id}`}>
                     <i className="fas fa-edit" ></i>&nbsp;EDIT
                     </a>&nbsp;&nbsp;&nbsp;
                     
   
                  
-                <a className="btn btn-danger"  href="#" onClick={() =>this.onDelete(posts._id)}>
+                <a className="btn btn-warning"  href="#" onClick={() =>this.onDelete(posts._id)}>
                     <i className="fas fa-trash-alt"></i>&nbsp;Delete
                     </a>&nbsp;&nbsp;&nbsp;
                 
                 
   
-                    <a className="btn btn-secondary" href= {`/view/${posts._id}`}>
+                    <a className="btn btn-dark" href= {`/view/${posts._id}`}>
                     <i className="fas fa-edit" ></i>&nbsp;VIEW
                     </a>&nbsp;&nbsp;&nbsp;
                     
@@ -154,7 +161,7 @@ componentDidMount(){
                 
                 
   
-                    <a className="btn btn-success" href= {`/profile/${posts._id}`}>
+                    <a className="btn btn-dark" href= {`/profile/${posts._id}`}>
                     <i className="fas fa-edit" ></i>&nbsp;PROFILE
                     </a>
                     
