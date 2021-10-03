@@ -78,6 +78,8 @@ export default class MarkStudentattendance extends Component {
     });
   }
 
+ 
+
   render() {
     return (
       <div className="col-md-8 mt-4 mx-auto">
@@ -92,7 +94,7 @@ export default class MarkStudentattendance extends Component {
               placeholder="enter lecturer Id"
               value={this.state.lecturerid}
               onChange={this.onChangelecturerid}
-              required
+              readOnly
             />
           </div>
 
