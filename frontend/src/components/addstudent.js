@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import pic7 from '../images/addNew.png';
+import pic77 from '../images/lapWithGirl.jpeg';
 export default class addstudent extends Component {
    
 
@@ -144,8 +145,10 @@ onsubmit = (e) =>{
         return (
             <div>
                 <p class="fs-4">Student Management System</p> 
+                <div className='card container'>
        <div className="container">
-       <h2><p class="fs-1"> Admin Approves Student <img src={pic7} style={{width:'200px' , height:'100%'}}></img></p></h2>
+       <img src={pic77} style={{width:'1280px' , height:'100%'}}></img>
+       <h1 style={{color:'black'}}><p className="fs-1"> Admin Add New Student Registration No: <img src={pic7} style={{width:'200px' , height:'100%'}}></img></p></h1>
         &nbsp;&nbsp; 
        <form className="needs-validation" noValidate>
        <div className="mb-3">
@@ -204,6 +207,9 @@ onsubmit = (e) =>{
 <label for="exampleInputEmail1" className="form-label"><p class="fw-bold">Nationality</p></label>
 <input className="form-control" name="nationality" aria-describedby="emailHelp" value={this.state.nationality} onChange={this.handleInputChange}/>
 </div>
+&nbsp;
+<h3>Student Gurdian Details</h3>
+&nbsp;
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"><p class="fw-bold">Gurdian Name</p></label>
 <input className="form-control" name="gurdian_name" aria-describedby="emailHelp" value={this.state.gurdian_name} onChange={this.handleInputChange}/>
@@ -223,7 +229,10 @@ onsubmit = (e) =>{
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"><p class="fw-bold">Date</p></label>
 <input className="form-control" name="date" aria-describedby="emailHelp" value={this.state.date} onChange={this.handleInputChange}/>
-</div>
+</div>&nbsp;
+<h3>Student Bank Details</h3>
+&nbsp;
+
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"><p class="fw-bold">Bank Name </p></label>
 <input className="form-control" name="bank_name" aria-describedby="emailHelp" value={this.state.bank_name} onChange={this.handleInputChange}/>
@@ -237,7 +246,8 @@ onsubmit = (e) =>{
 <input className="form-control" name="payment_date" aria-describedby="emailHelp" value={this.state.payment_date} onChange={this.handleInputChange}/>
 </div>
 <center><button type="submit" className="btn btn-dark" onClick={this.onsubmit}> &nbsp; SUBMIT &nbsp;</button></center>
-</form>
+</form>&nbsp;
+   </div>
    </div>
    </div>
    )

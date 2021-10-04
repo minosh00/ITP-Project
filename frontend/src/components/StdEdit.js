@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import pics from '../images/EditNew.jpg';
-import ch1 from '../images/child.jpg';
+import ch1 from '../images/lap.jpg';
 export default class StdEdit extends Component {
    
 
@@ -147,11 +147,15 @@ onsubmit = (e) =>{
             <div>
             <p class="fs-4">Student Management System</p>
             <div className="container">
-        <img src={ch1} style={{width:'250px' , height:'100%'}}></img> 
-</div>
+                <h1>Student Registed Upadate Form</h1>
+                </div>
+            <div className='card container'>
+            &nbsp;
+            <img src={ch1} style={{width:'1300px' , height:'100%'}}></img> 
+
        <div className="container">
        <form className="needs-validation" noValidate>
-       <h1><p class="fs-1"> STUDENT DETAILS <img src={pics} style={{width:'400px' , height:'100%'}}></img> </p></h1>
+       <h1><p class="fs-1"> STUDENT DETAILS <img src={pics} style={{width:'400px' , height:'150%'}}></img> </p></h1>
          
        <div className="mb-3">
 <label for="exampleInputPassword1" className="form-label"><p class="fw-bold">Student Full Name </p></label>
@@ -204,7 +208,9 @@ onsubmit = (e) =>{
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"><p class="fw-bold">Nationality</p></label>
 <input className="form-control" name="nationality" aria-describedby="emailHelp" value={this.state.nationality} onChange={this.handleInputChange}/>
-</div>
+</div>&nbsp;
+<h3>Now you can Edit the Student Gardian Details</h3>
+&nbsp;
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"><p class="fw-bold">Gurdian Name</p></label>
 <input className="form-control" name="gurdian_name" aria-describedby="emailHelp" value={this.state.gurdian_name} onChange={this.handleInputChange}/>
@@ -225,6 +231,9 @@ onsubmit = (e) =>{
 <label for="exampleInputEmail1" className="form-label"><p class="fw-bold">Date</p></label>
 <input className="form-control" name="date" aria-describedby="emailHelp" value={this.state.date} onChange={this.handleInputChange}/>
 </div>
+&nbsp;
+     <h3>Now you can Edit the Student Bank Details</h3>
+&nbsp;
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"><p class="fw-bold">Bank Name </p></label>
 <input className="form-control" name="bank_name" aria-describedby="emailHelp" value={this.state.bank_name} onChange={this.handleInputChange}/>
@@ -243,11 +252,9 @@ onsubmit = (e) =>{
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <button type="button" style={{width:'100%'}} className="btn btn-dark btn-lg btn-block" onClick={this.onSubmit}>SAVE ALL DETAILS</button>
 </form>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
+&nbsp;&nbsp;&nbsp;
    </div>
-   
+   </div>
    </div>
    )
    }

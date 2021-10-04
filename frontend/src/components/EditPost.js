@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import pics6 from '../images/pencil.png';
+import pics66 from '../images/editPost.jpeg';
+
 export default class EditPost extends Component {
    
 
@@ -144,8 +146,12 @@ onsubmit = (e) =>{
         return (
             <div>
         <p class="fs-4">Student Management System</p>
-         
+        <div className="container">
+            <h1>Edit Student Details </h1>
+         </div>
+        <div className='card container'>
        <div className="container">
+       <img src={pics66} style={{width:'1300px' , height:'100%'}}></img>
        <h1><p class="fs-1">  Admin Edit Students Details<img src={pics6} style={{width:'100px' , height:'100%'}}></img> </p></h1>
         &nbsp;&nbsp;
        <form className="needs-validation" noValidate>
@@ -204,7 +210,9 @@ onsubmit = (e) =>{
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"><p class="fw-bold">Nationality</p></label>
 <input className="form-control" name="nationality" aria-describedby="emailHelp" value={this.state.nationality} onChange={this.handleInputChange}/>
-</div>
+</div>&nbsp;
+<h3>Student Gurdian Details</h3>
+&nbsp;
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"><p class="fw-bold">Gurdian Name</p></label>
 <input className="form-control" name="gurdian_name" aria-describedby="emailHelp" value={this.state.gurdian_name} onChange={this.handleInputChange}/>
@@ -224,7 +232,9 @@ onsubmit = (e) =>{
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"><p class="fw-bold">Date</p></label>
 <input className="form-control" name="date" aria-describedby="emailHelp" value={this.state.date} onChange={this.handleInputChange}/>
-</div>
+</div>&nbsp;
+<h3>Student Bank Details</h3>
+&nbsp;
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"><p class="fw-bold">Bank Name </p></label>
 <input className="form-control" name="bank_name" aria-describedby="emailHelp" value={this.state.bank_name} onChange={this.handleInputChange}/>
@@ -239,6 +249,8 @@ onsubmit = (e) =>{
 </div>
 <center><button type="submit" className="btn btn-dark" onClick={this.onsubmit}> SAVE ALL DETAILS </button></center>
 </form>
+&nbsp;
+</div>
    </div>
    </div>
    )

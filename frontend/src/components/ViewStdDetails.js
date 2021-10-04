@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import pic3 from '../images/std33.jpg';
+import pic3 from '../images/boy123.jpeg';
 import ReactHTMLTableToExcel from 'react-html-table-to-excel';
  
 export default class ViewStdDetails extends Component {
@@ -34,11 +34,12 @@ export default class ViewStdDetails extends Component {
                 <p class="fs-4">Student Management System</p>
                 <div className="container">
                 <h1><p class="fs-1">View Student Details</p></h1>
+                <div className='card container'>
                 &nbsp;&nbsp;            
                 <table>
                         <tr>
                             <td>
-                                <a href=''><img src={pic3} style={{ height: '250px', marginTop: '40px', marginLeft: '300px' }}></img></a><br />
+                                <a href=''><img src={pic3} style={{ height: '300px', marginTop: '40px', marginLeft: '300px' }}></img></a><br />
                                 <br></br>
                             </td>
                         </tr>
@@ -49,96 +50,123 @@ export default class ViewStdDetails extends Component {
                             <th scope="col">Registation Number</th>
                             <td>{registrationNo}</td>
                         </tr>
+                        <br></br>
                         <tr>
                             <th scope="col">Student Full Name</th>
                             <td>{student_full_name}</td>
                         </tr>
+                        <br></br>
                         <tr>
                             <th scope="col">Name With Initials</th>
                             <td>{Name_with_initials}</td>
                         </tr>
+                        <br></br>
                         <tr>
                             <th scope="col">Date of Admission</th>
                             <td>{date_of_addmission}</td>
                         </tr>
+                        <br></br>
                         <tr>
                             <th scope="col">Class Name</th>
                             <td>{class_name}</td>
                         </tr>
+                        <br></br>
                         <tr>
                             <th scope="col">Course Name</th>
                             <td>{course_name}</td>
                         </tr>
+                        <br></br>
                         <tr>
                             <th scope="col">Date Of Birth</th>
                             <td>{date_of_birth}</td>
                         </tr>
+                        <br></br>
                         <tr>
                             <th scope="col">Student NIC</th>
                             <td>{nic}</td>
                         </tr>
+                        <br></br>
                         <tr>
                             <th scope="col">Student Email</th>
                             <td>{email}</td>
                         </tr>
+                        <br></br>
                         <tr>
                             <th scope="col">Contact Number</th>
                             <td>{telephone}</td>
                         </tr>
+                        <br></br>
                         <tr>
                             <th scope="col">Date Of Addmission</th>
                             <td>{date_of_addmission}</td>
                         </tr>
+                        <br></br>
                         <tr>
                             <th scope="col">Gender</th>
                             <td>{gender}</td>
                         </tr>
+                        <br></br>
                         <tr>
                             <th scope="col">Religion</th>
                             <td>{religion}</td>
                         </tr>
+                        <br></br>
                         <tr>
                             <th scope="col">Nationality</th>
                             <td>{nationality}</td>
                         </tr>
+                        <br></br>
                         <tr>
                             <th scope="col">Student Address</th>
                             <td>{address}</td>
                         </tr>
+                        <br></br>
                         <tr>
                         <th scope="col">Gurdians Name</th>
                         <td>{gurdian_name}</td>
                         </tr>
+                        <br></br>
                         <tr>
                         <th scope="col">Gurdians Contact Number</th>
                         <td>{gurdian_contact_number}</td>
                         </tr>
+                        <br></br>
                         <tr>
                         <th scope="col">Gurdians Email</th>
                         <td>{gurdian_email}</td>
                         </tr>
+                        <br></br>
                         <tr>
                         <th scope="col">Gurdians Occupation</th>
                         <td>{gurdian_occupation}</td>
                         </tr>
+                        <br></br>
                         <tr>
                         <th scope="col">Date</th>
                         <td>{date}</td>
                         </tr>
+                        <br></br>
                         <tr>
                         <th scope="col">Bank Name</th>
                         <td>{bank_name}</td>
                         </tr>
+                        <br></br>
                         <tr>
                         <th scope="col">Branch</th>
                         <td>{branch}</td>
                         </tr>
+                        <br></br>
                         <tr>
                         <th scope="col">Payment Date</th>
                         <td>{payment_date}</td>
                         </tr>
+                        <br></br>
                         &nbsp;&nbsp;
                     </table>
+                    </div>
+                    <br></br>
+                    <h3>You can Download Excel sheet of the Student Details..</h3>
+                    <br></br>
                     <ReactHTMLTableToExcel
                     className="btn btn-dark fas fa-file"
                     style={{textDecoration:'none', color:'white'}}
@@ -146,24 +174,16 @@ export default class ViewStdDetails extends Component {
                     filename="Students Report"
                     sheet="tablexls"
                     buttonText=" Download Excel Report"/>
-
-&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/getmail"><button class="btn btn-danger" ><i class="far fa-envelope"></i>&nbsp;Send Email</button></a>
-
-                </div>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <div className="container">   
-                <p class="fs-5">Giving Compass is a one-stop shop to help individual donors learn about issues.
-                 get involved, and give to community-led change.
-                 In the US, 80% of giving to nonprofits comes from individuals (Giving USA)
-                 While the amount we give is important, how we give also matters.
-                 We guide donors toward practices that advance equity and address the root causes of society's issues.
-                We embrace fresh ideas, forward thinking, and fast improvements.
-                We are accountable to our mission and to delivering a public benefit.
-                We are driven by the desire to do the right thing.We believe in the power of elevating diverse voices and representing the breadth and depth of work in our sector.
-                We’re motivated by the joy of giving and spreading it.
-                </p>
+                    <br></br><br></br>
+                    <h3>Admin can send an Email to the Student...</h3>
+                       <br></br>
+                    <br></br>
+                  <a href="/getmail"><button class="btn btn-danger" ><i class="far fa-envelope"></i>&nbsp;Send Email</button></a><br></br>
                 </div>
                 </div>
+                           
+                
+              
                
             )
     }

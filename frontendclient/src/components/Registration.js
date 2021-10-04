@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import pic from '../images/welcome1.jpg';
-import ch from '../images/group.jpg';
+// import pic from '../images/welcome1.jpg';
+// import ch from '../images/group.jpg';
 
 export default class Registration extends Component {
     constructor(props) {
@@ -109,10 +109,10 @@ export default class Registration extends Component {
                 <h1>Student Registration Form</h1>
                 </div>
                 <div className='card container'>
-                <img src={ch} style={{ width: '1300px', height: '100%',  }}></img>
+                {/* <img src={ch} style={{ width: '1300px', height: '100%',  }}></img> */}
                 <div className="container">
                 
-                    <h1><p class="fs-1"> You can REGISTER here and we warmly <img src={pic} style={{ width: '500px', height: '100%' }}></img> </p></h1>
+                    {/* <h1><p class="fs-1"> You can REGISTER here and we warmly <img src={pic} style={{ width: '500px', height: '100%' }}></img> </p></h1> */}
                     &nbsp;&nbsp;
 
                     <form className="needs-validation" noValidate>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import adminpic from '../images/stdAdminPic.png';
 import search from '../images/searchStd.jpg';
-
+import girl from '../images/twoGirl.jpeg';
 export default class mainhome extends Component {
   constructor(props){
     super(props);
@@ -67,6 +67,11 @@ componentDidMount(){
          <div className="container">
                 <h1><p class="fs-1"> Welcome to Student <img src={adminpic} style={{width:'600px' , height:'100%'}}></img> </p></h1>
           </div> 
+          <div className="container">
+                <img src={girl} style={{width:'1400px' , height:'100%'}}></img> 
+          </div> 
+
+
         <h1> <p class="fs-2"> Display Student Details</p></h1>
         <div>
                 <h1><p class="fs-3"> You can search.. <img src={search} style={{width:'80px' , height:'100%'}}></img> </p></h1>
@@ -98,21 +103,13 @@ componentDidMount(){
               <th scope = "col">INDEX NO</th>
               <th scope = "col">REGISTRATION NUMBER</th>
                <th scope = "col">STUDENT FULL NAME</th>
-                
                 <th scope = "col">DATE OF ADDMISSION </th>
                 <th scope = "col"> CLASS NAME</th>
                 <th scope = "col"> COURSE NAME</th>
-                
                 <th scope = "col"> NIC</th>
                 <th scope = "col"> EMAIL</th>
-                
-                <th scope = "col">TELEPHONE </th>
-               
-               
-                
-                
+                <th scope = "col">TELEPHONE </th>          
                 <th scope = "col"> BANK NAME</th>
-               
                 <th scope = "col"> PAYMENT DATE</th>
                 <th scope = "col"> ACTION</th>
                 

@@ -42,7 +42,7 @@ export default class Homeheader extends Component {
         </li>
       </ul>
       <form className="d-flex">
-      <a className="navbar-brand " href="/apply"><b> Register Now! </b></a>
+      <a className="navbar-brand " href="/signupstd"><b> Register Now! </b></a>
       <a className="navbar-brand " href="/login"><b> Login </b></a>
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
         <button className="btn btn-success" type="submit" style={{ marginRight:'20px'}}>Search</button>
