@@ -31,7 +31,7 @@ export default class Displaytimetables extends Component {
             <div>
              <div className="container-xxl">
                 <center><h1 style={{textDecoration:'none', color:'Green'}}>All Time tables </h1></center>
-                <table className="table table-success table-striped table-bordered">
+                <table className="table  table-striped table-bordered">
                 <thead>
                           <tr>
                             <th scope="col">#</th>

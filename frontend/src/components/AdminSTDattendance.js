@@ -68,7 +68,7 @@ export default class AdminSTDattendance extends Component {
           <br />
           <table
             id="std-table"
-            className="table table-success table-striped table-bordered"
+            className="table  table-striped table-bordered"
           >
             <thead>
               <tr>

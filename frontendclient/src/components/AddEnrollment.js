@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import emailjs from "emailjs-com";
 
 export default class AddEnrollment extends Component {
 
@@ -46,6 +47,8 @@ export default class AddEnrollment extends Component {
     onSubmit = (e) => {
         e.preventDefault();
 
+        this.sendEmail();
+
         const { enrollmentCode, studentId, SubjectId, StudentName, StudentAddress, dateOfEnroll } = this.state;
 
         const data = {
@@ -80,6 +83,21 @@ export default class AddEnrollment extends Component {
         return Math.floor(Math.random() * max - min + 1) + min;
     }
 
+    sendEmail = (e) => {
+
+        e.preventDefault();
+
+        emailjs.sendForm(
+            "service_x3exyq6",
+            "template_nu35ky8",
+            e.target,
+            "user_4Ty61vRi47OewtmEVjcGx"
+        ).then(res => {
+            console.log(res);
+            
+        }).catch(err => console.log(err));
+    }
+
     render() {
         return (
             <div>
@@ -92,34 +110,51 @@ export default class AddEnrollment extends Component {
 
                     <form className="row g-3 needs-validation" onSubmit={this.onSubmit} novalidate>
 
-                        <div className="col-md-6">
-                            <label for="inputEmail4" className="form-label">Enrollment Code</label>
-                            <input className="form-control" name="enrollmentCode" value={this.state.enrollmentCode} onChange={this.handleInputChange} required></input>
+                        <div className="card">
+
+                            <div className="card-header"><h4>Student Details</h4></div>
+
+                            <div className="col-md-4">
+                                <label for="inputPassword4" className="form-label">Student ID</label>
+                                <input className="form-control" name="studentId" value={this.state.studentId} onChange={this.handleInputChange} required />
+                            </div>
+
+                            <div className="col-md-8">
+                                <label for="inputAddress2" className="form-label">Student Name</label>
+                                <input className="form-control" name="StudentName" value={this.state.StudentName} onChange={this.handleInputChange} required />
+                            </div>
+
+                            <div className="col-md-6">
+                                <label for="inputAddress2" className="form-label">Student Address</label>
+                                <input className="form-control" name="StudentAddress" value={this.state.StudentAddress} onChange={this.handleInputChange} required />
+                            </div>
+
+                            <div className="col-md-4">
+                                <label for="inputAddress2" className="form-label">Subject ID</label>
+                                <input className="form-control" name="SubjectId" value={this.state.SubjectId} onChange={this.handleInputChange} required />
+                            </div>
+
+                            <div className="col-md-4">
+                                <label for="inputAddress2" className="form-label">Student Email</label>
+                                <input className="form-control" name="SubjectId" value={this.state.SubjectId} onChange={this.handleInputChange} required />
+                            </div>
+
                         </div>
 
-                        <div className="col-md-6">
-                            <label for="inputPassword4" className="form-label">Student ID</label>
-                            <input className="form-control" name="studentId" value={this.state.studentId} onChange={this.handleInputChange} required />
-                        </div>
+                        <div className="card">
 
-                        <div className="col-md-4">
-                            <label for="inputAddress2" className="form-label">Subject ID</label>
-                            <input className="form-control" name="SubjectId" value={this.state.SubjectId} onChange={this.handleInputChange} required />
-                        </div>
+                            <div className="card-header"><h4>Enrollment Details</h4></div>
 
-                        <div className="col-md-4">
-                            <label for="inputAddress2" className="form-label">Student Name</label>
-                            <input className="form-control" name="StudentName" value={this.state.StudentName} onChange={this.handleInputChange} required />
-                        </div>
+                            <div className="col-md-6">
+                                <label for="inputEmail4" className="form-label">Enrollment Code&nbsp;<small style={{ color: 'red' }}>*You cannot change this code*</small></label>
+                                <input className="form-control" name="enrollmentCode" value={this.state.enrollmentCode} onChange={this.handleInputChange} readOnly />
+                            </div>
 
-                        <div className="col-md-4">
-                            <label for="inputAddress2" className="form-label">Student Address</label>
-                            <input className="form-control" name="StudentAddress" value={this.state.StudentAddress} onChange={this.handleInputChange} required />
-                        </div>
+                            <div className="col-md-4">
+                                <label for="inputCity" className="form-label">Date of Enroll</label>
+                                <input type="date" className="form-control" name="dateOfEnroll" value={this.state.dateOfEnroll} onChange={this.handleInputChange} required />
+                            </div>
 
-                        <div className="col-md-3">
-                            <label for="inputCity" className="form-label">Date of Enroll</label>
-                            <input type="date" className="form-control" name="dateOfEnroll" value={this.state.dateOfEnroll} onChange={this.handleInputChange} required />
                         </div>
 
                         <div className="col-12">
@@ -130,13 +165,12 @@ export default class AddEnrollment extends Component {
                                 </label>
                             </div>
                         </div>
-                        
+
                         <div>
                             <hr />
                             <button type="submit" className="btn btn-success">Add New Enrollment</button>
                         </div>
                     </form>
-
 
                 </div>
             </div>

@@ -39,7 +39,7 @@ export default class Adminalltimetables extends Component {
             <div>
                 <div className="container-xxl">
                 <center><h2 style={{textDecoration:'none', color:'black'}}>All Time tables </h2></center>
-                <table className="table table-success table-striped table-bordered">
+                <table className="table  table-striped table-bordered">
                 <thead>
                           <tr>
                             <th scope="col">#</th>
