@@ -16,8 +16,8 @@ export default class addLecturer extends Component {
             email:"",
             cNumber:"",
             address:"",
-            username:"LU"+this.rand(99999, 999999),
-            password:"R"+this.rand(9999999,99999999),
+            username:"L"+this.rand(99999, 999999),
+            password:this.rand(9999999,99999999),
             summary:"",
             aQualification:"",
             Rmembership:"",
@@ -41,7 +41,7 @@ onsubmit = (e) =>{
     e.preventDefault();
     const {lecId,lecFname,lecLname,nic,dob,email,cNumber,address,username,password,summary,aQualification,Rmembership,Rdate} = this.state;
     const data ={
-        lecId : lecId,
+         lecId : lecId,
         lecFname:lecFname,
         lecLname:lecLname,
         nic:nic,
@@ -86,15 +86,9 @@ rand=(min, max)=>{
 
 render(){
     return (
-        <div 
-        style={{
-         width: '1500px',
-         border: '1px solid black',
-         marginRight:'250px',
-         marginLeft:'200px'}}>
        <div className = "container" >
-           <br></br>
-       <center><h3><b>Add New Lecturer</b></h3></center>
+           
+       <center><h1><b><u>Add New Lecturer</u></b></h1></center>
           
        <form className="needs-validation" noValidate>
 
@@ -152,19 +146,20 @@ render(){
 
 <div className="col-md-12">
 <label  className="form-label"><b>Career Summary</b></label>
-<textarea className="form-control" name="summary" cols="25" rows="5" value={this.state.summary} onChange={this.handleInputChange}></textarea>
+<input className="form-control" name="summary" cols="25" rows="5" value={this.state.summary} onChange={this.handleInputChange}></input>
 </div><br/>
 
 
 <div className="col-md-12">
 <label  className="form-label"><b>Acedemic qualifications</b></label>
-<textarea className="form-control" name="aQualification" cols="25" rows="5" value={this.state.aQualification} onChange={this.handleInputChange}></textarea>
+<input className="form-control" name="aQualification" cols="25" rows="5" value={this.state.aQualification} onChange={this.handleInputChange}></input>
 </div><br/>
 
 
+<div className ="alpex-003"></div>
 <div className="col-md-12">
 <label className="form-label"><b>Research interests and memberships</b></label>
-<textarea className="form-control" name="Rmembership" cols="25" rows="5" value={this.state.Rmembership} onChange={this.handleInputChange}></textarea>
+<input className="form-control" name="Rmembership" cols="25" rows="5" value={this.state.Rmembership} onChange={this.handleInputChange}></input>
 </div><br/>
 
 <div className="col-md-12">
@@ -178,7 +173,7 @@ render(){
 </center>
 <br></br>
 </form>
-</div>
+
 </div>
 )
 }
