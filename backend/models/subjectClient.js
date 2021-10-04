@@ -2,6 +2,9 @@ const mongoose = require('mongoose');
 
 const subjectClientSchema = new mongoose.Schema({
 
+    subjectId:{
+        type: String,
+    },
     
     subjectName:{
         type: String,

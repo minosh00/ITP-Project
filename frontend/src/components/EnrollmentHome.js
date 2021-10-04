@@ -38,7 +38,7 @@ export default class EnrollmentHome extends Component {
 
     filterData(enrollments, Searchkey){
         const result = enrollments.filter((enr)=>
-        enr.SubjectId.toLowerCase().includes(Searchkey) || 
+        enr.subjectId.toLowerCase().includes(Searchkey) || 
         enr.StudentName.toLowerCase().includes(Searchkey) ||
         enr.enrollmentCode.toLowerCase().includes(Searchkey) ||
         enr.dateOfEnroll.toLowerCase().includes(Searchkey) ||
@@ -105,7 +105,7 @@ export default class EnrollmentHome extends Component {
                     <td>{enrollments.studentId}</td>
                     <td>{enrollments.StudentName}</td>
                     <td>{enrollments.StudentAddress}</td>
-                    <td>{enrollments.SubjectId}</td>
+                    <td>{enrollments.subjectId}</td>
                     <td>{enrollments.enrollmentCode}</td>
                     <td>{enrollments.dateOfEnroll}</td>
                     <td>
