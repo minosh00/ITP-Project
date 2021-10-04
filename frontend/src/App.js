@@ -53,6 +53,7 @@ import timetableUpdate from './components/timetableUpdate';
 import leaveReq from './components/leaveReq';
 import DownloadPdf from './components/DownloadPdf'
 import LecturerEmail from './components/LecturerEmail';
+
 import viewRegistrations from './components/viewRegistrations'
 import CreateRegistration from './components/CreateRegistration';
 import detailRequest from './components/detailRequest';
