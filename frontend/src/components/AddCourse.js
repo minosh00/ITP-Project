@@ -71,7 +71,6 @@ const AddCourse = () => {
       onChange={(e )=> setCourseID(e.target.value)}
        value={courseID}
     />
-  
   </div>
   <div class="mb-3">
     <label htmlFor="courseName" class="form-label">Course Name</label>
