@@ -54,7 +54,7 @@ export default class AdminStaffLecAttendance extends Component {
                 <br/><br/>
                 <button className="btn btn-success"><a href="/addnewattendance" style={{textDecoration:'none', color:'white'}}>Mark New attendance</a></button>
                 <br/><br/>
-                <table id='staff-table' className="table table-success table-striped table-bordered">
+                <table id='staff-table' className="table table-striped table-bordered">
                 <thead>
                           <tr>
                             <th scope="col">#</th>

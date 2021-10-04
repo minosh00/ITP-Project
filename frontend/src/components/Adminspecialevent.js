@@ -48,7 +48,7 @@ export default class Adminspecialevents extends Component {
             <div>
                 <center><h1>Special Events</h1></center>
                 <div className="container-xxl">
-                <table className="table table-success table-striped table-bordered">
+                <table className="table  table-striped table-bordered">
                     <thead>
                           <tr>
                             <th scope="col">#</th>
