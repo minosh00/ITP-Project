@@ -30,6 +30,9 @@ const DisplayAll = ({posts}) => {
   <h1>Manage All Course</h1>
   <div align="left">
     <p>The Course Currently Available In The Institue</p>
+    <td>
+                <input className="form-control" style={{width:'400px', marginLeft:'50px'}} type="search" placeholder="Search for student" name="searchQuery" ></input>
+              </td>
     </div>
   <div align="right">
     <p></p>
