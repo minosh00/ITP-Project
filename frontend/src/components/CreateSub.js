@@ -19,13 +19,33 @@ export default class CreateSub extends Component {
   handleInputChange = (e) => {
     const { name, value } = e.target;
 
+    let nam = e.target.name;
+    let val = e.target.value;
+
+    //validations
+    if (nam === 'subjectName') {
+
+      if (Number(val)) {
+        alert('The name should be in letters!.')
+      }
+    }
+
+    if (nam === 'subjectFee') {
+
+      if (!Number(val)) {
+        alert('The Fee should be numeric!.')
+      }
+
+      if (val < 1) {
+        alert('The Fee should be greater than 00!.')
+      }
+    }
+
     this.setState({
       ...this.setState,
       [name]: value
     })
   }
-
-  handleChange = ({ target: { value, name } }) => this.setState({ [name]: value })
 
   onSubmit = (e) => {
     e.preventDefault();
@@ -68,6 +88,8 @@ export default class CreateSub extends Component {
 
     return (
 
+      
+
       <div>
         <div style={{ marginBottom: '45px', marginLeft: '50px' }}>
           <h1>Add New Subject</h1>
@@ -78,29 +100,48 @@ export default class CreateSub extends Component {
 
         <div className='container' style={{ marginTop: '45px' }}>
 
-          <form className="row g-3 needs-validation" novalidate>
+          <form className="row g-3 needs-validation" onSubmit={this.onSubmit} novalidate>
 
             <div className="col-md-4">
               <label for="validationCustom01" className="form-label">Subject ID</label>
-              <input className="form-control" name="subjectId" value={this.state.subjectId} onChange={this.handleChange} required />
+              <input
+                className="form-control"
+                name="subjectId"
+                value={this.state.subjectId}
+                onChange={this.handleInputChange} required />
             </div>
 
             <div className="col-md-4">
               <label for="validationCustom02" className="form-label">Subject Name</label>
-              <input className="form-control" name="subjectName" value={this.state.subjectName} onChange={this.handleChange} required />
+              <input
+                className="form-control"
+                name="subjectName"
+                value={this.state.subjectName}
+                onChange={this.handleInputChange} required />
+              <div className="invalid-feedback">
+                Please choose a subject name.
+              </div>
             </div>
 
             <div className="col-md-4">
               <label for="validationCustomUsername" className="form-label">Subject Fee</label>
               <div className="input-group has-validation">
                 <span className="input-group-text" id="inputGroupPrepend">Rs:</span>
-                <input className="form-control" name="subjectFee" value={this.state.subjectFee} onChange={this.handleChange} required />
+                <input
+                  className="form-control"
+                  name="subjectFee"
+                  value={this.state.subjectFee}
+                  onChange={this.handleInputChange} required />
               </div>
             </div>
 
             <div className="col-md-3">
               <label for="validationCustom04" className="form-label">Subject Type</label>
-              <select className="form-select" name="subjectType" value={this.state.subjectType} onChange={this.handleInputChange} required>
+              <select
+                className="form-select"
+                name="subjectType"
+                value={this.state.subjectType}
+                onChange={this.handleInputChange} required>
                 <option selected disabled value="">Choose...</option>
                 <option>Group Class</option>
                 <option>Mass Class</option>
@@ -110,7 +151,11 @@ export default class CreateSub extends Component {
 
             <div className="col-md-3">
               <label for="validationCustom04" className="form-label">Subject Category</label>
-              <select className="form-select" name="subjectCategory" value={this.state.subjectCategory} onChange={this.handleInputChange} required>
+              <select
+                className="form-select"
+                name="subjectCategory"
+                value={this.state.subjectCategory}
+                onChange={this.handleInputChange} required>
                 <option selected disabled value="">Choose...</option>
                 <option>Ordinary Level</option>
                 <option>Advanced Level</option>
@@ -119,21 +164,29 @@ export default class CreateSub extends Component {
 
             <div className="col-md-6">
               <label for="validationCustom05" className="form-label">Description</label>
-              <textarea className="form-control" name="subjectDes" value={this.state.subjectDes} onChange={this.handleChange} required />
+              <textarea
+                className="form-control"
+                name="subjectDes"
+                value={this.state.subjectDes}
+                onChange={this.handleInputChange} required />
             </div>
 
-            <div className="col-12">
-              <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="" id="invalidCheck" required />
-                <label className="form-check-label" for="invalidCheck">
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+                <label class="form-check-label" for="invalidCheck">
                   Agree to terms and conditions
                 </label>
+                <div class="invalid-feedback">
+                  You must agree before submitting.
+                </div>
               </div>
             </div>
 
             <div>
               <hr />
-              <button type="submit" className="btn btn-success" onClick={this.onSubmit}>Add New</button>
+              <button type="submit" className="btn btn-success" data-toggle="modal">Add New</button>
+              
             </div>
 
           </form>

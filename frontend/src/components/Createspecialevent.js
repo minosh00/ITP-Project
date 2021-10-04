@@ -13,7 +13,7 @@ export default class Createspecialevent extends Component {
         this.onSubmit = this.onSubmit.bind(this);
         
         this.state={
-            eventID:'',
+            eventID: "SE" + this.randomid(999, 99999),
             eventname:'',
             venue:'',
             date:'',
@@ -21,6 +21,7 @@ export default class Createspecialevent extends Component {
         
         }
     }
+
 
 
 
@@ -70,13 +71,16 @@ export default class Createspecialevent extends Component {
         time:''})
     }
 
+    randomid = (min, max) => {
+        return Math.floor(Math.random() * max - min + 1) + min;
+    }
 
 
     render() {
         return (
             <div className="col-md-8 mt-4 mx-auto">
             <h1 className="h3 mb-3 font-weight-normal">Add new special event</h1>
-            <form className="needs-validation" noValidate>
+            <form className="needs-validation" onSubmit={this.onSubmit}>
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>Event ID</label>
                     <input type="text"
@@ -84,7 +88,7 @@ export default class Createspecialevent extends Component {
                     name="eventID"
                     placeholder="enter Event Id"
                     value={this.state.eventID}
-                    onChange={this.onChangeeventID}/>
+                    onChange={this.onChangeeventID} readOnly/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -94,7 +98,7 @@ export default class Createspecialevent extends Component {
                     name="eventname"
                     placeholder="enter Event Name"
                     value={this.state.eventname}
-                    onChange={this.onChangeeventname}/>
+                    onChange={this.onChangeeventname} required/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -104,7 +108,7 @@ export default class Createspecialevent extends Component {
                     name="venue"
                     placeholder="enter Venue"
                     value={this.state.venue}
-                    onChange={this.onChangevenue}/>
+                    onChange={this.onChangevenue} required/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -114,7 +118,7 @@ export default class Createspecialevent extends Component {
                     name="date"
                     placeholder="enter Date"
                     value={this.state.date}
-                    onChange={this.onChangedate}/>
+                    onChange={this.onChangedate} required/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -123,11 +127,11 @@ export default class Createspecialevent extends Component {
                     className="form-control"
                     name="time"
                     placeholder="enter Time"
-                    value={this.state.time}
-                    onChange={this.onChangetime}/>
+                    value={this.state.time} 
+                    onChange={this.onChangetime} required/>
                 </div>
 
-                <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} onClick={this.onSubmit}>
+                <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} >
                     <i className="far fa-check-square"></i>
                     &nbsp;save
                 </button>

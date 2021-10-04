@@ -3,35 +3,35 @@ import axios from 'axios';
 
 export default class SubAddClient extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
 
-        this.state={
-            subjectName:"",
-            subjectFee:"",
-            subjectDes:""
+        this.state = {
+            subjectName: "",
+            subjectFee: "",
+            subjectDes: ""
         }
     }
-    
-    handleInputChange=(e)=>{
-        const{name, value} = e.target;
+
+    handleInputChange = (e) => {
+        const { name, value } = e.target;
 
         this.setState({
             ...this.state,
-            [name]:value
+            [name]: value
         })
     }
 
-    componentDidMount(){
+    componentDidMount() {
 
         const id = this.props.match.params.id;
 
-        axios.get(`/subject/${id}`).then((res)=>{
-            if(res.data.success){
+        axios.get(`/subject/${id}`).then((res) => {
+            if (res.data.success) {
                 this.setState({
-                    subjectName:res.data.subject.subjectName,
-                    subjectFee:res.data.subject.subjectFee,
-                    subjectDes:res.data.subject.subjectDes
+                    subjectName: res.data.subject.subjectName,
+                    subjectFee: res.data.subject.subjectFee,
+                    subjectDes: res.data.subject.subjectDes
                 });
 
                 console.log(this.state.subject);
@@ -39,27 +39,27 @@ export default class SubAddClient extends Component {
         });
     }
 
-    onSubmit=(e)=>{
+    onSubmit = (e) => {
         e.preventDefault();
 
-        const {subjectName,subjectFee,subjectDes} = this.state;
+        const { subjectName, subjectFee, subjectDes } = this.state;
 
-        const data={
-            subjectName:subjectName,
-            subjectFee:subjectFee,
-            subjectDes:subjectDes
+        const data = {
+            subjectName: subjectName,
+            subjectFee: subjectFee,
+            subjectDes: subjectDes
         }
 
         console.log(data)
 
-        axios.post("/subjectclient/save", data).then((res)=>{
-            if(res.data.success){
+        axios.post("/subjectclient/save", data).then((res) => {
+            if (res.data.success) {
                 alert("Subject Added!")
                 this.setState(
                     {
-                        subjectName:"",
-                        subjectFee:"",
-                        subjectDes:""
+                        subjectName: "",
+                        subjectFee: "",
+                        subjectDes: ""
                     }
                 )
             }
@@ -69,35 +69,39 @@ export default class SubAddClient extends Component {
     render() {
         return (
             <div>
-                <div style={{marginBottom: '45px', marginLeft:'50px'}}>
+                <div style={{ marginBottom: '45px', marginLeft: '50px' }}>
                     <h1>Add to Client View</h1>
                     <h5>You can adda new subjects to client</h5>
                 </div>
 
-                <hr/>
+                <hr />
 
-                <div className='container' style={{marginTop: '45px'}}>
-                <form className="row g-3">
-  <div className="col-md-6">
-    <label for="inputPassword4" className="form-label">Subject Name</label>
-    <input className="form-control" name="subjectName" value={this.state.subjectName} onChange={this.handleInputChange}readOnly/>
-  </div>
-  <div className="col-md-4">
-    <label for="inputAddress2" className="form-label">Subject Fee</label>
-    <input className="form-control" name="subjectFee" value={this.state.subjectFee} onChange={this.handleInputChange}readOnly/>
-  </div>
-   <div className="col-md-8">
-    <label for="inputCity" className="form-label">Description</label>
-    <input className="form-control" style={{width:'600px'}} name="subjectDes" value={this.state.subjectDes} onChange={this.handleInputChange}readOnly/>
-  </div>
-  
-  <div>
-    <hr/>
-    <button type="submit" className="btn btn-success" onClick={this.onSubmit}>Add to Client</button>
-  </div>
-</form>
-</div>
-</div>
+                <div className='container' style={{ marginTop: '45px' }}>
+                    <form className="row g-3">
+                        <div className="col-md-6">
+                            <label for="inputPassword4" className="form-label">Subject Name</label>
+                            <input className="form-control" name="subjectName" value={this.state.subjectName} onChange={this.handleInputChange} readOnly />
+                        </div>
+                        <div className="col-md-6">
+                            <label for="inputCity" className="form-label">Description</label>
+                            <textarea rows="7" className="form-control" style={{ width: '600px' }} name="subjectDes" value={this.state.subjectDes} onChange={this.handleInputChange} readOnly />
+                        </div>
+                        <div className="col-md-4">
+                            <label for="inputAddress2" className="form-label">Subject Fee</label>
+                            <div className="input-group has-validation">
+                                <span className="input-group-text" id="inputGroupPrepend">Rs:</span>
+                                <input className="form-control" name="subjectFee" value={this.state.subjectFee} onChange={this.handleInputChange} readOnly />
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <hr />
+                            <button type="submit" className="btn btn-success" onClick={this.onSubmit}>Add to Client</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         )
     }
 }

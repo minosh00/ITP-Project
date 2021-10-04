@@ -7,7 +7,7 @@ export default class Homeheader extends Component {
     render() {
         return (
             <div >
-     <footer className="site-footer bg-dark text-dark" style={{fontSize:'20px'}}>
+     <footer className="site-footer bg-dark text-dark" style={{fontSize:'20px', marginTop:'45px'}}>
       <div >
         <div className="row">
           <div className="col-sm-12 col-md-2" style={{marginLeft:'100px'}}>

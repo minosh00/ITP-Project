@@ -130,6 +130,7 @@ export default class AddEnrollment extends Component {
                                 </label>
                             </div>
                         </div>
+                        
                         <div>
                             <hr />
                             <button type="submit" className="btn btn-success">Add New Enrollment</button>

@@ -86,7 +86,7 @@ export default class Editspecialevent extends Component {
         return (
             <div className="col-md-8 mt-4 mx-auto">
             <h1 className="h3 mb-3 font-weight-normal">Update special event</h1>
-            <form className="needs-validation" noValidate>
+            <form className="needs-validation" onSubmit={this.onSubmit} >
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>Event ID</label>
                     <input type="text"
@@ -94,7 +94,7 @@ export default class Editspecialevent extends Component {
                     name="eventID"
                     placeholder="enter Event Id"
                     value={this.state.eventID}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.handleInputChange} required/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -104,7 +104,7 @@ export default class Editspecialevent extends Component {
                     name="eventname"
                     placeholder="enter Event Name"
                     value={this.state.eventname}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.handleInputChange} required/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -114,7 +114,7 @@ export default class Editspecialevent extends Component {
                     name="venue"
                     placeholder="enter Venue"
                     value={this.state.venue}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.handleInputChange} required/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -124,7 +124,7 @@ export default class Editspecialevent extends Component {
                     name="date"
                     placeholder="enter Date"
                     value={this.state.date}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.handleInputChange} required/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
@@ -134,10 +134,10 @@ export default class Editspecialevent extends Component {
                     name="time"
                     placeholder="enter Time"
                     value={this.state.time}
-                    onChange={this.handleInputChange}/>
+                    onChange={this.handleInputChange} required/>
                 </div>
 
-                <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} onClick={this.onSubmit}>
+                <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} >
                     <i className="far fa-check-square"></i>
                     &nbsp;Update
                 </button>

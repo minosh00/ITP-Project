@@ -52,7 +52,7 @@ export default class Adminhomeheader extends Component {
       <form className="d-flex">
         
         &nbsp;&nbsp;
-        <a className="nav-link active" aria-current="page" href="/adminmainhomelogin" style={{fontSize:'25px', color:'white'}}>Login</a>
+        <a className="navbar-brand" href="/adminmainhomelogin"><b> Login </b></a>
         &nbsp;&nbsp;
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
         <button style={{marginRight:'20px'}} className="btn btn-success" type="submit">Search</button>
