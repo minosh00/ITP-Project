@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 
 export default class AdminStaffLecAttendance extends Component {
    
@@ -43,11 +44,17 @@ export default class AdminStaffLecAttendance extends Component {
                 </div>
                 <br/><br/>
                 <div className="container-xxl">   
-                <button className="btn btn-primary"><a href="" style={{textDecoration:'none', color:'white'}}>Download All Attendance details</a></button>
+                <ReactHTMLTableToExcel
+                            className = 'btn btn-outline-success'
+                            table = 'staff-table'
+                            filename = 'Staff attendance Excel'
+                            sheet = 'Sheet'
+                            buttonText = 'Download all staff attendance'
+                        />  
                 <br/><br/>
                 <button className="btn btn-success"><a href="/addnewattendance" style={{textDecoration:'none', color:'white'}}>Mark New attendance</a></button>
                 <br/><br/>
-                <table className="table table-success table-striped table-bordered">
+                <table id='staff-table' className="table table-success table-striped table-bordered">
                 <thead>
                           <tr>
                             <th scope="col">#</th>

@@ -13,7 +13,7 @@ export default class Createspecialevent extends Component {
         this.onSubmit = this.onSubmit.bind(this);
         
         this.state={
-            eventID:'',
+            eventID: "SE" + this.randomid(999, 99999),
             eventname:'',
             venue:'',
             date:'',
@@ -21,6 +21,7 @@ export default class Createspecialevent extends Component {
         
         }
     }
+
 
 
 
@@ -70,6 +71,9 @@ export default class Createspecialevent extends Component {
         time:''})
     }
 
+    randomid = (min, max) => {
+        return Math.floor(Math.random() * max - min + 1) + min;
+    }
 
 
     render() {
@@ -84,7 +88,7 @@ export default class Createspecialevent extends Component {
                     name="eventID"
                     placeholder="enter Event Id"
                     value={this.state.eventID}
-                    onChange={this.onChangeeventID} required/>
+                    onChange={this.onChangeeventID} readOnly/>
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>

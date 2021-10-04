@@ -14,7 +14,7 @@ export default class Adminaddttable extends Component {
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
-            timetableID:'',
+            timetableID:"TT" + this.randomid(999, 99999),
             subjectORcourse:'',
             monthANDdate:'',
             time:''
@@ -62,6 +62,9 @@ export default class Adminaddttable extends Component {
         time:''})
     }
  
+    randomid = (min, max) => {
+        return Math.floor(Math.random() * max - min + 1) + min;
+    }
 
     render() {
         return (
@@ -70,7 +73,7 @@ export default class Adminaddttable extends Component {
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label><h5>Time Table ID</h5></label>
-                        <input type="text" value={this.state.timetableID} onChange={this.onChangeTimeTableID} className="form-control" required  />
+                        <input type="text" value={this.state.timetableID} onChange={this.onChangeTimeTableID} className="form-control" readOnly  />
                     </div>
                     <div className="form-group">
                         <label><h5>Subject or Course</h5></label>
