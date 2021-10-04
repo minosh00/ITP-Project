@@ -18,10 +18,14 @@ const AddCourse = () => {
 
 
     const onChangeFile = e =>{
-
+      
       setFileName(e.target.files[0]);
+      
     }
+
     
+    
+   
         const changeOnClick = e =>{
          
             e.preventDefault();
@@ -35,7 +39,12 @@ const AddCourse = () => {
           formData.append("courseType" , courseType);
           formData.append("description" , description);
           formData.append("requirement" , requirement);
-          formData.append("price" , price); 
+          if(price>0){
+            formData.append("price" , price); 
+          }else{
+            alert("PRICE SHOULD BE MORE THAN 0")
+          }
+          
           formData.append("courseImage" , fileName);
           formData.append("duration" , duration);
 
@@ -71,7 +80,7 @@ const AddCourse = () => {
     <label htmlFor="courseID" class="form-label">Course ID</label>
     <input type="" class="form-control" placeholder="Enter Course ID"
       onChange={(e )=> setCourseID(e.target.value)}
-       value={courseID}
+       value={courseID} required
     />
   
   </div>
@@ -79,7 +88,7 @@ const AddCourse = () => {
   <div class="mb-3">
     <label htmlFor="courseName" class="form-label">Course Name</label>
     <input type="" class="form-control" placeholder="Enter Course Name" 
-        onChange={e => setCourseName(e.target.value)}
+        onChange={e => setCourseName(e.target.value)} required
         value={courseName}/>
   </div>
 
@@ -87,7 +96,7 @@ const AddCourse = () => {
           
           <label htmlFor="courseType" class="form-label">Course Type</label>
               <input type=""  class="form-control" placeholder="Course Type.." 
-                onChange={e => setcourseType(e.target.value)}
+                onChange={e => setcourseType(e.target.value)} required
                 value={courseType}
           
                   />
@@ -97,7 +106,7 @@ const AddCourse = () => {
     <label htmlFor="description">Course Description</label>
     <textarea className="form-control"  rows="5"  
         onChange={e => setDescription(e.target.value)}
-        value={description}
+        value={description} required
         ></textarea>
   </div>
 
@@ -108,7 +117,7 @@ const AddCourse = () => {
           
     <label htmlFor="requirement" class="form-label">Requirement</label>
         <input type="" list="requirement" class="form-control" placeholder=" need After A/L or After O/L" 
-            onChange={e => setRequirement(e.target.value)}
+            onChange={e => setRequirement(e.target.value)} required
             value={requirement}
             />
                    <datalist id="requirement">
@@ -121,9 +130,8 @@ const AddCourse = () => {
     <div class="col">
       <div class="form-outline">
       <label htmlFor="category" class="form-label">Price</label>
-        <input type="" class="form-control"  placeholder="price"
-        
-        onChange={e => setprice(e.target.value)}
+        <input type="" class="form-control"  placeholder="price" required
+        onChange={e => setprice(e.target.value)} 
         value={price}
         />
         
@@ -133,7 +141,7 @@ const AddCourse = () => {
   </div>
  <div>
   <label htmlFor="file" class="form-label">Upload Any Image</label><br></br>
-  <input type="file" class="form-control-file" fileName="courseImage"
+  <input type="file" class="form-control-file" fileName="courseImage" required
   onChange={onChangeFile}
   /><br></br>
     </div>
@@ -141,7 +149,7 @@ const AddCourse = () => {
           <br></br>
           <label htmlFor="duration" class="form-label">Course Dueration</label>
               <input type=""  list="duration"  class="form-control" placeholder="Course Dueration.." 
-                 onChange={e => setDuration(e.target.value)}
+                 onChange={e => setDuration(e.target.value)} required
                  value={duration}
           
                   />
