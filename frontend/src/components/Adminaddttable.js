@@ -12,6 +12,7 @@ export default class Adminaddttable extends Component {
         this.onChangeMonthandDate = this.onChangeMonthandDate.bind(this);
         this.onChangeTime = this.onChangeTime.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+        this.onfill = this.onfill.bind(this);
 
         this.state = {
             timetableID:"TT" + this.randomid(999, 99999),
@@ -20,6 +21,15 @@ export default class Adminaddttable extends Component {
             time:''
         }
     }
+
+    onfill() {
+        this.setState({
+            timetableID: "TT" + this.randomid(999, 99999),
+            subjectORcourse: "Science",
+            monthANDdate: "2021/11/07",
+            time: "10.30"
+        });
+      }
 
     onChangeTimeTableID(e) {
      
@@ -91,6 +101,15 @@ export default class Adminaddttable extends Component {
                         <input type="submit" value="Add time table" className="btn btn-success btn-block"   />
                     </div>
                 </form>
+                <button
+            className="btn btn-success"
+            type="submit"
+            style={{ marginTop: "15px" }}
+            onClick={this.onfill}
+          >
+            <i className="far fa-check-square"></i>
+            &nbsp;Fill the form
+          </button>
             </div>
         )
     }
