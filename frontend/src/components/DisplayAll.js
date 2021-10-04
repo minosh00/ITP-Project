@@ -60,8 +60,8 @@ const DisplayAll = ({posts}) => {
      
       <th Scope="col">❌</th>
       <th scope="row">Course ID</th>
-      <th scope="row">Course Name</th>
-      <th scope="row">Course Type</th> 
+      <th scope="row">Course Name</th> 
+      <th scope="row">Description</th> 
       <th scope="row">Enroll Requirement</th>
       <th scope="row">Course Duration</th>
       <th scope="row">Image</th>
@@ -81,11 +81,12 @@ const DisplayAll = ({posts}) => {
     
       <td>{course.courseID}</td>
       <td>{course.courseName}</td>
-      <td>{course.courseType}</td>
+     
+      <td>{course.description}</td>
       <td>{course.requirement}</td> 
       <td>{course.duration}</td>
       <td><div class="text-center">
-    <img src={`/uploads/${course.courseImage}`} alt="..." style={{height: "55px" ,width: "84px" }}  />
+    <img src={`/uploads/${course.courseImage}`} alt="..." style={{height: "45px" ,width: "74px" }}  />
     </div></td>
 
       <td> <Link to ={{
