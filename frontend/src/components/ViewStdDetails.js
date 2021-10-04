@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import pic3 from '../images/boy123.jpeg';
 import ReactHTMLTableToExcel from 'react-html-table-to-excel';
- 
+import pic33 from '../images/red1.jpg';
 export default class ViewStdDetails extends Component {
 
     constructor(props){
@@ -34,6 +34,7 @@ export default class ViewStdDetails extends Component {
                 <p class="fs-4">Student Management System</p>
                 <div className="container">
                 <h1><p class="fs-1">View Student Details</p></h1>
+                <img src={pic33} style={{width:'1300px' , height:'50px'}}></img>
                 <div className='card container'>
                 &nbsp;&nbsp;            
                 <table>
@@ -163,6 +164,7 @@ export default class ViewStdDetails extends Component {
                         <br></br>
                         &nbsp;&nbsp;
                     </table>
+                   
                     </div>
                     <br></br>
                     <h3>You can Download Excel sheet of the Student Details..</h3>

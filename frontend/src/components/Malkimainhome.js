@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import adminpic from '../images/stdAdminPic.png';
 import search from '../images/searchStd.jpg';
-import girl from '../images/twoGirl.jpeg';
+import girl from '../images/orange.jpg';
 export default class mainhome extends Component {
   constructor(props){
     super(props);

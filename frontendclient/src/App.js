@@ -26,6 +26,7 @@ import Course from './components/Course';
 
 //malki
 import Registration from './components/Registration';
+import profile from './components/profile';
 
 
 
@@ -70,10 +71,14 @@ import Registration from './components/Registration';
         <Route  path="/course"  render={()=> <Courses posts={posts} />} />
         <Route path="/course/:id"    render={(props)=>  <Course {...props} posts={posts} />} />
         <Route  path="/allCourse"  component={Course} />
-        <Route path="" component={Homefooter}></Route>
 
         {/* malki */}
         <Route path="/signupstd" component={Registration}></Route>
+        <Route path="/loginstd" component={profile}></Route>
+
+        <Route path="" component={Homefooter}></Route>
+
+        
 
       </div>
     </BrowserRouter>

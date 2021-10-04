@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import adminpic2 from '../images/stdAdminPic.png';
 import search from '../images/searchStd.jpg';
-import by from '../images/boy.jpeg';
+import by from '../images/yellow.jpg';
 export default class Home extends Component {
   constructor(props){
     super(props);
@@ -66,7 +66,7 @@ componentDidMount(){
                 <h1><p class="fs-1"> Welcome to Student <img src={adminpic2} style={{width:'600px' , height:'100%'}}></img> </p></h1>
           </div> 
           <div className="container">
-          <img src={by} style={{ width: '96%'}}></img>
+          <img src={by} style={{ width: '110%'}}></img>
           </div>
           <h1> <p class="fs-2"> Display Student Details</p></h1>
            
