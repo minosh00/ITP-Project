@@ -71,7 +71,7 @@ export default class Specialevents extends Component {
                      </input>
                 </div>
           </div>
-                <table className="table table-success table-striped table-bordered">
+                <table className="table  table-striped table-bordered">
                     <thead>
                           <tr>
                             <th scope="col">#</th>

@@ -121,10 +121,15 @@ const EditCourse = props => {
       <div class="form-outline">
           
     <label htmlFor="requirement" class="form-label">Requirement</label>
-        <input type=""  class="form-control" placeholder="complete or need After A/L or After O/L..." 
+        <input type=""  list="requirement" class="form-control" placeholder="complete  After A/L or After O/L" 
             onChange={e => setRequirement(e.target.value)}
             value={requirement}
             />
+             <datalist id="requirement">
+                                <option value="Advanced Level"></option>
+                                <option value="Ordinary Level "></option>
+                              
+                            </datalist>
       </div>
     </div>
     <div class="col">
@@ -143,11 +148,18 @@ const EditCourse = props => {
   <div class="form-outline">
           
           <label htmlFor="duration" class="form-label">Course Dueration</label>
-              <input type=""  class="form-control" placeholder="Course Dueration.." 
+              <input type=""   list="duration"   class="form-control" placeholder="Course Dueration" 
                  onChange={e => setDuration(e.target.value)}
                  value={duration}
           
                   />
+                    <datalist id="duration">
+                                <option value="03 Months"></option>
+                                <option value="06 Months "></option>
+                                <option value="12 Months "></option>
+                                <option value="1 Year "></option>
+                                
+                            </datalist>
             </div>
 
 

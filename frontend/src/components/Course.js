@@ -2,11 +2,14 @@ import React ,{useState,useEffect,useRef  }from 'react'
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import autoTable from 'jspdf-autotable'
+import { jsPDF } from "jspdf";
 import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 const Course =  (props) => {
    
     const[courseID , setCourseID] = useState("");
     const[courseName , setCourseName] = useState("");
+    const [courseImage , setFileName]= useState("");
     const[courseType , setcourseType] = useState("");
     const[description , setDescription] = useState("");
     const[requirement , setRequirement] = useState("");
@@ -25,6 +28,7 @@ const Course =  (props) => {
             setDescription(res.data.description),
             setRequirement(res.data.requirement),
             setprice(res.data.price),
+            setFileName(res.data.courseImage),
             setDuration(res.data.duration)
 
 
@@ -34,46 +38,79 @@ const Course =  (props) => {
           
          },[props]);
 
-
+        function pdfGenerat(){
+          var doc = new jsPDF('landscape', 'px', 'a4', 'false');
+          
+          doc.autoTable({
+                 
+                  body: [
+                      [{ content: '  ', colSpan: 2, rowSpan: 2, styles: { halign: 'center' } }],
+                    ],
+                  })
+              autoTable(doc, { html: '#cusdet' })
+             doc.save('course.pdf')
+        
+                }
+          
 
     return (
 
 
 
         <MainContainer  >
-   <table id="table-to-xls">
-       <h2>Course Information&nbsp;&nbsp;<i class="far fa-bookmark"></i></h2>
+  
+       <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Course Information&nbsp;&nbsp;<i class="far fa-bookmark"></i></h1>
 
       
        <br></br>
+       <table class="table table-borderless"   >
+  <thead >
+    <tr>
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <th scope="col"><img src={`/uploads/${courseImage}`} alt="..." style={{height: "400px" ,width: "580px" }}  /></th>
+   
+     
+    </tr>
+  </thead>
+  <tbody id="cusdet" >
+    <tr>
+      <th  scope="row"><i class="fas fa-portrait"></i>&nbsp; Course ID</th>
+      <td>{courseID}</td>
+      
+    </tr>
+    <tr>
+      <th scope="row"><i class="fas fa-book-open"></i>&nbsp;Course Name</th>
+      <td>{courseName}</td>
+    
+    </tr>
+    <tr>
+      <th scope="row"><i class="fas fa-comment-medical"></i> &nbsp; Description</th>
+    <th> {description}</th>
+      
+    </tr>
+    <tr>
+      <th scope="row"><i class="fas fa-key"></i>&nbsp; Requirement</th>
+      <td>{requirement}</td>
+    
+    </tr>
+    <tr>
+      <th scope="row"><i class="far fa-credit-card"></i>&nbsp; Price</th>
+      <td>{price}</td>
+    
+    </tr>
+    <tr>
+      <th scope="row"><i class="far fa-calendar-times"></i>&nbsp; Duration</th>
+      <td scope="row" >{duration}</td>
+    
+    </tr>
+  </tbody>
+
        <br></br>
 
-       <dl className="row" >
-<dt className="col-sm-3"><i class="fas fa-portrait"></i>&nbsp; Course ID</dt>
-<dd className="col-sm-9">{courseID}</dd>
-
-<dt className="col-sm-3"><i class="fas fa-book-open"></i>&nbsp;Course  Name</dt>
-<dd className="col-sm-9"> {courseName}</dd>
-
-<dt className="col-sm-3"><i class="fas fa-comment-medical"></i> &nbsp; Description</dt>
-<dd className="col-sm-9">{description}</dd>
-
-<dt className="col-sm-3"><i class="fas fa-key"></i>&nbsp; Requirement</dt>
-<dd className="col-sm-9">{requirement}</dd>
-
-
-
-
-<dt className="col-sm-3"><i class="far fa-credit-card"></i>&nbsp; Price </dt>
-<dd className="col-sm-9">{price}</dd>
-
-
-<dt className="col-sm-3"><i class="far fa-calendar-times"></i>&nbsp; Duration</dt>
-<dd className="col-sm-9">{duration}</dd>
-</dl>
-</table>
-      <div />
-   
+       <button className="btn btn-danger btn-sm"  onClick={pdfGenerat}>Generate PDF</button>
+       </table>
+       <br></br>
+   <br></br>
   
      <button> <ReactHTMLTableToExcel id="test-table-xls-button"
                     className="btn btn-warning"
