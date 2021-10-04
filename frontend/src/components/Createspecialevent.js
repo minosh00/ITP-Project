@@ -11,7 +11,8 @@ export default class Createspecialevent extends Component {
         this.onChangedate = this.onChangedate.bind(this);
         this.onChangetime = this.onChangetime.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
-        
+        this.onfill = this.onfill.bind(this);
+
         this.state={
             eventID: "SE" + this.randomid(999, 99999),
             eventname:'',
@@ -22,7 +23,15 @@ export default class Createspecialevent extends Component {
         }
     }
 
-
+    onfill() {
+        this.setState({
+            eventID: "SE" + this.randomid(999, 99999),
+            eventname: "Christmas party",
+            venue: "Hotel grandiza",
+            date :"2021/12/27",
+            time: "18.30"
+        });
+      }
 
 
     onChangeeventID(e) {
@@ -139,7 +148,15 @@ export default class Createspecialevent extends Component {
 
 
             </form>
-            
+            <button
+            className="btn btn-success"
+            type="submit"
+            style={{ marginTop: "15px" }}
+            onClick={this.onfill}
+          >
+            <i className="far fa-check-square"></i>
+            &nbsp;Fill the form
+          </button>
         </div>
         )
     }
