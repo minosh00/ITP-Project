@@ -12,8 +12,7 @@
     "bootstrap-table": "^1.18.3",
     "emailjs-com": "^3.2.0",
     "file-saver": "^2.0.5",
-    "jspdf": "^2.4.0",
-    "jspdf-autotable": "^3.5.20",
+    
     "multer": "^1.4.3",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.4",
