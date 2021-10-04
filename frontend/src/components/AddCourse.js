@@ -73,7 +73,6 @@ const AddCourse = () => {
     />
   
   </div>
-
   <div class="mb-3">
     <label htmlFor="courseName" class="form-label">Course Name</label>
     <input type="" class="form-control" placeholder="Enter Course Name" 
