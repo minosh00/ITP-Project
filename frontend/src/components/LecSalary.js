@@ -25,6 +25,8 @@ export default class LecSalary extends Component {
               console.error('There was an error!', error);
           });
   }
+
+
   
   filterData(dulaleaverequests,searchKey){
     const result = dulaleaverequests.filter((dulaleaverequests) =>
