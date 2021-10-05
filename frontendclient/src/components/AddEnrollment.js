@@ -7,7 +7,7 @@ export default class AddEnrollment extends Component {
         super(props);
 
         this.state = {
-            enrollmentCode: "EN" + this.rand(999, 99999),
+            enrollmentCode: "",
             studentId: "",
             SubjectId: "",
             StudentName: "",
@@ -110,7 +110,6 @@ export default class AddEnrollment extends Component {
                 studentId: "STD75464",
                 StudentAddress: "No123, 3rd Street, Rathmalana",
                 dateOfEnroll: "2021-09-20",
-                email: "Azmie@outlook.com"
             })
     }
 
@@ -150,10 +149,10 @@ export default class AddEnrollment extends Component {
                                 <input className="form-control" name="StudentAddress" value={this.state.StudentAddress} onChange={this.handleInputChange} required />
                             </div>
 
-                            <div className="col-md-4">
+                            {/* <div className="col-md-4">
                                 <label for="inputAddress2" className="form-label">Student Email</label>
                                 <input className="form-control" name="email" value={this.state.email} onChange={this.handleInputChange} required />
-                            </div>
+                            </div> */}
 
                         </div>
 
@@ -162,8 +161,8 @@ export default class AddEnrollment extends Component {
                             <div className="card-header"><h4>Enrollment Details</h4></div>
 
                             <div className="col-md-6">
-                                <label for="inputEmail4" className="form-label">Enrollment Code&nbsp;<small style={{ color: 'red' }}>*You cannot change this code*</small></label>
-                                <input type='password' className="form-control" name="enrollmentCode" value={this.state.enrollmentCode} onChange={this.handleInputChange} readOnly />
+                                <label for="inputEmail4" className="form-label">Enrollment Code&nbsp;<small><a href='/subemail' style={{color:'blue'}}><b>Click here to get the enrollment key</b></a></small></label>
+                                <input type='password' className="form-control" name="enrollmentCode" value={this.state.enrollmentCode} onChange={this.handleInputChange} required />
                             </div>
 
                             <div className="col-md-4">
@@ -185,7 +184,7 @@ export default class AddEnrollment extends Component {
                         <div>
                             <hr />
                             <button className="btn btn-outline-danger btn-sm" onClick={this.onClickDemo}>Demo</button>&nbsp;
-                            <button type="submit" className="btn btn-success">Add New Enrollment</button>
+                            <button type="submit" className="btn btn-success">Enrollment to Subject</button>
                         </div>
                     </form>
 

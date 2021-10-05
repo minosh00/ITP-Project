@@ -141,6 +141,7 @@ export default class CreateSub extends Component {
               <div className="input-group has-validation">
                 <span className="input-group-text" id="inputGroupPrepend">Rs:</span>
                 <input
+                type="number"
                   className="form-control"
                   name="subjectFee"
                   value={this.state.subjectFee}

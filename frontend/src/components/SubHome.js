@@ -72,9 +72,9 @@ onDelete=(id)=>{
               <td>
                 <input className="form-control" style={{width:'400px', marginLeft:'50px'}} type="search" placeholder="Search for Subjects" name="searchQuery" onChange={this.handleSearchArea}></input>
               </td>
-              <td>
+              <td>&nbsp;
                 
-                <a className="btn btn-success" style={{marginLeft:'1320px'}} href='/addsub'>
+                <a className="btn btn-success"  href='/addsub'>
                 <i className="fas fa-plus-circle"></i>&nbsp;Add New Subject
                 </a>
                 &nbsp;
