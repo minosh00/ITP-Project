@@ -4,6 +4,7 @@ const RegistrationL = require('../models/registrationL');
 const { findByIdAndUpdate } = require('../models/registrationL');
 const fileValidation = require('../middlewares/file-upload/validation.js');
 const multer = require('multer');
+const regeviewer = require('../models/regeviewer');
 
 const fileFilter = (req,res,cb)=>{
     cb(null,true)
@@ -54,5 +55,28 @@ router.put('/reviewer/update/:id', (req, res)=>{
         }
     );
 });
+
+//get specific post
+
+router.get("/reviewer/:id", (req, res)=>{
+    let regId = req.params.id;
+
+    RegistrationL.findById(regId, (err, post)=>{
+        if(err){
+            return res.status(400).json({
+                success:false, err
+            });
+        }
+
+        return res.status(200).json({
+            success:true, post
+        });
+    });
+});
+
+
+
+
+
 
 module.exports = router;

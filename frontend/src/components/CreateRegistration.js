@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { ProgressBar } from "react-bootstrap";
 import { useHistory, Link } from "react-router-dom";
+//import background from '../images/lec.png';
 
 const CreateRegistration = (props) => {
   const history = useHistory();
@@ -20,6 +21,7 @@ const CreateRegistration = (props) => {
     found: false,
     message: "",
   });
+
 
   const upload = (e) => {
     setUploads(e.target.files[0]);
@@ -48,7 +50,7 @@ const CreateRegistration = (props) => {
     setCnumber("");
     setAddress("");
     setRdate("");
-  
+
 
     axios
       .post("/addRe", formData, {
@@ -75,10 +77,16 @@ const CreateRegistration = (props) => {
   return (
     <div className="container">
       <br />
-      <div className="card" style={{ width: "100%" , color:"black"}}>
-        <div className="alllecturerheader">
+      <div className="card" style={{
+        width: '1500px',
+        border: '1px solid black',
+        marginRight: '10px',
+        marginLeft: '-90px',
+      }}>
+        <div className="">
+          <br></br>
           <center>
-          <h2>Lecturer Registration</h2>
+            <h3><b>Lecturer Registration</b></h3>
           </center>
         </div>
 
@@ -90,14 +98,14 @@ const CreateRegistration = (props) => {
                 First Name
               </label>
               <input
-               
+
                 className="form-control"
                 id="lecFame"
                 required
                 value={lecFname}
                 onChange={(e) => setFname(e.target.value)}
                 name="lecFname"
-                
+
               />
             </div>
 
@@ -107,37 +115,41 @@ const CreateRegistration = (props) => {
                 Last Name
               </label>
               <input
-               
+
                 className="form-control"
                 id="lecLname"
                 required
                 value={lecLname}
                 onChange={(e) => setLname(e.target.value)}
                 name="lecLname"
-                
+                pattern="[a-zA-Z]*"
+
               />
             </div>
 
 
             <div className="mb-3">
               <label htmlFor="nic" className="form-label">
-               NIC number
+                NIC number
               </label>
               <input
-              
+
                 className="form-control"
                 id="nic"
                 required
                 value={nic}
                 onChange={(e) => setNic(e.target.value)}
                 name="nic"
-                placeholder="123456789V"
+                placeholder="xxxxxxxxxV"
+                pattern="^[0-9]{9}[vVxX]$"
+                maxLength="10"
+
               />
             </div>
 
             <div className="mb-3">
               <label htmlFor="dob" className="form-label">
-              Date Of Birth
+                Date Of Birth
               </label>
               <input
                 type="date"
@@ -147,7 +159,7 @@ const CreateRegistration = (props) => {
                 value={dob}
                 onChange={(e) => setDob(e.target.value)}
                 name="dob"
-               
+
               />
             </div>
 
@@ -157,14 +169,17 @@ const CreateRegistration = (props) => {
                 Email
               </label>
               <input
-              
+
                 className="form-control"
                 id="email"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 name="email"
-                placeholder="abc@gmail.com"
+                type="email"
+                //pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]"
+
+
               />
             </div>
 
@@ -174,7 +189,7 @@ const CreateRegistration = (props) => {
                 Mobile Number
               </label>
               <input
-               
+
                 className="form-control"
                 id="cNumber"
                 required
@@ -182,7 +197,7 @@ const CreateRegistration = (props) => {
                 onChange={(e) => setCnumber(e.target.value)}
                 name="cNumber"
                 pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-                title="Must contain at least 10  numbers"
+                title="Must contain 10  numbers"
                 maxLength="10"
               />
             </div>
@@ -193,20 +208,21 @@ const CreateRegistration = (props) => {
                 Address
               </label>
               <input
-               
+
                 className="form-control"
                 id="address"
                 required
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
                 name="address"
-               
+
+
               />
             </div>
 
             <div className="mb-3">
               <label htmlFor="Rdate" className="form-label">
-               Registration Date
+                Registration Date
               </label>
               <input
                 type="date"
@@ -216,7 +232,7 @@ const CreateRegistration = (props) => {
                 value={Rdate}
                 onChange={(e) => setRdate(e.target.value)}
                 name="Rdate"
-                
+
               />
             </div>
 
@@ -232,8 +248,8 @@ const CreateRegistration = (props) => {
                   {error.message}
                 </span>
               )}
-             
-              <small style={{color:"red"}}>Upload Only Pdf Format</small><br/>
+
+              <small style={{ color: "red" }}>Upload Only Pdf Format</small><br />
               <label htmlFor="upload" className="form-label">
                 Upload your Curriculum Vitae
               </label>
@@ -241,7 +257,7 @@ const CreateRegistration = (props) => {
               <input
                 type="file"
                 uploads="uploads"
-               
+                required
                 className="form-control-file"
                 onChange={upload}
               />
@@ -254,12 +270,12 @@ const CreateRegistration = (props) => {
             )}
             <br />
             <center>
-            <button type="submit" className="btn btn-primary">
-              Register
-            </button>
+              <button type="submit" className="btn btn-primary">
+                Register
+              </button>
             </center>
             <Link to="">
-              
+
             </Link>
           </form>
         </div>

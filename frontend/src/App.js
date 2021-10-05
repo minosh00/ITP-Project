@@ -231,7 +231,7 @@ useEffect(()=>{
         <Route path="/subjectclientadd/:id" component={SubAddClient}></Route>
 
         <Route path ="/lechome" component ={lecturerHome}></Route>
-        <Route path= "/addLec" component={addLecturer}></Route>
+        <Route path= "/addLec/:id" component={addLecturer}></Route>
         <Route path ="/editLec/:id" component={EditLecturer}></Route>
         <Route path ="/postLec/:id" component={PostLecturer}></Route>
         <Route path ="/timetableReq" component={timetableUpdate}></Route> 
