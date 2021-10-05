@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from'axios';
 import './style.css'
+import background from '../images/hall.png';
 
 
 export default class detailsHome extends Component {
@@ -57,57 +58,33 @@ axios.get("/lecDetailsReq").then(res =>{
       }
     });
 }
-
-
-
-  render() {
+render() {
     return(
       
-      <div className="#" >
-        <div className="row">
+      
+      <div className="container" >
+         <div className="row">
           <div className="col-lg-12 mt-3 mb-3">
-           
-           
-          
-            <div  className ="#">
-            <h1><center><b>Special Notices For Lecturers</b></center></h1>
+           <div  className ="container">
+            <h3><center><b>Special Notices For Lecturers</b></center></h3>
             </div>
             </div>
             <div className="col-lg-3 mt-2 mb-2">
-         
-              
+          </div>
               </div>
-              </div>
-
-
-        <table className =" table table-bordered" >
-       
-      
-        
-        
+ <table className =" table table-bordered" >
+  
           {this.state.updateDetails.map((updateDetail,index) =>(
              <div key ={index} className="card mb-3">
-               <div className="cardstyle">
-                <th scope = "row">{index+1}</th>
-                
-                <h5  style={{ marginRight: '1700px' }}>Date :{updateDetail.date}</h5>
-                <h5 style={{ color: 'red'  }}>{updateDetail.notice}</h5>
-                
-                    
+               <div className="container" style={{ border: '2px solid black' ,width:'100%',background:"Silver"}}>
+                 <h6><b>Notice number : {index+1}</b></h6>
+                <h5  style={{ color: 'red'}}><b>Date :{updateDetail.date}</b></h5>
+                <h5 style={{ color: 'black'  }}><b>{updateDetail.notice}</b></h5>
                
-                
                 </div>
              </div>
-
-
           ))}
-
-        
         </table>
-     
-       
-        
-    
       </div>
       
     )

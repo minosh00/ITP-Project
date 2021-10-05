@@ -1,4 +1,5 @@
 const express = require('express');
+const { findByIdAndUpdate } = require('../models/updateDetails');
 const updateDetails = require('../models/updateDetails');
 
 const router = express.Router();
@@ -33,5 +34,22 @@ router.get('/lecDetailsReq', (req, res) => {
         });
     });
 });
+
+//delete
+
+router.delete('/detailreq/delete/:id', (req, res)=>{
+    updateDetails.findByIdAndRemove(req.params.id).exec((err, deletedPost) =>{
+        if(err){
+            return res.status(400).json({
+                message:"Delete error", err
+            });
+        }
+
+        return res.status(200).json({
+            message:"Delete successful", deletedPost
+        });
+    });
+});
+
 
 module.exports = router;
