@@ -20,6 +20,7 @@ export default class EditLecturer extends Component {
             password:"",
             aQualification:"",
             Rmembership:"",
+            salary:"",
             Rdate:""
         }
         this.handleInputChange=this.handleInputChange.bind(this)
@@ -41,7 +42,7 @@ export default class EditLecturer extends Component {
         e.preventDefault();
 
         const id = this.props.match.params.id;
-        const {lecId,lecFname,lecLname,nic,dob,email,cNumber,address,username,password,summary,aQualification,Rmembership,Rdate} = this.state;
+        const {lecId,lecFname,lecLname,nic,dob,email,cNumber,address,username,password,summary,aQualification,Rmembership,salary,Rdate} = this.state;
 
         const data ={
             lecId:lecId,
@@ -57,6 +58,7 @@ export default class EditLecturer extends Component {
             summary:summary,
             aQualification:aQualification,
             Rmembership:Rmembership,
+            salary:salary,
             Rdate:Rdate
         }
 
@@ -81,6 +83,7 @@ export default class EditLecturer extends Component {
             summary:"",
             aQualification:"",
             Rmembership:"",
+            salary:"",
             Rdate:""
                 })
             }
@@ -106,7 +109,9 @@ export default class EditLecturer extends Component {
                     summary:res.data.lecturer.summary,
                     aQualification:res.data.lecturer.aQualification,
                     Rmembership:res.data.lecturer.Rmembership,
+                    salary:res.data.lecturer.salary,
                     Rdate:res.data.lecturer.Rdate
+                    
                 });
 
                 console.log(this.state.lecturer);
@@ -198,6 +203,11 @@ export default class EditLecturer extends Component {
 <label className="form-label"><b>Research interests and memberships</b></label>
 <textarea className="form-control" name="Rmembership" cols="25" rows="5" value={this.state.Rmembership} onChange={this.handleInputChange}></textarea>
 </div><br/>
+
+<div className="col-md-12">
+<label className="form-label"><b>Basic Salary</b></label>
+<input className="form-control" name="salary" value={this.state.salary} onChange={this.handleInputChange} required />
+</div><br />
 
 <div className="col-md-12">
 <label  className="form-label"><b>Registration Date</b></label>

@@ -21,6 +21,7 @@ export default class addLecturer extends Component {
             summary: "",
             aQualification: "",
             Rmembership: "",
+            salary:"",
             Rdate: ""
         }
     }
@@ -37,7 +38,7 @@ export default class addLecturer extends Component {
     }
     onsubmit = (e) => {
         e.preventDefault();
-        const { lecId, lecFname, lecLname, nic, dob, email, cNumber, address, username, password, summary, aQualification, Rmembership, Rdate } = this.state;
+        const { lecId, lecFname, lecLname, nic, dob, email, cNumber, address, username, password, summary, aQualification, Rmembership, salary,Rdate } = this.state;
         const data = {
             lecId: lecId,
             lecFname: lecFname,
@@ -52,6 +53,7 @@ export default class addLecturer extends Component {
             summary: summary,
             aQualification: aQualification,
             Rmembership: Rmembership,
+            salary:salary,
             Rdate: Rdate
         }
         console.log(data)
@@ -72,7 +74,9 @@ export default class addLecturer extends Component {
                     summary: "",
                     aQualification: "",
                     Rmembership: "",
+                    salary:"",
                     Rdate: ""
+
                 })
             }
         })
@@ -187,6 +191,11 @@ export default class addLecturer extends Component {
                         <div className="col-md-12">
                             <label className="form-label"><b>Research interests and memberships</b></label>
                             <textarea className="form-control" name="Rmembership" cols="25" rows="5" value={this.state.Rmembership} onChange={this.handleInputChange} required ></textarea>
+                        </div><br />
+
+                        <div className="col-md-12">
+                            <label className="form-label"><b>Basic Salary</b></label>
+                            <input className="form-control" name="salary" value={this.state.salary} onChange={this.handleInputChange} required />
                         </div><br />
 
                         <div className="col-md-12">
