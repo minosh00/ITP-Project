@@ -166,6 +166,7 @@ export default class ViewStdDetails extends Component {
                     </table>
                    
                     </div>
+                    <img src={pic33} style={{width:'1300px' , height:'50px'}}></img>
                     <br></br>
                     <h3>You can Download Excel sheet of the Student Details..</h3>
                     <br></br>
