@@ -44,6 +44,9 @@ export default class Registration extends Component {
             if (val.length > 12) {
                 alert("Invalid length!!");
             }
+            if (!Number(val)) {
+                alert('The Fee should be numeric!.')
+              }
         }
 
         if (nam === 'telephone') {
@@ -51,6 +54,9 @@ export default class Registration extends Component {
             if (val.length > 10) {
                 alert("Invalid length!!");
             }
+            if (!Number(val)) {
+                alert('The Fee should be numeric!.')
+              }
         }
 
         if (nam === 'gurdian_contact_number') {
@@ -58,6 +64,9 @@ export default class Registration extends Component {
             if (val.length > 10) {
                 alert("Invalid length!!");
             }
+            if (!Number(val)) {
+                alert('The Fee should be numeric!.')
+              }
         }
 
 
@@ -145,14 +154,12 @@ export default class Registration extends Component {
                 gurdian_contact_number: "0714224296",
                 gurdian_email: "kumaraPeiris@gmail.com",
                 gurdian_occupation: "Officer",
-                // date: "2020-07-12",
+                date: "2020-07-12",
                 bank_name: "Sampath ",
                 branch: "Kalutara",
                 payment_date: "2020-01-18"
             })
     }
-
-
 
     render() {
         return (
@@ -168,7 +175,7 @@ export default class Registration extends Component {
                         <h1><p class="fs-1"> You can REGISTER here and we warmly <img src={pic} style={{ width: '500px', height: '100%' }}></img> </p></h1>
                         &nbsp;&nbsp;
 
-                        <form className="needs-validation" onSubmit={this.onSubmit}>
+                        <form className="needs-validation">
                             <div className="mb-3">
                                 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Student full Name </p></label>
                                 <input className="form-control" name="student_full_name" aria-describedby="emailHelp" value={this.state.student_full_name} onChange={this.handleInputChange} required />
@@ -191,7 +198,7 @@ export default class Registration extends Component {
                             </div>
                             <div className="mb-3">
                                 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Date of Birth</p></label>
-                                <input className="form-control" name="date_of_birth" aria-describedby="emailHelp" value={this.state.date_of_birth} onChange={this.handleInputChange} required />
+                                <input  type="date" className="form-control" name="date_of_birth" aria-describedby="emailHelp" value={this.state.date_of_birth} onChange={this.handleInputChange} required />
                             </div>
 
                             <div className="mb-3">
@@ -240,11 +247,11 @@ export default class Registration extends Component {
                                 <label for="exampleInputEmail1" className="form-label"><p class="fw-bold">Gurdian Occupation </p></label>
                                 <input className="form-control" name="gurdian_occupation" aria-describedby="emailHelp" value={this.state.gurdian_occupation} onChange={this.handleInputChange} required />
                             </div>
-                            {/* <div className="mb-3">
+                            <div className="mb-3">
                             <label for="exampleInputEmail1" className="form-label"><p class="fw-bold">Date</p></label>
-                            <input className="form-control" name="date" aria-describedby="emailHelp" value={this.state.date} onChange={this.handleInputChange}required />
+                            <input  type="date" className="form-control" name="date" aria-describedby="emailHelp" value={this.state.date} onChange={this.handleInputChange} required />
                         </div>
-                        &nbsp; */}
+                        &nbsp;
                             <h3>Now you can Fill the Student Payment Details</h3>
                             &nbsp;
                             <div className="mb-3">
@@ -260,7 +267,7 @@ export default class Registration extends Component {
                                 <input type="date" className="form-control" name="payment_date" aria-describedby="emailHelp" value={this.state.payment_date} onChange={this.handleInputChange} required />
                             </div>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <button type="button" style={{ width: '100%' }} className="btn btn-dark btn-lg btn-block" >SAVE ALL DETAILS</button>
+                            <button type="button" style={{ width: '100%' }} className="btn btn-dark btn-lg btn-block" onClick={this.onSubmit}>SAVE ALL DETAILS</button>
                         </form>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </div>
