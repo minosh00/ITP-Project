@@ -7,7 +7,7 @@ export default class Homeheader extends Component {
   
     render() {
         return (
-      <div style={{marginBottom:'20px'}}>
+      <div>
         <nav className="navbar navbar-light bg-light ">
           <div   >
              <img src={logo} alt="logo" style={{width:600 , marginTop:'20px', marginLeft:'20px'}} />
@@ -48,7 +48,6 @@ export default class Homeheader extends Component {
         <button className="btn btn-success" type="submit" style={{ marginRight:'20px'}}>Search</button>
       </form>
 </nav>
-<br/>
 </div>     
         )
     }
