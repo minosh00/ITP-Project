@@ -78,17 +78,30 @@ export default class CreateSub extends Component {
         )
       }
     })
+    window.location.replace('/Adminsubhome');
   }
 
   rand = (min, max) => {
     return Math.floor(Math.random() * max - min + 1) + min;
   }
 
+  onClickDemo = () => {
+    this.setState(
+      {
+        subjectId: "SUB93463",
+        subjectName: "Pure Mathematics",
+        subjectType: "Mass Class",
+        subjectCategory: "Advanced Level",
+        subjectFee: "1500",
+        subjectDes: "Lorem Ipsum is simply dummy text of the printing and typesetting industry..."
+      })
+  }
+
   render() {
 
     return (
 
-      
+
 
       <div>
         <div style={{ marginBottom: '45px', marginLeft: '50px' }}>
@@ -185,8 +198,9 @@ export default class CreateSub extends Component {
 
             <div>
               <hr />
-              <button type="submit" className="btn btn-success" data-toggle="modal">Add New</button>
-              
+              <button className="btn btn-outline-danger btn-sm" onClick={this.onClickDemo}>Demo</button>&nbsp;
+              <button type="submit" className="btn btn-success">Add New</button>
+
             </div>
 
           </form>

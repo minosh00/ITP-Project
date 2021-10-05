@@ -45,7 +45,7 @@ export default class profile extends Component {
                     <table>
                         <tr>
                             <td><center>
-                                <a href=''><img src={pic2} style={{ height: '450px', marginTop: '40px' }}></img></a><br />
+                                 <a href=''><img src={pic2} style={{ height: '450px', marginTop: '40px' }}></img></a><br /> 
                                 <br></br></center>
                             </td>
                         </tr>
@@ -170,9 +170,9 @@ export default class profile extends Component {
                         <br></br>
                         &nbsp;&nbsp;
                     </table>
-                    </div>
+                    </div>&nbsp;
                     <div className="container">   
-                   
+                    
                 <p class="fs-5">If you need  Edit some details which were included in your Student Registration form?And You can click this button as well.
                 </p>
                 </div>

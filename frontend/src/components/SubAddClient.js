@@ -9,7 +9,8 @@ export default class SubAddClient extends Component {
         this.state = {
             subjectName: "",
             subjectFee: "",
-            subjectDes: ""
+            subjectDes: "",
+            subjectId: ""
         }
     }
 
@@ -31,7 +32,8 @@ export default class SubAddClient extends Component {
                 this.setState({
                     subjectName: res.data.subject.subjectName,
                     subjectFee: res.data.subject.subjectFee,
-                    subjectDes: res.data.subject.subjectDes
+                    subjectDes: res.data.subject.subjectDes,
+                    subjectId: res.data.subject.subjectId
                 });
 
                 console.log(this.state.subject);
@@ -42,12 +44,13 @@ export default class SubAddClient extends Component {
     onSubmit = (e) => {
         e.preventDefault();
 
-        const { subjectName, subjectFee, subjectDes } = this.state;
+        const { subjectName, subjectFee, subjectDes, subjectId } = this.state;
 
         const data = {
             subjectName: subjectName,
             subjectFee: subjectFee,
-            subjectDes: subjectDes
+            subjectDes: subjectDes,
+            subjectId: subjectId
         }
 
         console.log(data)
@@ -57,6 +60,7 @@ export default class SubAddClient extends Component {
                 alert("Subject Added!")
                 this.setState(
                     {
+                        subejctId: "",
                         subjectName: "",
                         subjectFee: "",
                         subjectDes: ""
@@ -64,6 +68,7 @@ export default class SubAddClient extends Component {
                 )
             }
         })
+        window.location.replace('/stdview');
     }
 
     render() {
@@ -79,20 +84,25 @@ export default class SubAddClient extends Component {
                 <div className='container' style={{ marginTop: '45px' }}>
                     <form className="row g-3">
                         <div className="col-md-6">
+                            <label for="inputPassword4" className="form-label">Subject ID</label>
+                            <input className="form-control" name="subjectId" value={this.state.subjectId} onChange={this.handleInputChange} readOnly />
+                        </div>
+                        <div className="col-md-6">
                             <label for="inputPassword4" className="form-label">Subject Name</label>
                             <input className="form-control" name="subjectName" value={this.state.subjectName} onChange={this.handleInputChange} readOnly />
                         </div>
                         <div className="col-md-6">
-                            <label for="inputCity" className="form-label">Description</label>
-                            <textarea rows="7" className="form-control" style={{ width: '600px' }} name="subjectDes" value={this.state.subjectDes} onChange={this.handleInputChange} readOnly />
-                        </div>
-                        <div className="col-md-4">
                             <label for="inputAddress2" className="form-label">Subject Fee</label>
                             <div className="input-group has-validation">
                                 <span className="input-group-text" id="inputGroupPrepend">Rs:</span>
                                 <input className="form-control" name="subjectFee" value={this.state.subjectFee} onChange={this.handleInputChange} readOnly />
                             </div>
                         </div>
+                        <div className="col-md-6">
+                            <label for="inputCity" className="form-label">Description</label>
+                            <textarea rows="7" className="form-control" style={{ width: '600px' }} name="subjectDes" value={this.state.subjectDes} onChange={this.handleInputChange} readOnly />
+                        </div>
+
 
 
                         <div>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import emailjs from "emailjs-com";
 
 export default class AddEnrollment extends Component {
 
@@ -13,7 +12,8 @@ export default class AddEnrollment extends Component {
             SubjectId: "",
             StudentName: "",
             StudentAddress: "",
-            dateOfEnroll: ""
+            dateOfEnroll: "",
+            email: ""
         }
     }
 
@@ -44,20 +44,37 @@ export default class AddEnrollment extends Component {
         })
     }
 
+    componentDidMount() {
+
+        const id = this.props.match.params.id;
+
+        axios.get(`/subjectclient/${id}`).then((res) => {
+            if (res.data.success) {
+                this.setState({
+                    subjectId: res.data.subject.subjectId
+                });
+
+                console.log(this.state.subject);
+            }
+        });
+    }
+
+
     onSubmit = (e) => {
+
         e.preventDefault();
 
-        this.sendEmail();
 
-        const { enrollmentCode, studentId, SubjectId, StudentName, StudentAddress, dateOfEnroll } = this.state;
+        const { enrollmentCode, studentId, subjectId, StudentName, StudentAddress, dateOfEnroll, email } = this.state;
 
         const data = {
-            SubjectId: SubjectId,
+            subjectId: subjectId,
             StudentName: StudentName,
             enrollmentCode: enrollmentCode,
             studentId: studentId,
             StudentAddress: StudentAddress,
-            dateOfEnroll: dateOfEnroll
+            dateOfEnroll: dateOfEnroll,
+            email: email
         }
 
         console.log(data)
@@ -67,12 +84,13 @@ export default class AddEnrollment extends Component {
                 alert("Enrollment Added!")
                 this.setState(
                     {
-                        SubjectId: "",
+                        subjectId: "",
                         StudentName: "",
                         enrollmentCode: "",
                         studentId: "",
                         StudentAddress: "",
-                        dateOfEnroll: ""
+                        dateOfEnroll: "",
+                        email: ""
                     }
                 )
             }
@@ -83,19 +101,17 @@ export default class AddEnrollment extends Component {
         return Math.floor(Math.random() * max - min + 1) + min;
     }
 
-    sendEmail = (e) => {
-
-        e.preventDefault();
-
-        emailjs.sendForm(
-            "service_x3exyq6",
-            "template_nu35ky8",
-            e.target,
-            "user_4Ty61vRi47OewtmEVjcGx"
-        ).then(res => {
-            console.log(res);
-            
-        }).catch(err => console.log(err));
+    onClickDemo = () => {
+        this.setState(
+            {
+                subjectId: "SB34743",
+                StudentName: "Ahmed Azmie",
+                enrollmentCode: "EN34578",
+                studentId: "STD75464",
+                StudentAddress: "No123, 3rd Street, Rathmalana",
+                dateOfEnroll: "2021-09-20",
+                email: "Azmie@outlook.com"
+            })
     }
 
     render() {
@@ -115,6 +131,11 @@ export default class AddEnrollment extends Component {
                             <div className="card-header"><h4>Student Details</h4></div>
 
                             <div className="col-md-4">
+                                <label for="inputAddress2" className="form-label">Subject ID</label>
+                                <input className="form-control" name="SubjectId" value={this.state.subjectId} onChange={this.handleInputChange} required readOnly />
+                            </div>
+
+                            <div className="col-md-4">
                                 <label for="inputPassword4" className="form-label">Student ID</label>
                                 <input className="form-control" name="studentId" value={this.state.studentId} onChange={this.handleInputChange} required />
                             </div>
@@ -130,13 +151,8 @@ export default class AddEnrollment extends Component {
                             </div>
 
                             <div className="col-md-4">
-                                <label for="inputAddress2" className="form-label">Subject ID</label>
-                                <input className="form-control" name="SubjectId" value={this.state.SubjectId} onChange={this.handleInputChange} required />
-                            </div>
-
-                            <div className="col-md-4">
                                 <label for="inputAddress2" className="form-label">Student Email</label>
-                                <input className="form-control" name="SubjectId" value={this.state.SubjectId} onChange={this.handleInputChange} required />
+                                <input className="form-control" name="email" value={this.state.email} onChange={this.handleInputChange} required />
                             </div>
 
                         </div>
@@ -147,7 +163,7 @@ export default class AddEnrollment extends Component {
 
                             <div className="col-md-6">
                                 <label for="inputEmail4" className="form-label">Enrollment Code&nbsp;<small style={{ color: 'red' }}>*You cannot change this code*</small></label>
-                                <input className="form-control" name="enrollmentCode" value={this.state.enrollmentCode} onChange={this.handleInputChange} readOnly />
+                                <input type='password' className="form-control" name="enrollmentCode" value={this.state.enrollmentCode} onChange={this.handleInputChange} readOnly />
                             </div>
 
                             <div className="col-md-4">
@@ -168,6 +184,7 @@ export default class AddEnrollment extends Component {
 
                         <div>
                             <hr />
+                            <button className="btn btn-outline-danger btn-sm" onClick={this.onClickDemo}>Demo</button>&nbsp;
                             <button type="submit" className="btn btn-success">Add New Enrollment</button>
                         </div>
                     </form>

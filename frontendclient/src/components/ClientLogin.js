@@ -31,7 +31,7 @@ export default class ClientLogin extends Component {
                         </label>
                     </div>
                     <div className="row mb-3 px-3">
-                        <button type="submit" className="btn btn-blue text-center">Login</button>
+                        <a href='/loginstd'><button type="submit" className="btn btn-blue text-center">Login</button></a>
                     </div>
                     <div>
                         <b><small>Don't have an account? <a className="text-danger "><b>Register</b></a></small></b>
