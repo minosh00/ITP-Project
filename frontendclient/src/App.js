@@ -24,7 +24,7 @@ import Displaytimetables from './components/Displaytimetables';
 // minosh
 import Courses from './components/Courses';
 import Course from './components/Course';
-import BuyCourseDula from './components/BuyCourseDula'
+
 
 
 //malki
@@ -73,7 +73,7 @@ import profile from './components/profile';
         <Route path="/displaytimetables" component={Displaytimetables}></Route>
 
         {/* minosh */}
-        <Route path = "/buycourse" component = {BuyCourseDula}></Route> 
+        {/* <Route path = "/buycourse" component = {BuyCourseDula}></Route>  */}
         <Route  path="/course"  render={()=> <Courses posts={posts} />} />
 
         
