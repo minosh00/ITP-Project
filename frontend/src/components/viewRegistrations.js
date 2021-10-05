@@ -57,29 +57,30 @@ class viewRegistrations extends Component {
     return (
       <div className="">
         <div className="container">
-        <br></br>
-          <div className = "alllecturerheader">
-          <center><h3>View Lecturer Registrations</h3></center>
-          </div>
-          <br />
-          
+       
+          <div className = "">
+          <center><h3><b>View Lecturer Registrations</b></h3></center>
           <br></br>
+          </div>
+         
           {this.state.registrationL.length > 0 && this.state.registrationL.map((value, index) => (
             <div key={index} className="card mb-3">
-              <div className="card-content-research">
+              <div className="card-content-research" style={{ border: '1px solid black'}}>
                 <div className="p-3">
-                  <h4 style={{ color: 'black' }}><p><u>Registration No : 0{index + 1}</u></p></h4>
-                  <h5 style={{ color: 'black' }}>First Name : {value.lecFname}</h5>
-                  <h5 style={{ color: 'black' }}>Last Name : {value.lecLname}</h5>
-                  <h5 style={{ color: 'black' }}>NIC number : {value.nic}</h5>
-                  <h5 style={{ color: 'black' }}>Date Of Birth : {value.dob}</h5>
-                  <h5 style={{ color: 'black' }}>E-mail : {value.email}</h5>
-                  <h5 style={{ color: 'black' }}>Mobile Number : {value.cNumber}</h5>
-                  <h5 style={{ color: 'black' }}>Address : {value.address}</h5>
-                  <h5 style={{ color: 'black' }}>Registration Date :{value.Rdate}</h5>
-                  <button className="btn btn-light" onClick={event => this.navigateDownload(event, value.uploads)}> <i class="fa fa-file" aria-hidden="true"></i> <b> View Curriculum Vitae</b></button>
+                  <h4 style={{ fontSize: '20px',color: 'black'}}><p><b>Registration No : 0{index + 1}</b></p></h4>
+                  <br></br>
+                  <h5 style={{ fontSize: '16px',color: 'black' }}><b> First Name :   {value.lecFname}</b></h5>
+                  <h5 style={{ fontSize: '16px',color: 'black' }}><b> Last Name :   {value.lecLname}</b></h5>
+                  <h5 style={{ fontSize: '16px',color: 'black' }}><b> NIC number :   {value.nic}</b></h5>
+                  <h5 style={{ fontSize: '16px',color: 'black' }}><b> Date Of Birth :   {value.dob}</b></h5>
+                  <h5 style={{ fontSize: '16px',color: 'black' }}><b> E-mail :   {value.email}</b></h5>
+                  <h5 style={{ fontSize: '16px',color: 'black' }}><b> Mobile Number :   {value.cNumber}</b></h5>
+                  <h5 style={{ fontSize: '16px',color: 'black' }}><b> Address :   {value.address}</b></h5>
+                  <h5 style={{ fontSize: '16px',color: 'black' }}><b> Registration Date :   {value.Rdate}</b></h5>
+                  <br></br>
+                  <button className="btn btn-secondary" onClick={event => this.navigateDownload(event, value.uploads)}> <i class="fa fa-file" aria-hidden="true"></i> <b> View Curriculum Vitae</b></button>
 
-                  <a href = "/addLec" className="btn btn-success" style={{ marginLeft: "2%" }} > <i class="fa fa-plus" aria-hidden="true"></i><b> Add to the Institute</b></a>
+                  <a href = {`/addLec/${value._id}`} className="btn btn-success" style={{ marginLeft: "2%" }} target="_blank" rel="noopener noreferrer"> <i class="fa fa-plus" aria-hidden="true" ></i><b> Add to the Institute</b></a>
 
 
                   <button className="btn btn-danger" style={{ marginLeft: "2%" }} onClick={event => this.navigateDelete(event, value._id)}><i class="fa fa-times" aria-hidden="true"></i> <b>Reject Registration </b></button>

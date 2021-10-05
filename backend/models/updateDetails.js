@@ -3,34 +3,16 @@ const mongoose = require('mongoose');
 const updateDetailSchema = new mongoose.Schema({
 
 
-    lecId:{
+    date:{
         type:String,
         required:true
     },
 
-    lecName:{
+    notice:{
         type:String,
         required:true
     },
-    updateDetail:{
-        
-        type:String,
-        required:true
-    },
-
-    correctDetail:{
-        type:String,
-        required:true
-    },
-
-    email:{
-        type:String,
-        required:true
-    },
-    cNumber:{
-        type:String,
-        required:true
-    },
+    
 
 });
 

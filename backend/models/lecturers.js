@@ -66,8 +66,12 @@ const lecturerSchema = new mongoose.Schema({
     Rdate:{
         type:String,
         required:true
-    }
+    },
 
+    salary:{
+        type:String,
+        required:true
+    }
 
 });
 
