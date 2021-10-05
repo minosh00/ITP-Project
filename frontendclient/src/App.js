@@ -10,7 +10,7 @@ import Homefooter from './components/Homefooter';
 import ClientLogin from './components/ClientLogin';
 import AllSubjectsView from './components/AllSubjectsView';
 import AddEnrollment from './components/AddEnrollment';
-import SubjectPayment from './components/SubjectPayment';
+import SubjectEmail from './components/SubjectEmail';
 
 import Apply from './components/Apply'
 
@@ -51,7 +51,7 @@ import profile from './components/profile';
     
       })
 
-
+      
 
     return (
     <BrowserRouter>
@@ -65,7 +65,7 @@ import profile from './components/profile';
         <Route path="/login"  component={ClientLogin}></Route> 
         <Route path="/allsubjects"  component={AllSubjectsView}></Route>
         <Route path="/addenrollsub/:id"  component={AddEnrollment}></Route>
-        <Route path="/subpayment"  component={SubjectPayment}></Route>
+        <Route path="/subemail"  component={SubjectEmail}></Route>
 
         {/* dima */}
         <Route path="/middle" component={middle}></Route>

@@ -28,7 +28,7 @@ export default class Homeheader extends Component {
             <p className="text-justify" style={{color:'white'}}>Royal-EDU higher education institute <i> Join with us to make your life success </i> We have  courses for after o/l and after a/l students. There are all subjects for O/L and A/L students. . </p>
           </div>
 
-          <div className="col-xs-6 col-md-2" style={{marginLeft:'70px'}}>
+          <div className="col-xs-6 col-md-2" style={{marginLeft:'30px'}}>
             <h6>Payments</h6>
             <ul className="footer-links">
               <li><a href="/"  style={{textDecoration:'none'}}>About Us</a></li>
