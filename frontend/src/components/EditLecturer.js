@@ -20,6 +20,7 @@ export default class EditLecturer extends Component {
             password:"",
             aQualification:"",
             Rmembership:"",
+            salary:"",
             Rdate:""
         }
         this.handleInputChange=this.handleInputChange.bind(this)
@@ -41,7 +42,7 @@ export default class EditLecturer extends Component {
         e.preventDefault();
 
         const id = this.props.match.params.id;
-        const {lecId,lecFname,lecLname,nic,dob,email,cNumber,address,username,password,summary,aQualification,Rmembership,Rdate} = this.state;
+        const {lecId,lecFname,lecLname,nic,dob,email,cNumber,address,username,password,summary,aQualification,Rmembership,salary,Rdate} = this.state;
 
         const data ={
             lecId:lecId,
@@ -57,6 +58,7 @@ export default class EditLecturer extends Component {
             summary:summary,
             aQualification:aQualification,
             Rmembership:Rmembership,
+            salary:salary,
             Rdate:Rdate
         }
 
@@ -81,6 +83,7 @@ export default class EditLecturer extends Component {
             summary:"",
             aQualification:"",
             Rmembership:"",
+            salary:"",
             Rdate:""
                 })
             }
@@ -106,7 +109,9 @@ export default class EditLecturer extends Component {
                     summary:res.data.lecturer.summary,
                     aQualification:res.data.lecturer.aQualification,
                     Rmembership:res.data.lecturer.Rmembership,
+                    salary:res.data.lecturer.salary,
                     Rdate:res.data.lecturer.Rdate
+                    
                 });
 
                 console.log(this.state.lecturer);
@@ -116,87 +121,104 @@ export default class EditLecturer extends Component {
     
     render() {
         return (
+            <div 
+            style={{
+             width: '1500px',
+             border: '1px solid black',
+             marginRight:'250px',
+             marginLeft:'200px'}}>
             <div className ="container">
-                
-<center><h1><b><u>Update Lecturer Details</u></b></h1></center>
+                <br></br>
+<center><h3><b>Update Lecturer Details</b></h3></center>
                
             <form className="needs-validation" noValidate>
             
     <div className = "container"></div>
 
-    <div className="mb-3">
+    <div className="col-md-12">
 <label className="form-label"><b>Lecturer ID</b></label>
-<input type="text" className="form-control" name="lecId" value={this.state.lecId} onChange={this.handleInputChange}/>
-</div>
-            <div className="mb-3">
-<label  className="form-label"><b>First Name</b></label>
-<input type="text" className="form-control" name="lecFname" value={this.state.lecFname} onChange={this.handleInputChange}/>
-</div>
+<input className="form-control" name="lecId" value={this.state.lecId} onChange={this.handleInputChange}></input>
+</div><br/>
 
-<div className="mb-3">
+<div className="col-md-12">
+<label className="form-label"><b>First Name</b></label>
+<input className="form-control" name="lecFname" value={this.state.lecFname} onChange={this.handleInputChange}></input>
+</div><br/>
+
+
+<div className="col-md-12">
 <label  className="form-label"><b>Last Name</b></label>
-<input type="text" className="form-control" name="lecLname" value={this.state.lecLname} onChange={this.handleInputChange}/>
-</div>
+<input className="form-control" name="lecLname" value={this.state.lecLname} onChange={this.handleInputChange}></input>
+</div><br/>
 
-<div className="mb-3">
+<div className="col-md-12">
 <label  className="form-label"><b>NIC number</b></label>
-<input type="text" className="form-control" name="nic" value={this.state.nic} onChange={this.handleInputChange}/>
-</div>
+<input className="form-control" name="nic" value={this.state.nic} onChange={this.handleInputChange}></input>
+</div><br/>
 
-<div className="mb-3">
+<div className="col-md-12">
 <label  className="form-label"><b>Date of birth</b></label>
-<input type="text" className="form-control" name="dob" value={this.state.dob} onChange={this.handleInputChange}/>
-</div>
+<input type="date" className="form-control" placeholder ="D/M/Y"name="dob" value={this.state.dob} onChange={this.handleInputChange}/>
+</div><br/>
 
-<div className="mb-3">
+<div className="col-md-12">
 <label  className="form-label"><b>E-mail</b></label>
-<input type="text" className="form-control" name="email" value={this.state.email} onChange={this.handleInputChange}/>
-</div>
+<input className="form-control" name="email" value={this.state.email} onChange={this.handleInputChange}></input>
+</div><br/>
 
-<div className="mb-3">
+<div className="col-md-12">
 <label  className="form-label"><b>Contact number</b></label>
-<input type="text" className="form-control" name="cNumber" value={this.state.cNumber} onChange={this.handleInputChange}/>
-</div>
+<input className="form-control" name="cNumber" value={this.state.cNumber} onChange={this.handleInputChange}></input>
+</div><br/>
 
-<div className="mb-3">
+<div className="col-md-12">
 <label  className="form-label"><b>Address</b></label>
-<input type="text" className="form-control" name="address" value={this.state.address} onChange={this.handleInputChange}/>
-</div> 
+<input className="form-control" name="address" value={this.state.address} onChange={this.handleInputChange}></input>
+</div><br/>
 
-<div className="mb-3">
+<div className="col-md-12">
 <label className="form-label"><b>Username</b></label>
-<input type="text" className="form-control" name="username" value={this.state.username} onChange={this.handleInputChange}/>
-</div>
+<input className="form-control" name="username" value={this.state.username} onChange={this.handleInputChange}></input>
+</div><br/>
 
-<div className="mb-3">
+<div className="col-md-12">
 <label className="form-label"><b>Password</b></label>
-<input type="text" className="form-control" name="password" value={this.state.password} onChange={this.handleInputChange}/>
-</div>
+<input className="form-control" name="password" value={this.state.password} onChange={this.handleInputChange}></input>
+</div><br/>
 
-<div className="mb-3">
+
+<div className="col-md-12">
 <label  className="form-label"><b>Career Summary</b></label>
-<input type="text" className="form-control" name="summary" value={this.state.summary} onChange={this.handleInputChange}/>
-</div>
+<textarea className="form-control" name="summary" cols="25" rows="5" value={this.state.summary} onChange={this.handleInputChange}></textarea>
+</div><br/>
 
-<div className="mb-3">
+
+<div className="col-md-12">
 <label  className="form-label"><b>Acedemic qualifications</b></label>
-<input type="text" className="form-control" name="aQualification" value={this.state.aQualification} onChange={this.handleInputChange}/>
-</div>
+<textarea className="form-control" name="aQualification" cols="25" rows="5" value={this.state.aQualification} onChange={this.handleInputChange}></textarea>
+</div><br/>
 
-<div className="mb-3">
+
+<div className="col-md-12">
 <label className="form-label"><b>Research interests and memberships</b></label>
-<input type="text" className="form-control" name="Rmembership" value={this.state.Rmembership} onChange={this.handleInputChange}/>
-</div>
+<textarea className="form-control" name="Rmembership" cols="25" rows="5" value={this.state.Rmembership} onChange={this.handleInputChange}></textarea>
+</div><br/>
 
-<div className="mb-3">
-<label  className="form-label">Registration Date</label>
-<input type="text" className="form-control" name="Rdate" value={this.state.Rdate} onChange={this.handleInputChange}/>
-</div>
+<div className="col-md-12">
+<label className="form-label"><b>Basic Salary</b></label>
+<input className="form-control" name="salary" value={this.state.salary} onChange={this.handleInputChange} required />
+</div><br />
+
+<div className="col-md-12">
+<label  className="form-label"><b>Registration Date</b></label>
+<input type="date" className="form-control" name="Rdate" value={this.state.Rdate} onChange={this.handleInputChange}/>
+</div><br/>
 
 <center><button type="submit" className="btn btn-primary" onClick={this.onSubmit}>Update</button></center>
 <br></br>
 </form>
 
+</div>
 </div>
         )
     }

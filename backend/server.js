@@ -34,6 +34,8 @@ const regRoutes = require('./routes/registration');
 const reqRoutes = require('./routes/request');
 const timetableUpdate = require('./routes/updateTimet');
 const detailRoutes = require('./routes/updateDetails');
+const registrationL = require('./routes/registrationL');
+const regeviewer = require('./routes/regeviewer');
 
 //minosh
 const buyCourse = require("./routes/buyCourse");
@@ -90,6 +92,8 @@ app.use(regRoutes);
 app.use(reqRoutes);
 app.use(timetableUpdate);
 app.use(detailRoutes);
+app.use(registrationL);
+app.use(regeviewer);
 
 //minosh
 app.use('/courses', courseRouter );

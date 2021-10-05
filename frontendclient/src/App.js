@@ -73,7 +73,7 @@ import profile from './components/profile';
         <Route path="/displaytimetables" component={Displaytimetables}></Route>
 
         {/* minosh */}
-        <Route path = "/buycourse" component = {BuyCourseDula}></Route>
+        {/* <Route path = "/buycourse" component = {BuyCourseDula}></Route> */}
         <Route  path="/course"  render={()=> <Courses posts={posts} />} />
 
         
