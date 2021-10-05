@@ -86,7 +86,9 @@ const DisplayAll = ({posts}) => {
     }else if(course.courseName.toLowerCase().includes(serachItem.toLowerCase())){
       return course
     }
-  }).map((course, index) =>(
+  })
+  
+.map((course, index) =>(
  
  <tr key={index}>
  <th scope="row">{index+1}</th>
