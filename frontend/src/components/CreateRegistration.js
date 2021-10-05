@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { ProgressBar } from "react-bootstrap";
 import { useHistory, Link } from "react-router-dom";
-//import background from '../images/lec.png';
+//import background from '../images/hall.png';
 
 const CreateRegistration = (props) => {
   const history = useHistory();
@@ -74,15 +74,26 @@ const CreateRegistration = (props) => {
       });
   };
 
+  
   return (
     <div className="container">
-      <br />
+      
+      <center>
+        <p>
+        <h4><b>REGISTRATION FORM: ROYAL EDUCATION INSTITUTE</b></h4>
+         <h5><b>INVITED TO REGISTER: Retired lecturers, unemployed lecturers, lecturers currently applying
+          their trade in Industry and foreign based lecturers</b></h5>
+        </p>
+        </center>
+        <br></br>
+
       <div className="card" style={{
         width: '1500px',
         border: '1px solid black',
         marginRight: '10px',
         marginLeft: '-90px',
       }}>
+        
         <div className="">
           <br></br>
           <center>
@@ -274,6 +285,8 @@ const CreateRegistration = (props) => {
                 Register
               </button>
             </center>
+
+            
             <Link to="">
 
             </Link>
@@ -281,6 +294,7 @@ const CreateRegistration = (props) => {
         </div>
       </div>
     </div>
+    
   );
 };
 

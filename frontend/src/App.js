@@ -53,7 +53,7 @@ import timetableUpdate from './components/timetableUpdate';
 import leaveReq from './components/leaveReq';
 import DownloadPdf from './components/DownloadPdf'
 import LecturerEmail from './components/LecturerEmail';
-
+import lecAdminPage from './components/lecAdminPage';
 import viewRegistrations from './components/viewRegistrations'
 import CreateRegistration from './components/CreateRegistration';
 import detailRequest from './components/detailRequest';
@@ -242,6 +242,7 @@ useEffect(()=>{
         <Route path ="/lecturerRegistration" component={CreateRegistration}></Route>
         <Route path ="/publishNotice" component={detailRequest}></Route>
         <Route path ="/viewNotice" component={detailsHome}></Route>
+        <Route path ="/lecAdminPage" component={lecAdminPage}></Route>
        
        
         <Route   exact path="/view"  render={()=> <Courses posts={posts} />} />
