@@ -4,6 +4,7 @@ import axios from "axios";
 export default class Apply extends Component {
   constructor(props) {
     super(props);
+    this.onfill = this.onfill.bind(this);
     this.state = {
       FirstName: "",
       LastName: "",
@@ -16,6 +17,21 @@ export default class Apply extends Component {
       ExpectedSalary: "",
     };
   }
+
+  onfill() {
+    this.setState({
+      FirstName: "Hivindu",
+      LastName: "Punsith",
+      DateOfBirth: "2000-05-14",
+      position: "IT Staff",
+      ContactNumber: "0775902679",
+      NationalIDNumber: "200034903755",
+      Gender: "Male",
+      Address: "No.73/A1, Watarappala Road, Mount Lavinia",
+      ExpectedSalary: "25 000"
+    });
+  }
+
 
   handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -268,6 +284,15 @@ export default class Apply extends Component {
               </button>
         </form>
         <br />
+        <button
+            className="btn btn-success"
+            type="submit"
+            style={{ marginTop: "15px" }}
+            onClick={this.onfill}
+          >
+            <i className="far fa-check-square"></i>
+            &nbsp;Fill the form
+          </button>
         <br />
         <br />
         <br />
