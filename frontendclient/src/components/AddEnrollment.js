@@ -161,7 +161,7 @@ export default class AddEnrollment extends Component {
                             <div className="card-header"><h4>Enrollment Details</h4></div>
 
                             <div className="col-md-6">
-                                <label for="inputEmail4" className="form-label">Enrollment Code&nbsp;<small><a href='/subemail' target="_blank" rel="noopener noreferrer" style={{color:'blue'}}><b>Click here to get the enrollment key</b></a></small></label>
+                                <label for="inputEmail4" className="form-label">Enrollment Code&nbsp;<small><a href='/subemail' style={{color:'blue'}}><b>Click here to get the enrollment key</b></a></small></label>
                                 <input type='password' className="form-control" name="enrollmentCode" value={this.state.enrollmentCode} onChange={this.handleInputChange} required />
                             </div>
 

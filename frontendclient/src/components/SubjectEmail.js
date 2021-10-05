@@ -27,7 +27,6 @@ export default class SubjectEmail extends Component {
             alert("Successfully sent. please check your email for the code...");
         }).catch(err => console.log(err));
 
-        window.location.replace('/stdview');
     }
 
     rand = (min, max) => {
