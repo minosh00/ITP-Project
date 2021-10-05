@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { builtinModules } from "module";
+import ReactHTMLTableToExcel from "react-html-table-to-excel";
 
 export default class StaffSalary extends Component {
   constructor(props) {
@@ -13,7 +14,6 @@ export default class StaffSalary extends Component {
 
   componentDidMount() {
     this.retriveStaffDetails();
-
   }
 
   retriveStaffDetails() {
@@ -27,8 +27,6 @@ export default class StaffSalary extends Component {
         console.error("There was an error!", error);
       });
   }
-
-
 
   filterData(StaffDetails, searchKey) {
     const result = StaffDetails.filter(
@@ -63,6 +61,7 @@ export default class StaffSalary extends Component {
           </center>
         </div>
         <br />
+
         <br />
         <div className="col-lg-9 mt-2 mb-2">
           <input
@@ -74,9 +73,21 @@ export default class StaffSalary extends Component {
           ></input>
         </div>
         <br />
+
         <br />
         <div className="container-xxl">
-          <table className="table table-success table-striped table-bordered">
+          <ReactHTMLTableToExcel
+            className="btn btn-outline-success"
+            table="staffsal-table"
+            filename="Staff salary Excel"
+            sheet="Sheet"
+            buttonText="Download all staff salary"
+          />
+          <br />
+          <table
+            id="staffsal-table"
+            className="table table-success table-striped table-bordered"
+          >
             <thead>
               <tr>
                 <th scope="col">#</th>
@@ -95,7 +106,7 @@ export default class StaffSalary extends Component {
                   <td>{StaffDetails.FirstName}</td>
                   <td>{StaffDetails.LastName}</td>
                   <td>{StaffDetails.BasicSalary}</td>
-                  <td>{StaffDetails.BasicSalary* 110/100}</td>
+                  <td>{(StaffDetails.BasicSalary * 110) / 100}</td>
                   {/* <td>
                     <a
                       className="btn btn-warning"

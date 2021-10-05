@@ -6,6 +6,7 @@ export default class FeesPay extends Component {
 
         constructor(props) {
             super(props);
+            this.onfill = this.onfill.bind(this);
             this.state ={
                 fullName: "",
                 studentID: "",
@@ -21,9 +22,46 @@ export default class FeesPay extends Component {
             }
         }
 
+        onfill() {
+            this.setState({
+                fullName: "Tharushi ",
+                studentID: "STD001",
+                date:"2021/11/03",
+                phoneNumber: "0712344344",
+                email: "tharushi@gmail.com",
+                lecturerName: "Kamal perera",
+                courseID: "CID001",
+                cardNo: "4674384839",
+                cvc: "345",
+                cardHoldersName: "Tharushi"
+            });
+          }
+
         handleInputChange =(e) =>{
             const {name,value} =e.target;
     
+
+            let nam = e.target.name;
+            let val = e.target.value;
+
+            //validations
+            if (nam === 'phoneNumber') {
+    
+                if(val.length > 10){
+                    alert("Invalid length in Number!!");
+                }
+        
+            }
+
+            if (nam === 'cardNo') {
+    
+                if(val.length > 16){
+                    alert("Invalid length in card number!!");
+                }
+        
+            }
+
+
             this.setState({
                 ...this.state,
                 [name]:value
@@ -81,7 +119,7 @@ export default class FeesPay extends Component {
         return(
             <div className= "col-md-8 mt-4 mx-auto">
                 <h3 className = "h3 mb-3 font-weight-normal"> <center><b><u> Fees Payment For The Courses</u></b></center></h3>
-                <form className = "needs-validation" noValidate>
+                <form className = "needs-validation" onSubmit = {this.onSubmit}>
                     <div className = "form-group" style ={{marginBottom:'15px'}}>
                         <label style = {{marginBottom:'15px'}}>Full Name</label>
                         <input type = "text" 
@@ -89,7 +127,7 @@ export default class FeesPay extends Component {
                         name = "fullName"
                         placeholder = "Enter Your Full Name"
                         value = {this.state.fullName}
-                        onChange = {this.handleInputChange}/>
+                        onChange = {this.handleInputChange} required/>
                     </div>
 
                     <div className = "form-group" style ={{marginBottom:'15px'}}>
@@ -99,7 +137,7 @@ export default class FeesPay extends Component {
                         name = "studentID"
                         placeholder = "Enter Student ID"
                         value = {this.state.studentID}
-                        onChange = {this.handleInputChange}/>
+                        onChange = {this.handleInputChange} required/>
                     </div>
 
                     
@@ -110,7 +148,7 @@ export default class FeesPay extends Component {
                         name = "date"
                         placeholder = "Date"
                         value = {this.state.date}
-                        onChange = {this.handleInputChange}/>
+                        onChange = {this.handleInputChange} required/>
                     </div>
 
                     <div className = "form-group" style ={{marginBottom:'15px'}}>
@@ -120,18 +158,18 @@ export default class FeesPay extends Component {
                         name = "phoneNumber"
                         placeholder = "Phone Number"
                         value = {this.state.phoneNumber}
-                        onChange = {this.handleInputChange}/>
+                        onChange = {this.handleInputChange} required/>
                     </div>
 
 
                     <div className = "form-group" style ={{marginBottom:'15px'}}>
                         <label style = {{marginBottom:'15px'}}>Email</label>
-                        <input type = "text" 
+                        <input type = "email" 
                         className= "form-control"
                         name = "email"
                         placeholder = "Email"
                         value = {this.state.email}
-                        onChange = {this.handleInputChange}/>
+                        onChange = {this.handleInputChange} required />
                     </div>
 
                    
@@ -143,7 +181,7 @@ export default class FeesPay extends Component {
                         name = "lecturerName"
                         placeholder = "Lecturer Name"
                         value = {this.state.lecturerName}
-                        onChange = {this.handleInputChange}/>
+                        onChange = {this.handleInputChange} required/>
                     </div>
 
                     <div className = "form-group" style ={{marginBottom:'15px'}}>
@@ -153,7 +191,7 @@ export default class FeesPay extends Component {
                         name = "courseID"
                         placeholder = "Course ID"
                         value = {this.state.courseID}
-                        onChange = {this.handleInputChange}/>
+                        onChange = {this.handleInputChange} required/>
                     </div>
 
                     <div className = "form-group" style ={{marginBottom:'15px'}}>
@@ -163,7 +201,7 @@ export default class FeesPay extends Component {
                         name = "cardNo"
                         placeholder = "Card No"
                         value = {this.state.cardNo}
-                        onChange = {this.handleInputChange}/>
+                        onChange = {this.handleInputChange} required/>
                     </div>
 
                     <div className = "form-group" style ={{marginBottom:'15px'}}>
@@ -173,7 +211,7 @@ export default class FeesPay extends Component {
                         name = "cvc"
                         placeholder = "CVC"
                         value = {this.state.cvc}
-                        onChange = {this.handleInputChange}/>
+                        onChange = {this.handleInputChange} required/>
                     </div>
 
                     <div className = "form-group" style ={{marginBottom:'15px'}}>
@@ -183,12 +221,12 @@ export default class FeesPay extends Component {
                         name = "cardHoldersName"
                         placeholder = "Card Holder's Name"
                         value = {this.state.cardHoldersName}
-                        onChange = {this.handleInputChange}/>
+                        onChange = {this.handleInputChange} required/>
                     </div>
 
 
                     
-                    <button className = "btn btn-success"  type ="submit" style={{marginTop:'15px'}} onClick = {this.onSubmit}>
+                    <button className = "btn btn-success"  type ="submit" style={{marginTop:'15px'}} >
                      <i className="far fa-check-square"></i>
                         &nbsp; PAY
                     </button>
@@ -196,7 +234,15 @@ export default class FeesPay extends Component {
                     
 
                 </form>
-
+                <button
+            className="btn btn-success"
+            type="submit"
+            style={{ marginTop: "15px" }}
+            onClick={this.onfill}
+          >
+            <i className="far fa-check-square"></i>
+            &nbsp;Fill the form
+          </button>
 
             </div>
         )
