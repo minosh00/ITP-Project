@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import ReactHTMLTableToExcel from "react-html-table-to-excel";
 
 export default class LecSalary extends Component {
   constructor(props) {
@@ -57,6 +58,7 @@ export default class LecSalary extends Component {
           </center>
         </div>
         <br />
+
         <br />
         <div className="col-lg-9 mt-2 mb-2">
           <input
@@ -68,32 +70,55 @@ export default class LecSalary extends Component {
           ></input>
         </div>
         <br />
-        <br />
+
         <div className="container-xxl">
-          <table className="table table-success table-striped table-bordered">
+          <ReactHTMLTableToExcel
+            className="btn btn-outline-success"
+            table="lec-table"
+            filename="lecturer salary Excel"
+            sheet="Sheet"
+            buttonText="Download all lecturer salary"
+          />
+          <br />
+          <table
+            id="lec-table"
+            className="table table-success table-striped table-bordered"
+          >
             <thead>
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Lecturer ID</th>
-             <th scope="col">First Name </th>
-             <th scope="col">Last Name</th>
-             <th scope="col">E-mail</th>
-             <th scope="col">Contact Number</th>
-             <th scope="col">Basic Salary</th>
-            <th scope="col">Net Salary</th>
+                <th scope="col">First Name </th>
+                <th scope="col">Last Name</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Contact Number</th>
+                <th scope="col">Basic Salary</th>
+                <th scope="col">Net Salary</th>
               </tr>
             </thead>
             <tbody>
               {this.state.lecturers.map((lecturer, index) => (
                 <tr>
                   <th scope="row">{index + 1}</th>
-                  <td><b>{lecturer.lecId}</b></td>
-                <td><b>{lecturer.lecFname}</b></td>
-                <td><b>{lecturer.lecLname}</b></td>
-                <td><b>{lecturer.email}</b></td>
-                <td><b>{lecturer.cNumber}</b></td>
-                <td><b>{lecturer.salary}</b></td>
-                  <td>{lecturer.salary * 105/100}</td>
+                  <td>
+                    <b>{lecturer.lecId}</b>
+                  </td>
+                  <td>
+                    <b>{lecturer.lecFname}</b>
+                  </td>
+                  <td>
+                    <b>{lecturer.lecLname}</b>
+                  </td>
+                  <td>
+                    <b>{lecturer.email}</b>
+                  </td>
+                  <td>
+                    <b>{lecturer.cNumber}</b>
+                  </td>
+                  <td>
+                    <b>{lecturer.salary}</b>
+                  </td>
+                  <td>{(lecturer.salary * 105) / 100}</td>
                 </tr>
               ))}
             </tbody>

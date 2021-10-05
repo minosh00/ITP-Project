@@ -6,6 +6,7 @@ export default class BuyCourseDula extends Component {
 
     constructor(props) {
         super(props);
+        this.onfill = this.onfill.bind(this);
         this.state ={
             fullName: "",
             address: "",
@@ -19,6 +20,22 @@ export default class BuyCourseDula extends Component {
             date: ""
         }
     }
+
+
+    onfill() {
+        this.setState({
+            fullName: "DUlakshi Madhuhansani",
+            address: "Panadura",
+            email: "Dula@gmail.com",
+            phoneNumber: "0713765765",
+            nic: "969876878v",
+            courseName: "IT certificate course",
+            cardNo: "87654767",
+            cvc: "678",
+            cardHoldersName: "Mitrarathne D.M",
+            date: "2021/11/12"
+        });
+      }
 
     handleInputChange =(e) =>{
         const {name,value} =e.target;
@@ -72,6 +89,10 @@ export default class BuyCourseDula extends Component {
             }
         })
     }
+
+
+   
+
 
     render() {
         return(
@@ -188,7 +209,15 @@ export default class BuyCourseDula extends Component {
                     
 
                 </form>
-
+                <button
+            className="btn btn-success"
+            type="submit"
+            style={{ marginTop: "15px" }}
+            onClick={this.onfill}
+          >
+            <i className="far fa-check-square"></i>
+            &nbsp;Fill the form
+          </button>
 
             </div>
         )
