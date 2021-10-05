@@ -38,7 +38,7 @@ const Courses = ({posts}) => {
     </Link>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <Link to ={{
-        pathname:``
+        pathname:`/buycourse`
       }}>
     <button type="button" class="btn btn-dark"><i class="fas fa-shopping-cart"></i>&nbsp;Buy</button>
     </Link>
