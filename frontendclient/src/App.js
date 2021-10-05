@@ -67,10 +67,9 @@ import BuyCourseDula from './components/BuyCourseDula';
         <Route path = "/buycourse" component = {BuyCourseDula}></Route>
         <Route  path="/course"  render={()=> <Courses posts={posts} />} />
        
-        <Route path="/course/:id"    render={(props)=>  <Course {...props} posts={posts} />} />
+        <Route path="/course1/:id"    render={(props)=>  <Course {...props} posts={posts} />} />
 
-        <Route  path="/allCourse"  component={Course} />
-
+    
         <Route path="" component={Homefooter}></Route>
 
       </div>

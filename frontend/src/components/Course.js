@@ -95,7 +95,7 @@ const Course =  (props) => {
     </tr>
     <tr>
       <th scope="row"><i class="far fa-credit-card"></i>&nbsp; Price</th>
-      <td>{price}</td>
+      <td>Rs{price}</td>
     
     </tr>
     <tr>
@@ -112,14 +112,7 @@ const Course =  (props) => {
        <br></br>
    <br></br>
   
-     <button> <ReactHTMLTableToExcel id="test-table-xls-button"
-                    className="btn btn-warning"
-                   
-                    table="table-to-xls"
-                    filename={courseID}
-                    sheet="tablexls"
-                    
-                    buttonText="Download as XLSheet"/></button>
+ 
              <br></br>
    
     <br></br>
