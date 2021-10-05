@@ -25,7 +25,9 @@ import Displaytimetables from './components/Displaytimetables';
 import Courses from './components/Courses';
 import Course from './components/Course';
 
-
+//nethmi
+import RegisterTypes from './components/RegisterTypes';
+import CreateRegistration from './components/CreateRegistration';
 
 //malki
 import Registration from './components/Registration';
@@ -82,6 +84,10 @@ import profile from './components/profile';
 
         <Route path="/course/:id"    render={(props)=>  <Course {...props} posts={posts} />} />
         <Route  path="/allCourse"  component={Course} />
+
+        {/* nethmi */}
+        <Route path="/regtypes" component={RegisterTypes}></Route>
+        <Route path="/lecturerreg" component={CreateRegistration}></Route>
 
         {/* malki */}
         <Route path="/signupstd" component={Registration}></Route>
