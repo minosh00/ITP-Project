@@ -10,6 +10,7 @@ import Homefooter from './components/Homefooter';
 import ClientLogin from './components/ClientLogin';
 import AllSubjectsView from './components/AllSubjectsView';
 import AddEnrollment from './components/AddEnrollment';
+import SubjectPayment from './components/SubjectPayment';
 
 import Apply from './components/Apply'
 
@@ -23,6 +24,13 @@ import Displaytimetables from './components/Displaytimetables';
 // minosh
 import Courses from './components/Courses';
 import Course from './components/Course';
+
+
+
+//malki
+import Registration from './components/Registration';
+import profile from './components/profile';
+
 
 
 
@@ -54,7 +62,8 @@ import Course from './components/Course';
         {/* diniru */}
         <Route path="/login"  component={ClientLogin}></Route> 
         <Route path="/allsubjects"  component={AllSubjectsView}></Route>
-        <Route path="/addenrollsub"  component={AddEnrollment}></Route>
+        <Route path="/addenrollsub/:id"  component={AddEnrollment}></Route>
+        <Route path="/subpayment"  component={SubjectPayment}></Route>
 
         {/* dima */}
         <Route path="/middle" component={middle}></Route>
@@ -64,13 +73,24 @@ import Course from './components/Course';
         <Route path="/displaytimetables" component={Displaytimetables}></Route>
 
         {/* minosh */}
+        <Route path = "/buycourse" component = {BuyCourseDula}></Route>
         <Route  path="/course"  render={()=> <Courses posts={posts} />} />
-       
-        <Route path="/course/:id"    render={(props)=>  <Course {...props} posts={posts} />} />
 
+        
+
+    
+
+        <Route path="/course/:id"    render={(props)=>  <Course {...props} posts={posts} />} />
         <Route  path="/allCourse"  component={Course} />
 
+        {/* malki */}
+        <Route path="/signupstd" component={Registration}></Route>
+        <Route path="/loginstd" component={profile}></Route>
+
+
         <Route path="" component={Homefooter}></Route>
+
+        
 
       </div>
     </BrowserRouter>

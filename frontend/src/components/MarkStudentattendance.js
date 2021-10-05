@@ -11,6 +11,7 @@ export default class MarkStudentattendance extends Component {
     this.onChangedate = this.onChangedate.bind(this);
     this.onChangecount = this.onChangecount.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.onfill = this.onfill.bind(this);
 
     this.state = {
       lecturerid: "",
@@ -19,6 +20,16 @@ export default class MarkStudentattendance extends Component {
       date: "",
       count: "",
     };
+  }
+
+  onfill() {
+    this.setState({
+      lecturerid: "L001",
+      lecname: "Kamal perera",
+      subjectorcourse: "Science",
+      date: "2021/11/07",
+      count: 50,
+    });
   }
 
   onChangelecturerid(e) {
@@ -77,8 +88,6 @@ export default class MarkStudentattendance extends Component {
       count: "",
     });
   }
-
- 
 
   render() {
     return (
@@ -158,7 +167,19 @@ export default class MarkStudentattendance extends Component {
             <i className="far fa-check-square"></i>
             &nbsp;Mark Student attendance
           </button>
+
+          <br />
+          <br />
         </form>
+        <button
+          className="btn btn-success"
+          type="submit"
+          style={{ marginTop: "15px" }}
+          onClick={this.onfill}
+        >
+          <i className="far fa-check-square"></i>
+          &nbsp;Fill the form
+        </button>
       </div>
     );
   }

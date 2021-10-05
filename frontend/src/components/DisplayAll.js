@@ -8,6 +8,8 @@ import adminCourseDisplay from './adminCourseDisplay';
 
 const DisplayAll = ({posts}) => {
 
+
+  const [serachItem,setserachItem] =useState([]);
     const[course,setCourse]  = useState([])
     const deleteCourse = id=>{
 
@@ -30,6 +32,9 @@ const DisplayAll = ({posts}) => {
   <h1>Manage All Course</h1>
   <div align="left">
     <p>The Course Currently Available In The Institue</p>
+    <td>
+                <input className="form-control" style={{width:'400px', marginLeft:'50px'}} type="search" placeholder="Search for student" onChange={event=>{setserachItem(event.target.value)}} ></input>
+              </td>
     </div>
   <div align="right">
     <p></p>
@@ -61,7 +66,7 @@ const DisplayAll = ({posts}) => {
       <th Scope="col">❌</th>
       <th scope="row">Course ID</th>
       <th scope="row">Course Name</th>
-      <th scope="row">Course Type</th> 
+      <th scope="row">Course Description</th> 
       <th scope="row">Enroll Requirement</th>
       <th scope="row">Course Duration</th>
       <th scope="row">Image</th>
@@ -74,14 +79,21 @@ const DisplayAll = ({posts}) => {
 
   <tbody>
 
-  {posts.map((course, index) =>(
+
+  {posts.filter((course)=>{
+    if(serachItem==""){
+      return course
+    }else if(course.courseName.toLowerCase().includes(serachItem.toLowerCase())){
+      return course
+    }
+  }).map((course, index) =>(
  
  <tr key={index}>
  <th scope="row">{index+1}</th>
     
       <td>{course.courseID}</td>
       <td>{course.courseName}</td>
-      <td>{course.courseType}</td>
+      <td>{course.description}</td>
       <td>{course.requirement}</td> 
       <td>{course.duration}</td>
       <td><div class="text-center">

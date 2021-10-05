@@ -78,6 +78,7 @@ export default class EditSub extends Component {
           })
       }
     })
+    window.location.replace('/Adminsubhome');
   }
 
   componentDidMount() {

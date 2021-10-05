@@ -11,6 +11,7 @@ export default class Adminaddnewattendance extends Component {
         this.onChangemonth = this.onChangemonth.bind(this);
         this.onChangecategory = this.onChangecategory.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+        this.onfill = this.onfill.bind(this);
         
         this.state={
             attendanceID:"ATT" + this.randomid(999, 99999),
@@ -21,6 +22,14 @@ export default class Adminaddnewattendance extends Component {
         }
     }
 
+    onfill() {
+        this.setState({
+            attendanceID:"L001",
+            name:"Kamal perera",
+            month:"September",
+            category:'Lecturer'
+        });
+      }
 
 
     onChangeattendanceID(e) {
@@ -122,7 +131,15 @@ export default class Adminaddnewattendance extends Component {
 
 
             </form>
-            
+            <button
+            className="btn btn-success"
+            type="submit"
+            style={{ marginTop: "15px" }}
+            onClick={this.onfill}
+          >
+            <i className="far fa-check-square"></i>
+            &nbsp;Fill the form
+          </button>
         </div>
           
         )

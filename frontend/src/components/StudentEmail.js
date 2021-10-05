@@ -1,7 +1,8 @@
 
 import emailjs from "emailjs-com";
 import { Link } from 'react-router-dom';
-import pic4 from '../images/pdf.jpg';
+import pic4 from '../images/emailPhone.jpeg';
+import pic44 from '../images/E1.jpeg';
 const StudentEmail = () => {
   function sendEmail(e) {
 
@@ -23,31 +24,32 @@ const StudentEmail = () => {
   return (
     <div className="container">
       <form className="row" onSubmit={sendEmail} >
-
-        <img src={pic4} style={{ width: '100px', height: '100%' }}></img>
-
+        <h1>  Admin Send An Email To The New Student</h1>
+        &nbsp;&nbsp;
+        <img src={pic44} style={{ width: '1290px', height: '100%', marginBottom: '20px' }}></img>
+        &nbsp;
+        <h1>  You must fill all the details of this one.....</h1>
         <div class="card">
-          <h4 class="card-header">Send Email Students</h4>
+          <h4 class="card-header">Send an Email</h4>
           <div class="card-body">
-            <h6 class="card-title">Send Email :</h6>
-            <label>name</label>
+            <h6 class="card-title">Send an Email to the Student </h6>
+            <label>Student Name</label>
             <input type="" name="stdname" className="form-control" />
 
-            <label>Email</label>
+            <label>Student Email Address</label>
             <input type="email" name="user_email" className="form-control" />
 
-            <label>Message</label>
+            <label> Message</label>
             <textarea name="message" rows="4" className="form-control" />
 
             <br></br>
           </div>
 
-          <button type="submit" class="btn btn-danger"><i class="far fa-envelope"></i>&nbsp;Send Email</button>
+          <button type="submit" class="btn btn-dark"><i class="far fa-envelope"></i>&nbsp;Send Email</button>
         </div>
-
-
-
       </form>
+      <br></br> <br></br>
+      <img src={pic4} style={{ width: '1290px', height: '100%', marginBottom: '20px' }}></img>
 
     </div>
 

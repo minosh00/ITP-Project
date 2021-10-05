@@ -7,7 +7,7 @@ export default class Homeheader extends Component {
   
     render() {
         return (
-      <div style={{marginBottom:'20px'}}>
+      <div>
         <nav className="navbar navbar-light bg-light ">
           <div   >
              <img src={logo} alt="logo" style={{width:600 , marginTop:'20px', marginLeft:'20px'}} />
@@ -42,13 +42,12 @@ export default class Homeheader extends Component {
         </li>
       </ul>
       <form className="d-flex">
-      <a className="navbar-brand " href="/apply"><b> Register Now! </b></a>
+      <a className="navbar-brand " href="/signupstd"><b> Register Now! </b></a>
       <a className="navbar-brand " href="/login"><b> Login </b></a>
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
         <button className="btn btn-success" type="submit" style={{ marginRight:'20px'}}>Search</button>
       </form>
 </nav>
-<br/>
 </div>     
         )
     }

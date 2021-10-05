@@ -52,7 +52,8 @@ export default class SubStdView extends Component {
                     <tbody>
                         {this.state.subjects.map((subjects, index)=>(
                         <tr style={{fontSize:'20px'}}>   
-                            <td style={{width:'150px',}}>{subjects.subjectName}<br/><b style={{fontSize:'24px'}}>Rs: {subjects.subjectFee}</b></td>
+                            <td style={{width:'150px',}}>{subjects.subjectName}<br/>
+                            <b style={{fontSize:'24px'}}>Rs: {subjects.subjectFee}/<small style={{ fontSize: '13px' }}>Monthly</small></b></td>
                             <td style={{width:'500px', fontSize:'17px', color:'#8c8c8c'}}>{subjects.subjectDes}</td>
                             <td style={{width:'150px', marginLeft:'50px'}}>
                               <a className="btn btn-warning" onClick={()=>this.onDelete(subjects._id)}>

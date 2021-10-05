@@ -9,7 +9,7 @@ export default class AddEnrollment extends Component {
         this.state = {
             enrollmentCode: "EN" + this.rand(999, 99999),
             studentId: "",
-            SubjectId: "",
+            subjectId: "",
             StudentName: "",
             StudentAddress: "",
             dateOfEnroll: ""
@@ -46,10 +46,10 @@ export default class AddEnrollment extends Component {
     onSubmit = (e) => {
         e.preventDefault();
 
-        const { enrollmentCode, studentId, SubjectId, StudentName, StudentAddress, dateOfEnroll } = this.state;
+        const { enrollmentCode, studentId, subjectId, StudentName, StudentAddress, dateOfEnroll } = this.state;
 
         const data = {
-            SubjectId: SubjectId,
+            subjectId: subjectId,
             StudentName: StudentName,
             enrollmentCode: enrollmentCode,
             studentId: studentId,
@@ -64,7 +64,7 @@ export default class AddEnrollment extends Component {
                 alert("Enrollment Added!")
                 this.setState(
                     {
-                        SubjectId: "",
+                        subjectId: "",
                         StudentName: "",
                         enrollmentCode: "",
                         studentId: "",
@@ -74,11 +74,24 @@ export default class AddEnrollment extends Component {
                 )
             }
         })
+        window.location.replace('/enrollhome');
     }
 
     rand = (min, max) => {
         return Math.floor(Math.random() * max - min + 1) + min;
     }
+
+    onClickDemo = () => {
+        this.setState(
+          {
+            subjectId: "SUB34765",
+            StudentName: "Ahmed Azmie",
+            enrollmentCode: "EN45784",
+            studentId: "STD34638",
+            StudentAddress: "No123, 3rd Street, Rathmalana",
+            dateOfEnroll: "2021-09-20"
+          })
+      }
 
     render() {
         return (
@@ -104,7 +117,7 @@ export default class AddEnrollment extends Component {
 
                         <div className="col-md-4">
                             <label for="inputAddress2" className="form-label">Subject ID</label>
-                            <input className="form-control" name="SubjectId" value={this.state.SubjectId} onChange={this.handleInputChange} required />
+                            <input className="form-control" name="subjectId" value={this.state.subjectId} onChange={this.handleInputChange} required />
                         </div>
 
                         <div className="col-md-4">
@@ -132,6 +145,7 @@ export default class AddEnrollment extends Component {
                         </div>
                         <div>
                             <hr />
+                            <button className="btn btn-outline-danger btn-sm" onClick={this.onClickDemo}>Demo</button>&nbsp;
                             <button type="submit" className="btn btn-success">Add New Enrollment</button>
                         </div>
                     </form>

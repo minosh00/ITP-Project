@@ -12,7 +12,7 @@ const enrollmentSchema = new mongoose.Schema({
         //required:true
     },
 
-    SubjectId:{
+    subjectId:{
         type: String,
         //required:true
     },
