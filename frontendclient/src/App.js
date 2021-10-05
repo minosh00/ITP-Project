@@ -25,9 +25,12 @@ import Displaytimetables from './components/Displaytimetables';
 import Courses from './components/Courses';
 import Course from './components/Course';
 
+
+
 //malki
 import Registration from './components/Registration';
 import profile from './components/profile';
+
 
 
 
@@ -70,13 +73,20 @@ import profile from './components/profile';
         <Route path="/displaytimetables" component={Displaytimetables}></Route>
 
         {/* minosh */}
+        <Route path = "/buycourse" component = {BuyCourseDula}></Route>
         <Route  path="/course"  render={()=> <Courses posts={posts} />} />
+
+        
+
+    
+
         <Route path="/course/:id"    render={(props)=>  <Course {...props} posts={posts} />} />
         <Route  path="/allCourse"  component={Course} />
 
         {/* malki */}
         <Route path="/signupstd" component={Registration}></Route>
         <Route path="/loginstd" component={profile}></Route>
+
 
         <Route path="" component={Homefooter}></Route>
 
