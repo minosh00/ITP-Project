@@ -24,9 +24,9 @@ const StudentEmail = () => {
   return (
     <div className="container">
       <form className="row" onSubmit={sendEmail} >
-      <h1>  Admin Send An Email To The New Student</h1>
-      &nbsp;&nbsp;
-        <img src={pic44} style={{ width: '1290px', height: '100%', marginBottom:'20px'}}></img>
+        <h1>  Admin Send An Email To The New Student</h1>
+        &nbsp;&nbsp;
+        <img src={pic44} style={{ width: '1290px', height: '100%', marginBottom: '20px' }}></img>
         &nbsp;
         <h1>  You must fill all the details of this one.....</h1>
         <div class="card">
@@ -49,8 +49,8 @@ const StudentEmail = () => {
         </div>
       </form>
       <br></br> <br></br>
-      <img src={pic4} style={{ width: '1290px', height: '100%', marginBottom:'20px'}}></img>
-        
+      <img src={pic4} style={{ width: '1290px', height: '100%', marginBottom: '20px' }}></img>
+
     </div>
 
   );

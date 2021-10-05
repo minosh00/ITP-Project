@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import pic2 from '../images/ladyFace.jpeg';
-import pic12 from '../images/blue.jpg';
+import pic12 from '../images/ff1.jpg';
 
 export default class profile extends Component {
 
@@ -39,13 +39,15 @@ export default class profile extends Component {
                 <div className="container">
                 
                 <h1><p class="fs-1">  Welcome to the Student Profile </p></h1>
-                <img src={pic12} style={{width:'1300px' , height:'50px'}}></img>
+                <img src={pic12} style={{width:'1300px' , height:'100%'}}></img>
+                
                 <div className='card container'>
+                <h1>This is My Profile</h1>
                     &nbsp;&nbsp;
                     <table>
                         <tr>
                             <td><center>
-                                <a href=''><img src={pic2} style={{ height: '450px', marginTop: '40px' }}></img></a><br />
+                                <a href=''><img src={pic2} style={{ height: '350px', marginTop: '40px' }}></img></a><br />
                                 <br></br></center>
                             </td>
                         </tr>
@@ -171,6 +173,7 @@ export default class profile extends Component {
                         &nbsp;&nbsp;
                     </table>
                     </div>
+                    <img src={pic12} style={{width:'1300px' , height:'100%'}}></img>  &nbsp;&nbsp;
                     <div className="container">   
                    
                 <p class="fs-5">If you need  Edit some details which were included in your Student Registration form?And You can click this button as well.
