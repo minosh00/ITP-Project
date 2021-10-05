@@ -12,9 +12,23 @@ const Courses = ({posts}) => {
 
     return (
 
-<div  class="text-center mt-3">
     
+
+<div  class="text-center mt-3">
+<div className="container ">
+  <div align="left">
+<h4>Now You Can Search Courses </h4>
+</div>
+<div class="input-group">
+  
+  <input type="search" class="form-control rounded" placeholder="Search Courses" aria-label="Search"
+    aria-describedby="search-addon" />
+  
+</div>
+   </div> 
       <h1 className="text-center mt-3">All Courses List</h1>
+    
+ 
 
       {posts.map((course, key) =>(
 
