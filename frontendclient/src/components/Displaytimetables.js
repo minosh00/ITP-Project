@@ -91,7 +91,7 @@ export default class Displaytimetables extends Component {
                         <center>
                           <a
                             className="btn btn-warning"
-                            href=""
+                            href={`/downloadttables/${timetables._id}`}
                             style={{ textDecoration: "none", color: "white" }}
                           >
                             <i>Download as PDF</i>
