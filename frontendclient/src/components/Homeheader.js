@@ -35,12 +35,14 @@ export default class Homeheader extends Component {
           <a className="nav-link active " aria-current="page" href="/displaytimetables" style={{fontSize:'23px'}}>TimeTables</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link active " aria-current="page" href="/" style={{fontSize:'23px'}}>Our Lecturers</a>
+          <a className="nav-link active " aria-current="page" href="/notices" style={{fontSize:'25px'}}>Notices</a>
+
         </li>
         <li className="nav-item">
           <a className="nav-link active " aria-current="page" href="/about" style={{fontSize:'23px'}}>Notices</a>
         </li>
       </ul>
+
 </nav>
 </div>     
         )
