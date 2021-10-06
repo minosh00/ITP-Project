@@ -33,7 +33,7 @@ const DisplayAll = ({posts}) => {
   <div align="left">
     <p>The Course Currently Available In The Institue</p>
     <td>
-                <input className="form-control" style={{width:'400px', marginLeft:'50px'}} type="search" placeholder="Search for student" onChange={event=>{setserachItem(event.target.value)}} ></input>
+                <input className="form-control" style={{width:'400px', marginLeft:'50px'}} type="search" placeholder="Search All Courses" onChange={event=>{setserachItem(event.target.value)}} ></input>
               </td>
     </div>
   <div align="right">
