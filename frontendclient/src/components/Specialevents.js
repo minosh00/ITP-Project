@@ -48,9 +48,9 @@ export default class Specialevents extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div >
         <div className="container">
-          <div className="row">
+          <div >
             <div>
               <center>
                 <b>
@@ -81,33 +81,31 @@ export default class Specialevents extends Component {
               &nbsp;
             </div>
           </div>
+          <hr />
+          <div  class="d-flex justify-content-center">
+          <div className="col-12 col-md-7 col-lg-78 mx-0 mb-2">
           <table
             id="specialevent-table"
-            className="table  table-striped table-bordered"
+            className="table  table-borderless"
           >
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Event ID</th>
-                <th scope="col">Event Name </th>
-                <th scope="col">Venue</th>
-                <th scope="col">Date</th>
-                <th scope="col">Time</th>
-              </tr>
-            </thead>
-            <tbody>
+            <tbody >
               {this.state.specialevents.map((specialevents, event) => (
-                <tr>
-                  <th scope="row">{event + 1}</th>
-                  <td>{specialevents.eventID}</td>
-                  <td>{specialevents.eventname}</td>
-                  <td>{specialevents.venue}</td>
-                  <td>{specialevents.date}</td>
-                  <td>{specialevents.time}</td>
+                <tr className="card p-0 overflow-hidden h-100 shadow">
+                  
+                  {/* <td className="card-title" >{specialevents.eventID}</td> */}
+                  <td className="card-text" style={{fontSize:'30px' , color:'#00ff80' , textAlign:'center'}}>&nbsp; 🔶 &nbsp;{specialevents.eventname}&nbsp; 🔶 &nbsp;</td>
+                  <td className="card-text" style={{fontSize:'25px' , color:'#9966ff' , textAlign:'center'}}>&nbsp;  Vanue : &nbsp;{specialevents.venue}</td>
+                  <td className="card-text" style={{fontSize:'25px' , color:'#9966ff' , textAlign:'center'}}>&nbsp;  Date : &nbsp;{specialevents.date}</td>
+                  <td className="card-text" style={{fontSize:'25px' , color:'#9966ff' , textAlign:'center'}}>&nbsp;  Time : &nbsp;{specialevents.time}</td>
+                  
                 </tr>
+                
               ))}
+              <br></br>
             </tbody>
           </table>
+          </div>
+          </div>
         </div>
       </div>
     );
