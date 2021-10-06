@@ -29,6 +29,7 @@ import Course from './components/Course';
 import RegisterTypes from './components/RegisterTypes';
 import CreateRegistration from './components/CreateRegistration';
 import detailsHome from './components/detailsHome';
+import ourlecturers from './components/ourlecturers';
 
 //malki
 import Registration from './components/Registration';
@@ -90,6 +91,8 @@ import profile from './components/profile';
         <Route path="/regtypes" component={RegisterTypes}></Route>
         <Route path="/lecturerreg" component={CreateRegistration}></Route>
         <Route path="/notices" component={detailsHome}></Route>
+        <Route path="/ourlecturers" component={ourlecturers}></Route>
+
 
         {/* malki */}
         <Route path="/signupstd" component={Registration}></Route>
