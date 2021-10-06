@@ -25,7 +25,7 @@ export default class Middle extends Component {
                                 <td style={{ color: 'white', textAlign: 'center' }}>
                                     <h3 ><b>New Registration for Students</b></h3>
                                     <p>now you can join with our next year classes</p>
-                                    <a className="btn btn-outline-light btn-lg" style={{ width: '200px' }} >Register now!</a>
+                                    <a className="btn btn-outline-light btn-lg" style={{ width: '200px' }} href='/signupstd'>Register now!</a>
                                 </td>
                             </tr>
                         </table>
@@ -36,7 +36,7 @@ export default class Middle extends Component {
                                 <td style={{ color: 'white', textAlign: 'center' }}>
                                     <h3 style={{ marginLeft: '30px' }}><b>How to buy online subjects?</b></h3>
                                     <p style={{ marginLeft: '30px' }}>You can buy subjects here. Click below...</p>
-                                    <a className="btn btn-outline-light btn-lg" style={{ width: '200px', marginLeft: '30px' }}>Register now!</a>
+                                    <a className="btn btn-outline-light btn-lg" style={{ width: '200px', marginLeft: '30px' }} href='/allsubjects'>Buy now!</a>
                                 </td>
                                 <td style={{ textAlign: 'right' }}>
                                     <img src={subgif} style={{ width: '400px', height: 'auto' }} />
@@ -53,7 +53,7 @@ export default class Middle extends Component {
                                 <td style={{ color: 'white', textAlign: 'center' }}>
                                     <h3 ><b>How to buy online courses?</b></h3>
                                     <p>You can buy courses here. Click below...</p>
-                                    <a className="btn btn-outline-light btn-lg" style={{ width: '200px' }}>Register now!</a>
+                                    <a className="btn btn-outline-light btn-lg" style={{ width: '200px' }} href='/course'>Buy now!</a>
                                 </td>
                             </tr>
                         </table>
