@@ -53,9 +53,8 @@ import profile from './components/profile';
 
     return (
     <BrowserRouter>
-      <div>
-        {/* dima header*/}
-        <Route path=""  component={Homeheader}></Route>
+      <div >
+          <Homeheader/>
 
         <Route path="/apply"  component={Apply}></Route>   
 
@@ -66,7 +65,7 @@ import profile from './components/profile';
         <Route path="/subemail"  component={SubjectEmail}></Route>
 
         {/* dima */}
-        <Route path="/middle" component={middle}></Route>
+        <Route path="/middle"exact component={middle}></Route>
         <Route path="/special" component={Specialevents}></Route>
         <Route path="/about" component={Aboutus}></Route>
         <Route path="/admin"  component={Loginpage}></Route>
