@@ -8,7 +8,6 @@ const multer = require("multer");
 //create image hold in storage 
 
 const storage = multer.diskStorage({
-
     destination:(req, file,callback) =>{
      callback(null, "./frontend/public/uploads/");
 

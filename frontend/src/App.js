@@ -64,6 +64,12 @@ import detailsHome from './components/detailsHome';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import './App.css';
+
+import { FileUploader } from './components/FileUploader';
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Preview } from './components/Preview';
+
 import EditCourseFollowpdf from './components/EditCourseFollowpdf';
 import Courses from './components/Courses';
 import AddCourse from './components/AddCourse';
@@ -130,6 +136,12 @@ import EditMembers from './components/EditMembers';
      
 
       const[posts , setPosts] = useState([])
+      const [files, setFiles] = useState([]);
+
+      const onSuccess = (savedFiles) => {
+        setFiles(savedFiles)
+    };
+    
     
       useEffect(() => {
     
@@ -180,6 +192,10 @@ useEffect(()=>{
     return (
     <BrowserRouter>
       <div>
+
+{/* minosh  */}
+
+
 
         <Route path=""  component={Adminhomeheader}></Route>
 
@@ -243,7 +259,15 @@ useEffect(()=>{
         <Route path ="/publishNotice" component={detailRequest}></Route>
         <Route path ="/viewNotice" component={detailsHome}></Route>
         <Route path ="/lecAdminPage" component={lecAdminPage}></Route>
-       
+      
+
+{/* minosh */}
+    
+
+    <Route  path="/CourseInside"   component={FileUploader} />
+       <Preview/>
+      <ToastContainer/>
+   
        
         <Route   exact path="/view"  render={()=> <Courses posts={posts} />} />
         <Route path="/course/:id"    render={(props)=>  <Course {...props} posts={posts} />} />
@@ -255,6 +279,8 @@ useEffect(()=>{
         <Route path="/course/:id"    render={(props)=>  <adminCourseDisplay {...props} posts={posts} />} />
         <Route  path="/buyCoursepdf/:id"  component={EditCourseFollowpdf} />
         <Route  path="/EnrollKeySend"  component={CourseEnrollKeySendEmail} />
+
+       
 
 
 

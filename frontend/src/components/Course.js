@@ -115,7 +115,10 @@ const Course =  (props) => {
  
              <br></br>
    
+             <Link  to="/CourseInside" type="button" class="btn btn-dark" ><i class="fas fa-arrow-circle-left"></i>&nbsp;Course Inside</Link><br></br>
+
     <br></br>
+
       <Link  to="/" type="button" class="btn btn-success"><i class="fas fa-arrow-circle-left"></i>&nbsp;Back</Link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      

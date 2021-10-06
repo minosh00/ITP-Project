@@ -28,6 +28,7 @@ const Courses = ({posts}) => {
   
 </div>
    </div> 
+   <br></br><br></br>
       <h1 className="text-center mt-3">All Courses List</h1>
     
  
@@ -49,7 +50,7 @@ const Courses = ({posts}) => {
   <div className=" text-center mt-3">
   <img src={`/uploads/${course.courseImage}`} alt="..."  class="img-fluid"   width="390"/> 
   <div className="card-body text-center">
-  <h5 className="card-title">&nbsp; {course.courseName} </h5>
+  <h4 className="card-title">&nbsp; {course.courseName} </h4>
   <p className="card-title">&nbsp; 🔶Course Type: {course.courseType} </p>
   <p className="card-text">&nbsp; 🔶 Enroll Requirement: {course.requirement}</p>
   <p className="card-text">&nbsp;🔶 Course Duration: {course.duration}</p>
