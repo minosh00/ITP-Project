@@ -23,35 +23,7 @@ export default class downloadttable extends Component {
     }
    
     onSubmit =(e) =>{
-        e.preventDefault();
-        
-        const id = this.props.match.params.id;
-
-        const {timetableID,subjectORcourse,monthANDdate,time} = this.state;
-
-        const data ={
-            timetableID:timetableID,
-            subjectORcourse:subjectORcourse,
-            monthANDdate:monthANDdate,
-            time:time
-        }
-
-        console.log(data)
-
-
-        axios.put(`/timetables/update/${id}`,data).then((res)=>{
-            if(res.data.success){
-                alert("update success")
-                this.setState(
-                    {
-                        timetableID:'',
-                        subjectORcourse:'',
-                        monthANDdate:'',
-                        time:'' 
-                    }
-                )
-            }
-        })
+    
 
     }
    

@@ -20,7 +20,7 @@ import Loginpage from "./components/Loginpage";
 import middle from "./components/Middle";
 import Aboutus from "./components/Aboutus";
 import Displaytimetables from "./components/Displaytimetables";
-
+import downloadttable from "./components/downloadttable";
 
 // minosh
 import Courses from './components/Courses';
@@ -71,7 +71,7 @@ function App() {
         <Route path="/about" component={Aboutus}></Route>
         <Route path="/admin" component={Loginpage}></Route>
         <Route path="/displaytimetables" component={Displaytimetables}></Route>
-
+        <Route path="/downloadttables/:id" component={downloadttable}></Route>
 
         {/* minosh */}
         <Route path = "/buycourse" component = {BuyCourseDula}></Route> 
