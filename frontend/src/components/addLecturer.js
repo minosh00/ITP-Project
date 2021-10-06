@@ -131,7 +131,7 @@ export default class addLecturer extends Component {
             >
                 <div className="container" >
                     <br></br>
-                    <center><h3><b>Add New Lecturer Details To The Institute</b></h3></center>
+                    <center><h3><b>Add New Lecturer</b></h3></center>
 
                     <form className="needs-validation" onSubmit={this.onsubmit}>
 
