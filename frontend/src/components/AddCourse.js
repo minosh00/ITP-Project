@@ -57,6 +57,8 @@ const AddCourse = () => {
         setDuration('');
 
 
+      
+
         axios.post("http://localhost:8000/courses/add" , formData)
         .then (res =>
          

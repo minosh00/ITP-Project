@@ -1,6 +1,7 @@
 import React, { Component  } from 'react'
 import { Redirect } from 'react-router-dom'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
 export default class Login extends Component {
     constructor(props){
         super(props)
@@ -58,7 +59,15 @@ export default class Login extends Component {
                     <br></br>
                     <div class="form-group">
                      <div class="container"><button type="submit" class="btn btn-warning">Enroll</button>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                     <Link to ={{
+        pathname:`/course`
+      }}>
+       <button type="button" className="btn btn-info "  > <i class="fas fa-arrow-circle-left"></i>&nbsp;Back  </button>
+    </Link>
+                            
                             </div>
+                            
                     </div>
 
 

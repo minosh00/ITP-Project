@@ -25,11 +25,13 @@ import Displaytimetables from './components/Displaytimetables';
 import Courses from './components/Courses';
 import Course from './components/Course';
 
+
 //nethmi
 import RegisterTypes from './components/RegisterTypes';
 import CreateRegistration from './components/CreateRegistration';
 import detailsHome from './components/detailsHome';
 import ourlecturers from './components/ourlecturers';
+
 
 //malki
 import Registration from './components/Registration';
@@ -57,9 +59,8 @@ import profile from './components/profile';
 
     return (
     <BrowserRouter>
-      <div>
-        {/* dima header*/}
-        <Route path=""  component={Homeheader}></Route>
+      <div >
+          <Homeheader/>
 
         <Route path="/apply"  component={Apply}></Route>   
 
@@ -70,16 +71,19 @@ import profile from './components/profile';
         <Route path="/subemail"  component={SubjectEmail}></Route>
 
         {/* dima */}
-        <Route path="/middle" component={middle}></Route>
+        <Route path="/middle"exact component={middle}></Route>
         <Route path="/special" component={Specialevents}></Route>
         <Route path="/about" component={Aboutus}></Route>
         <Route path="/admin"  component={Loginpage}></Route>
         <Route path="/displaytimetables" component={Displaytimetables}></Route>
 
         {/* minosh */}
-        {/* <Route path = "/buycourse" component = {BuyCourseDula}></Route> */}
-        <Route  path="/course"  render={()=> <Courses posts={posts} />} />
-
+        <Route path = "/buycourse" component = {BuyCourseDula}></Route> 
+        <Route  path="/course"  render={()=> <Courses posts={posts} />} 
+        />
+        <Route path="/course1/:id"    render={(props)=>  <Course {...props} posts={posts} />} />
+        <Route  path="/log"  render={()=> <Login posts={posts} />} 
+        />
         
 
     

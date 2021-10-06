@@ -44,7 +44,9 @@ const EditCourse = props => {
 
 
         axios.put(`http://localhost:8000/courses/update/${props.match.params.id}`, courses)
-        .then (res =>setMessage(res.data))
+        .then (res =>
+          alert("Course  Updated!")
+          (res.data))
         .catch(err =>{
             console.log(err);
         });
