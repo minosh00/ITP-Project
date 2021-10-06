@@ -6,12 +6,13 @@ body{
 
 
 .leave{
-    background: url("../images/book.png");
-    height: 990px;
+    background: url("../images/hall.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+   margin-top: -45px;
+   margin-bottom: -65px;
     
 }
 .adminhome{
@@ -107,8 +108,9 @@ body{
 .alllecturerheader{
     display: block;
     width: 100%;
+    height: 60px;
     border: none;
-    background-color: #000000;
+    background-color: #1e516e;
     color: rgb(255, 255, 255);
     padding: 14px 28px;
     font-size: 24px;

@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import axios from'axios';
 import './style.css'
-import background from '../images/hall.png';
-
 
 export default class detailsHome extends Component {
 constructor(props){
