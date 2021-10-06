@@ -3,6 +3,7 @@ import axios from "axios";
 import { ProgressBar } from "react-bootstrap";
 import { useHistory, Link } from "react-router-dom";
 //import background from '../images/hall.png';
+import regform from '../images/regform.png'
 
 const CreateRegistration = (props) => {
   const history = useHistory();
@@ -77,7 +78,7 @@ const CreateRegistration = (props) => {
   
   return (
     <div className="container">
-      
+      <br></br>
       <center>
         <p>
         <h4><b>REGISTRATION FORM: ROYAL EDUCATION INSTITUTE</b></h4>
@@ -89,7 +90,7 @@ const CreateRegistration = (props) => {
 
       <div className="card" style={{
         width: '1500px',
-        border: '1px solid black',
+        border: '3px solid black',
         marginRight: '10px',
         marginLeft: '-90px',
       }}>
@@ -98,7 +99,9 @@ const CreateRegistration = (props) => {
           <br></br>
           <center>
             <h3><b>Lecturer Registration</b></h3>
+            <img src={regform} style={{width:1000 ,height:400, marginTop:'40px', marginRight:'35px'}}></img>
           </center>
+          
         </div>
 
 
@@ -106,7 +109,7 @@ const CreateRegistration = (props) => {
           <form onSubmit={onSubmit} encType="multipart/form-data">
             <div className="mb-3">
               <label htmlFor="lecFname" className="form-label">
-                First Name
+                <b>First Name</b>
               </label>
               <input
 
@@ -123,7 +126,7 @@ const CreateRegistration = (props) => {
 
             <div className="mb-3">
               <label htmlFor="lecLname" className="form-label">
-                Last Name
+              <b>Last Name</b>
               </label>
               <input
 
@@ -141,7 +144,7 @@ const CreateRegistration = (props) => {
 
             <div className="mb-3">
               <label htmlFor="nic" className="form-label">
-                NIC number
+              <b>NIC number</b>
               </label>
               <input
 
@@ -160,7 +163,7 @@ const CreateRegistration = (props) => {
 
             <div className="mb-3">
               <label htmlFor="dob" className="form-label">
-                Date Of Birth
+              <b>Date Of Birth</b>
               </label>
               <input
                 type="date"
@@ -177,7 +180,7 @@ const CreateRegistration = (props) => {
 
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
-                Email
+              <b>Email</b>
               </label>
               <input
 
@@ -197,7 +200,7 @@ const CreateRegistration = (props) => {
 
             <div className="mb-3">
               <label htmlFor="cNumber" className="form-label">
-                Mobile Number
+              <b>Mobile Number</b>
               </label>
               <input
 
@@ -216,7 +219,7 @@ const CreateRegistration = (props) => {
 
             <div className="mb-3">
               <label htmlFor="address" className="form-label">
-                Address
+              <b>Address</b>
               </label>
               <input
 
@@ -233,7 +236,7 @@ const CreateRegistration = (props) => {
 
             <div className="mb-3">
               <label htmlFor="Rdate" className="form-label">
-                Registration Date
+              <b>Registration Date</b>
               </label>
               <input
                 type="date"
@@ -262,7 +265,7 @@ const CreateRegistration = (props) => {
 
               <small style={{ color: "red" }}>Upload Only Pdf Format</small><br />
               <label htmlFor="upload" className="form-label">
-                Upload your Curriculum Vitae
+              <b> your Curriculum Vitae</b>
               </label>
               <br />
               <input
@@ -281,7 +284,7 @@ const CreateRegistration = (props) => {
             )}
             <br />
             <center>
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-success">
                 Register
               </button>
             </center>

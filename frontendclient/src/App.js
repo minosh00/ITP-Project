@@ -28,6 +28,7 @@ import Course from './components/Course';
 //nethmi
 import RegisterTypes from './components/RegisterTypes';
 import CreateRegistration from './components/CreateRegistration';
+import detailsHome from './components/detailsHome';
 
 //malki
 import Registration from './components/Registration';
@@ -88,6 +89,7 @@ import profile from './components/profile';
         {/* nethmi */}
         <Route path="/regtypes" component={RegisterTypes}></Route>
         <Route path="/lecturerreg" component={CreateRegistration}></Route>
+        <Route path="/notices" component={detailsHome}></Route>
 
         {/* malki */}
         <Route path="/signupstd" component={Registration}></Route>

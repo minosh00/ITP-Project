@@ -35,7 +35,7 @@ export default class Homeheader extends Component {
           <a className="nav-link active " aria-current="page" href="/displaytimetables" style={{fontSize:'25px'}}>TimeTables</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link active " aria-current="page" href="/" style={{fontSize:'25px'}}>Payment</a>
+          <a className="nav-link active " aria-current="page" href="/notices" style={{fontSize:'25px'}}>Notices</a>
         </li>
         <li className="nav-item">
           <a className="nav-link active " aria-current="page" href="/about" style={{fontSize:'25px'}}>About us</a>

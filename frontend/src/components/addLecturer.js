@@ -82,6 +82,17 @@ export default class addLecturer extends Component {
         })
     }
 
+    onClickDemo = () => {
+        this.setState(
+            {
+                summary: "Renowned academic and researcher in Plant Biotechnology. After graduating from faculty of Agriculture, University of Peradeniya, Sri Lanka, I completed the M.Sc Degree in Pennsylvania State University, USA, and Ph.D. in University of London, UK. I started my career at Faculty of Agriculture University of Peradeniya, Sri Lanka as a Lecturer in Department of Crop Science and promoted to senior Lecturer, Associate Professor, Professor and Senior Professor during my 30 years of service",
+                aQualification: "M.Sc. (Agronomy), The Pennsylvania State University,  USA, 1986 B.Sc. (Agriculture), University of Peradeniya, Sri Lanka, 1978",
+                Rmembership: "Main Committee Member 2017 to date, Committee on Equating and or Validating of Certificates of Diplomas and Degree (CVECD), National Apprentice & Industrial Training Authority, Sri Lanka",
+                salary:"80000",
+            })
+    }
+
+
     componentDidMount() {
         const id = this.props.match.params.id;
 
@@ -120,7 +131,7 @@ export default class addLecturer extends Component {
             >
                 <div className="container" >
                     <br></br>
-                    <center><h3><b>Add New Lecturer</b></h3></center>
+                    <center><h3><b>Add New Lecturer Details To The Institute</b></h3></center>
 
                     <form className="needs-validation" onSubmit={this.onsubmit}>
 
@@ -206,9 +217,14 @@ export default class addLecturer extends Component {
 
                         <center>
                             <button type="submit" className="btn btn-primary">Save Details</button>
+                            <br></br>
+                            <br></br>
+                            <button className="btn btn-outline-danger btn-sm" onClick={this.onClickDemo}>Demo</button>
                         </center>
                         <br></br>
+                        
                     </form>
+                    
                 </div>
             </div>
         )
