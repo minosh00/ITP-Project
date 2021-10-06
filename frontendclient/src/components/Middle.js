@@ -25,7 +25,7 @@ export default class Middle extends Component {
                                 <td style={{ color: 'white', textAlign: 'center' }}>
                                     <h3 ><b>New Registration for Students</b></h3>
                                     <p>now you can join with our next year classes</p>
-                                    <a className="btn btn-outline-light btn-lg" style={{ width: '200px' }} href="/allsubjects">Register now!</a>
+                                    <a className="btn btn-outline-light btn-lg" style={{ width: '200px' }} >Register now!</a>
                                 </td>
                             </tr>
                         </table>

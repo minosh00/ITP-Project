@@ -136,3 +136,8 @@
     font-weight: 600;
   }
 }
+
+.nav-link:hover {
+  background-color: #00858a;
+  border-radius: 3;
+}
