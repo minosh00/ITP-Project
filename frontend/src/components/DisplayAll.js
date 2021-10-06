@@ -67,8 +67,6 @@ const DisplayAll = ({posts}) => {
       <th scope="row">Course ID</th>
       <th scope="row">Course Name</th>
       <th scope="row">Course Description</th> 
-      <th scope="row">Enroll Requirement</th>
-      <th scope="row">Course Duration</th>
       <th scope="row">Image</th>
       <th scope="row">More Information</th>
       <th scope="row">Delete Course</th>
@@ -96,8 +94,8 @@ const DisplayAll = ({posts}) => {
       <td>{course.courseID}</td>
       <td>{course.courseName}</td>
       <td>{course.description}</td>
-      <td>{course.requirement}</td> 
-      <td>{course.duration}</td>
+    
+     
       <td><div class="text-center">
     <img src={`/uploads/${course.courseImage}`} alt="..." style={{height: "55px" ,width: "84px" }}  />
     </div></td>
