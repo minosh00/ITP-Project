@@ -26,17 +26,22 @@ export default class Homeheader extends Component {
           <a className="nav-link active " aria-current="page" href="/allsubjects" style={{fontSize:'23px'}}>Subjects</a>
         </li>
         <li className="nav-item">
+          <a className="nav-link active " aria-current="page" href="/lecturerpage" style={{fontSize:'23px'}}>Lecturers</a>
+        </li>
+        <li className="nav-item">
           <a className="nav-link active " aria-current="page" href="/" style={{fontSize:'23px'}}>Library</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link active " aria-current="page" href="/special" style={{fontSize:'23px'}}>Special Events</a>
+          <a className="nav-link active " aria-current="page" href="/special" style={{fontSize:'23px'}}>Events</a>
         </li>
         <li className="nav-item">
           <a className="nav-link active " aria-current="page" href="/displaytimetables" style={{fontSize:'23px'}}>TimeTables</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link active " aria-current="page" href="/notices" style={{fontSize:'25px'}}>Notices</a>
-
+          <a className="nav-link active " aria-current="page" href="/notices" style={{fontSize:'23px'}}>Notices</a>
+        </li>
+        <li className="nav-item" style={{marginLeft:'1135px'}}>
+          <a className="nav-link active " aria-current="page" href="/notices" style={{fontSize:'23px', color:'red'}}>Lecturer Req</a>
         </li>
         
       </ul>

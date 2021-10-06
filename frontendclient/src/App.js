@@ -91,7 +91,7 @@ function App() {
         <Route path="/regtypes" component={RegisterTypes}></Route>
         <Route path="/lecturerreg" component={CreateRegistration}></Route>
         <Route path="/notices" component={detailsHome}></Route>
-        <Route path="/ourlecturers" component={ourlecturers}></Route>
+        <Route path="/lecturerpage" component={ourlecturers}></Route>
 
 
         {/* malki */}
