@@ -65,6 +65,12 @@ const Courses = ({posts}) => {
       }}>
     <button type="button" class="btn btn-dark"><i class="fas fa-shopping-cart"></i>&nbsp;Buy</button>
     </Link>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <Link to ={{
+        pathname:`/log`
+      }}>
+    <button type="button" class="btn btn-danger">&nbsp;Enroll</button>
+    </Link>
   </div>
   
   

@@ -71,6 +71,7 @@ export default class BuyCourseDula extends Component {
         axios.post("/buyCourse/save",data).then ((res) =>{
             if (res.data.success) {
                 alert("Details Added Successfully!")
+              
                 this.setState(
                     {
                         fullName: "",
@@ -101,7 +102,7 @@ export default class BuyCourseDula extends Component {
                 <form className = "needs-validation" noValidate>
                     <div className = "form-group" style ={{marginBottom:'15px'}}>
                         <label style = {{marginBottom:'15px'}}> Full Name</label>
-                        <input type = "text" 
+                        <input type = "" 
                         className= "form-control"
                         name = "fullName"
                         placeholder = "Enter Your Full Name"
@@ -111,7 +112,7 @@ export default class BuyCourseDula extends Component {
 
                     <div className = "form-group" style ={{marginBottom:'15px'}}>
                         <label style = {{marginBottom:'15px'}}>Address</label>
-                        <input type = "text" 
+                        <input type = "" 
                         className= "form-control"
                         name = "address"
                         placeholder = "Enter Address"
@@ -121,7 +122,7 @@ export default class BuyCourseDula extends Component {
 
                     <div className = "form-group" style ={{marginBottom:'15px'}}>
                         <label style = {{marginBottom:'15px'}}>Email</label>
-                        <input type = "text" 
+                        <input type = "" 
                         className= "form-control"
                         name = "email"
                         placeholder = "Email"
@@ -131,7 +132,7 @@ export default class BuyCourseDula extends Component {
 
                     <div className = "form-group" style ={{marginBottom:'15px'}}>
                         <label style = {{marginBottom:'15px'}}>Phone Number</label>
-                        <input type = "text" 
+                        <input type = "" 
                         className= "form-control"
                         name = "phoneNumber"
                         placeholder = "Phone Number"
@@ -141,7 +142,7 @@ export default class BuyCourseDula extends Component {
 
                     <div className = "form-group" style ={{marginBottom:'15px'}}>
                         <label style = {{marginBottom:'15px'}}>NIC No</label>
-                        <input type = "text" 
+                        <input type = "" 
                         className= "form-control"
                         name = "nic"
                         placeholder = "NIC No"
@@ -151,7 +152,7 @@ export default class BuyCourseDula extends Component {
 
                     <div className = "form-group" style ={{marginBottom:'15px'}}>
                         <label style = {{marginBottom:'15px'}}>Course Name</label>
-                        <input type = "text" 
+                        <input type = "" 
                         className= "form-control"
                         name = "courseName"
                         placeholder = "Course Name"
@@ -161,7 +162,7 @@ export default class BuyCourseDula extends Component {
 
                     <div className = "form-group" style ={{marginBottom:'15px'}}>
                         <label style = {{marginBottom:'15px'}}>Card No</label>
-                        <input type = "text" 
+                        <input type = "" 
                         className= "form-control"
                         name = "cardNo"
                         placeholder = "Card No"
@@ -171,7 +172,7 @@ export default class BuyCourseDula extends Component {
 
                     <div className = "form-group" style ={{marginBottom:'15px'}}>
                         <label style = {{marginBottom:'15px'}}>CVC</label>
-                        <input type = "text" 
+                        <input type = "" 
                         className= "form-control"
                         name = "cvc"
                         placeholder = "CVC"
@@ -181,7 +182,7 @@ export default class BuyCourseDula extends Component {
 
                     <div className = "form-group" style ={{marginBottom:'15px'}}>
                         <label style = {{marginBottom:'15px'}}>Card Holder's Name</label>
-                        <input type = "text" 
+                        <input type = "" 
                         className= "form-control"
                         name = "cardHoldersName"
                         placeholder = "Card Holder's Name"
@@ -191,7 +192,7 @@ export default class BuyCourseDula extends Component {
 
                     <div className = "form-group" style ={{marginBottom:'15px'}}>
                         <label style = {{marginBottom:'15px'}}>Date</label>
-                        <input type = "text" 
+                        <input type = "" 
                         className= "form-control"
                         name = "date"
                         placeholder = "Date"
