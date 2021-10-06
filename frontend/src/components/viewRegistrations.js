@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { pdfDownload } from './pdfDownload'
 import "./Regviewer.css"
+import "./style.css"
 
 
 class viewRegistrations extends Component {
@@ -55,17 +56,19 @@ class viewRegistrations extends Component {
     }
 
     return (
-      <div className="">
+      <div className="leave">
         <div className="container">
-       
-          <div className = "">
+       <br></br>
+       <br></br>
+          <div className ="alllecturerheader" style={{color: 'white' }}>
           <center><h3><b>View Lecturer Registrations</b></h3></center>
           <br></br>
+          <br></br>
           </div>
-         
+          <br></br>
           {this.state.registrationL.length > 0 && this.state.registrationL.map((value, index) => (
             <div key={index} className="card mb-3">
-              <div className="card-content-research" style={{ border: '1px solid black'}}>
+              <div className="card-content-research" style={{ border: '3px solid black'}}>
                 <div className="p-3">
                   <h4 style={{ fontSize: '20px',color: 'black'}}><p><b>Registration No : 0{index + 1}</b></p></h4>
                   <br></br>
@@ -85,10 +88,11 @@ class viewRegistrations extends Component {
 
                   <button className="btn btn-danger" style={{ marginLeft: "2%" }} onClick={event => this.navigateDelete(event, value._id)}><i class="fa fa-times" aria-hidden="true"></i> <b>Reject Registration </b></button>
                   
-                  <a href = "/lecConfirmationSend" className="btn btn-primary" style={{ marginLeft: "2%" }} > <i class="fas fa-envelope-square"></i><b> Send E-mail</b></a>
-                 
+                  <a href = "/lecConfirmationSend" className="btn btn-warning" style={{ marginLeft: "2%" }} > <i class="fas fa-envelope-square"></i><b> Send E-mail</b></a>
+                 <br></br>
                 </div>
               </div>
+             
             </div>
           ))}
         </div>
