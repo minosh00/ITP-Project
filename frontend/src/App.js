@@ -265,7 +265,6 @@ useEffect(()=>{
     
 
     <Route  path="/CourseInside"   component={FileUploader} />
-       
        <Preview/>
       <ToastContainer/>
    
