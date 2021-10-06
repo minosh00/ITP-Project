@@ -21,11 +21,7 @@ import middle from "./components/Middle";
 import Aboutus from "./components/Aboutus";
 import Displaytimetables from "./components/Displaytimetables";
 
-// minosh
-import Courses from "./components/Courses";
-import Course from "./components/Course";
-import BuyCourseDula from "./components/BuyCourseDula";
-import Login from "./components/Login";
+
 
 //malki
 import Registration from "./components/Registration";
@@ -62,24 +58,7 @@ function App() {
         <Route path="/admin" component={Loginpage}></Route>
         <Route path="/displaytimetables" component={Displaytimetables}></Route>
 
-        {/* minosh */}
-        <Route path="/buycourse" component={BuyCourseDula}></Route>
-        <Route path="/course" render={() => <Courses posts={posts} />} />
-        <Route
-          path="/course1/:id"
-          render={(props) => <Course {...props} posts={posts} />}
-        />
-        <Route path="/log" render={() => <Login posts={posts} />} />
-
-        <Route
-          path="/course/:id"
-          render={(props) => <Course {...props} posts={posts} />}
-        />
-        <Route path="/allCourse" component={Course} />
-
-        {/* malki */}
-        <Route path="/signupstd" component={Registration}></Route>
-        <Route path="/loginstd" component={profile}></Route>
+     
 
         <Route path="" component={Homefooter}></Route>
       </div>
