@@ -8,15 +8,38 @@ import axios from 'axios';
 
 const Courses = ({posts}) => {
 
+  const [serachItem,setserachItem] =useState([]);
+
   const[course,setCourse]  = useState([])
 
     return (
 
-<div  class="text-center mt-3">
     
-      <h1 className="text-center mt-3">All Courses List</h1>
 
-      {posts.map((course, key) =>(
+<div  class="text-center mt-3">
+<div className="container ">
+  <div align="left">
+<h4>👌 Now You Can Search Courses  😉</h4>
+</div>
+<div class="input-group">
+  
+  <input type="search" class="form-control rounded" placeholder="Search Courses" aria-label="Search" onChange={event=>{setserachItem(event.target.value)}} 
+    aria-describedby="search-addon" />
+  
+</div>
+   </div> 
+      <h1 className="text-center mt-3">All Courses List</h1>
+    
+ 
+      {posts.filter((course)=>{
+    if(serachItem==""){
+      return course
+    }else if(course.courseName.toLowerCase().includes(serachItem.toLowerCase())){
+      return course
+    }
+  })
+
+      .map((course, key) =>(
 
 
 <div  class="d-flex justify-content-center">
@@ -41,6 +64,12 @@ const Courses = ({posts}) => {
         pathname:`/buycourse`
       }}>
     <button type="button" class="btn btn-dark"><i class="fas fa-shopping-cart"></i>&nbsp;Buy</button>
+    </Link>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <Link to ={{
+        pathname:`/log`
+      }}>
+    <button type="button" class="btn btn-danger">&nbsp;Enroll</button>
     </Link>
   </div>
   
