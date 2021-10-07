@@ -1,5 +1,7 @@
 const express = require('express');
 const timetables = require('../models/timetable');
+const pdf = require('html-pdf');
+const pdfTemplate4 = require('../documents/TTDocuments');
 
 const router = express.Router();
 
@@ -96,8 +98,25 @@ router.get('/timetables/search/:id',(req,res) =>{
             table
         });
     });
- 
  });
+
+//create the PDF
+
+router.post('/createttpdf', (req, res) => {
+    pdf.create(pdfTemplate4(req.body), {}).toFile('timetable.pdf', (err) => {
+        if(err) {
+            res.send(Promise.reject());
+        }
+
+        res.send(Promise.resolve());
+    });
+});
+
+//get the PDF
+
+router.get('/fetchttpdf', (req, res) => {
+    res.sendFile('timetable.pdf', { root:  `${__dirname}/../..` });
+})
  
 
 module.exports = router;
