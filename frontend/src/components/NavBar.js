@@ -14,7 +14,7 @@ export default class NavBar extends Component {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-           <button className = "btn btn-info"> <a href = "/" style = {{textDecoration: 'none' , color : 'black'}}><b> Home </b></a></button>
+           <button className = "btn btn-info"> <a href = "/paymenthome" style = {{textDecoration: 'none' , color : 'black'}}><b> Home </b></a></button>
            
            &nbsp;
            &nbsp;
