@@ -121,7 +121,16 @@ body{
    
 }
 
-.dropdown {
+.dropbtn {
+    background-color: #ce4a32;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
     position: relative;
     display: inline-block;
   }
@@ -129,8 +138,8 @@ body{
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
+    background-color: #f9f9f9;
+    min-width: 140px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
@@ -142,3 +151,12 @@ body{
     display: block;
   }
   
+  .dropdown-content a:hover {background-color: #929499}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #ce4a32;
+  }
