@@ -1,7 +1,6 @@
 import React, { Component  } from 'react'
 import { Redirect } from 'react-router-dom'
-import { Link } from 'react-router-dom';
-import ourlecmain from '../images/ourlecmain.gif'
+import styled from 'styled-components'
 export default class Login extends Component {
     constructor(props){
         super(props)
@@ -31,7 +30,7 @@ export default class Login extends Component {
 
 
 
-    if(username ==="LEC1234" && password === "lec123"){
+    if(username ==="LEC1234" && password === "lec1234"){
 
         this.setState({
             
@@ -39,38 +38,27 @@ export default class Login extends Component {
         })
 
     }else{
-        alert("cant access because your token is not vaild or contact us our members ")
+        alert("Username or password is wrong! ")
     }
   }
     render() {
 
         if(this.state.loggedIn){
-            return <Redirect to="/inside"/>
+            return <Redirect to="/adminhome"/>
         }
         return (   
-         
-            <div class="card">
+        
+            <div class="register-photo">
             <div class="container">
-                <center>
-                 <img src={ourlecmain}alt="John" style={{ width: 400, marginTop: '40px', marginLeft: '40px', marginRight: '40px' }}></img>
-                 </center>
-                    <form onSubmit={this.submitForm} >
-                    <h2 class="text-center"><strong>LECTURER LOGIN</strong></h2>
-                    <div class="form-group"><input class="form-control"  name="username" value={this.state.username} onChange={this.onChange} placeholder="Enter User Name"/></div><br></br><br></br>
-                    <div class="form-group"><input class="form-control" type="password" name="password" value={this.state.password} onChange={this.onChange} placeholder="Enter Password"/></div><br></br>
+                <div class="image-holder"></div>
+                <form onSubmit={this.submitForm} >
+                    <h2 class="text-center"><strong>Lecturer Login</strong></h2>
+                    <div class="form-group"><input class="form-control"  name="username" value={this.state.username} required onChange={this.onChange} placeholder="Enter Admin user name"/></div><br></br><br></br>
+                    <div class="form-group"><input class="form-control" type="password" name="password" value={this.state.password} required onChange={this.onChange} placeholder="Enter Admin password"/></div><br></br>
                     <br></br>
                     <div class="form-group">
-                     <div class="container">
-                         <center><button type="submit" class="btn btn-warning"><b>Login</b></button></center>
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
-                     <Link to ={{
-        pathname:`/course`
-      }}>
-       
-    </Link>
-                            
+                     <div class="container"><button type="submit" class="btn btn-warning">Login</button>
                             </div>
-                            
                     </div>
 
 
