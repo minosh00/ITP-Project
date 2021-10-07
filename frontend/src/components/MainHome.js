@@ -119,7 +119,11 @@ handleSearchArea =(e)=>{
               <th scope="col">National ID number</th>
               <th scope="col">Gender</th>
               <th scope="col">Basic Salary</th>
-              <th scope="col"> </th>
+              <th scope="col">Email</th>
+              <th scope="col">Appointed Date</th>
+              <th scope="col"></th>
+
+              
             </tr>
           </thead>
           <tbody>
@@ -133,20 +137,23 @@ handleSearchArea =(e)=>{
               <td>{registered.NationalIDNumber}</td>
               <td>{registered.Gender}</td>
               <td>{registered.BasicSalary}</td>
+              <td>{registered.Email}</td>
+              <td>{registered.AppointedDate}</td>
+              
               <td>
               
               <a className="btn btn-primary" href={`/adminprofile/${registered._id}`}>
-              <i className="fas fa-user"></i>&nbsp;Profile
+              <i className="fas fa-user"></i>&nbsp;View Profile
               </a>
               
               &nbsp;
               <a className="btn btn-warning" href={`/updateStf/${registered._id}`}>
-                  <i className="fas fa-edit"></i>&nbsp;Edit
+                  <i className="fas fa-edit"></i>&nbsp;Edit Details
                 </a>
 
                 &nbsp;
                 <a className="btn btn-danger" onClick={()=>this.onDelete(registered._id)}>
-                  <i className="far fa-trash-alt"></i>&nbsp;Delete
+                  <i className="far fa-trash-alt"></i>&nbsp;Delete Member
                 </a>
               </td>
             </tr>
