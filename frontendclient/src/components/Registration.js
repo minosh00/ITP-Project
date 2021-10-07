@@ -107,6 +107,7 @@ export default class Registration extends Component {
 
         axios.post('/post/save', data).then((res) => {
             if (res.data.success) {
+                alert("Are you sure to submit those details ?")
                 this.setState({
                     student_full_name: "",
                     Name_with_initials: "",
