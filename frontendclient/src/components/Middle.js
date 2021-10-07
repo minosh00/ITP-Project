@@ -4,7 +4,6 @@ import subgif from './HomeImages/subgif.gif'
 import coursegif from './HomeImages/coursegif.gif'
 import maingif from './HomeImages/maingif.gif'
 import lecgif from './HomeImages/lecgif.gif'
-import removethis from './HomeImages/removethis.jpg'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 
@@ -13,7 +12,7 @@ export default class Middle extends Component {
         return (
             <div>
                 <div style={{ width: '100%' }}>
-                    <center><img src={removethis} style={{ width: '100%', height: 'auto' }} /></center>
+                    <center><img src={maingif} style={{ width: '100%', height: 'auto' }} /></center>
                 </div>
                 <br />
 
