@@ -136,17 +136,17 @@ handleSearchArea =(e)=>{
               <td>
               
               <a className="btn btn-primary" href={`/adminprofile/${registered._id}`}>
-              <i className="fas fa-user"></i>&nbsp;Profile
+              <i className="fas fa-user"></i>&nbsp;View Profile
               </a>
               
               &nbsp;
               <a className="btn btn-warning" href={`/updateStf/${registered._id}`}>
-                  <i className="fas fa-edit"></i>&nbsp;Edit
+                  <i className="fas fa-edit"></i>&nbsp;Edit Details
                 </a>
 
                 &nbsp;
                 <a className="btn btn-danger" onClick={()=>this.onDelete(registered._id)}>
-                  <i className="far fa-trash-alt"></i>&nbsp;Delete
+                  <i className="far fa-trash-alt"></i>&nbsp;Delete Member
                 </a>
               </td>
             </tr>
