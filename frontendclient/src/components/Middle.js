@@ -3,6 +3,7 @@ import reggif from './HomeImages/reggif.gif'
 import subgif from './HomeImages/subgif.gif'
 import coursegif from './HomeImages/coursegif.gif'
 import maingif from './HomeImages/maingif.gif'
+import lecgif from './HomeImages/lecgif.gif'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 
@@ -57,8 +58,22 @@ export default class Middle extends Component {
                                 </td>
                             </tr>
                         </table>
-                    </div>
-                    <br />
+                    </div><br/>
+                    <div className="row" style={{ backgroundColor: '#003566', borderRadius: '150px 0px 0px 150px' }}>
+                        <table>
+                            <tr>
+                                <td style={{ color: 'white', textAlign: 'center' }}>
+                                    <h3 style={{ marginLeft: '30px' }}><b>Wanna Join With Us?</b></h3>
+                                    <p style={{ marginLeft: '30px' }}>You are warmly wewlcome here as a lecturer or trainee...</p>
+                                    <a className="btn btn-outline-light btn-lg" style={{ width: '230px', marginLeft: '30px' }} href='/lecturerreg'>Request as Lecturer</a>&nbsp;
+                                    <a className="btn btn-outline-light btn-lg" style={{ width: '200px', marginLeft: '30px' }} href='/apply'>Request for staff</a>
+                                </td>
+                                <td style={{ textAlign: 'right' }}>
+                                    <img src={lecgif} style={{ width: '500px', height: 'auto' }} />
+                                </td>
+                            </tr>
+                        </table>
+                    </div><br />
                     <hr style={{ backgroundColor: '#004f99', height: '5px' }}></hr>
                     <br />
                     <div id="contact" class="container" style={{ color: '#808080' }}>
