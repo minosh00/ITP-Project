@@ -34,6 +34,7 @@ import RegisterTypes from './components/RegisterTypes';
 import CreateRegistration from './components/CreateRegistration';
 import detailsHome from './components/detailsHome';
 import ourlecturers from './components/ourlecturers';
+import leclogin from './components/leclogin'
 
 
 
@@ -92,6 +93,8 @@ function App() {
         <Route path="/lecturerreg" component={CreateRegistration}></Route>
         <Route path="/notices" component={detailsHome}></Route>
         <Route path="/lecturerpage" component={ourlecturers}></Route>
+        <Route path="/leclogin" component={leclogin}></Route>
+
 
 
         {/* malki */}

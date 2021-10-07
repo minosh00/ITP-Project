@@ -35,6 +35,7 @@ export default class ourlecturers extends Component {
                     
                     <center>
                         <br></br>
+                        
                         <table>
                         <tr>
                             <td>
