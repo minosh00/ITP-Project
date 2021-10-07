@@ -42,6 +42,9 @@ onDelete=(id)=>{
                <hr/>
                <a className="btn btn-success" href="/staffhome" style={{textDecoration:'none', color:'white'}}>
                  <i className="fas fa-home"></i>&nbsp;Home
+                </a>&nbsp;&nbsp;&nbsp;
+                <a className="btn btn-success" href="/apply" style={{textDecoration:'none', color:'white'}}>
+                 <i className="fas fa-home"></i>&nbsp;application add
                 </a>
                 &nbsp;
               &nbsp;
@@ -75,14 +78,10 @@ onDelete=(id)=>{
               <td>{applications.ExpectedSalary}</td>
               <td>{applications.DateOfBirth}</td>
               <td>{applications.Address}</td>
-
-
-
-
               <td>
-            
-              <a className="btn btn-success" href= {`/viewapplication/${applications._id}`} style={{textDecoration:'none', color:'white'}}>
-              <i className="fas fa-plus-circle"></i>&nbsp;Add
+
+              <a className="btn btn-primary" href={`/ViewStfApplication/${applications._id}`}>
+              <i className="fas fa-user"></i>&nbsp;View Application
               </a>
 
               &nbsp;
