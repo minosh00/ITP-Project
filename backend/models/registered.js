@@ -52,6 +52,22 @@ const RegisteredSchema = new mongoose.Schema({
         required:true
 
     },
+    Email:{
+        type:String,
+        required:true
+    },
+    WorkingExp:{
+        type:String,
+        required:true
+    },
+    CarreerSum:{
+        type:String,
+        required:true
+    },
+    EducationalQf:{
+        type:String,
+        required:true
+    },
 
 
 })

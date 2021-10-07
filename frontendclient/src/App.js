@@ -12,6 +12,7 @@ import AllSubjectsView from "./components/AllSubjectsView";
 import AddEnrollment from "./components/AddEnrollment";
 import SubjectEmail from "./components/SubjectEmail";
 
+//hivindu
 import Apply from "./components/Apply";
 
 // dima
@@ -36,8 +37,6 @@ import detailsHome from './components/detailsHome';
 import ourlecturers from './components/ourlecturers';
 import leclogin from './components/leclogin'
 
-
-
 //malki
 import Registration from "./components/Registration";
 import profile from "./components/profile";
@@ -56,8 +55,6 @@ function App() {
     <BrowserRouter>
       <div>
         <Route path="" component={Homeheader}></Route>
-
-        <Route path="/apply" component={Apply}></Route>
 
         {/* diniru */}
         <Route path="/login" component={ClientLogin}></Route>
@@ -81,10 +78,6 @@ function App() {
         <Route path="/course1/:id"    render={(props)=>  <Course {...props} posts={posts} />} />
         <Route  path="/log"  render={()=> <Login posts={posts} />} 
         />
-        
-
-    
-
         <Route path="/course/:id"    render={(props)=>  <Course {...props} posts={posts} />} />
         <Route  path="/allCourse"  component={Course} />
 
@@ -96,10 +89,12 @@ function App() {
         <Route path="/leclogin" component={leclogin}></Route>
 
 
-
         {/* malki */}
         <Route path="/signupstd" component={Registration}></Route>
         <Route path="/loginstd" component={profile}></Route>
+
+        {/* hivindu */}
+        <Route path="/apply" component={Apply}></Route>
 
 
         <Route path="" component={Homefooter}></Route>

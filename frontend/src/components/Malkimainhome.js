@@ -86,7 +86,7 @@ componentDidMount(){
                 <button className="btn btn-dark" style={{marginLeft:'33px'}}><a href="/studentapplications" style={{textDecoration:'none',color:'white'}}> STUDENT APPLICATIONS </a></button>
               </td>
               <td>
-                <button className="btn btn-dark" style={{marginLeft:'33px'}}><a href="/registration" style={{textDecoration:'none',color:'white'}}> Registration Form</a></button>
+                {/* <button className="btn btn-dark" style={{marginLeft:'33px'}}><a href="/registration" style={{textDecoration:'none',color:'white'}}> Registration Form</a></button> */}
               </td>
               
             </tr>

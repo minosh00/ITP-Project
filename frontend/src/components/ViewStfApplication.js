@@ -1,53 +1,53 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export default class adminViewProfile extends Component {
+export default class ViewStfApplication extends Component {
 
     constructor(props){
         super(props);
 
         this.state={
-            profile:{}
+            application:{}
         };
     }
 
     componentDidMount(){
         const id = this.props.match.params.id;
 
-        axios.get(`/register/${id}`).then((res)=>{
+        axios.get(`/application/${id}`).then((res)=>{
             if(res.data.success){
                 this.setState({
-                    profile:res.data.post
+                    application:res.data.post
                 });
 
-                console.log(this.state.profile);
+                console.log(this.state.application);
             }
         });
     }
+
+    onDelete=(id)=>{
+        axios.delete(`/application/delete/${id}`).then((res)=>{
+          alert("Deleted Succesfully..!")
+          window.location.replace('/applications');
+        })
+      }
+
     render() {
-            const{RegistationNumber,AppointedDate, FirstName, LastName,
+            const{FirstName, LastName,
                 DateOfBirth, position, ContactNumber, NationalIDNumber, Gender, 
-                Address, BasicSalary,Email,WorkingExp,CarreerSum,EducationalQf} = this.state.profile;
+                Address, ExpectedSalary,Email,WorkingExp,CarreerSum,EducationalQf} = this.state.application;
             return (
                 
                 <div style={{marginLeft:100}}>
                  <a className="btn btn-success" href="/staffhome" style={{textDecoration:'none', color:'white'}}>
                  <i className="fas fa-home"></i>&nbsp;Home
                 </a>
-                     <h1 className="h1">Profile</h1>
+                     <h1 className="h1">Application</h1>
     
                     <hr/>
     
                     <table className="table">
-        
-                        <tr>
-                            <th scope="col">Registation Number</th>
-                            <td>{RegistationNumber}</td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Appointed Date</th>
-                            <td>{AppointedDate}</td>
-                        </tr>
+    
                         <tr>
                             <th scope="col">First Name</th>
                             <td>{FirstName}</td>
@@ -77,12 +77,12 @@ export default class adminViewProfile extends Component {
                             <td>{Gender}</td>
                         </tr>
                         <tr>
-                            <th scope="col">BasicSalary</th>
-                            <td>{BasicSalary}</td>
+                            <th scope="col">Address</th>
+                            <td>{Address}</td>
                         </tr>
                         <tr>
-                        <th scope="col">Address</th>
-                        <td>{Address}</td>
+                            <th scope="col">Expected Salary</th>
+                            <td>{ExpectedSalary}</td>
                         </tr>
                         <tr>
                              <th scope="col">Email</th>
@@ -105,15 +105,15 @@ export default class adminViewProfile extends Component {
                     </table>
                     &nbsp;
 
-                <a className="btn btn-success" href={`/updateStf/${this.props.match.params.id}`}>
-                    <i className="fas fa-edit" ></i>&nbsp;Edit Details
+                <a className="btn btn-success" href= {`/viewapplication/${this.props.match.params.id}`} style={{textDecoration:'none', color:'white'}}>
+              <i className="fas fa-plus-circle"></i>&nbsp;Add To Staff
+              </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <a className="btn btn-danger" onClick={()=>this.onDelete(this.props.match.params.id)}>
+                  <i className="far fa-trash-alt"></i>&nbsp;Delete Application
                 </a>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                <a className="btn btn-success" href={`/pdf/${this.props.match.params.id}`}>
-                    <i className="fas fa-file" ></i>&nbsp;Generate PDF
-                </a>
 
 
                 </div>

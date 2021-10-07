@@ -103,7 +103,7 @@ const DisplayAll = ({posts}) => {
       <td> <Link to ={{
         pathname:`/course/${course._id}`
       }}>
-       <button type="button" class="btn btn-success" style={{marginTop:'10px'}} > <i class="fas fa-search"></i>&nbsp;More.. </button>
+       <button type="button" class="btn btn-success" style={{marginTop:'10px'}} > <i class="fas fa-search"></i>&nbsp;More</button>
     </Link></td>
 
       <td><button  onClick={() => deleteCourse(course._id)}    className="btn btn-danger" style={{marginTop:'10px'}}><i class="far fa-trash-alt">&nbsp;delete</i>
