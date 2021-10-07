@@ -101,11 +101,7 @@ export default class ViewStfApplication extends Component {
               <i className="fas fa-plus-circle"></i>&nbsp;Add
               </a>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                <a className="btn btn-success" href={`/pdf/${this.props.match.params.id}`}>
-                    <i className="fas fa-file" ></i>&nbsp;Generate PDF
-                </a>
 
 
                 </div>
