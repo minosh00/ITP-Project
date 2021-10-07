@@ -11,6 +11,7 @@ import adminViewApplication from './components/adminViewApplication'
 import updateAdmin from './components/updateAdmin'
 import Apply from './components/Apply'
 import staffpdf from './components/staffpdf'
+import ViewStfApplication from './components/ViewStfApplication'
 
 import Specialevents from './components/Specialevents';
 import Loginpage from './components/Loginpage';
@@ -201,11 +202,14 @@ useEffect(()=>{
 
         <Route path="/staffhome" component={MainHome}></Route>
         <Route path="/applications"  component={AppliedAll}></Route>
-        <Route path="/update/:id"  component={updateAdmin}></Route>
+        <Route path="/updateStf/:id"  component={updateAdmin}></Route>
         <Route path="/adminprofile/:id"  component={adminViewProfile}></Route>
+        <Route path="/ViewStfApplication/:id" component={ViewStfApplication}></Route>
         <Route path="/viewapplication/:id"  component={adminViewApplication}></Route> 
         <Route path="/apply"  component={Apply}></Route>   
         <Route path="/pdf/:id" component={staffpdf}></Route>
+        
+
 
         <Route path="/Admintimetable" component={DimaNavbarTT}></Route>
         <Route path="/middle" component={middle}></Route>

@@ -18,7 +18,11 @@ export default class updateAdmin extends Component {
             NationalIDNumber:"",
             Gender:"",
             Address:"",
-            BasicSalary:""
+            BasicSalary:"",
+            Email: "",
+            WorkingExp: "",
+            CarreerSum: "",
+            EducationalQf: ""
         }
     }
 
@@ -39,7 +43,7 @@ export default class updateAdmin extends Component {
 
         const{RegistationNumber,AppointedDate, FirstName, LastName,
             DateOfBirth, position, ContactNumber, NationalIDNumber, Gender, 
-            Address, BasicSalary} = this.state;
+            Address, BasicSalary, Email,WorkingExp,CarreerSum,EducationalQf} = this.state;
 
         const data ={
             RegistationNumber:RegistationNumber,
@@ -52,7 +56,11 @@ export default class updateAdmin extends Component {
             NationalIDNumber:NationalIDNumber,
             Gender:Gender,
             Address:Address,
-            BasicSalary:BasicSalary
+            BasicSalary:BasicSalary,
+            Email:Email,
+            WorkingExp:WorkingExp,
+            CarreerSum:CarreerSum,
+            EducationalQf:EducationalQf
         }
 
         console.log(data)
@@ -71,7 +79,11 @@ export default class updateAdmin extends Component {
                     NationalIDNumber:"",
                     Gender:"",
                     Address:"",
-                    BasicSalary:""
+                    BasicSalary:"",
+                    Email: "",
+                    WorkingExp: "",
+                    CarreerSum: "",
+                    EducationalQf: ""
                 })
             }
         })
@@ -94,7 +106,11 @@ export default class updateAdmin extends Component {
                     NationalIDNumber:res.data.post.NationalIDNumber,
                     Gender:res.data.post.Gender,
                     Address:res.data.post.Address,
-                    BasicSalary:res.data.post.BasicSalary
+                    BasicSalary:res.data.post.BasicSalary,
+                    Email: res.data.post.Email,
+                    WorkingExp: res.data.post.WorkingExp,
+                    CarreerSum: res.data.post.CarreerSum,
+                    EducationalQf: res.data.post.EducationalQf
                 });
 
                 console.log(this.state.post);
@@ -229,6 +245,58 @@ export default class updateAdmin extends Component {
           value={this.state.BasicSalary}
           onChange={this.handleInputChange}readOnly/>
         </div>
+
+        <div className="mb-3">
+            <label for="formGroupExampleInput" class="form-label">
+              Email
+            </label>
+            <input
+            type="text" 
+              className="form-control"
+              name="Email"
+              value={this.state.Email}
+              onChange={this.handleInputChange}readOnly
+            />
+          </div>
+
+          <div className="mb-3">
+            <label for="formGroupExampleInput" class="form-label">
+            Working Experience
+            </label>
+            <input
+            type="text" 
+              className="form-control"
+              name="WorkingExp"
+              value={this.state.WorkingExp}
+              onChange={this.handleInputChange}readOnly
+            />
+          </div>
+
+          <div className="mb-3">
+            <label for="formGroupExampleInput" class="form-label">
+            Carreer Summary
+            </label>
+            <input
+            type="text" 
+              className="form-control"
+              name="CarreerSum"
+              value={this.state.CarreerSum}
+              onChange={this.handleInputChange}readOnly
+            />
+          </div>
+
+          <div className="mb-3">
+            <label for="formGroupExampleInput" class="form-label">
+            Educational Quilification
+            </label>
+            <input
+            type="text" 
+              className="form-control"
+              name="EducationalQf"
+              value={this.state.EducationalQf}
+              onChange={this.handleInputChange}readOnly
+            />
+          </div>
         </form>
         <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} onClick={this.createAndDownloadPdf}> 
               <i className="fa fa-file-pdf-o"></i> &nbsp;

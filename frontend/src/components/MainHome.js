@@ -140,7 +140,7 @@ handleSearchArea =(e)=>{
               </a>
               
               &nbsp;
-              <a className="btn btn-warning" href={`/update/${registered._id}`}>
+              <a className="btn btn-warning" href={`/updateStf/${registered._id}`}>
                   <i className="fas fa-edit"></i>&nbsp;Edit
                 </a>
 
