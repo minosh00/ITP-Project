@@ -159,7 +159,7 @@ onsubmit = (e) =>{
        <form className="needs-validation">
        <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Registraion No</p></label>
-<input className="form-control" name="registrationNo" aria-describedby="emailHelp" value={this.state.registrationNo} onChange={this.handleInputChange}readOnly/>
+<input className="form-control" name="registrationNo" aria-describedby="emailHelp" value={this.state.registrationNo} onChange={this.handleInputChange}/>
 </div>
 <div className="mb-3">
 <label for="exampleInputEmail1" className="form-label"> <p class="fw-bold">Student full Name </p></label>
