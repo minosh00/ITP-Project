@@ -41,7 +41,24 @@ const applicationsSchema = new mongoose.Schema({
     ExpectedSalary:{
         type:String,
         required:true
-    }
+    },
+    Email:{
+        type:String,
+        required:true
+    },
+    WorkingExp:{
+        type:String,
+        required:true
+    },
+    CarreerSum:{
+        type:String,
+        required:true
+    },
+    EducationalQf:{
+        type:String,
+        required:true
+    },
+    
 
 })
 
