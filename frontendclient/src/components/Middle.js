@@ -65,8 +65,8 @@ export default class Middle extends Component {
                                 <td style={{ color: 'white', textAlign: 'center' }}>
                                     <h3 style={{ marginLeft: '30px' }}><b>Wanna Join With Us?</b></h3>
                                     <p style={{ marginLeft: '30px' }}>You are warmly wewlcome here as a lecturer or trainee...</p>
-                                    <a className="btn btn-outline-light btn-lg" style={{ width: '230px', marginLeft: '30px' }} href='/lecturerreg'>Request as Lecturer</a>&nbsp;
-                                    <a className="btn btn-outline-light btn-lg" style={{ width: '200px', marginLeft: '30px' }} href='/apply'>Request for staff</a>
+                                    <a className="btn btn-outline-light btn-lg" style={{ width: '250px', marginLeft: '30px' }} href='/lecturerreg'>Academic Registration</a>&nbsp;
+                                    <a className="btn btn-outline-light btn-lg" style={{ width: '300px', marginLeft: '30px' }} href='/apply'>Non-Academic Registration</a>
                                 </td>
                                 <td style={{ textAlign: 'right' }}>
                                     <img src={lecgif} style={{ width: '500px', height: 'auto' }} />

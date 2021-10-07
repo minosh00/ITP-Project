@@ -257,7 +257,7 @@ useEffect(()=>{
         <Route path ="/timetableReq" component={timetableUpdate}></Route> 
         <Route path ="/leaveReq" component={leaveReq}></Route> 
         <Route path ="/download/:id" component={DownloadPdf}></Route>
-        <Route path ="/lecConfirmationSend" component={LecturerEmail}></Route>
+        <Route path ="/lecConfirmationSend/:id" component={LecturerEmail}></Route>
         <Route path ="/viewRegistrations" component={viewRegistrations}></Route>
         <Route path ="/lecturerRegistration" component={CreateRegistration}></Route>
         <Route path ="/publishNotice" component={detailRequest}></Route>

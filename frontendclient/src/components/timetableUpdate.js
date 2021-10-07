@@ -77,7 +77,7 @@ render(){
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            marginTop:'-45px',
+            marginTop:'-5px',
             marginBottom:'-65px',
             height:'1000px'
             
@@ -89,7 +89,7 @@ render(){
             width: '1000px',
             border: '2px solid black',
             marginRight:'40px',
-            marginLeft:'440px',
+            marginLeft:'540px',
             background:'white' }}>
 
        <div className = "container" >

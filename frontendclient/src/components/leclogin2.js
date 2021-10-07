@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import './ClientLogin.css'
 import logo from '../images/teacher.png'
 
-export default class leclogin extends Component {
+export default class leclogin2 extends Component {
     constructor(props) {
         super(props)
         let loggedIn = false
@@ -48,7 +48,7 @@ export default class leclogin extends Component {
     render() {
 
         if (this.state.loggedIn) {
-            return <Redirect to="/leaveRequest" />
+            return <Redirect to="/timetableRequest" />
         }
         return (
             <div>
