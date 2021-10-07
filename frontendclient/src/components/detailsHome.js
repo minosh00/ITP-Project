@@ -109,7 +109,7 @@ export default class detailsHome extends Component {
               <h6><b>Notice number : 1</b></h6>
               <h3 style={{ color: 'red' }}><b>Rgistration offers</b></h3>
               <h2 style={{ color: 'black' }}><b>To: All Students</b></h2>
-              <h3 style={{ color: 'black' }}><b>All the students can Register in to our Institiute every year and specially we offer  special discount for Some students who are regiter into ouur institute between December-January.</b></h3>
+              <h3 style={{ color: 'black' }}><b>All the students can Register in to our Institiute every year and specially we offer  special discount for Some students who register into our institute between December-January.</b></h3>
               <br></br>
               <img src={notice2} style={{ width: '50px', height: '100%' }}></img>Further inquiries : 0112881364 ,0701235770
             </div>
