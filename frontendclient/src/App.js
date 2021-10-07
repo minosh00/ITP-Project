@@ -36,6 +36,7 @@ import CreateRegistration from './components/CreateRegistration';
 import detailsHome from './components/detailsHome';
 import ourlecturers from './components/ourlecturers';
 import leclogin from './components/leclogin'
+import leclogin2 from './components/leclogin2'
 import leaveReq from './components/leaveReq'
 import timetableUpdate from "./components/timetableUpdate";
 
@@ -89,6 +90,7 @@ function App() {
         <Route path="/notices" component={detailsHome}></Route>
         <Route path="/lecturerpage" component={ourlecturers}></Route>
         <Route path="/leclogin" component={leclogin}></Route>
+        <Route path="/leclogin2" component={leclogin2}></Route>
         <Route path="/leaveRequest" component={leaveReq}></Route>
         <Route path="/timetableRequest" component={timetableUpdate}></Route>
 
