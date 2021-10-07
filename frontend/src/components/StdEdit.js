@@ -99,7 +99,7 @@ onsubmit = (e) =>{
     console.log(data)
     axios.put(`/Approved/update/${id}`,data).then((res) =>{
         if(res.data.success){
-            alert("Post Updated Successfully")
+            alert("Your Updated Successfully")
             this.setState({
             registrationNo:"",    
             student_full_name:"",
