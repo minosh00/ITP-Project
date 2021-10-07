@@ -170,7 +170,7 @@ export default class adminViewApplication extends Component {
               name="RegistationNumber"
               value={this.state.RegistationNumber}
               required
-              onChange={this.handleInputChange}
+              onChange={this.handleInputChange}readOnly
             />
           </div>
 
@@ -217,7 +217,7 @@ export default class adminViewApplication extends Component {
               className="form-control"
               name="FirstName"
               value={this.state.FirstName}
-              onChange={this.handleInputChange}
+              onChange={this.handleInputChange}readOnly
             />
           </div>
 
@@ -229,7 +229,7 @@ export default class adminViewApplication extends Component {
               className="form-control"
               name="LastName"
               value={this.state.LastName}
-              onChange={this.handleInputChange}
+              onChange={this.handleInputChange}readOnly
             />
           </div>
 
@@ -241,7 +241,7 @@ export default class adminViewApplication extends Component {
               className="form-control"
               name="DateOfBirth"
               value={this.state.DateOfBirth}
-              onChange={this.handleInputChange}
+              onChange={this.handleInputChange}readOnly
             />
           </div>
 
@@ -253,7 +253,7 @@ export default class adminViewApplication extends Component {
               className="form-control"
               name="position"
               value={this.state.position}
-              onChange={this.handleInputChange}
+              onChange={this.handleInputChange}readOnly
             />
           </div>
 
@@ -265,7 +265,7 @@ export default class adminViewApplication extends Component {
               className="form-control"
               name="ContactNumber"
               value={this.state.ContactNumber}
-              onChange={this.handleInputChange}
+              onChange={this.handleInputChange}readOnly
             />
           </div>
 
@@ -277,7 +277,7 @@ export default class adminViewApplication extends Component {
               className="form-control"
               name="NationalIDNumber"
               value={this.state.NationalIDNumber}
-              onChange={this.handleInputChange}
+              onChange={this.handleInputChange}readOnly
             />
           </div>
 
@@ -289,7 +289,7 @@ export default class adminViewApplication extends Component {
               className="form-control"
               name="Gender"
               value={this.state.Gender}
-              onChange={this.handleInputChange}
+              onChange={this.handleInputChange}readOnly
             />
           </div>
 
@@ -301,7 +301,7 @@ export default class adminViewApplication extends Component {
               className="form-control"
               name="Address"
               value={this.state.Address}
-              onChange={this.handleInputChange}
+              onChange={this.handleInputChange}readOnly
             />
           </div>
 
@@ -313,7 +313,7 @@ export default class adminViewApplication extends Component {
               className="form-control"
               name="Email"
               value={this.state.Email}
-              onChange={this.handleInputChange}
+              onChange={this.handleInputChange}readOnly
             />
           </div>
 
@@ -325,7 +325,7 @@ export default class adminViewApplication extends Component {
               className="form-control"
               name="WorkingExp"
               value={this.state.WorkingExp}
-              onChange={this.handleInputChange}
+              onChange={this.handleInputChange}readOnly
             />
           </div>
 
@@ -337,7 +337,7 @@ export default class adminViewApplication extends Component {
               className="form-control"
               name="CarreerSum"
               value={this.state.CarreerSum}
-              onChange={this.handleInputChange}
+              onChange={this.handleInputChange}readOnly
             />
           </div>
 
@@ -349,7 +349,7 @@ export default class adminViewApplication extends Component {
               className="form-control"
               name="EducationalQf"
               value={this.state.EducationalQf}
-              onChange={this.handleInputChange}
+              onChange={this.handleInputChange}readOnly
             />
           </div>
 

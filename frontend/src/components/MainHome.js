@@ -119,7 +119,11 @@ handleSearchArea =(e)=>{
               <th scope="col">National ID number</th>
               <th scope="col">Gender</th>
               <th scope="col">Basic Salary</th>
-              <th scope="col"> </th>
+              <th scope="col">Email</th>
+              <th scope="col">Appointed Date</th>
+              <th scope="col"></th>
+
+              
             </tr>
           </thead>
           <tbody>
@@ -133,6 +137,9 @@ handleSearchArea =(e)=>{
               <td>{registered.NationalIDNumber}</td>
               <td>{registered.Gender}</td>
               <td>{registered.BasicSalary}</td>
+              <td>{registered.Email}</td>
+              <td>{registered.AppointedDate}</td>
+              
               <td>
               
               <a className="btn btn-primary" href={`/adminprofile/${registered._id}`}>

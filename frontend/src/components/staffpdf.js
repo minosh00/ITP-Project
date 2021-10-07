@@ -138,7 +138,7 @@ export default class updateAdmin extends Component {
 
 <a className="btn btn-success" href="/staffhome" style={{textDecoration:'none', color:'white'}}>
                  <i className="fas fa-home"></i>&nbsp;Home
-                </a>-
+                </a>
             <h1 className="h1">Download PDF</h1>
 
            <hr/>
@@ -146,7 +146,7 @@ export default class updateAdmin extends Component {
           
           <div className="form-group" style={{marginBottom:'15px'}}>
           <label for="formGroupExampleInput" class="form-label">Registration Number</label>
-          <input type="text" 
+          <input 
           className="form-control" 
           name="RegistationNumber"
           value={this.state.RegistationNumber}
@@ -155,7 +155,7 @@ export default class updateAdmin extends Component {
 
         <div className="mb-3">
         <label for="formGroupExampleInput" class="form-label">Appointed Date</label>
-          <input type="text" 
+          <input 
           className="form-control" 
           name="AppointedDate"
           value={this.state.AppointedDate}
@@ -164,7 +164,7 @@ export default class updateAdmin extends Component {
 
         <div className="mb-3">
         <label for="formGroupExampleInput" class="form-label">First Name</label>
-          <input type="text" 
+          <input 
           className="form-control" 
           name="FirstName"
           value={this.state.FirstName}
@@ -173,7 +173,7 @@ export default class updateAdmin extends Component {
 
         <div className="mb-3">
         <label for="formGroupExampleInput" class="form-label">Last Name</label>
-          <input type="text" 
+          <input  
           className="form-control" 
           name="LastName"
           value={this.state.LastName}
@@ -182,7 +182,7 @@ export default class updateAdmin extends Component {
 
         <div className="mb-3">
         <label for="formGroupExampleInput" class="form-label">Date Of Birth</label>
-          <input type="text" 
+          <input 
           className="form-control" 
           name="DateOfBirth"
           value={this.state.DateOfBirth}
@@ -191,7 +191,7 @@ export default class updateAdmin extends Component {
 
         <div className="mb-3">
         <label for="formGroupExampleInput" class="form-label">position</label>
-          <input type="text" 
+          <input
           className="form-control" 
           name="position"
           value={this.state.position}
@@ -200,7 +200,7 @@ export default class updateAdmin extends Component {
 
         <div className="mb-3">
         <label for="formGroupExampleInput" class="form-label">Contact Number</label>
-          <input type="text" 
+          <input
           className="form-control" 
           name="ContactNumber"
           value={this.state.ContactNumber}
@@ -209,7 +209,7 @@ export default class updateAdmin extends Component {
 
         <div className="mb-3">
         <label for="formGroupExampleInput" class="form-label">National ID Number</label>
-          <input type="text" 
+          <input
           className="form-control" 
           name="NationalIDNumber"
           value={this.state.NationalIDNumber}
@@ -219,7 +219,7 @@ export default class updateAdmin extends Component {
         
         <div className="mb-3">
         <label for="formGroupExampleInput" class="form-label">Gender</label>
-          <input type="text" 
+          <input
           className="form-control" 
           name="Gender"
           value={this.state.Gender}
@@ -229,7 +229,7 @@ export default class updateAdmin extends Component {
         
         <div className="mb-3">
         <label for="formGroupExampleInput" class="form-label">Address</label>
-          <input type="text" 
+          <input
           className="form-control" 
           name="Address"
           value={this.state.Address}
@@ -239,7 +239,7 @@ export default class updateAdmin extends Component {
         
         <div className="mb-3">
         <label for="formGroupExampleInput" class="form-label">BasicSalary</label>
-          <input type="text" 
+          <input
           className="form-control" 
           name="BasicSalary"
           value={this.state.BasicSalary}
@@ -251,7 +251,7 @@ export default class updateAdmin extends Component {
               Email
             </label>
             <input
-            type="text" 
+        
               className="form-control"
               name="Email"
               value={this.state.Email}
@@ -264,7 +264,7 @@ export default class updateAdmin extends Component {
             Working Experience
             </label>
             <input
-            type="text" 
+          
               className="form-control"
               name="WorkingExp"
               value={this.state.WorkingExp}
@@ -277,7 +277,7 @@ export default class updateAdmin extends Component {
             Carreer Summary
             </label>
             <input
-            type="text" 
+        
               className="form-control"
               name="CarreerSum"
               value={this.state.CarreerSum}
@@ -290,7 +290,7 @@ export default class updateAdmin extends Component {
             Educational Quilification
             </label>
             <input
-            type="text" 
+        
               className="form-control"
               name="EducationalQf"
               value={this.state.EducationalQf}
