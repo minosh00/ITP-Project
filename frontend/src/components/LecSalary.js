@@ -31,7 +31,7 @@ export default class LecSalary extends Component {
     const result = lecturers.filter(
       (lecturers) =>
         lecturers.lecId.toLowerCase().includes(searchKey) ||
-        lecturers.name.toLowerCase().includes(searchKey)
+        lecturers.lecFname.toLowerCase().includes(searchKey)
     );
     this.setState({ lecturers: result });
   }
@@ -40,7 +40,7 @@ export default class LecSalary extends Component {
     const searchKey = e.currentTarget.value;
     axios.get("/lecturers").then((res) => {
       if (res.data.success) {
-        this.filterDate(res.data.existingLecturers, searchKey);
+        this.filterData(res.data.existingLecturers, searchKey);
       }
     });
   };
@@ -52,7 +52,7 @@ export default class LecSalary extends Component {
           <center>
             <h2 style={{ textDecoration: "none", color: "#800080" }}>
               <b>
-                <u>Salary Calculation for Lecturers</u>
+                <u> Lecturers' Salary</u>
               </b>
             </h2>
           </center>
@@ -64,7 +64,7 @@ export default class LecSalary extends Component {
           <input
             className="form-control"
             type="search"
-            placeholder="Search here for the Payments you did for the courses"
+            placeholder="Search salary details here"
             name="searchQuery"
             onChange={this.handleSearchArea}
           ></input>
@@ -77,7 +77,7 @@ export default class LecSalary extends Component {
             table="lec-table"
             filename="lecturer salary Excel"
             sheet="Sheet"
-            buttonText="Download all lecturer salary"
+            buttonText="Download Lecturers' Salary List"
           />
           <br />
           <table

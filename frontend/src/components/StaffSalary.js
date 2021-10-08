@@ -40,7 +40,6 @@ export default class StaffSalary extends Component {
 
   handleSearchArea = (e) => {
     const searchKey = e.currentTarget.value;
-
     axios.get("/register/posts").then((res) => {
       if (res.data.success) {
         this.filterData(res.data.existingRegistrations, searchKey);
@@ -55,7 +54,7 @@ export default class StaffSalary extends Component {
           <center>
             <h2 style={{ textDecoration: "none", color: "#333399" }}>
               <b>
-                <u> Salary Calculation for Non-Academic Staff</u>
+                <u> Non-Academic Staff's Salary</u>
               </b>
             </h2>
           </center>
@@ -67,7 +66,7 @@ export default class StaffSalary extends Component {
           <input
             className="form-control"
             type="search"
-            placeholder="Search here for the Payments you did for the courses"
+            placeholder="Search here staff salary details"
             name="searchQuery"
             onChange={this.handleSearchArea}
           ></input>
@@ -81,7 +80,7 @@ export default class StaffSalary extends Component {
             table="staffsal-table"
             filename="Staff salary Excel"
             sheet="Sheet"
-            buttonText="Download all staff salary"
+            buttonText="Download Staff Salary List"
           />
           <br />
           <table
