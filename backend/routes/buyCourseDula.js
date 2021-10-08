@@ -59,8 +59,8 @@ router.get("/buycourse/:id",(req,res) => {
 
 //create the PDF
 
-router.post('/create-pdf', (req, res) => {
-    pdf.create(pdfTemplate2(req.body), {}).toFile('pdfcourse.pdf', (err) => {
+router.post('/createdulapdf', (req, res) => {
+    pdf.create(pdfTemplate2(req.body), {}).toFile('Receipt.pdf', (err) => {
         if(err) {
             res.send(Promise.reject());
         }
@@ -71,8 +71,8 @@ router.post('/create-pdf', (req, res) => {
 
 //get the PDF
 
-router.get('/fetch-pdf', (req, res) => {
-    res.sendFile('pdfcourse.pdf', { root:  `${__dirname}/../..` });
+router.get('/fetchdulapdf', (req, res) => {
+    res.sendFile('Receipt.pdf', { root:  `${__dirname}/../..` });
 });
 
 

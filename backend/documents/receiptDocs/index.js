@@ -101,22 +101,22 @@ return `
                       <table style="font-family:verdana">
                          <tr>
                             <td style="font-size:18px">
-                               Subject ID: ${fullName}
+                               Full Name: ${fullName}
                             </td>
                          </tr>
                       </table>
                    </td>
                 </tr>
                 <tr class="item">
-                   <td width="30%">Subject Name:</td>
+                   <td width="30%">Email :</td>
                    <td>${email}</td>
                 </tr>
                 <tr class="item">
-                   <td>Subject Category :</td>
+                   <td> Category :</td>
                    <td>${courseName}</td>
                 </tr>
                 <tr class="item">
-                   <td>Subject Type     :</td>
+                   <td>Date  :</td>
                    <td>${date}</td>
                 </tr>
              </table>

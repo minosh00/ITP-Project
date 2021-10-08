@@ -29,19 +29,19 @@ export default class feesPayList extends Component {
     })
   }
 
-filterData(feesPay,searchKey){
-  const result = feesPay.filter((feesPay) =>
-  feesPay.fullName.toLowerCase().includes(searchKey)
+filterData(feesPayRoutes,searchKey){
+  const result = feesPayRoutes.filter((feesPayRoutes) =>
+  feesPayRoutes.fullName.toLowerCase().includes(searchKey)
 
  
-  )
-  this.setState({feesPay:result})
+  );
+  this.setState({feesPayRoutes:result})
 }
 
  handleSearchArea = (e) =>{
   const searchKey = e.currentTarget.value;
      
-  axios.get("/retrive").then(res=>{
+  axios.get("/retriveFeesPay").then(res=>{
       if(res.data.success){
           this.filterData(res.data.existingfeesPay,searchKey)
       }
@@ -56,13 +56,14 @@ filterData(feesPay,searchKey){
                 <center><h2 style={{textDecoration:'none', color:'black'}}> <u> <b>Fees Paid List </b> </u> </h2></center>
                 &nbsp;
                 <div className="col-lg-9 mt-2 mb-2">
-                     <input
-                            className="form-control"
-                            type="search"
-                            placeholder="search"
-                            name="searchQuery"
-                            onChange={this.handleSearchArea}>
-                     </input>
+                <input
+              className="form-control"
+              style={{ width: "400px", marginLeft: "50px" }}
+              type="search"
+              placeholder="Search here your payment record "
+              name="searchQuery"
+              onChange={this.handleSearchArea}
+            ></input>
                 </div>
                 &nbsp;
                 <table className="table table-success table-striped table-bordered">
@@ -74,7 +75,7 @@ filterData(feesPay,searchKey){
                             <th scope="col">Date</th>
                             <th scope="col">Email</th>
                             <th scope="col">Course ID</th>
-                            <th scope="col">#</th>
+                            
                           </tr>
                     </thead>
                <tbody>
@@ -88,13 +89,7 @@ filterData(feesPay,searchKey){
                            <td>{feesPayRoutes.courseID}</td>
                            
                            
-                           <td>
-                                       <a  className="btn btn-warning" href="" style={{textDecoration:'none', color:'white'}}>
-                                        <i class="fa fa-bookmark-o" aria-hidden="true"> ULA</i>
-                                       </a>
-                                       &nbsp;
-                                      
-                                   </td>
+                          
                    </tr>  
                 ))}
                 </tbody>
