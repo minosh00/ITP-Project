@@ -41,7 +41,7 @@ filterData(feesPay,searchKey){
  handleSearchArea = (e) =>{
   const searchKey = e.currentTarget.value;
      
-  axios.get("/retrive").then(res=>{
+  axios.get("/retriveFeesPay").then(res=>{
       if(res.data.success){
           this.filterData(res.data.existingfeesPay,searchKey)
       }
@@ -74,7 +74,7 @@ filterData(feesPay,searchKey){
                             <th scope="col">Date</th>
                             <th scope="col">Email</th>
                             <th scope="col">Course ID</th>
-                            <th scope="col">#</th>
+                            
                           </tr>
                     </thead>
                <tbody>
@@ -88,13 +88,7 @@ filterData(feesPay,searchKey){
                            <td>{feesPayRoutes.courseID}</td>
                            
                            
-                           <td>
-                                       <a  className="btn btn-warning" href="" style={{textDecoration:'none', color:'white'}}>
-                                        <i class="fa fa-bookmark-o" aria-hidden="true"> ULA</i>
-                                       </a>
-                                       &nbsp;
-                                      
-                                   </td>
+                          
                    </tr>  
                 ))}
                 </tbody>

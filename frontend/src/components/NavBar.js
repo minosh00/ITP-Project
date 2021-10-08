@@ -14,7 +14,7 @@ export default class NavBar extends Component {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-           <button className = "btn btn-info"> <a href = "/paymenthome" style = {{textDecoration: 'none' , color : 'black'}}><b> Home </b></a></button>
+           <button className = "btn btn-info"> <a href = "/paymenthome" style = {{textDecoration: 'none' , color : 'black'}}><b> Additional Payments </b></a></button>
            
            &nbsp;
            &nbsp;
@@ -23,22 +23,22 @@ export default class NavBar extends Component {
            &nbsp;
            &nbsp;
            &nbsp;
-           <button className = "btn btn-info"> <a href = "/cReceipt" style = {{textDecoration: 'none' , color : 'black'}}><b>Details of students who purchased for courses</b></a></button>
+           <button className = "btn btn-info"> <a href = "/cReceipt" style = {{textDecoration: 'none' , color : 'black'}}><b>Buy Course List</b></a></button>
            &nbsp;
            &nbsp;
            &nbsp;
-           <button className = "btn btn-info"> <a href = "/feespay" style = {{textDecoration: 'none' , color : 'black'}}><b>Fees Pay</b></a></button>
+           <button className = "btn btn-info"> <a href = "/feespay" style = {{textDecoration: 'none' , color : 'black'}}><b>Fees Pay Form</b></a></button>
            &nbsp;
            &nbsp;
            &nbsp;
-           <button className = "btn btn-info"> <a href = "/paidlist" style = {{textDecoration: 'none' , color : 'black'}}><b>Paid List</b></a></button>
+           <button className = "btn btn-info"> <a href = "/paidlist" style = {{textDecoration: 'none' , color : 'black'}}><b>Fees Paid List</b></a></button>
            <br/><br/>
-           <button className = "btn btn-secondary"> <i class="fa fa-list" aria-hidden="true"></i>  <a href = "/calculatesalary" style = {{textDecoration: 'none' , color : 'black'}}><b>Calculte Lecturer Salary</b></a></button>
+           <button className = "btn btn-info"> <i class="fa fa-list" aria-hidden="true"></i>  <a href = "/calculatesalary" style = {{textDecoration: 'none' , color : 'black'}}><b>Lecturer Salary</b></a></button>
            &nbsp;
            &nbsp;
            &nbsp;
 
-           <button className = "btn btn-secondary"> <i class="fa fa-list" aria-hidden="true"></i>  <a href = "/calculateStaffsalary" style = {{textDecoration: 'none' , color : 'black'}}><b>Calculte Staff Salary</b></a></button>
+           <button className = "btn btn-info"> <i class="fa fa-list" aria-hidden="true"></i>  <a href = "/calculateStaffsalary" style = {{textDecoration: 'none' , color : 'black'}}><b>Staff Salary</b></a></button>
            &nbsp;
            &nbsp;
            &nbsp;
