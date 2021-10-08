@@ -7,15 +7,21 @@ import ourlec5 from '../images/ourlec5.png'
 import ourlec6 from '../images/ourlec6.png'
 import ourlec7 from '../images/ourlec7.png'
 import ourlec8 from '../images/ourlec8.png'
-import ourlecmain from '../images/ourlecmain.gif'
+import background from '../images/lecbackground.gif';
 
 
 export default class ourlecturers extends Component {
     render() {
         return (
-            <div>
+            <div style={{ backgroundImage: `url(${background})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            marginTop:'-45px',
+            marginBottom:'-15px'}}>
                 <center>
 
+                <br></br>
                 <br></br>
                 <br></br>
                 <p><h3> <b>OUR LECTURERS</b></h3></p>
@@ -35,6 +41,7 @@ export default class ourlecturers extends Component {
                     
                     <center>
                         <br></br>
+                        
                         <table>
                         <tr>
                             <td>

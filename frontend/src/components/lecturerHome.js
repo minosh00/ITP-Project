@@ -163,14 +163,14 @@ axios.get("/lecturers").then(res =>{
                 <td>
 
                   
-                <a className = "btn btn-info" href={`/postLec/${lecturer._id}`}>
+                <a className = "btn btn-info" href={`/postLec/${lecturer._id}`} target="_blank" rel="noopener noreferrer">
                 <i class="fa fa-user" aria-hidden="true"></i>&nbsp;View
                     </a>
                     <br></br>
                   
                     &nbsp;
                     
-                  <a className = "btn btn-warning" href={`/editLec/${lecturer._id}`}>
+                  <a className = "btn btn-warning" href={`/editLec/${lecturer._id}`} target="_blank" rel="noopener noreferrer">
                     < i className ="fas fa-edit"></i>&nbsp;Edit
                     </a>
                     <br></br>

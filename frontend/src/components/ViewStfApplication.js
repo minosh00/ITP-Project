@@ -24,6 +24,14 @@ export default class ViewStfApplication extends Component {
             }
         });
     }
+
+    onDelete=(id)=>{
+        axios.delete(`/application/delete/${id}`).then((res)=>{
+          alert("Deleted Succesfully..!")
+          window.location.replace('/applications');
+        })
+      }
+
     render() {
             const{FirstName, LastName,
                 DateOfBirth, position, ContactNumber, NationalIDNumber, Gender, 
@@ -98,8 +106,12 @@ export default class ViewStfApplication extends Component {
                     &nbsp;
 
                 <a className="btn btn-success" href= {`/viewapplication/${this.props.match.params.id}`} style={{textDecoration:'none', color:'white'}}>
-              <i className="fas fa-plus-circle"></i>&nbsp;Add
+              <i className="fas fa-plus-circle"></i>&nbsp;Add To Staff
               </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <a className="btn btn-danger" onClick={()=>this.onDelete(this.props.match.params.id)}>
+                  <i className="far fa-trash-alt"></i>&nbsp;Delete Application
+                </a>
 
 
 

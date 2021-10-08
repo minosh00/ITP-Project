@@ -27,12 +27,7 @@ retrieveapplications(){
     })
 }
 
-onDelete=(id)=>{
-  axios.delete(`/application/delete/${id}`).then((res)=>{
-    alert("Deleted Succesfully..!")
-    this.retrieveapplications();
-  })
-}
+
 
     render() {
         return (
@@ -83,12 +78,6 @@ onDelete=(id)=>{
               <a className="btn btn-primary" href={`/ViewStfApplication/${applications._id}`}>
               <i className="fas fa-user"></i>&nbsp;View Application
               </a>
-
-              &nbsp;
-              &nbsp;
-                <a className="btn btn-danger" onClick={()=>this.onDelete(applications._id)}>
-                  <i className="far fa-trash-alt"></i>&nbsp;Delete
-                </a>
               </td>
             </tr>
             ))}
