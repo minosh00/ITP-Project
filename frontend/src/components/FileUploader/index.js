@@ -28,7 +28,7 @@ export const FileUploader = ({onSuccess }) =>{
         onSuccess(response.data)
     })
     .catch((e) => {
-        toast.error('Upload Error')
+        toast.error('Upload error')
     })
 };
 return(
