@@ -1,9 +1,16 @@
 import React, {Component} from 'react';
+import gif from './g.gif';
 
 export default class NavBar extends Component {
     render () {
         return (
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style = {{backgroundColor:'#e3f2fd'}}>
+          <div>
+            <center>
+            <img src={gif} style={{ width: '500px', height: 'auto' }} />
+            </center>
+         
+<nav class="navbar navbar-expand-lg navbar-light bg-light " style = {{backgroundColor:'#e3f2fd',marginLeft:'350px'}}>
+
   <div class="container-fluid">
    <button class="navbar-toggler" type="button" 
     data-bs-toggle="collapse" 
@@ -32,7 +39,10 @@ export default class NavBar extends Component {
            &nbsp;
            &nbsp;
            <button className = "btn btn-info"> <a href = "/paidlist" style = {{textDecoration: 'none' , color : 'black'}}><b>Fees Paid List</b></a></button>
-           <br/><br/>
+           &nbsp;
+           &nbsp;
+           &nbsp;
+
            <button className = "btn btn-info"> <i class="fa fa-list" aria-hidden="true"></i>  <a href = "/calculatesalary" style = {{textDecoration: 'none' , color : 'black'}}><b>Lecturer Salary</b></a></button>
            &nbsp;
            &nbsp;
@@ -48,6 +58,8 @@ export default class NavBar extends Component {
     </div>
   </div>
 </nav>
+
+</div>
         )
     }
 }
