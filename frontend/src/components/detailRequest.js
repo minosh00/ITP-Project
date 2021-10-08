@@ -128,6 +128,7 @@ export default class detailRequest extends Component {
                             <th scope="col" >Date</th>
                             <th scope="col" >Notice</th>
                             <th scope="col" ></th>
+                            <th scope="col" ></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -139,7 +140,13 @@ export default class detailRequest extends Component {
                                 <td>
                                     <a className="btn btn-danger" href="#" onClick={() => this.onDelete(updateDetail._id)}>
                                         <i className="far fa-trash-alt"></i>&nbsp;Delete
-                                    </a>
+                                        </a>
+                                        &nbsp;
+                    </td>
+                    <td>
+                  <a className = "btn btn-warning" href={`/editnotice/${updateDetail._id}`} target="_blank" rel="noopener noreferrer">
+                    < i className ="fas fa-edit"></i>&nbsp;Edit
+                    </a>
                                 </td>
                             </tr>
 

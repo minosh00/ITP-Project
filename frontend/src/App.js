@@ -59,6 +59,7 @@ import viewRegistrations from './components/viewRegistrations'
 import CreateRegistration from './components/CreateRegistration';
 import detailRequest from './components/detailRequest';
 import detailsHome from './components/detailsHome';
+import editNotice from './components/editNotice';
 
 
 
@@ -263,6 +264,8 @@ useEffect(()=>{
         <Route path ="/publishNotice" component={detailRequest}></Route>
         <Route path ="/viewNotice" component={detailsHome}></Route>
         <Route path ="/lecAdminPage" component={lecAdminPage}></Route>
+        <Route path ="/editnotice/:id" component={editNotice}></Route>
+
       
 
 {/* minosh */}

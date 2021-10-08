@@ -13,7 +13,7 @@ export default class Middle extends Component {
             <div>
                 <div style={{ width: '100%' }}>
                     <center><img src={maingif} style={{ width: '100%', height: 'auto' }} /></center>
-                    <div class="centered" style={{fontSize:'82px',color:'black',fontFamily:'fantasy'}}>Welcome To Royal EDU Institute </div>
+                    <div class="centered" style={{fontSize:'82px',color:'white',fontFamily:'fantasy'}}> </div>
                 </div>
                 <br />
 
