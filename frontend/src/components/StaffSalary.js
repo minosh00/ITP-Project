@@ -42,7 +42,7 @@ export default class StaffSalary extends Component {
     const searchKey = e.currentTarget.value;
     axios.get("/register/posts").then((res) => {
       if (res.data.success) {
-        this.filterData(res.data.existingRegistrations, searchKey);
+        this.filterData(res.data.existingPosts, searchKey);
       }
     });
   };
