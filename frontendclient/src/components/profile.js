@@ -40,13 +40,13 @@ export default class profile extends Component {
                 
                 <h1><p class="fs-1">  Welcome to the Student Profile </p></h1>
                 <img src={pic12} style={{width:'1300px' , height:'100%'}}></img>
-                <div className='card container'>
+                <div className='card container'  style={{backgroundColor:'#009999'}}>
                 <h1>This is My Profile</h1>
                    
                     <table>
                         <tr>
                             <td><center>
-                                 <a href=''><img src={pic2} style={{ height: '450px', marginTop: '40px' }}></img></a><br /> 
+                                 <a href=''><img src={pic2} style={{ height: '350px', marginTop: '40px' }}></img></a><br /> 
                                 <br></br></center>
                             </td>
                         </tr>

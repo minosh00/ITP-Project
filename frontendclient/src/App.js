@@ -12,6 +12,7 @@ import AllSubjectsView from "./components/AllSubjectsView";
 import AddEnrollment from "./components/AddEnrollment";
 import SubjectEmail from "./components/SubjectEmail";
 
+//hivindu
 import Apply from "./components/Apply";
 
 // dima
@@ -34,8 +35,10 @@ import RegisterTypes from './components/RegisterTypes';
 import CreateRegistration from './components/CreateRegistration';
 import detailsHome from './components/detailsHome';
 import ourlecturers from './components/ourlecturers';
-
-
+import leclogin from './components/leclogin'
+import leclogin2 from './components/leclogin2'
+import leaveReq from './components/leaveReq'
+import timetableUpdate from "./components/timetableUpdate";
 
 //malki
 import Registration from "./components/Registration";
@@ -55,8 +58,6 @@ function App() {
     <BrowserRouter>
       <div>
         <Route path="" component={Homeheader}></Route>
-
-        <Route path="/apply" component={Apply}></Route>
 
         {/* diniru */}
         <Route path="/login" component={ClientLogin}></Route>
@@ -80,10 +81,6 @@ function App() {
         <Route path="/course1/:id"    render={(props)=>  <Course {...props} posts={posts} />} />
         <Route  path="/log"  render={()=> <Login posts={posts} />} 
         />
-        
-
-    
-
         <Route path="/course/:id"    render={(props)=>  <Course {...props} posts={posts} />} />
         <Route  path="/allCourse"  component={Course} />
 
@@ -91,12 +88,20 @@ function App() {
         <Route path="/regtypes" component={RegisterTypes}></Route>
         <Route path="/lecturerreg" component={CreateRegistration}></Route>
         <Route path="/notices" component={detailsHome}></Route>
-        <Route path="/ourlecturers" component={ourlecturers}></Route>
+        <Route path="/lecturerpage" component={ourlecturers}></Route>
+        <Route path="/leclogin" component={leclogin}></Route>
+        <Route path="/leclogin2" component={leclogin2}></Route>
+        <Route path="/leaveRequest" component={leaveReq}></Route>
+        <Route path="/timetableRequest" component={timetableUpdate}></Route>
+
 
 
         {/* malki */}
         <Route path="/signupstd" component={Registration}></Route>
         <Route path="/loginstd" component={profile}></Route>
+
+        {/* hivindu */}
+        <Route path="/apply" component={Apply}></Route>
 
 
         <Route path="" component={Homefooter}></Route>

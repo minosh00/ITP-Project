@@ -88,7 +88,7 @@ class viewRegistrations extends Component {
 
                   <button className="btn btn-danger" style={{ marginLeft: "2%" }} onClick={event => this.navigateDelete(event, value._id)}><i class="fa fa-times" aria-hidden="true"></i> <b>Reject Registration </b></button>
                   
-                  <a href = "/lecConfirmationSend" className="btn btn-warning" style={{ marginLeft: "2%" }} > <i class="fas fa-envelope-square"></i><b> Send E-mail</b></a>
+                  <a href = {`/lecConfirmationSend/${value._id}`} className="btn btn-warning" style={{ marginLeft: "2%" }} > <i class="fas fa-envelope-square"></i><b> Send E-mail</b></a>
                  <br></br>
                 </div>
               </div>

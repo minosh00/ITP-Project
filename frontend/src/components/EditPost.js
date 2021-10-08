@@ -100,7 +100,7 @@ export default class EditPost extends Component {
         console.log(data)
         axios.put(`/Approved/update/${id}`, data).then((res) => {
             if (res.data.success) {
-                alert("Post Updated Successfully")
+                alert("Updated Successfully")
                 this.setState({
                     registrationNo: "",
                     student_full_name: "",

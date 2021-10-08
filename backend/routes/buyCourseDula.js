@@ -1,6 +1,8 @@
 const express = require('express');
 //const buyCourse = require('../models/buyCourse');
 const buyCourseRoutes = require('../models/buyCourse');
+const pdf = require('html-pdf');
+const pdfTemplate2 = require('../documents/receiptDocs');
 
 const router = express.Router();
 
@@ -55,6 +57,23 @@ router.get("/buycourse/:id",(req,res) => {
     });
 });
 
+//create the PDF
+
+router.post('/createdulapdf', (req, res) => {
+    pdf.create(pdfTemplate2(req.body), {}).toFile('Receipt.pdf', (err) => {
+        if(err) {
+            res.send(Promise.reject());
+        }
+
+        res.send(Promise.resolve());
+    });
+});
+
+//get the PDF
+
+router.get('/fetchdulapdf', (req, res) => {
+    res.sendFile('Receipt.pdf', { root:  `${__dirname}/../..` });
+});
 
 
 

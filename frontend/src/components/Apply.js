@@ -15,6 +15,10 @@ export default class Apply extends Component {
       Gender: "",
       Address: "",
       ExpectedSalary: "",
+      Email: "",
+      WorkingExp: "",
+      CarreerSum: "",
+      EducationalQf: ""
     };
   }
 
@@ -28,7 +32,11 @@ export default class Apply extends Component {
       NationalIDNumber: "200034903755",
       Gender: "Male",
       Address: "No.73/A1, Watarappala Road, Mount Lavinia",
-      ExpectedSalary: "25 000"
+      ExpectedSalary: "25 000",
+      Email: "hivindupunsith@gmail.com",
+      WorkingExp: "3 Years",
+      CarreerSum: "Trainee Electrical Engineer - National Engineering Research and Development Centre (NERDC)) - (since November 2015 - February 2016)",
+      EducationalQf: "Passed GCE O/L and Passed GCE A/L"
     });
   }
 
@@ -89,7 +97,10 @@ export default class Apply extends Component {
       Gender,
       Address,
       ExpectedSalary,
-    } = this.state;
+      Email,
+      WorkingExp,
+      CarreerSum,
+      EducationalQf} = this.state;
 
     const data = {
       FirstName: FirstName,
@@ -101,6 +112,10 @@ export default class Apply extends Component {
       Gender: Gender,
       Address: Address,
       ExpectedSalary: ExpectedSalary,
+      Email:Email,
+      WorkingExp:WorkingExp,
+      CarreerSum:CarreerSum,
+      EducationalQf:EducationalQf
     };
 
     console.log(data);
@@ -118,6 +133,10 @@ export default class Apply extends Component {
           Gender: "",
           Address: "",
           ExpectedSalary: "",
+          Email: "",
+          WorkingExp: "",
+          CarreerSum: "",
+          EducationalQf: ""
         });
       }
     });
@@ -274,6 +293,54 @@ export default class Apply extends Component {
               required
             />
             </div>
+          </div>
+
+          <div className="mb-3">
+            <label for="formGroupExampleInput" class="form-label">
+              Email
+            </label>
+            <input
+              className="form-control"
+              name="Email"
+              value={this.state.Email}
+              onChange={this.handleInputChange}
+            />
+          </div>
+
+          <div className="mb-3">
+            <label for="formGroupExampleInput" class="form-label">
+            Working Experience
+            </label>
+            <input
+              className="form-control"
+              name="WorkingExp"
+              value={this.state.WorkingExp}
+              onChange={this.handleInputChange}
+            />
+          </div>
+
+          <div className="mb-3">
+            <label for="formGroupExampleInput" class="form-label">
+            Carreer Summary
+            </label>
+            <input
+              className="form-control"
+              name="CarreerSum"
+              value={this.state.CarreerSum}
+              onChange={this.handleInputChange}
+            />
+          </div>
+
+          <div className="mb-3">
+            <label for="formGroupExampleInput" class="form-label">
+            Educational Quilification
+            </label>
+            <input
+              className="form-control"
+              name="EducationalQf"
+              value={this.state.EducationalQf}
+              onChange={this.handleInputChange}
+            />
           </div>
           <button
                 type="submit"
