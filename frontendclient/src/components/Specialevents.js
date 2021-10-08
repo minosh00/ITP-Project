@@ -93,7 +93,7 @@ export default class Specialevents extends Component {
                 <tr className="card p-0 overflow-hidden h-100 shadow">
                   
                   {/* <td className="card-title" >{specialevents.eventID}</td> */}
-                  <td className="card-text" style={{fontSize:'30px' , color:'#00ff80' , textAlign:'center'}}>&nbsp; 🔶 &nbsp;{specialevents.eventname}&nbsp; 🔶 &nbsp;</td>
+                  <td className="card-text" style={{fontSize:'30px' , color:'#00ff80' , textAlign:'center'}}>&nbsp;  &nbsp;{specialevents.eventname}&nbsp;  &nbsp;</td>
                   <td className="card-text" style={{fontSize:'25px' , color:'#9966ff' , textAlign:'center'}}>&nbsp;  Vanue : &nbsp;{specialevents.venue}</td>
                   <td className="card-text" style={{fontSize:'25px' , color:'#9966ff' , textAlign:'center'}}>&nbsp;  Date : &nbsp;{specialevents.date}</td>
                   <td className="card-text" style={{fontSize:'25px' , color:'#9966ff' , textAlign:'center'}}>&nbsp;  Time : &nbsp;{specialevents.time}</td>

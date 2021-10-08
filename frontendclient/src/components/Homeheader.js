@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import logo from './Bright.png'
+import './style.css'
 
 export default class Homeheader extends Component {
 
@@ -40,17 +41,13 @@ export default class Homeheader extends Component {
             <li className="nav-item">
               <a className="nav-link active " aria-current="page" href="/notices" style={{ fontSize: '23px' }}>Notices</a>
             </li>
-            <li style={{ marginLeft: '1180px' }}>
-              <div class="btn-group">
-                <button type="button" class="btn btn-danger">Request</button>
-                <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Time table update request</a>
-                  <a class="dropdown-item" href="#">get leave request</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Separated link</a>
+            <li style={{ marginLeft: '1165px' }}>
+              <div class="dropdown">
+                <button class="dropbtn"><b>Request</b></button>
+                <div class="dropdown-content">
+                  <a href="/leclogin" target="_blank" rel="noopener noreferrer"><b>Get leave</b></a>
+                  <a href="/leclogin2" target="_blank" rel="noopener noreferrer"><b>Update time table</b></a>
+                  
                 </div>
               </div>
             </li>
