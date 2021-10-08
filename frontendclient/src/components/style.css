@@ -122,12 +122,13 @@ body{
 }
 
 .dropbtn {
-    background-color: #ce4a32;
+    background-color: #00858a;
     color: white;
     padding: 12px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    
   }
   
   .dropdown {
@@ -151,7 +152,7 @@ body{
     display: block;
   }
   
-  .dropdown-content a:hover {background-color: #929499}
+  .dropdown-content a:hover {background-color: #d43934}
   
   .dropdown:hover .dropdown-content {
     display: block;
@@ -160,3 +161,8 @@ body{
   .dropdown:hover .dropbtn {
     background-color: #ce4a32;
   }
+  .centered {
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
