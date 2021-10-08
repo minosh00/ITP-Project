@@ -71,14 +71,7 @@ export default class LecSalary extends Component {
         </div>
         <br />
 
-        <div className="container-xxl">
-          <ReactHTMLTableToExcel
-            className="btn btn-outline-success"
-            table="lec-table"
-            filename="lecturer salary Excel"
-            sheet="Sheet"
-            buttonText="Download Lecturers' Salary List"
-          />
+        
           <br />
           <table
             id="lec-table"
@@ -123,7 +116,22 @@ export default class LecSalary extends Component {
               ))}
             </tbody>
           </table>
+          <br/>
+          <br/>
+          <center>
+
+          <div className="container-xxl">
+          <ReactHTMLTableToExcel
+            className="btn btn-outline-success"
+            table="lec-table"
+            filename="lecturer salary Excel"
+            sheet="Sheet"
+            buttonText="Download Lecturers' Salary List"
+          />
+          
+
         </div>
+        </center>
       </div>
     );
   }
