@@ -74,14 +74,7 @@ export default class StaffSalary extends Component {
         <br />
 
         <br />
-        <div className="container-xxl">
-          <ReactHTMLTableToExcel
-            className="btn btn-outline-success"
-            table="staffsal-table"
-            filename="Staff salary Excel"
-            sheet="Sheet"
-            buttonText="Download Staff Salary List"
-          />
+       
           <br />
           <table
             id="staffsal-table"
@@ -121,7 +114,20 @@ export default class StaffSalary extends Component {
               ))}
             </tbody>
           </table>
+          <br/>
+          <br/>
+          <center>
+
+          <div className="container-xxl">
+          <ReactHTMLTableToExcel
+            className="btn btn-outline-success"
+            table="staffsal-table"
+            filename="Staff salary Excel"
+            sheet="Sheet"
+            buttonText="Download Staff Salary List"
+          />
         </div>
+        </center>
       </div>
     );
   }

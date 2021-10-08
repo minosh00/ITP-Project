@@ -60,7 +60,7 @@ filterData(feesPayRoutes,searchKey){
               className="form-control"
               style={{ width: "400px", marginLeft: "50px" }}
               type="search"
-              placeholder="Search "
+              placeholder="Search here your payment record "
               name="searchQuery"
               onChange={this.handleSearchArea}
             ></input>
