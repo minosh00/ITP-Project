@@ -31,7 +31,7 @@ export default class Login extends Component {
 
 
 
-    if(username ==="00" && password === "123"){
+    if(username ==="member" && password === "member123"){
 
         this.setState({
             
@@ -45,7 +45,7 @@ export default class Login extends Component {
     render() {
 
         if(this.state.loggedIn){
-            return <Redirect to="/cinside"/>
+            return <Redirect to="/libhome"/>
         }
         return (   
           <CourseContainer> 
@@ -53,18 +53,16 @@ export default class Login extends Component {
             <div class="form-container">
                 <div class="image-holder"></div>
                 <form onSubmit={this.submitForm} >
-                    <h2 class="text-center"><strong>Course</strong>&nbsp;Enroll </h2>
-                    <div class="form-group"><input class="form-control" type="text" name="username" value={this.state.username} onChange={this.onChange} placeholder="Enter User ID"/></div><br></br><br></br>
-                    <div class="form-group"><input class="form-control" type="password" name="password" value={this.state.password} onChange={this.onChange} placeholder="Enter Enrollment Key"/></div><br></br>
+                    <h2 class="text-center"><strong>Libary&nbsp;Login</strong> </h2>
+                    <div class="form-group"><input class="form-control" type="text" name="username" value={this.state.username} onChange={this.onChange} placeholder="Enter User Name"/></div><br></br><br></br>
+                    <div class="form-group"><input class="form-control" type="password" name="password" value={this.state.password} onChange={this.onChange} placeholder="Enter Password"/></div><br></br>
                     <br></br>
                     <div class="form-group">
-                     <div class="container"><button type="submit" class="btn btn-warning">Enroll</button>
+                     <div class="container"><button type="submit" class="btn btn-warning">Login</button>
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
                      <Link to ={{
         pathname:`/course`
-      }}>
-       <button type="button" className="btn btn-info "  > <i class="fas fa-arrow-circle-left"></i>&nbsp;Back  </button>
-    </Link>
+      }}></Link>
                             
                             </div>
                             

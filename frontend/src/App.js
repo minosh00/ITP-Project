@@ -308,17 +308,26 @@ useEffect(()=>{
         <Route path="/adminmainhomelogin" component={Adminlogin}></Route>
         <Route path ="/paymenthome" component = {NavBar}></Route>
         <Route path ="/paymenthome" component = {HomePayment}></Route>
+        <Route path ="/additem" component = {NavBar}></Route>
         <Route path = "/additem" component ={CreateItem}></Route> 
+        <Route path ="/edititem/:id" component = {NavBar}></Route>
         <Route path = "/edititem/:id" component ={EditItem}></Route> 
+        <Route path ="/buycourse" component = {NavBar}></Route>
         <Route path = "/buycourse" component = {BuyCourseDula}></Route>
+        <Route path ="/cReceipt" component = {NavBar}></Route>
         <Route path = "/cReceipt" component = {CourseReceipt}></Route>
+        <Route path ="/getCourseR/:id" component = {NavBar}></Route>
         <Route path = "/getCourseR/:id" component = {GetCourseReceipt}></Route>
+        <Route path ="/feespay" component = {NavBar}></Route>
         <Route path = "/feespay" component = {FeesPay}></Route>
+        <Route path ="/paidlist" component = {NavBar}></Route>
         <Route path = "/paidlist" component = {feesPayList}></Route>
+        <Route path ="/calculatesalary" component = {NavBar}></Route>
         <Route path = "/calculatesalary" component = {LecSalary}></Route>
         <Route path="/calculatesalry/:id" component={LecSalary}></Route>
         <Route path="/calculatesalry/:id" component={CalcNetSalry}></Route>
         <Route path="/calculatesalry/:id" component={CalculateLecSalary}></Route>
+        <Route path ="/calculateStaffsalary" component = {NavBar}></Route>
         <Route path="/calculateStaffsalary" component={StaffSalary}></Route>
         <Route path="/calculatestaffsalry/:id" component={StaffSalary}></Route>
         <Route path="/calculatestaffsalry/:id" component={CalcStaffSalary}></Route>

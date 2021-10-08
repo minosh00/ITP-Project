@@ -59,6 +59,9 @@ export default class AllSubjectsView extends Component {
                   <td style={{ width: '150px', marginLeft: '50px' }}>
                     <a className="btn btn-success" href={`/addenrollsub/${subjects._id}`}>
                       &nbsp;<b>Enroll</b>&nbsp;<i className="fas fa-arrow-circle-right"></i>
+                    </a>&nbsp;
+                    <a className="btn btn-light" href={`/subfee/${subjects._id}`}>
+                      <i className="fas fa-money-bill-alt"></i>&nbsp;<b>Pay Fees</b>&nbsp;
                     </a>
                   </td>
                 </tr>

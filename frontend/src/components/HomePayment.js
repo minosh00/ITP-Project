@@ -63,7 +63,7 @@ export default class HomePayment extends Component {
           <div className="row">
             <div className ="col-lg-9 mt-2 mb-2"></div>
          
-          <p> <h3><center><b>ALL ITEMS</b></center></h3></p>
+          <p> <h3><center><u><b>ALL ITEMS</b></u></center></h3></p>
           </div>
           <div className ="col-lg-9 mt-2 mb-2">
             <input className = "form-control"

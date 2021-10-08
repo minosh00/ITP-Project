@@ -27,7 +27,7 @@ export default class buyCourse extends Component {
   }
   onDelete = (id) => {
     axios.delete(`http://localhost:8000/buycourse/delete/${id}`).then((res) => {
-      alert("Delte succesfully");
+      alert("Delete succesfully");
       this.retrivebuyCourse();
     });
   };
@@ -51,7 +51,7 @@ export default class buyCourse extends Component {
         this.filterData(res.data.existingCourseReceipt, Searchkey);
       }
     });
-  };
+  }
 
   render() {
     return (
