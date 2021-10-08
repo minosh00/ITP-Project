@@ -44,8 +44,8 @@ export default class GetCourseReceipt extends Component {
     }
 
     createAndDownloadPdf = () => {
-        axios.post('/create-pdf', this.state)
-          .then(() => axios.get('/fetch-pdf', { responseType: 'blob' }))
+        axios.post('/createdulapdf', this.state)
+          .then(() => axios.get('/fetchdulapdf', { responseType: 'blob' }))
           .then((res) => {
             const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
     
@@ -64,23 +64,23 @@ export default class GetCourseReceipt extends Component {
                 <div style={{marginTop: '45px'}}>
                 
   <div className="col-md-8" style={{marginTop: '20px'}}>
-    <label for="inputEmail4" className="form-label">Subject ID</label>
+    <label for="inputEmail4" className="form-label">Full Name :</label>
     <input className="form-control" name="fullName"  value={this.state.fullName} onChange={this.handleInputChange} readOnly/>
   </div>
 
   <div className="col-md-8" style={{marginTop: '20px'}}>
-    <label for="inputPassword4" className="form-label">Subject Name</label>
+    <label for="inputPassword4" className="form-label">Email :</label>
     <input className="form-control" name="email" value={this.state.email} onChange={this.handleInputChange} readOnly/>
   </div>
 
   <div className="col-md-8" style={{marginTop: '20px'}}>
-    <label for="inputAddress2" className="form-label">Subject Fee</label>
+    <label for="inputAddress2" className="form-label">Category :</label>
     <input className="form-control" name="courseName" value={this.state.courseName} onChange={this.handleInputChange} readOnly/>
   </div>
 
    <div className="col-md-8" style={{marginTop: '20px'}}>
-    <label for="inputCity" className="form-label">Description</label>
-    <textarea rows="3" className="form-control" style={{width:'600px'}} name="date" value={this.state.date} onChange={this.handleInputChange} readOnly/>
+    <label for="inputCity" className="form-label">Date</label>
+    <input  className="form-control" style={{width:'600px'}} name="date" value={this.state.date} onChange={this.handleInputChange} readOnly/>
   </div>
 
   <hr/>
