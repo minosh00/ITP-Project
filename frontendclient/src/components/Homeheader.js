@@ -30,7 +30,7 @@ export default class Homeheader extends Component {
               <a className="nav-link active " aria-current="page" href="/lecturerpage" style={{ fontSize: '23px' }}>Lecturers</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active " aria-current="page" href="/" style={{ fontSize: '23px' }}>Library</a>
+              <a className="nav-link active " aria-current="page" href="/clientlibrary" style={{ fontSize: '23px' }}>Library</a>
             </li>
             <li className="nav-item">
               <a className="nav-link active " aria-current="page" href="/special" style={{ fontSize: '23px' }}>Events</a>

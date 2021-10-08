@@ -45,6 +45,14 @@ import timetableUpdate from "./components/timetableUpdate";
 import Registration from "./components/Registration";
 import profile from "./components/profile";
 
+//disa
+import LibraryHome from './components/Library';
+import AddApllicant from './components/AddApplicant';
+import AddBooks from './components/AddBook';
+import LibraryLOgin from './components/LibraryLOgin';
+
+
+
 function App() {
   const [posts, setPosts] = useState([]);
 
@@ -54,6 +62,26 @@ function App() {
       .then((res) => setPosts(res.data))
       .catch((error) => console.log(error));
   });
+
+  const [books, setBooks] = useState([])
+
+  useEffect(()=>{
+
+    axios.get('http://localhost:8000/addBook') 
+    .then(res=>setBooks(res.data))
+    .catch(error => console.log(error));
+  },[])
+
+
+const [Applicants, setApplicant] = useState([])
+
+useEffect(()=>{
+
+  axios.get('http://localhost:8000/applicants') 
+  .then(res =>setApplicant(res.data))
+  .catch(error => console.log(error));
+},[])
+
 
   return (
     <BrowserRouter>
@@ -105,6 +133,12 @@ function App() {
         {/* hivindu */}
         <Route path="/apply" component={Apply}></Route>
 
+        {/* disa */}
+        <Route path="/clientlibrary" exact component={LibraryLOgin}></Route>
+        <Route path="/libhome"  component={LibraryHome}></Route>
+        <Route path="/AddApplicant" component={AddApllicant}/>
+        <Route path="/books" render={() => <AddBooks books={books}/>} />
+      
 
         <Route path="" component={Homefooter}></Route>
       </div>
