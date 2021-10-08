@@ -45,8 +45,8 @@ export default class Homeheader extends Component {
               <div class="dropdown">
                 <button class="dropbtn"><b>Request</b></button>
                 <div class="dropdown-content">
-                  <a href="/leclogin"><b>Get leave</b></a>
-                  <a href="/leclogin2"><b>Update time table</b></a>
+                  <a href="/leclogin" target="_blank" rel="noopener noreferrer"><b>Get leave</b></a>
+                  <a href="/leclogin2" target="_blank" rel="noopener noreferrer"><b>Update time table</b></a>
                   
                 </div>
               </div>

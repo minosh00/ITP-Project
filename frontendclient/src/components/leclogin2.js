@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import styled from 'styled-components'
 import './ClientLogin.css'
-import logo from '../images/teacher.png'
+import login from '../images/login.gif'
 
 export default class leclogin2 extends Component {
     constructor(props) {
@@ -57,7 +57,7 @@ export default class leclogin2 extends Component {
                         <div className="row d-flex">
                             <div className="col-lg-6">
                                 <div className="card1 pb-5">
-                                    <div className="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src={logo} className="image" /> </div>
+                                    <div className="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src={login} className="image" /> </div>
                                 </div>
                             </div>
                             <div className="col-lg-6">

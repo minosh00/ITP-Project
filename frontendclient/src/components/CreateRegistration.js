@@ -3,7 +3,7 @@ import axios from "axios";
 import { ProgressBar } from "react-bootstrap";
 import { useHistory, Link } from "react-router-dom";
 //import background from '../images/hall.png';
-import regform from '../images/nethmiLap.jpg'
+
 
 const CreateRegistration = (props) => {
   const history = useHistory();
@@ -99,7 +99,7 @@ const CreateRegistration = (props) => {
           <br></br>
           <center>
             <h1><b>Lecturer Registration</b></h1>
-            <img src={regform} style={{width:1300 ,height:'100%', marginTop:'40px', marginRight:'35px'}}></img>
+            
           </center>
           
         </div>
