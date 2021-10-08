@@ -11,6 +11,7 @@ import ClientLogin from "./components/ClientLogin";
 import AllSubjectsView from "./components/AllSubjectsView";
 import AddEnrollment from "./components/AddEnrollment";
 import SubjectEmail from "./components/SubjectEmail";
+import SubjectFees from "./components/SubjectFees";
 
 //hivindu
 import Apply from "./components/Apply";
@@ -64,6 +65,7 @@ function App() {
         <Route path="/allsubjects" component={AllSubjectsView}></Route>
         <Route path="/addenrollsub/:id" component={AddEnrollment}></Route>
         <Route path="/subemail" component={SubjectEmail}></Route>
+        <Route path="/subfee/:id" component={SubjectFees}></Route>
 
         {/* dima */}
         <Route path="/" exact component={middle}></Route>
