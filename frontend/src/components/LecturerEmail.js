@@ -60,13 +60,22 @@ export default class LecturerEmail extends Component {
             <div class="card-body">
 
               <label><b>Name</b></label>
-              <input name="name" className="form-control" value={this.state.lecLname} required />
+              <input name="name" className="form-control" value={this.state.lecFname + this.state.lecLname} required />
               <br></br>
               <label><b>E-mail</b></label>
               <input type="email" name="user_email" value={this.state.email} className="form-control" required />
               <br></br>
               <label><b>Message</b></label>
-              <textarea name="message" rows="4" className="form-control" value="Congratulations! You have been selected by the Royal-Edu Institute" />
+              <textarea name="message" rows="4" className="form-control" value="Congratulations! You have been selected by the Royal-Edu Institute 
+              
+              
+              Be the best with the best lecturers. ICON assure you that your learning experience at ICON will be beyond expectation. 
+              Well experienced, qualified and dedicated lecturers will guide you with practical corporate examples as they are prominent corporate professionals. 
+              they have produced highest pass rates and many local and world prize winners across many professional examinations over the years. 
+              The local and international exposure combined with many years of corporate cross cultural experience add further value to students in teaching.
+              You will receive a wide range of knowledge which makes your learning journey a success.
+
+" />
 
               <br></br>
 
