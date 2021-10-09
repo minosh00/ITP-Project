@@ -28,7 +28,7 @@ export default class Createspecialevent extends Component {
             eventID: "SE" + this.randomid(999, 99999),
             eventname: "Christmas party",
             venue: "Hotel grandiza",
-            date :"2021/12/27",
+            date :"2021-12-27",
             time: "18.30"
         });
       }
@@ -92,7 +92,7 @@ export default class Createspecialevent extends Component {
             <form className="needs-validation" onSubmit={this.onSubmit}>
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>Event ID</label>
-                    <input type="text"
+                    <input 
                     className="form-control"
                     name="eventID"
                     placeholder="enter Event Id"
@@ -102,7 +102,7 @@ export default class Createspecialevent extends Component {
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>Event Name</label>
-                    <input type="text"
+                    <input 
                     className="form-control"
                     name="eventname"
                     placeholder="enter Event Name"
@@ -112,7 +112,7 @@ export default class Createspecialevent extends Component {
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>Venue</label>
-                    <input type="text"
+                    <input 
                     className="form-control"
                     name="venue"
                     placeholder="enter Venue"
@@ -122,7 +122,7 @@ export default class Createspecialevent extends Component {
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>Date</label>
-                    <input type="text"
+                    <input type="date"
                     className="form-control"
                     name="date"
                     placeholder="enter Date"
@@ -132,7 +132,7 @@ export default class Createspecialevent extends Component {
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>Time</label>
-                    <input type="text"
+                    <input 
                     className="form-control"
                     name="time"
                     placeholder="enter Time"
