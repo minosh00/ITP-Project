@@ -6,6 +6,11 @@ import maingif from './HomeImages/maingif.gif'
 import lecgif from './HomeImages/lecgif.gif'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import sliit1 from '../images/sliit1.png'
+import sliit2 from '../images/sliit2.png'
+import sliit3 from '../images/sliit3.png'
+import sliit4 from '../images/sliit4.png'
+
 
 export default class Middle extends Component {
     render() {
@@ -13,9 +18,61 @@ export default class Middle extends Component {
             <div>
                 <div style={{ width: '100%' }}>
                     <center><img src={maingif} style={{ width: '100%', height: 'auto' }} /></center>
+                    <br></br>
 
-                    <div class="centered" style={{fontSize:'82px',color:'white',fontFamily:'fantasy'}}> </div>
+                    <div >
+                        <table>
+                            <tr>
+                                <td>
+                                    <div style={{ fontSize: '60px', color: '#008B8B', marginLeft: '380px',fontFamily:'-moz-initial' }}><b>Welcome To Royal EDU Institute</b>
+                                        <br></br>
 
+                                        <h5><b>We are a leading non-state degree awarding institute approved by the University </b></h5>
+                                        <h5><b>Grants Commission (UGC) under the Universities Act. We are also members of the</b></h5>
+                                        <h5><b>Association of Commonwealth Universities (ACU), as well as the International</b></h5>
+                                        <h5><b>Association of Universities (IAU), and the first Sri Lankan institute to be</b></h5>
+                                        <h5><b>accredited by the Institution of Engineering & Technology, UK.</b></h5>
+
+                                        <h5><b>We are proud to be listed as a leading and formidable awarding institute authorised</b></h5>
+                                        <h5><b>and approved by the University Grants Commission (UGC) under the Universities Act,</b></h5>
+                                        <h5><b>and the International Association of Universities (IAU). Furthermore, not only we</b></h5>
+                                        <h5><b>are the first Sri Lankan institute to be accredited by the Institute of Engineering</b></h5>
+                                        <h5><b>& Technology(IET.), UK, our IT degrees are also in turn accredited by the Council, UK.</b></h5>
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <tr>
+                                        <td>
+                                            <img src={sliit1} style={{ width: 150, marginTop: '40px', marginLeft: '40px', marginRight: '40px' }} />
+                                            <center><p><b>10 YEARS OF EXISTENCE</b></p></center>
+                                        </td>
+
+                                        <td>
+                                            <img src={sliit2} style={{ width: 150, marginTop: '40px', marginLeft: '40px', marginRight: '40px' }} />
+                                            <center><p><b>10000+ STUDENTS</b></p></center>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <img src={sliit3} style={{ width: 150, marginTop: '40px', marginLeft: '40px', marginRight: '40px' }} />
+                                            <center><p><b>500 YEARS <br></br> OF COLLECTIVE EXPERIENCE</b></p></center>
+                                        </td>
+
+                                        <td>
+                                            <img src={sliit4} style={{ width: 150, marginTop: '40px', marginLeft: '40px', marginRight: '40px' }} />
+                                            <center><p><b>OVER 7000 <br></br>SUCCESS STORIES</b></p></center>
+                                        </td>
+
+
+                                    </tr>
+
+
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
 
                 </div>
                 <br />
@@ -62,7 +119,7 @@ export default class Middle extends Component {
                                 </td>
                             </tr>
                         </table>
-                    </div><br/>
+                    </div><br />
                     <div className="row" style={{ backgroundColor: '#003566', borderRadius: '150px 0px 0px 150px' }}>
                         <table>
                             <tr>
@@ -104,9 +161,9 @@ export default class Middle extends Component {
                                 <br />
                                 <div class="row">
                                     <div class="col-md-12 form-group">
-                                        
+
                                         <Popup trigger={<button class="btn pull-right btn btn-outline-secondary" type="submit">Send</button>} position="right center">
-                                            <div>Thank You! for your response<br/></div>
+                                            <div>Thank You! for your response<br /></div>
                                         </Popup>
                                     </div>
                                 </div>
