@@ -67,7 +67,7 @@ const AddNewBooks = () => {
             onChange={e => setBook_Id(e.target.value)}
             className="form-control"  
             value={Book_Id}
-            placeholder="Book Id" />
+            placeholder="Book Id" required/>
 
 
             </div>
@@ -80,7 +80,7 @@ const AddNewBooks = () => {
              onChange={e => setBook_Name(e.target.value)}
             className="form-control"  
             value={Book_Name }
-            placeholder="Book Name" />
+            placeholder="Book Name" required/>
             </div>
         </div>
 
@@ -92,7 +92,7 @@ const AddNewBooks = () => {
             onChange={e => setAuthor(e.target.value)} 
             className="form-control" 
             value={Author}
-            placeholder="Author" />
+            placeholder="Author" required/>
           </div>
 
           <br/>
@@ -137,7 +137,7 @@ const AddNewBooks = () => {
             onChange={e => setNo_of_Copies(e.target.value)} 
             className="form-control" 
             value={No_of_Copies} 
-            placeholder="Number of Copies" />
+            placeholder="Number of Copies" required/>
           </div>
               <br/>
           <div className="form-group">
