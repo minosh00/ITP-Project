@@ -75,9 +75,13 @@ export default class adminViewApplication extends Component {
 
     console.log(data);
 
+    axios.delete(`/application/delete/${id}`).then((res)=>{
+    })
+
     axios.post(`/register/save`, data).then((res) => {
       if (res.data.success) {
         alert("Member Added..!");
+        window.location.replace('/applications');
         this.setState({
           RegistationNumber: "",
           AppointedDate: "",
@@ -96,12 +100,6 @@ export default class adminViewApplication extends Component {
           EducationalQf: ""
         });
       }
-    });
-  };
-
-  onDelete = (id) => {
-    axios.delete(`/application/delete/${id}`).then((res) => {
-      this.retrieveapplications();
     });
   };
 
@@ -133,6 +131,12 @@ export default class adminViewApplication extends Component {
   
   rand = (min, max) => {
     return Math.floor(Math.random() * max - min + 1) + min;
+  }
+
+  onDelete=(id)=>{
+    axios.delete(`/application/delete/${id}`).then((res)=>{
+      window.location.replace('/applications');
+    })
   }
 
   render() {

@@ -123,6 +123,7 @@ export default class Apply extends Component {
     axios.post(`/application/save`, data).then((res) => {
       if (res.data.success) {
         alert("Applied Succesfully..!");
+        window.location.replace('/');
         this.setState({
           FirstName: "",
           LastName: "",
@@ -146,6 +147,7 @@ export default class Apply extends Component {
   render() {
     return (
       <div style={{ marginLeft: 100 }}>
+        <br/><br/><br/>
         <h1 className="h1">APPLY TO STAFF</h1>
         <p class="lead">
           Note*

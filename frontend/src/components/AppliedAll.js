@@ -38,9 +38,6 @@ retrieveapplications(){
                <a className="btn btn-success" href="/staffhome" style={{textDecoration:'none', color:'white'}}>
                  <i className="fas fa-home"></i>&nbsp;Home
                 </a>&nbsp;&nbsp;&nbsp;
-                <a className="btn btn-success" href="/apply" style={{textDecoration:'none', color:'white'}}>
-                 <i className="fas fa-home"></i>&nbsp;application add
-                </a>
                 &nbsp;
               &nbsp;
               &nbsp;
