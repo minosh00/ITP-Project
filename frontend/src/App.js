@@ -130,8 +130,8 @@ import AddLibraryMember from './components/AddLibraryMember';
 import LibraryAdmin from './components/LibraryAdmin';
 import Members from './components/Members';
 import EditMembers from './components/EditMembers';
-
-
+import AllBorrow from './components/AllBorrow';
+import LibaryEmail from './components/LibaryEmail';
   function App() {
 
      
@@ -189,6 +189,12 @@ useEffect(()=>{
   .catch(error=>console.log(error));
 },[])
 
+const[Borrow,setBorrow]= useState([])
+useEffect(()=>{
+  axios.get('http://localhost:8000/borrow')
+  .then(res=>setBorrow(res.data))
+  .catch(error=>console.log(error));
+},[])
 
     return (
     <BrowserRouter>
@@ -344,7 +350,9 @@ useEffect(()=>{
       <Route path="/addtolibray/:id" render={props => <AddLibraryMember{...props}  Applicants={Applicants}/>} />
       <Route path="/allMembers" render={() => <Members   Member={Member}/>}/>
       <Route path="/updateMember/:id" render={props => <EditMembers{...props} Member={Member}/>} />
-      
+      <Route path="/AllBorrow" render={()=><AllBorrow Borrow={Borrow}/>}/>
+      <Route  path="/Email"  component={LibaryEmail} />
+
 
     
 
