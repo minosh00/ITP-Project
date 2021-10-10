@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import './style.css'
+import addnew from '../images/addnew.gif';
 
 
 export default class addLecturer extends Component {
@@ -21,7 +22,7 @@ export default class addLecturer extends Component {
             summary: "",
             aQualification: "",
             Rmembership: "",
-            salary:"",
+            salary: "",
             Rdate: ""
         }
     }
@@ -38,7 +39,7 @@ export default class addLecturer extends Component {
     }
     onsubmit = (e) => {
         e.preventDefault();
-        const { lecId, lecFname, lecLname, nic, dob, email, cNumber, address, username, password, summary, aQualification, Rmembership, salary,Rdate } = this.state;
+        const { lecId, lecFname, lecLname, nic, dob, email, cNumber, address, username, password, summary, aQualification, Rmembership, salary, Rdate } = this.state;
         const data = {
             lecId: lecId,
             lecFname: lecFname,
@@ -53,7 +54,7 @@ export default class addLecturer extends Component {
             summary: summary,
             aQualification: aQualification,
             Rmembership: Rmembership,
-            salary:salary,
+            salary: salary,
             Rdate: Rdate
         }
         console.log(data)
@@ -74,7 +75,7 @@ export default class addLecturer extends Component {
                     summary: "",
                     aQualification: "",
                     Rmembership: "",
-                    salary:"",
+                    salary: "",
                     Rdate: ""
 
                 })
@@ -88,7 +89,7 @@ export default class addLecturer extends Component {
                 summary: "Renowned academic and researcher in Plant Biotechnology. After graduating from faculty of Agriculture, University of Peradeniya, Sri Lanka, I completed the M.Sc Degree in Pennsylvania State University, USA, and Ph.D. in University of London, UK. I started my career at Faculty of Agriculture University of Peradeniya, Sri Lanka as a Lecturer in Department of Crop Science and promoted to senior Lecturer, Associate Professor, Professor and Senior Professor during my 30 years of service",
                 aQualification: "M.Sc. (Agronomy), The Pennsylvania State University,  USA, 1986 B.Sc. (Agriculture), University of Peradeniya, Sri Lanka, 1978",
                 Rmembership: "Main Committee Member 2017 to date, Committee on Equating and or Validating of Certificates of Diplomas and Degree (CVECD), National Apprentice & Industrial Training Authority, Sri Lanka",
-                salary:"80000",
+                salary: "80000",
             })
     }
 
@@ -123,15 +124,25 @@ export default class addLecturer extends Component {
     render() {
         return (
             <div
-            style={{
-                width: '1500px',
-                border: '1px solid black',
-                marginRight:'250px',
-                marginLeft:'200px'}}
+                style={{
+                    width: '1500px',
+                    border: '1px solid black',
+                    marginRight: '280px',
+                    marginLeft: '290px',
+                    background:'#F5F5F5'
+                }}
             >
                 <div className="container" >
                     <br></br>
-                    <center><h3><b>Add New Lecturer</b></h3></center>
+                    <center>
+                    
+                        <h3><b>Add New Lecturer Details</b></h3><br></br>
+                        <img src={addnew} style={{ width: '500px', height: 'auto' }}></img>
+                        <br></br>
+                        <br></br>
+                        <h6><p>On this page add new lecturer details to the institute database. In here lecturer ID is auto generating. By viewing the curriculum vitae fill the summary, academic qualifications and Research interests and memberships</p></h6>
+                        <br></br>
+                        </center>
 
                     <form className="needs-validation" onSubmit={this.onsubmit}>
 
@@ -218,13 +229,12 @@ export default class addLecturer extends Component {
                         <center>
                             <button type="submit" className="btn btn-primary">Save Details</button>
                             <br></br>
-                            <br></br>
-                            <button className="btn btn-outline-danger btn-sm" onClick={this.onClickDemo}>Demo</button>
                         </center>
                         <br></br>
-                        
+
                     </form>
-                    
+                    <center><button className="btn btn-outline-danger btn-sm" onClick={this.onClickDemo}>Demo</button></center><br />
+
                 </div>
             </div>
         )

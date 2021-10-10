@@ -39,8 +39,7 @@ filterData(buyCourse,searchKey){
 
  handleSearchArea = (e) =>{
   const searchKey = e.currentTarget.value;
-     
-  axios.get("/retrive").then(res=>{
+  axios.get("/retrivedula").then(res=>{
       if(res.data.success){
           this.filterData(res.data.existingCourseReceipt,searchKey)
       }
@@ -58,7 +57,7 @@ filterData(buyCourse,searchKey){
                      <input
                             className="form-control"
                             type="search"
-                            placeholder="search"
+                            placeholder="Search for your reciept"
                             name="searchQuery"
                             onChange={this.handleSearchArea}>
                      </input>

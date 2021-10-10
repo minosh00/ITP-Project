@@ -96,7 +96,7 @@ export default class AdminApproveLR extends Component {
             <form className="needs-validation" onSubmit={this.onSubmit}>
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>Lecturer ID</label>
-                    <input type="text"
+                    <input 
                     className="form-control"
                     name="lecId"
                     placeholder="enter Lecturer Id"
@@ -106,7 +106,7 @@ export default class AdminApproveLR extends Component {
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>Lecturer Name</label>
-                    <input type="text"
+                    <input 
                     className="form-control"
                     name="name"
                     placeholder="enter Event Name"
@@ -116,7 +116,7 @@ export default class AdminApproveLR extends Component {
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>Begin Date</label>
-                    <input type="text"
+                    <input 
                     className="form-control"
                     name="beginDate"
                     placeholder="enter begin Date"
@@ -126,7 +126,7 @@ export default class AdminApproveLR extends Component {
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>Return Date</label>
-                    <input type="text"
+                    <input 
                     className="form-control"
                     name="returnDate"
                     placeholder="enter return Date"
@@ -136,7 +136,7 @@ export default class AdminApproveLR extends Component {
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>Reason</label>
-                    <input type="text"
+                    <input 
                     className="form-control"
                     name="reason"
                     placeholder="enter reason"
@@ -146,7 +146,7 @@ export default class AdminApproveLR extends Component {
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
                     <label style={{margineBottom:'5px'}}>email</label>
-                    <input type="text"
+                    <input 
                     className="form-control"
                     name="email"
                     placeholder="enter email"
@@ -155,8 +155,8 @@ export default class AdminApproveLR extends Component {
                 </div>
 
                 <div className="form-group" style={{marginBottom:'15px'}}>
-                    <label style={{margineBottom:'5px'}}>Cnumber</label>
-                    <input type="text"
+                    <label style={{margineBottom:'5px'}}>Card number</label>
+                    <input 
                     className="form-control"
                     name="Cnumber"
                     placeholder="enter Cnumber"

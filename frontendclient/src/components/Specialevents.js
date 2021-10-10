@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import ch2 from '../images/events.jpg';
+import ch1 from '../images/events2.jpg';
 import ReactHTMLTableToExcel from "react-html-table-to-excel";
 
 export default class Specialevents extends Component {
@@ -91,9 +93,9 @@ export default class Specialevents extends Component {
             <tbody >
               {this.state.specialevents.map((specialevents, event) => (
                 <tr className="card p-0 overflow-hidden h-100 shadow">
-                  
+                 
                   {/* <td className="card-title" >{specialevents.eventID}</td> */}
-                  <td className="card-text" style={{fontSize:'30px' , color:'#00ff80' , textAlign:'center'}}>&nbsp; 🔶 &nbsp;{specialevents.eventname}&nbsp; 🔶 &nbsp;</td>
+                  <td className="card-text" style={{fontSize:'30px' , color:'#00ff80' , textAlign:'center'}}>&nbsp;  &nbsp;{specialevents.eventname}&nbsp;  &nbsp;</td>
                   <td className="card-text" style={{fontSize:'25px' , color:'#9966ff' , textAlign:'center'}}>&nbsp;  Vanue : &nbsp;{specialevents.venue}</td>
                   <td className="card-text" style={{fontSize:'25px' , color:'#9966ff' , textAlign:'center'}}>&nbsp;  Date : &nbsp;{specialevents.date}</td>
                   <td className="card-text" style={{fontSize:'25px' , color:'#9966ff' , textAlign:'center'}}>&nbsp;  Time : &nbsp;{specialevents.time}</td>

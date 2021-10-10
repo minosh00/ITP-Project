@@ -59,6 +59,7 @@ import viewRegistrations from './components/viewRegistrations'
 import CreateRegistration from './components/CreateRegistration';
 import detailRequest from './components/detailRequest';
 import detailsHome from './components/detailsHome';
+import editNotice from './components/editNotice';
 
 
 
@@ -257,12 +258,14 @@ useEffect(()=>{
         <Route path ="/timetableReq" component={timetableUpdate}></Route> 
         <Route path ="/leaveReq" component={leaveReq}></Route> 
         <Route path ="/download/:id" component={DownloadPdf}></Route>
-        <Route path ="/lecConfirmationSend" component={LecturerEmail}></Route>
+        <Route path ="/lecConfirmationSend/:id" component={LecturerEmail}></Route>
         <Route path ="/viewRegistrations" component={viewRegistrations}></Route>
         <Route path ="/lecturerRegistration" component={CreateRegistration}></Route>
         <Route path ="/publishNotice" component={detailRequest}></Route>
         <Route path ="/viewNotice" component={detailsHome}></Route>
         <Route path ="/lecAdminPage" component={lecAdminPage}></Route>
+        <Route path ="/editnotice/:id" component={editNotice}></Route>
+
       
 
 {/* minosh */}
@@ -305,17 +308,26 @@ useEffect(()=>{
         <Route path="/adminmainhomelogin" component={Adminlogin}></Route>
         <Route path ="/paymenthome" component = {NavBar}></Route>
         <Route path ="/paymenthome" component = {HomePayment}></Route>
+        <Route path ="/additem" component = {NavBar}></Route>
         <Route path = "/additem" component ={CreateItem}></Route> 
+        <Route path ="/edititem/:id" component = {NavBar}></Route>
         <Route path = "/edititem/:id" component ={EditItem}></Route> 
+        <Route path ="/buycourse" component = {NavBar}></Route>
         <Route path = "/buycourse" component = {BuyCourseDula}></Route>
+        <Route path ="/cReceipt" component = {NavBar}></Route>
         <Route path = "/cReceipt" component = {CourseReceipt}></Route>
+        <Route path ="/getCourseR/:id" component = {NavBar}></Route>
         <Route path = "/getCourseR/:id" component = {GetCourseReceipt}></Route>
+        <Route path ="/feespay" component = {NavBar}></Route>
         <Route path = "/feespay" component = {FeesPay}></Route>
+        <Route path ="/paidlist" component = {NavBar}></Route>
         <Route path = "/paidlist" component = {feesPayList}></Route>
+        <Route path ="/calculatesalary" component = {NavBar}></Route>
         <Route path = "/calculatesalary" component = {LecSalary}></Route>
         <Route path="/calculatesalry/:id" component={LecSalary}></Route>
         <Route path="/calculatesalry/:id" component={CalcNetSalry}></Route>
         <Route path="/calculatesalry/:id" component={CalculateLecSalary}></Route>
+        <Route path ="/calculateStaffsalary" component = {NavBar}></Route>
         <Route path="/calculateStaffsalary" component={StaffSalary}></Route>
         <Route path="/calculatestaffsalry/:id" component={StaffSalary}></Route>
         <Route path="/calculatestaffsalry/:id" component={CalcStaffSalary}></Route>

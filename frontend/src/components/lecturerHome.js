@@ -97,10 +97,8 @@ axios.get("/lecturers").then(res =>{
               </input></div>
               </div>
               </div>
-
-              <div className ="addbtn" >
-              <button className="btn btn-success"><a href = "/addLec" style ={{textDecoration:'none',color:'white',marginLeft:'12px'}}><i class="fa fa-plus-square" aria-hidden="true"></i>   Add New Lecturer Details</a></button>
-              </div>
+<br></br>
+              
 
               <ReactHTMLTableToExcel
                     id="test-table-xls-button"
@@ -163,14 +161,14 @@ axios.get("/lecturers").then(res =>{
                 <td>
 
                   
-                <a className = "btn btn-info" href={`/postLec/${lecturer._id}`}>
+                <a className = "btn btn-info" href={`/postLec/${lecturer._id}`} target="_blank" rel="noopener noreferrer">
                 <i class="fa fa-user" aria-hidden="true"></i>&nbsp;View
                     </a>
                     <br></br>
                   
                     &nbsp;
                     
-                  <a className = "btn btn-warning" href={`/editLec/${lecturer._id}`}>
+                  <a className = "btn btn-warning" href={`/editLec/${lecturer._id}`} target="_blank" rel="noopener noreferrer">
                     < i className ="fas fa-edit"></i>&nbsp;Edit
                     </a>
                     <br></br>

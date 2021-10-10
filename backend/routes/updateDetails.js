@@ -35,6 +35,45 @@ router.get('/lecDetailsReq', (req, res) => {
     });
 });
 
+//get specific post
+
+router.get("/detailReq/:id", (req, res)=>{
+    let detailReqId = req.params.id;
+
+    updateDetails.findById(detailReqId, (err, updateDetail)=>{
+        if(err){
+            return res.status(400).json({
+                success:false, err
+            });
+        }
+
+        return res.status(200).json({
+            success:true,updateDetail
+        });
+    });
+});
+//update
+
+router.put('/detailreq/update/:id', (req, res)=>{
+    updateDetails.findByIdAndUpdate(
+        req.params.id,
+        {
+            $set:req.body
+        },
+        (err, updateDetail)=>{
+            if(err){
+                return res.status(400).json({
+                    error:err
+                });
+            }
+
+            return res.status(200).json({
+                success:"Updated succesfully"
+            });
+        }
+    );
+});
+
 //delete
 
 router.delete('/detailreq/delete/:id', (req, res)=>{
