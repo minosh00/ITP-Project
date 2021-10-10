@@ -51,7 +51,7 @@ const AddFine = () => {
     <input type="text" 
     onChange={f => setNIC(f.target.value)}
     className="form-control"  
-    placeholder="NIC"/>
+    placeholder="NIC" required/>
     </div>
 
 
@@ -60,7 +60,7 @@ const AddFine = () => {
       <input type="text" 
       onChange={f=> setBook_Name(f.target.value)}
       className="form-control" 
-      placeholder="Name of The Book " />
+      placeholder="Name of The Book " required/>
       </div>
     
       <div className="form-group col-md-6">
@@ -68,7 +68,7 @@ const AddFine = () => {
       <input type="text" 
       onChange={f=> setAuthor(f.target.value)}
       className="form-control" 
-      placeholder="Author" />
+      placeholder="Author" required/>
       </div>
   </div>
 
@@ -84,7 +84,7 @@ const AddFine = () => {
     <input type="text"
     onChange={f=>setFines(f.target.value)} 
     className="form-control"  
-    placeholder="Fines" />
+    placeholder="Fines" required/>
   </div>
 
  <br/>

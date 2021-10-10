@@ -2,13 +2,30 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import {Link} from "react-router-dom";
-
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
+import autoTable from 'jspdf-autotable'
+import { jsPDF } from "jspdf";
 const AddBooks = ({books}) => {
 
 
+  function pdfGenerat(){
+    var doc = new jsPDF('landscape', 'px', 'a4', 'false');
+    
+    doc.autoTable({
+           
+            body: [
+                [{ content: '  ', colSpan: 2, rowSpan: 2, styles: { halign: 'center' } }],
+              ],
+            })
+        autoTable(doc, { html: '#table-to-xls' })
+       doc.save('books.pdf')
+  
+          }
   //delete
 
   const [book, setBook ]=useState([])
+
+
 
    const detelebook = id =>{
      axios.delete(`http://localhost:8000/addBook/${id}`)
@@ -33,8 +50,22 @@ const AddBooks = ({books}) => {
     >
       
               <br></br>
+              
+              <br></br>
+              <ReactHTMLTableToExcel
+                    id="test-table-xls-button"
+                    className="btn btn-success"
+                    table="table-to-xls"
+                    filename="AllBooks"
+                    sheet="tablexls"
+                    buttonText="Generate All Books Report"/>
+                    
+              <br></br>
+              <button className="btn btn-danger btn-sm"  onClick={pdfGenerat}>Generate PDF</button>
+
+              <br></br>
               <h1>All Books</h1>
-          <table className="table">
+          <table className="table" id="table-to-xls" >
           <thead>
 <tr className="text-info bg-dark">
   <th scope="col">#</th>
@@ -48,7 +79,7 @@ const AddBooks = ({books}) => {
 </tr>
 </thead>
 
-              <tbody> 
+              <tbody id="book"> 
               {books.map((AddBooks,index)=>(                                
                   <tr key={index}>
                     <th scope="row">{index+1}</th>
@@ -83,6 +114,8 @@ const AddBooks = ({books}) => {
               </tbody>  
 
             </table>
+
+
 
                </div>
                
