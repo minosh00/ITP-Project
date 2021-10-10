@@ -21,19 +21,30 @@ const AddBooks = ({books}) => {
              
               
 
-            <div className="container">
+             <div
+      className="container border"
+      style={{
+        marginTop: "50px",
+        width: "100%",
+        backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9QXZMet9OUNTyqEvHbHqMoTUlsaRtNK9iGA&usqp=CAU')`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
+      
               <br></br>
               <h1>All Books</h1>
           <table className="table">
           <thead>
-<tr>
-  <th scopse="col">#</th>
-  <th scopse="col">Book ID</th>
-  <th scopse="col">Book Name</th>
-  <th scopse="col">Author</th>
-  <th scopse="col">Category</th>
-  <th scopse="col">Number of Copies</th>
-  <th scopse="col">Actions</th>
+<tr className="text-info bg-dark">
+  <th scope="col">#</th>
+  <th scope="col">Book ID</th>
+  <th scope="col">Book Name</th>
+  <th scope="col">Author</th>
+  <th scope="col">Category</th>
+  <th scope="col">Number of Copies</th>
+  <th scope="col">Cover Page</th>
+  <th scope="col">Actions</th>
 </tr>
 </thead>
 
@@ -49,15 +60,19 @@ const AddBooks = ({books}) => {
                       <td>{AddBooks.Author}</td>
                       <td>{AddBooks.Category}</td>
                       <td>{AddBooks.No_of_Copies}</td>
+                      <td><div class="text-center">
+    <img src={`/uploads/${AddBooks.BookImage}`} alt="..." style={{height: "55px" ,width: "84px" }}  />
+    </div></td>
+
            
                       <td> 
                       <Link to ={{
         pathname:`/update/${AddBooks._id}`
       }}>
-       <button type="button" className="btn btn-success" style={{marginTop:'10px'}} > <i className="fas fa-search"></i>Update</button>&nbsp;
+       <button type="button" className="btn btn-success" style={{marginTop:'10px'}} > <i className="fas fa-pencil-alt">&nbsp;</i>Update</button>&nbsp;
     </Link>
   
-    <button onClick={()=>detelebook(AddBooks._id)}deletebook type="button" class="btn btn-danger" style={{marginTop:'10px'}} > <i class="fas fa-search"></i>&nbsp;Delete </button>
+    <button onClick={()=>detelebook(AddBooks._id)}deletebook type="button" class="btn btn-danger" style={{marginTop:'10px'}} > <i class="far fa-trash-alt"></i>&nbsp;Delete </button>
  
     
     

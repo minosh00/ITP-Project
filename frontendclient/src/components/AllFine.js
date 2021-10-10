@@ -2,20 +2,14 @@ import axios from 'axios';
 import React,{ useState } from 'react'
 import {Link} from "react-router-dom";
 
-const Fine = ({PayFines}) => {
+const AllFine = ({PayFines}) => {
 
-    const [Fine, setFine ]=useState([])
-
-    const deteleFine = id =>{
-      axios.delete(`http://localhost:8000/fines/${id}`)
-      .then(res => alert(res.data))
-      setFine(Fine.filter(elem => elem._id !== id))
-    }
+  
  
 
     return (
         <div>
-                   <div
+                           <div
       className="container border"
       style={{
         marginTop: "50px",
@@ -36,30 +30,22 @@ const Fine = ({PayFines}) => {
   <th scopse="col">Author</th>
   <th scopse="col">Fines</th>
   <th scopse="col">Return Date</th>
-  <th scopse="col">Actions</th>
+  
 </tr>
 </thead>
 
               <tbody> 
-              {PayFines.map((Fines,index)=>(                                
+              {PayFines.map((Fine,index)=>(                                
                   <tr key={index}>
                     <th scope="row">{index+1}</th>
-                    <td><Link to ={{
-                              pathname:`/disafines/${Fines._id}` 
-                             }}>{Fines.NIC}</Link></td>
+                    <td>{Fine.NIC}</td>
                                                          
-                      <td>{Fines.Book_Name}</td>
-                      <td>{Fines.Author}</td>
-                      <td>{Fines.Fines}</td>
-                      <td>{Fines.Return_Date}</td>
+                      <td>{Fine.Book_Name}</td>
+                      <td>{Fine.Author}</td>
+                      <td>{Fine.Fines}</td>
+                      <td>{Fine.Return_Date}</td>
                      
-                      <td> 
-       
-    <button onClick={()=>deteleFine(Fines._id)}deleteBook type="button" class="btn btn-danger" style={{marginTop:'10px'}} > <i class="far fa-trash-alt"></i>&nbsp;Delete </button>
- 
-    
-    
-    </td> 
+            
                    
                   </tr>
                   ))}
@@ -74,4 +60,4 @@ const Fine = ({PayFines}) => {
     )
 }
 
-export default Fine
+export default AllFine
