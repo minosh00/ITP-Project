@@ -67,6 +67,7 @@ export default class updateAdmin extends Component {
         axios.put(`/register/update/${id}`, data).then((res)=>{
             if(res.data.success){
                 alert("Profile Updated..!")
+                window.location.replace('/staffhome');
                 this.setState({
                     RegistationNumber:"",
                     AppointedDate:"",

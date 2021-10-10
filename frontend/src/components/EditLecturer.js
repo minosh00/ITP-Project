@@ -126,7 +126,8 @@ export default class EditLecturer extends Component {
              width: '1500px',
              border: '1px solid black',
              marginRight:'250px',
-             marginLeft:'200px'}}>
+             marginLeft:'290px',
+             background:'#F5F5F5'}}>
             <div className ="container">
                 <br></br>
 <center><h3><b>Update Lecturer Details</b></h3></center>

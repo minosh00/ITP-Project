@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import './style.css'
+import addnew from '../images/addnew.gif';
 
 
 export default class addLecturer extends Component {
@@ -126,13 +127,22 @@ export default class addLecturer extends Component {
                 style={{
                     width: '1500px',
                     border: '1px solid black',
-                    marginRight: '250px',
-                    marginLeft: '200px'
+                    marginRight: '280px',
+                    marginLeft: '290px',
+                    background:'#F5F5F5'
                 }}
             >
                 <div className="container" >
                     <br></br>
-                    <center><h3><b>Add New Lecturer</b></h3></center>
+                    <center>
+                    
+                        <h3><b>Add New Lecturer Details</b></h3><br></br>
+                        <img src={addnew} style={{ width: '500px', height: 'auto' }}></img>
+                        <br></br>
+                        <br></br>
+                        <h6><p>On this page add new lecturer details to the institute database. In here lecturer ID is auto generating. By viewing the curriculum vitae fill the summary, academic qualifications and Research interests and memberships</p></h6>
+                        <br></br>
+                        </center>
 
                     <form className="needs-validation" onSubmit={this.onsubmit}>
 

@@ -23,6 +23,8 @@ import middle from "./components/Middle";
 import Aboutus from "./components/Aboutus";
 import Displaytimetables from "./components/Displaytimetables";
 import downloadttable from "./components/downloadttable";
+import leclogin3 from "./components/lecLogin3";
+import MarkStudentattendance from "./components/MarkStudentattendance";
 
 // minosh
 import Courses from './components/Courses';
@@ -119,6 +121,8 @@ useEffect(()=>{
         <Route path="/admin" component={Loginpage}></Route>
         <Route path="/displaytimetables" component={Displaytimetables}></Route>
         <Route path="/downloadttables/:id" component={downloadttable}></Route>
+        <Route path="/leclogin3" component={leclogin3}></Route>
+        <Route path="/markstudentattendance" component={MarkStudentattendance}></Route>
 
         {/* minosh */}
         <Route path = "/buycourse" component = {BuyCourseDula}></Route> 

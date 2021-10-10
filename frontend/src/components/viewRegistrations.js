@@ -3,6 +3,7 @@ import axios from 'axios'
 import { pdfDownload } from './pdfDownload'
 import "./Regviewer.css"
 import "./style.css"
+import regmain from '../images/reg1.gif';
 
 
 class viewRegistrations extends Component {
@@ -56,20 +57,24 @@ class viewRegistrations extends Component {
     }
 
     return (
-      <div className="leave">
+      <div className="">
+        
         <div className="container">
-       <br></br>
-       <br></br>
-          <div className ="alllecturerheader" style={{color: 'white' }}>
-          <center><h3><b>View Lecturer Registrations</b></h3></center>
+        <center>
+        <img src={regmain} style={{ width: '1200px', height: 'auto' }}></img>
+        <br></br>
+        <br></br>
+          <h3 style={{fontFamily:'fantasy'}}><b>View Lecturer Registrations</b></h3>
+          <h6><p>In this page administrator checking the lecturers' registrations. View their curriculum vitae, 
+            and If they suitable for the institute they have been selected to the institute. their selected 
+            confirmation E-mail will send. administrator can reject the registrations by checking curriculum vitae.</p></h6>
           <br></br>
-          <br></br>
-          </div>
-          <br></br>
+          </center>
+          
           {this.state.registrationL.length > 0 && this.state.registrationL.map((value, index) => (
-            <div key={index} className="card mb-3">
+            <div key={index} className="card mb-3" >
               <div className="card-content-research" style={{ border: '3px solid black'}}>
-                <div className="p-3">
+                <div className="p-3" style={{background:'#F5F5F5'}}>
                   <h4 style={{ fontSize: '20px',color: 'black'}}><p><b>Registration No : 0{index + 1}</b></p></h4>
                   <br></br>
                   <h5 style={{ fontSize: '16px',color: 'black' }}><b> First Name :   {value.lecFname}</b></h5>
@@ -88,7 +93,7 @@ class viewRegistrations extends Component {
 
                   <button className="btn btn-danger" style={{ marginLeft: "2%" }} onClick={event => this.navigateDelete(event, value._id)}><i class="fa fa-times" aria-hidden="true"></i> <b>Reject Registration </b></button>
                   
-                  <a href = {`/lecConfirmationSend/${value._id}`} className="btn btn-warning" style={{ marginLeft: "2%" }} > <i class="fas fa-envelope-square"></i><b> Send E-mail</b></a>
+                  <a href = {`/lecConfirmationSend/${value._id}`} className="btn btn-warning" style={{ marginLeft: "2%" }}  target="_blank" rel="noopener noreferrer" > <i class="fas fa-envelope-square" ></i><b> Send E-mail</b></a>
                  <br></br>
                 </div>
               </div>

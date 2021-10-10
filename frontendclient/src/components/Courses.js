@@ -42,13 +42,13 @@ const Courses = ({posts}) => {
 
       .map((course, key) =>(
 
-
+       
 <div  class="d-flex justify-content-center">
 <div className="col-12 col-md-7 col-lg-78 mx-0 mb-2">
  
 <div className="card p-0 overflow-hidden h-100 shadow" >
   <div className=" text-center mt-3">
-  <img src={`/uploads/${course.courseImage}`} alt="..."  class="img-fluid"   width="390"/> 
+  <img src={`uploads/${course.courseImage}`} alt="..."  class="img-fluid"   width="390"/> 
   <div className="card-body text-center">
   <h4 className="card-title">&nbsp; {course.courseName} </h4>
   <p className="card-title">&nbsp; 🔶Course Type: {course.courseType} </p>

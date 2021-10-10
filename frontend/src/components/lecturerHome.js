@@ -97,10 +97,8 @@ axios.get("/lecturers").then(res =>{
               </input></div>
               </div>
               </div>
-
-              <div className ="addbtn" >
-              <button className="btn btn-success"><a href = "/addLec" style ={{textDecoration:'none',color:'white',marginLeft:'12px'}}><i class="fa fa-plus-square" aria-hidden="true"></i>   Add New Lecturer Details</a></button>
-              </div>
+<br></br>
+              
 
               <ReactHTMLTableToExcel
                     id="test-table-xls-button"

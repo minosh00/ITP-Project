@@ -5,6 +5,10 @@ import notice from '../images/n.png';
 import notice1 from '../images/n2.png';
 import notice2 from '../images/tele.png';
 import hone from '../images/hone.png';
+import noticemain from '../images/notice.gif';
+import background from '../images/lecbackground.gif';
+
+
 
 
 export default class detailsHome extends Component {
@@ -63,13 +67,23 @@ export default class detailsHome extends Component {
   }
   render() {
     return (
-
+<div style={{ backgroundImage: `url(${background})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            marginTop:'-45px',
+            marginBottom:'-15px'}}>
 
       <div className="container" >
+        <center>
+          <br></br>
+          <br></br>
+         <img src={noticemain} style={{ width: '250px', height: '50%' }}></img>
+         </center>
         <div className="row">
           <div className="col-lg-12 mt-3 mb-3">
             <div className="container">
-              <h1><center><b>Special Notices For LECTURERS <img src={hone} style={{ width: '150px', height: '100%' }}></img></b></center></h1>
+              <h3><center><b>Special Notices For LECTURERS  <img src={hone} style={{ width: '50px', height: '30%' }}></img></b></center></h3>
             </div>
           </div>
           <div className="col-lg-3 mt-2 mb-2">
@@ -79,13 +93,16 @@ export default class detailsHome extends Component {
 
           {this.state.updateDetails.map((updateDetail, index) => (
             <div key={index} className="card mb-3">
-              <div className="container" style={{ border: '2px solid black', width: '100%', background: "	#B0C4DE" }}>
-                <img src={notice1} style={{ width: '190px', height: '100%' }}></img>
-                <h6><b>Notice number : {index + 1}</b></h6><br></br>
-                <h3 style={{ color: 'red' }}><b>Date :{updateDetail.date}</b></h3>
-                <h3 style={{ color: 'black' }}><b>{updateDetail.notice}</b></h3>
+              <div className="container" style={{ border: '2px solid black', width: '100%', background:'#93FFE8' }}>
+                <img src={notice1} style={{ width: '150px', height: '60%' }}></img>
+                <h6><b>Notice number : {index+1}</b></h6>
+                <h5 style={{ color: 'red' }}><b>Date :{updateDetail.date}</b></h5>
+                <h4 style={{ color: 'black' }}><b>{updateDetail.notice}</b></h4>
                 <br></br>
-              <img src={notice2} style={{ width: '60px', height: '100%' }}></img>Further inquiries :0112881376,  0112881150
+              <img src={notice2} style={{ width: '30px', height: '20%' }}></img>Further inquiries : 0112881364 ,0701235770
+                <br></br>
+                <br></br>
+             
 
               </div>
             </div>
@@ -95,7 +112,7 @@ export default class detailsHome extends Component {
         <div className="row">
           <div className="col-lg-12 mt-3 mb-3">
             <div className="container">
-              <h1><center><b>Special Notices For STUDENTS <img src={hone} style={{ width: '150px', height: '100%' }}></img></b></center></h1>
+              <h3><center><b>Special Notices For STUDENTS  <img src={hone} style={{ width: '50px', height: '30%' }}></img></b></center></h3>
             </div>
           </div>
           <div className="col-lg-3 mt-2 mb-2">
@@ -147,7 +164,7 @@ export default class detailsHome extends Component {
         </table>
         
       </div>
-
+</div>
 
 
     )
