@@ -123,6 +123,7 @@ export default class Apply extends Component {
     axios.post(`/application/save`, data).then((res) => {
       if (res.data.success) {
         alert("Applied Succesfully..!");
+        window.location.replace('/');
         this.setState({
           FirstName: "",
           LastName: "",
